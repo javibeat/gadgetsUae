@@ -40,6 +40,19 @@ const products = [
       'assets/images/nintendo/procontroller2/6.jpg',
       'assets/images/nintendo/procontroller2/7.jpg'
     ]
+  },
+  {
+    id: 'sandisk-switch2-sd',
+    title: 'SanDisk microSD Express 256GB para Nintendo Switch 2',
+    category: 'Video Games / Storage',
+    image: 'assets/images/nintendo/sd/sd1.jpg',
+    price: 'AED 223.03',
+    url: 'https://amzn.to/3Tmgofm',
+    gallery: [
+      'assets/images/nintendo/sd/sd1.jpg',
+      'assets/images/nintendo/sd/sd2.jpg'
+    ],
+    description: 'Tarjeta de memoria oficial para Nintendo Switch 2, velocidad de nueva generación, ideal para juegos y almacenamiento extra. Capacidad: 256GB. Marca: SanDisk.'
   }
   // Puedes añadir más productos aquí
 ];
