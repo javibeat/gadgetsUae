@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - GadgetsUAE</title>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <div id="menu-include"></div>
+   <div class="page-banner" style="display: flex; justify-content: center; margin: 2.5rem auto 2rem auto; max-width: 1200px;">
+    <img src="banners/favoritos.jpg" alt="Favorites Banner" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+</div>
+   <main>
+        <section class="trending">
+            <div class="container">
+                <h2 class="section-title">Your Favorites</h2>
+                <div class="products-grid" id="favoritesGrid">
+                    <!-- Aquí se renderizan los favoritos -->
+                </div>
+            </div>
+        </section>
+   </main>
+   <div id="footer-include"></div>
+   <script src="assets/js/products.js"></script>
+   <script src="assets/js/script.js"></script>
+   <script>
+function getFavorites() {
+  return JSON.parse(localStorage.getItem('favorites') || '[]');
+}
+
+function renderFavorites() {
+  const favs = getFavorites();
+  const grid = document.getElementById('favoritesGrid');
+  grid.innerHTML = '';
+  const favProducts = (window.products || []).filter(p => favs.includes(p.id));
+  if (favProducts.length === 0) {
+    grid.innerHTML = '<p>No favorite products yet.</p>';
+    return;
+  }
+  favProducts.forEach(product => {
+    grid.innerHTML += `
+      <div class="product-card">
+        <button class="favorite-btn active" data-id="${product.id}" aria-label="Quitar de favoritos">❤️</button>
+        <div class="product-image-container">
+          <img src="${product.image}" alt="${product.title}" class="product-image main-image">
+          <div class="gallery-thumbnails">
+            ${product.gallery.map((img, i) => `<img src="${img}" alt="${product.title} - ${i+1}" class="thumb">`).join('')}
+          </div>
+        </div>
+        <div class="product-info">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
+            <h3 style="margin: 0;">${product.title}</h3>
+            <a href="${product.review}" class="review-btn" target="_blank" rel="noopener noreferrer">Review</a>
+          </div>
+          <p class="product-category">${product.category}</p>
+          <div class="product-footer">
+            <div class="price-history" style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+              ${product.discount ? `<span class="discount">${product.discount}</span>` : ''}
+              ${product.original ? `<span class="original-price">${product.original}</span>` : ''}
+              <span class="current-price">${product.price}</span>
+            </div>
+            <a href="${product.url}" class="product-cta" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  document.querySelectorAll('.favorite-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      let favs = getFavorites();
+      favs = favs.filter(f => f !== this.dataset.id);
+      localStorage.setItem('favorites', JSON.stringify(favs));
+      renderFavorites();
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderFavorites);
+   </script>
+</body>
+</html> 

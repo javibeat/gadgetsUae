@@ -1,0 +1,45 @@
+/* Bebas Neue - Logo */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue'),
+         local('BebasNeue'),
+         url('../fonts/BebasNeue.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: optional;
+    unicode-range: U+000-5FF;
+}
+
+/* Clash Grotesk - Textos */
+@font-face {
+    font-family: 'Clash Grotesk';
+    src: local('Clash Grotesk Light'),
+         local('ClashGrotesk-Light'),
+         url('../fonts/ClashGrotesk-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: optional;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Clash Grotesk';
+    src: local('Clash Grotesk Regular'),
+         local('ClashGrotesk-Regular'),
+         url('../fonts/ClashGrotesk-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: optional;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Clash Grotesk';
+    src: local('Clash Grotesk Semibold'),
+         local('ClashGrotesk-SemiBold'),
+         url('../fonts/ClashGrotesk-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: optional;
+    unicode-range: U+000-5FF;
+}

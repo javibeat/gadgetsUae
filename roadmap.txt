@@ -1,0 +1,46 @@
+
+
+📄 Roadmap: Amazon Tech Affiliate Site (v1)
+_Last updated: 2025-06-08_
+
+🧱 1. Setup & Stack
+- [ ] Initialize Git repo and basic file structure.
+- [ ] Set up Firebase project (Auth, Firestore, Hosting, GA4).
+- [ ] Choose frontend stack (React + Tailwind recommended).
+- [ ] Configure Firebase SDK in the frontend.
+
+👤 2. Authentication
+- [ ] Enable Email/Password sign-in in Firebase Auth.
+- [ ] Create Sign Up / Sign In forms.
+- [ ] Store current user session and protect access to favorites page.
+- [ ] Optional: enable email verification.
+
+🛒 3. Product Catalog
+- [ ] Manually curate 20–30 tech products from Amazon.
+- [ ] Store products in JSON or Firestore (title, image, affiliate link, etc.).
+- [ ] Display products in a responsive grid layout.
+- [ ] Add CTA button with `rel="sponsored"` link.
+- [ ] Add legal affiliate disclaimer (footer or visible alert).
+
+❤️ 4. User Favorites
+- [ ] Create Firestore structure: `/users/{uid}/favorites/{productId}`.
+- [ ] Implement "Add to Favorites" and "Remove from Favorites" buttons.
+- [ ] Show user favorites in private `/favorites` page (requires auth).
+- [ ] Secure Firestore rules: only owner can read/write their favorites.
+
+📊 5. Analytics & Tracking
+- [ ] Enable Firebase Analytics (GA4).
+- [ ] Track events: `click_affiliate`, `add_favorite`, `remove_favorite`.
+- [ ] Mark outbound clicks as conversions in GA4.
+- [ ] Optional: store minimal tracking logs in Firestore (userId + timestamp).
+
+🚀 6. Deployment & Hosting
+- [ ] Deploy to Firebase Hosting with SSL.
+- [ ] Add custom domain + DNS.
+- [ ] Monitor usage and costs (Firestore reads/writes, hosting bandwidth).
+
+📈 7. Scale Plan (Future)
+- [ ] Integrate Amazon Product Advertising API via Cloud Functions (optional).
+- [ ] Add filters/search by category or keyword.
+- [ ] Launch more affiliate sites with same codebase (different niches).
+- [ ] Explore blog/reviews section for SEO growth.
