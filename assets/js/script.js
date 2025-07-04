@@ -22,49 +22,49 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error loading menu:', error));
 });
 
-// Configuración del menú móvil
+// Mobile menu setup
 function setupMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navList = document.querySelector('.nav-list');
     const body = document.body;
     
     if (!mobileMenu || !navList) {
-        console.warn('Elementos del menú no encontrados');
+        console.warn('Menu elements not found');
         return;
     }
     
-    // Función para alternar el menú
+    // Function to toggle the menu
     const toggleMenu = function() {
         const isOpen = navList.classList.toggle('active');
         mobileMenu.setAttribute('aria-expanded', isOpen);
         mobileMenu.classList.toggle('active');
         
-        // Bloquear el scroll cuando el menú está abierto
+        // Lock scroll when menu is open
         if (isOpen) {
             body.classList.add('menu-open');
-            // Usar requestAnimationFrame para asegurar que el DOM esté listo
+            // Use requestAnimationFrame to ensure DOM is ready
             requestAnimationFrame(function() {
                 const firstLink = navList.querySelector('a');
                 if (firstLink) firstLink.focus();
             });
         } else {
             body.classList.remove('menu-open');
-            // Devolver el foco al botón del menú
+            // Return focus to menu button
             mobileMenu.focus();
         }
     };
     
-    // Evento de clic en el botón del menú
+    // Click event on menu button
     mobileMenu.addEventListener('click', function(e) {
         e.preventDefault();
         toggleMenu();
     });
     
-    // Cerrar menú al hacer clic en un enlace
+    // Close menu when clicking a link
     const navLinks = document.querySelectorAll('.nav-list a');
     navLinks.forEach(function(link) {
         link.addEventListener('click', function() {
-            if (window.innerWidth <= 900) { // Solo en móvil
+            if (window.innerWidth <= 900) { // Only on mobile
                 navList.classList.remove('active');
                 mobileMenu.classList.remove('active');
                 mobileMenu.setAttribute('aria-expanded', 'false');
@@ -73,14 +73,14 @@ function setupMobileMenu() {
         });
     });
     
-    // Cerrar menú con la tecla Escape
+    // Close menu with Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && navList.classList.contains('active')) {
             toggleMenu();
         }
     });
     
-    // Cerrar menú al hacer clic fuera de él
+    // Close menu when clicking outside
     document.addEventListener('click', function(e) {
         const target = e.target;
         const isClickInside = navList.contains(target);
@@ -172,25 +172,25 @@ function initializeFilters() {
     });
 }
 
-// Funcionalidad de ordenamiento (para implementar más adelante)
+// Sorting functionality (to be implemented later)
 function initializeSorting() {
     const sortSelect = document.querySelector('.sort-select');
     if (sortSelect) {
         sortSelect.addEventListener('change', () => {
             const sortBy = sortSelect.value;
-            // Aquí implementaremos el ordenamiento cuando tengamos la API
-            console.log('Ordenando por:', sortBy);
+            // Sorting will be implemented when API is ready
+            console.log('Sorting by:', sortBy);
         });
     }
 }
 
-// Inicializar todas las funcionalidades
+// Initialize all functionalities
 document.addEventListener('DOMContentLoaded', () => {
     initializeFilters();
     initializeSorting();
 });
 
-// Lógica de favoritos
+// Favorites logic
 function getFavorites() {
   return JSON.parse(localStorage.getItem('favorites') || '[]');
 }
@@ -243,7 +243,7 @@ function includeHTML(selector, url, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Incluir footer
+  // Include footer
   if(document.getElementById('footer-include')) {
     includeHTML('#footer-include', 'footer.html');
   }
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Toggle menú principal en móvil
+  // Toggle main menu on mobile
   if (toggleBtn && categoriesList) {
     toggleBtn.addEventListener('click', function() {
       const expanded = categoriesList.classList.toggle('mobile-active');
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Submenús: click para abrir/cerrar
+  // Submenus: click to open/close
   categoryBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -287,14 +287,14 @@ document.addEventListener('DOMContentLoaded', function() {
       const sub = btn.nextElementSibling;
       
       if (isMobile()) {
-        // En móvil: solo uno abierto a la vez
+        // On mobile: only one open at a time
         closeAllSubmenus();
         if (!isActive && sub && sub.classList.contains('subcategory-list')) {
           btn.classList.add('active');
           sub.style.display = 'block';
         }
       } else {
-        // En desktop: toggle individual
+        // On desktop: toggle individually
         if (isActive) {
           btn.classList.remove('active');
           if (sub && sub.classList.contains('subcategory-list')) {
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Cerrar submenús al hacer clic fuera
+  // Close submenus when clicking outside
   document.addEventListener('click', function(e) {
     if (!submenu.contains(e.target)) {
       closeAllSubmenus();
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Cerrar submenús al cambiar a desktop
+  // Close submenus when switching to desktop
   window.addEventListener('resize', function() {
     closeAllSubmenus();
     if (categoriesList) categoriesList.classList.remove('mobile-active');

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favoritos - GadgetsUAE</title>
+    <title>Favorites - GadgetsUAE</title>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -17,7 +17,7 @@
             <div class="container">
                 <h2 class="section-title">Your Favorites</h2>
                 <div class="products-grid" id="favoritesGrid">
-                    <!-- Aquí se renderizan los favoritos -->
+                    <!-- Favorites will be rendered here -->
                 </div>
             </div>
         </section>
@@ -42,7 +42,7 @@ function renderFavorites() {
   favProducts.forEach(product => {
     grid.innerHTML += `
       <div class="product-card">
-        <button class="favorite-btn active" data-id="${product.id}" aria-label="Quitar de favoritos">❤️</button>
+        <button class="favorite-btn active" data-id="${product.id}" aria-label="Remove from favorites">❤️</button>
         <div class="product-image-container">
           <img src="${product.image}" alt="${product.title}" class="product-image main-image">
           <div class="gallery-thumbnails">
@@ -52,7 +52,7 @@ function renderFavorites() {
         <div class="product-info">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
             <h3 style="margin: 0;">${product.title}</h3>
-            <a href="${product.review}" class="review-btn" target="_blank" rel="noopener noreferrer">Review</a>
+            ${product.review ? `<a href="${product.review}" class="review-btn" target="_blank" rel="noopener noreferrer">Review</a>` : ''}
           </div>
           <p class="product-category">${product.category}</p>
           <div class="product-footer">
