@@ -1234,168 +1234,192 @@ body, .nav-list a, .nav-categories a, .product-info, .section-title, .section-su
   }
 }
 
-/* --- DAILY DEALS CARD --- */
+/* --- UNIFICACIÓN DE DISEÑO: DAILY DEALS = TRENDING NOW --- */
 .daily-deals-products {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 .daily-deals-products .product-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  min-width: 0;
+  width: 100%;
   max-width: 340px;
-  min-width: 260px;
+  min-height: 520px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: flex-start;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+  padding: 0;
   position: relative;
-  transition: box-shadow 0.2s;
 }
 .daily-deals-products .product-card:hover {
-  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.01);
 }
 .daily-deals-products .product-badges {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   display: flex;
   gap: 0.5rem;
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 2;
-}
-.daily-deals-products .badge {
-  background: #22c55e;
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0.25rem 0.75rem;
-  margin-right: 0.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  z-index: 1;
 }
 .daily-deals-products .badge.prime {
-  background: #2563eb;
+  background: #00A8E1;
+  color: #fff;
 }
 .daily-deals-products .badge.shipping {
-  background: #22c55e;
+  background: #f59e0b;
+  color: #fff;
 }
 .daily-deals-products .product-image-container {
-  position: relative;
-  width: 100%;
   height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  justify-content: flex-start;
+  background: #f6f7fa;
+  border-radius: 24px 24px 0 0;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 }
 .daily-deals-products .product-image {
-  width: 100%;
-  height: 180px;
+  max-width: 100%;
+  max-height: 140px;
   object-fit: contain;
-  border-radius: 12px;
-  background: #f3f4f6;
+  border-radius: 18px;
+  background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 0.5rem;
 }
 .daily-deals-products .gallery-thumbnails {
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.5rem;
-  justify-content: center;
+  margin-top: 0;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 0 0.5rem;
+  width: 100%;
+  scrollbar-width: none;
 }
-.daily-deals-products .gallery-thumbnails .thumbnail {
+.daily-deals-products .gallery-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+.daily-deals-products .gallery-thumbnails .thumb {
   width: 38px;
   height: 38px;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 6px;
   border: 2px solid transparent;
   cursor: pointer;
   transition: border 0.2s;
+  background: #fff;
 }
-.daily-deals-products .gallery-thumbnails .thumbnail.active,
-.daily-deals-products .gallery-thumbnails .thumbnail:hover {
+.daily-deals-products .gallery-thumbnails .thumb.selected,
+.daily-deals-products .gallery-thumbnails .thumb:focus {
   border: 2px solid #2563eb;
 }
-.daily-deals-products .fav-btn {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  background: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  cursor: pointer;
-  z-index: 2;
-  transition: box-shadow 0.2s;
-}
-.daily-deals-products .fav-btn:hover {
-  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
-}
 .daily-deals-products .product-info {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
+}
+.daily-deals-products .product-info > div:first-child {
+  margin-bottom: 1rem;
+}
+.daily-deals-products .product-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--black);
+  transition: color 0.2s ease;
+}
+.daily-deals-products .product-card:hover h3 {
+  color: #007bff;
 }
 .daily-deals-products .product-category {
-  color: #6b7280;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
-.daily-deals-products .product-pricing {
+.daily-deals-products .product-footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  margin-top: 0.2rem;
 }
-.daily-deals-products .discount-badge {
-  background: #ef4444;
-  color: #fff;
-  font-size: 1rem;
+.daily-deals-products .current-price {
+  font-size: 1.25rem;
   font-weight: 700;
-  border-radius: 8px;
-  padding: 0.25rem 0.75rem;
-  margin-right: 0.25rem;
+  color: var(--primary-color);
 }
-.daily-deals-products .old-price {
-  color: #9ca3af;
-  font-size: 1rem;
+.daily-deals-products .original-price {
   text-decoration: line-through;
+  color: var(--light-text);
+  font-size: 0.95em;
+  margin-bottom: 0;
 }
-.daily-deals-products .product-price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2563eb;
-  margin-bottom: 0.5rem;
-}
-.daily-deals-products .amazon-btn {
-  background: #2563eb;
+.daily-deals-products .discount {
+  background: #dc2626;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition: background 0.2s;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95em;
+  margin-bottom: 0;
   display: inline-block;
 }
-.daily-deals-products .amazon-btn:hover {
-  background: #1d4ed8;
+.daily-deals-products .product-cta {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: none;
+  cursor: pointer;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.daily-deals-products .product-cta:hover {
+  background: #1e40af;
+  color: #fff;
+}
+.daily-deals-products .favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 2rem;
+  color: #e0e0e0;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+}
+.daily-deals-products .favorite-btn.active,
+.daily-deals-products .favorite-btn:hover {
+  color: #dc2626;
 }
 @media (max-width: 900px) {
   .daily-deals-products {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
   .daily-deals-products .product-card {
     max-width: 98vw;
