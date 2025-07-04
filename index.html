@@ -85,12 +85,12 @@
                 <!-- Banner Amazon Prime Carrusel -->
                 <div class="prime-banner" style="display: flex; justify-content: center; margin-bottom: 2rem;">
                     <a href="https://amzn.to/3Tn9NkR" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 100%;">
-                        <img id="prime-carousel-img" src="assets/images/prime/1.jpg" alt="Amazon Prime Banner" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: opacity 0.5s;">
+                        <img id="prime-carousel-img" src="assets/images/prime/amazonPrime.png" alt="Amazon Prime Banner" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: opacity 0.5s;">
                     </a>
                 </div>
                 <script>
                 const primeImages = [
-                  'assets/images/prime/1.jpg',
+                  'assets/images/prime/amazonPrime.png',
                   'assets/images/prime/bazaar.jpg'
                 ];
                 let primeIndex = 0;
@@ -108,8 +108,41 @@
                 </script>
                 <h2 class="section-title">Daily Deals</h2>
                 <div class="countdown-timer" id="dealCountdown">Ends in: 23:59:59</div>
-                <div class="products-grid">
-                    <!-- Los productos se cargarán dinámicamente -->
+                <div class="products-grid daily-deals-products">
+                    <!-- Product 1: WalkingPad -->
+                    <div class="product-card">
+                        <div class="product-badges">
+                            <span class="badge prime">Prime</span>
+                            <span class="badge shipping">Free Shipping</span>
+                        </div>
+                        <div class="product-image-container walkingpad-gallery">
+                            <img src="assets/images/walkingpad/1.jpg" alt="KingSmith WalkingPad A1 Pro – Foldable Under Desk Treadmill" class="product-image main-image" id="walkingpad-main-img">
+                            <div class="gallery-thumbnails">
+                                <img src="assets/images/walkingpad/1.jpg" alt="WalkingPad 1" class="thumb selected" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/1.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/walkingpad/2.jpg" alt="WalkingPad 2" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/2.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/walkingpad/3.jpg" alt="WalkingPad 3" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/3.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/walkingpad/4.jpg" alt="WalkingPad 4" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/4.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/walkingpad/5.jpg" alt="WalkingPad 5" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/5.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/walkingpad/6.jpg" alt="WalkingPad 6" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/6.jpg'; setSelectedThumb(this)">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
+                                <h3 style="margin: 0;">KingSmith WalkingPad A1 Pro – Foldable Under Desk Treadmill</h3>
+                            </div>
+                            <p class="product-category">Fitness / Treadmills</p>
+                            <div class="product-footer">
+                                <div class="price-history" style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                                    <span class="discount" style="margin-bottom: 0;">-26%</span>
+                                    <span class="original-price" style="font-size: 0.95em;">AED 1,899.00</span>
+                                    <span class="current-price" style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED 1,399.00</span>
+                                </div>
+                                <a href="https://amzn.to/3TnS5h7" class="product-cta" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                            </div>
+                            <button class="favorite-btn" data-id="walkingpad" aria-label="Add to favorites">&#9825;</button>
+                        </div>
+                    </div>
+                    <!-- Aquí irán los otros dos productos -->
                 </div>
             </div>
         </section>
