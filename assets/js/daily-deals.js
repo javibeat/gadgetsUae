@@ -1,7 +1,7 @@
-// Daily Deals Slider - Ofertas diarias automáticas
+// Daily Deals Slider - Carrusel de 3 productos visibles, avanza de uno en uno, con animación slide y puntos centrados
 class DailyDealsSlider {
     constructor() {
-        this.deals = [
+        this.deals = window.dailyDealsSlider && window.dailyDealsSlider.deals ? window.dailyDealsSlider.deals : [
             {
                 id: 'omo-detergent',
                 title: 'OMO Liquid Laundry Detergent, Active, up to 100% stain removal',
@@ -91,9 +91,10 @@ class DailyDealsSlider {
                 badge: 'Limited time deal'
             }
         ];
-        
         this.currentIndex = 0;
         this.autoPlayInterval = null;
+        this.visibleCount = 3;
+        this.isSliding = false;
         this.init();
     }
 
@@ -106,18 +107,40 @@ class DailyDealsSlider {
     renderDeals() {
         const container = document.querySelector('.daily-deals .products-grid');
         if (!container) return;
-
         container.innerHTML = '';
-        
-        // Mostrar 4 productos a la vez
-        const visibleDeals = this.deals.slice(this.currentIndex, this.currentIndex + 4);
-        
-        visibleDeals.forEach(deal => {
-            const dealCard = this.createDealCard(deal);
-            container.appendChild(dealCard);
-        });
 
-        // Actualizar indicadores
+        // Crear un contenedor interno para animar el slide
+        let inner = document.createElement('div');
+        inner.className = 'deals-inner';
+        inner.style.display = 'flex';
+        inner.style.transition = this.isSliding ? 'transform 0.5s cubic-bezier(.4,1.3,.5,1)' : 'none';
+        inner.style.willChange = 'transform';
+
+        // Mostrar 3 productos, con loop infinito
+        for (let i = 0; i < this.visibleCount + 1; i++) {
+            // +1 para el efecto de loop
+            const dealIndex = (this.currentIndex + i) % this.deals.length;
+            const deal = this.deals[dealIndex];
+            const dealCard = this.createDealCard(deal);
+            inner.appendChild(dealCard);
+        }
+        container.appendChild(inner);
+
+        // Deslizar al siguiente
+        if (this.isSliding) {
+            setTimeout(() => {
+                inner.style.transform = 'translateX(-33.3333%)';
+            }, 10);
+            setTimeout(() => {
+                // Resetear al terminar la animación
+                this.isSliding = false;
+                this.currentIndex = (this.currentIndex + 1) % this.deals.length;
+                this.renderDeals();
+            }, 510);
+        } else {
+            inner.style.transform = 'translateX(0)';
+        }
+
         this.updateIndicators();
     }
 
@@ -125,7 +148,6 @@ class DailyDealsSlider {
         const card = document.createElement('div');
         card.className = 'product-card deal-card';
         card.setAttribute('data-deal-id', deal.id);
-        
         card.innerHTML = `
             <div class="product-badges">
                 <span class="badge prime">Prime</span>
@@ -149,7 +171,9 @@ class DailyDealsSlider {
                 <button class="favorite-btn" data-id="${deal.id}" aria-label="Añadir a favoritos">&#9825;</button>
             </div>
         `;
-        
+        card.style.minWidth = '320px';
+        card.style.maxWidth = '340px';
+        card.style.flex = '1 1 0';
         return card;
     }
 
@@ -160,38 +184,45 @@ class DailyDealsSlider {
             indicatorsContainer.className = 'deals-indicators';
             document.querySelector('.daily-deals .container').appendChild(indicatorsContainer);
         }
-
         indicatorsContainer.innerHTML = '';
-        const totalPages = Math.ceil(this.deals.length / 4);
-        
-        for (let i = 0; i < totalPages; i++) {
+        // Solo 3 puntos
+        for (let i = 0; i < this.visibleCount; i++) {
             const indicator = document.createElement('button');
-            indicator.className = `indicator ${i === Math.floor(this.currentIndex / 4) ? 'active' : ''}`;
-            indicator.onclick = () => this.goToPage(i);
+            let activeIndex = this.currentIndex % this.deals.length;
+            if (i === 0) activeIndex = this.currentIndex % this.deals.length;
+            if (i === 1) activeIndex = (this.currentIndex + 1) % this.deals.length;
+            if (i === 2) activeIndex = (this.currentIndex + 2) % this.deals.length;
+            indicator.className = `indicator${i === 0 ? ' active' : ''}`;
+            indicator.onclick = () => this.goToIndex((this.currentIndex + i) % this.deals.length);
             indicatorsContainer.appendChild(indicator);
         }
+        indicatorsContainer.style.display = 'flex';
+        indicatorsContainer.style.justifyContent = 'center';
+        indicatorsContainer.style.margin = '30px 0 0 0';
     }
 
-    goToPage(pageIndex) {
-        this.currentIndex = pageIndex * 4;
+    goToIndex(index) {
+        this.currentIndex = index;
         this.renderDeals();
         this.resetAutoPlay();
     }
 
     nextSlide() {
-        this.currentIndex = (this.currentIndex + 4) % this.deals.length;
+        if (this.isSliding) return;
+        this.isSliding = true;
         this.renderDeals();
     }
 
     prevSlide() {
-        this.currentIndex = this.currentIndex - 4 < 0 ? this.deals.length - 4 : this.currentIndex - 4;
+        this.currentIndex = (this.currentIndex - 1 + this.deals.length) % this.deals.length;
         this.renderDeals();
+        this.resetAutoPlay();
     }
 
     startAutoPlay() {
         this.autoPlayInterval = setInterval(() => {
             this.nextSlide();
-        }, 5000); // Cambiar cada 5 segundos
+        }, 3000);
     }
 
     resetAutoPlay() {
@@ -202,7 +233,7 @@ class DailyDealsSlider {
     }
 
     setupEventListeners() {
-        // Añadir botones de navegación si no existen
+        // Botones de navegación (opcional)
         const container = document.querySelector('.daily-deals .container');
         if (!document.querySelector('.deals-nav')) {
             const nav = document.createElement('div');
@@ -212,18 +243,13 @@ class DailyDealsSlider {
                 <button class="nav-btn next-btn" aria-label="Next deals">›</button>
             `;
             container.appendChild(nav);
-
             nav.querySelector('.prev-btn').addEventListener('click', () => {
                 this.prevSlide();
-                this.resetAutoPlay();
             });
-
             nav.querySelector('.next-btn').addEventListener('click', () => {
                 this.nextSlide();
-                this.resetAutoPlay();
             });
         }
-
         // Pausar autoplay al hacer hover
         const dealsSection = document.querySelector('.daily-deals');
         if (dealsSection) {
@@ -232,7 +258,6 @@ class DailyDealsSlider {
                     clearInterval(this.autoPlayInterval);
                 }
             });
-
             dealsSection.addEventListener('mouseleave', () => {
                 this.startAutoPlay();
             });
@@ -240,96 +265,65 @@ class DailyDealsSlider {
     }
 }
 
-// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     window.dailyDealsSlider = new DailyDealsSlider();
 });
 
-// Añadir estilos CSS para el slider
+// CSS para centrar y estilizar los puntos e implementar el slide
 const dealsStyle = document.createElement('style');
 dealsStyle.textContent = `
-    .daily-deals {
-        position: relative;
+    .daily-deals .products-grid {
         overflow: hidden;
-    }
-    
-    .deals-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
+        position: relative;
         display: flex;
-        justify-content: space-between;
-        pointer-events: none;
-        z-index: 10;
-    }
-    
-    .nav-btn {
-        background: rgba(37, 99, 235, 0.9);
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        font-size: 20px;
-        cursor: pointer;
-        pointer-events: all;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         justify-content: center;
+        align-items: stretch;
+        gap: 0;
+        min-height: 420px;
     }
-    
-    .nav-btn:hover {
-        background: rgba(37, 99, 235, 1);
-        transform: scale(1.1);
+    .deals-inner {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s cubic-bezier(.4,1.3,.5,1);
     }
-    
+    .deal-card {
+        min-width: 320px;
+        max-width: 340px;
+        flex: 1 1 0;
+        margin: 0 1rem;
+        transition: transform 0.3s;
+    }
     .deals-indicators {
         display: flex;
         justify-content: center;
-        gap: 8px;
-        margin-top: 20px;
+        align-items: center;
+        gap: 12px;
+        margin-top: 30px;
     }
-    
     .indicator {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
-        border: none;
-        background: #d1d5db;
+        border: 2px solid #2563eb;
+        background: #fff;
+        transition: background 0.3s, border 0.3s;
         cursor: pointer;
-        transition: all 0.3s ease;
+        outline: none;
     }
-    
     .indicator.active {
         background: #2563eb;
-        transform: scale(1.2);
+        border: 2px solid #2563eb;
     }
-    
-    .deal-card {
-        transition: transform 0.3s ease;
+    @media (max-width: 1100px) {
+        .deal-card { min-width: 260px; max-width: 300px; }
     }
-    
-    .deal-card:hover {
-        transform: translateY(-5px);
+    @media (max-width: 900px) {
+        .deal-card { min-width: 200px; max-width: 240px; }
     }
-    
-    .badge.deal {
-        background: #dc2626;
-        color: white;
-        font-size: 0.75rem;
-        font-weight: bold;
-    }
-    
-    @media (max-width: 768px) {
-        .deals-nav {
-            display: none;
-        }
-        
-        .deals-indicators {
-            margin-top: 15px;
-        }
+    @media (max-width: 700px) {
+        .daily-deals .products-grid { gap: 0; }
+        .deal-card { min-width: 160px; max-width: 200px; }
     }
 `;
 document.head.appendChild(dealsStyle); 
