@@ -112,24 +112,278 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 // Search functionality
-const searchInput = document.querySelector('.search-input');
-const searchButton = document.querySelector('.search-button');
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const closeSearch = document.getElementById('closeSearch');
+    const searchResultsContent = document.getElementById('searchResultsContent');
+    const searchResultsTitle = document.getElementById('searchResultsTitle');
 
-if (searchInput && searchButton) {
-    searchButton.addEventListener('click', () => {
-        const searchTerm = searchInput.value.trim();
-        if (searchTerm) {
-            // Search implementation will be added when API is ready
-            console.log('Searching:', searchTerm);
+    // Crear contenedor de sugerencias en tiempo real
+    const searchSuggestionsContainer = document.createElement('div');
+    searchSuggestionsContainer.className = 'search-suggestions-container';
+    searchSuggestionsContainer.style.cssText = `
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        z-index: 1000;
+        display: none;
+        max-height: 300px;
+        overflow-y: auto;
+    `;
+    
+    // Añadir el contenedor después del input
+    if (searchInput && searchInput.parentElement) {
+        searchInput.parentElement.style.position = 'relative';
+        searchInput.parentElement.appendChild(searchSuggestionsContainer);
+    }
+
+    // Lista de productos para sugerencias
+    const productos = [
+        { titulo: 'KingSmith WalkingPad A1 Pro', categoria: 'Fitness / Treadmills', terminos: ['walkingpad', 'treadmill', 'fitness', 'ejercicio'] },
+        { titulo: 'roborock S7 Max Ultra', categoria: 'Home / Robotic Vacuums', terminos: ['roborock', 'robot', 'aspiradora', 'limpieza'] },
+        { titulo: 'Wemart Self Cleaning Cat Litter Box', categoria: 'Pet Supplies', terminos: ['wemart', 'gato', 'mascota', 'litter'] },
+        { titulo: 'Nintendo Switch 2 Console', categoria: 'Video Games', terminos: ['nintendo', 'switch', 'consola', 'video games'] },
+        { titulo: 'Nintendo Switch 2 Pro Controller', categoria: 'Video Games / Accessories', terminos: ['nintendo', 'controller', 'mando', 'accesorio'] },
+        { titulo: 'SanDisk microSD Express 256GB', categoria: 'Video Games / Storage', terminos: ['sandisk', 'microsd', 'almacenamiento', 'storage'] }
+    ];
+
+    let debounceTimer;
+
+    function mostrarSugerenciasEnTiempoReal(searchTerm) {
+        if (!searchTerm || searchTerm.length < 2) {
+            searchSuggestionsContainer.style.display = 'none';
+            return;
+        }
+
+        const termino = searchTerm.toLowerCase();
+        const sugerencias = productos.filter(producto => 
+            producto.titulo.toLowerCase().includes(termino) ||
+            producto.categoria.toLowerCase().includes(termino) ||
+            producto.terminos.some(term => term.toLowerCase().includes(termino))
+        ).slice(0, 5); // Máximo 5 sugerencias
+
+        if (sugerencias.length > 0) {
+            searchSuggestionsContainer.innerHTML = sugerencias.map(producto => `
+                <div class="search-suggestion-item" onclick="seleccionarSugerencia('${producto.titulo}')">
+                    <div class="suggestion-content">
+                        <div class="suggestion-title">${producto.titulo}</div>
+                        <div class="suggestion-category">${producto.categoria}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            searchSuggestionsContainer.style.display = 'block';
+        } else {
+            searchSuggestionsContainer.style.display = 'none';
+        }
+    }
+
+    // Función para seleccionar sugerencia
+    window.seleccionarSugerencia = function(titulo) {
+        searchInput.value = titulo;
+        searchSuggestionsContainer.style.display = 'none';
+        mostrarResultadosBusqueda();
+    };
+
+    // Event listener para sugerencias en tiempo real
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                mostrarSugerenciasEnTiempoReal(e.target.value);
+            }, 300); // Debounce de 300ms
+        });
+
+        // Ocultar sugerencias al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (!searchInput.parentElement.contains(e.target)) {
+                searchSuggestionsContainer.style.display = 'none';
+            }
+        });
+
+        // Navegación con teclado en sugerencias
+        searchInput.addEventListener('keydown', (e) => {
+            const sugerencias = searchSuggestionsContainer.querySelectorAll('.search-suggestion-item');
+            const sugerenciaActiva = searchSuggestionsContainer.querySelector('.search-suggestion-item.active');
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (sugerencias.length > 0) {
+                    if (!sugerenciaActiva) {
+                        sugerencias[0].classList.add('active');
+                    } else {
+                        sugerenciaActiva.classList.remove('active');
+                        const siguiente = sugerenciaActiva.nextElementSibling;
+                        if (siguiente) {
+                            siguiente.classList.add('active');
+                        } else {
+                            sugerencias[0].classList.add('active');
+                        }
+                    }
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (sugerenciaActiva) {
+                    sugerenciaActiva.classList.remove('active');
+                    const anterior = sugerenciaActiva.previousElementSibling;
+                    if (anterior) {
+                        anterior.classList.add('active');
+                    } else {
+                        sugerencias[sugerencias.length - 1].classList.add('active');
+                    }
+                }
+            } else if (e.key === 'Enter') {
+                if (sugerenciaActiva) {
+                    e.preventDefault();
+                    const titulo = sugerenciaActiva.querySelector('.suggestion-title').textContent;
+                    seleccionarSugerencia(titulo);
+                } else {
+                    mostrarResultadosBusqueda();
+                }
+            }
+        });
+    }
+
+    if (searchInput && searchButton) {
+        function mostrarResultadosBusqueda() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            
+            if (!searchTerm) {
+                return; // No hacer nada si el campo está vacío
+            }
+
+            // Ocultar sugerencias en tiempo real
+            searchSuggestionsContainer.style.display = 'none';
+
+            // Mostrar overlay con loading
+            searchOverlay.classList.add('active');
+            searchResultsContent.innerHTML = `
+                <div class="search-loading">
+                    <div class="spinner"></div>
+                    <p>Buscando productos...</p>
+                </div>
+            `;
+
+            // Simular delay para mejor UX
+            setTimeout(() => {
+                const productCards = document.querySelectorAll('.product-card');
+                const resultados = [];
+
+                productCards.forEach(card => {
+                    const title = card.querySelector('.product-info h3');
+                    const category = card.querySelector('.product-category');
+                    const titleText = title ? title.textContent.toLowerCase() : '';
+                    const categoryText = category ? category.textContent.toLowerCase() : '';
+                    
+                    if (titleText.includes(searchTerm) || categoryText.includes(searchTerm)) {
+                        // Clonar la tarjeta para el overlay
+                        const cardClone = card.cloneNode(true);
+                        resultados.push(cardClone);
+                    }
+                });
+
+                // Actualizar título con número de resultados
+                searchResultsTitle.textContent = `Resultados de búsqueda (${resultados.length})`;
+
+                if (resultados.length > 0) {
+                    // Mostrar resultados
+                    searchResultsContent.innerHTML = `
+                        <div class="search-results-grid">
+                            ${resultados.map(card => card.outerHTML).join('')}
+                        </div>
+                    `;
+                    
+                    // Reinicializar funcionalidades en las tarjetas clonadas
+                    const clonedCards = searchResultsContent.querySelectorAll('.product-card');
+                    clonedCards.forEach(card => {
+                        // Reinicializar botones de favoritos
+                        const favBtn = card.querySelector('.favorite-btn');
+                        if (favBtn) {
+                            favBtn.addEventListener('click', function(e) {
+                                e.stopPropagation();
+                                toggleFavorite(this.dataset.id);
+                            });
+                        }
+                        
+                        // Reinicializar galerías de imágenes
+                        const gallery = card.querySelector('.gallery-thumbnails');
+                        if (gallery) {
+                            const thumbs = gallery.querySelectorAll('.thumb');
+                            thumbs.forEach(thumb => {
+                                thumb.addEventListener('click', function() {
+                                    const mainImg = card.querySelector('.main-image');
+                                    if (mainImg && this.src) {
+                                        mainImg.src = this.src;
+                                    }
+                                    setSelectedThumb(this);
+                                });
+                            });
+                        }
+                    });
+                    
+                    // Actualizar botones de favoritos
+                    updateFavoriteButtons();
+                } else {
+                    // Mostrar mensaje de no resultados
+                    const sugerencias = ['nintendo', 'walkingpad', 'roborock', 'wemart', 'fitness', 'video games'];
+                    const sugerenciasFiltradas = sugerencias.filter(s => s.includes(searchTerm) || searchTerm.includes(s));
+                    
+                    searchResultsContent.innerHTML = `
+                        <div class="search-no-results">
+                            <h3>No se encontraron productos</h3>
+                            <p>No hay productos que coincidan con "${searchInput.value.trim()}"</p>
+                            ${sugerenciasFiltradas.length > 0 ? `
+                                <div class="search-suggestions">
+                                    <p>Prueba con:</p>
+                                    ${sugerenciasFiltradas.map(s => `
+                                        <a href="#" class="search-suggestion" onclick="buscarSugerencia('${s}')">${s}</a>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }
+            }, 500); // Delay de 500ms para mejor UX
+        }
+
+        // Función para buscar sugerencias
+        window.buscarSugerencia = function(termino) {
+            searchInput.value = termino;
+            mostrarResultadosBusqueda();
+        };
+
+        searchButton.addEventListener('click', mostrarResultadosBusqueda);
+    }
+
+    // Cerrar overlay
+    if (closeSearch) {
+        closeSearch.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+        });
+    }
+
+    // Cerrar overlay al hacer clic fuera
+    if (searchOverlay) {
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) {
+                searchOverlay.classList.remove('active');
+            }
+        });
+    }
+
+    // Cerrar overlay con Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+            searchOverlay.classList.remove('active');
         }
     });
-
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            searchButton.click();
-        }
-    });
-}
+});
 
 // Lazy loading for images
 document.addEventListener('DOMContentLoaded', () => {
