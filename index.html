@@ -2,52 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- CSP optimizado para Amazon -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' 'unsafe-inline';
+        script-src 'self' 'unsafe-inline' *.amazon.com *.amazon-adsystem.com;
         style-src 'self' 'unsafe-inline';
         font-src 'self' data:;
-        img-src 'self' data: https://via.placeholder.com;
+        img-src 'self' data: https: *.amazon.com *.ssl-images-amazon.com *.media-amazon.com;
         object-src 'none';
         base-uri 'self';
         form-action 'self';
-        connect-src 'self' http://localhost:* ws://localhost:* wss://localhost:*;
+        connect-src 'self' *.amazon.com http://localhost:* ws://localhost:* wss://localhost:*;
     ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GadgetsUAE - Your Tech Destination in the Emirates</title>
-    <meta name="description" content="Find the best deals on gadgets and technology in the UAE. Compare prices and save on your Amazon and other online purchases.">
-    <meta name="keywords" content="UAE deals, gadgets, technology, Amazon UAE, best prices, price comparison, electronics, consoles, accessories, storage, smartwatches, audio, gaming">
-    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Optimizado -->
+    <title>GadgetsUAE - Best Tech Deals & Amazon Products in UAE | Electronics & Gadgets</title>
+    <meta name="description" content="Discover the best deals on gadgets, electronics, and technology in the UAE. Compare Amazon prices, find exclusive offers on smartphones, laptops, gaming consoles, and smart home devices. Free shipping available.">
+    <meta name="keywords" content="UAE gadgets, Amazon UAE deals, electronics Dubai, tech deals Emirates, best prices UAE, gadgets online, Amazon affiliate, technology shopping, smart devices UAE">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="GadgetsUAE">
+    <meta name="language" content="English">
+    
+    <!-- Canonical y URLs -->
     <link rel="canonical" href="https://gadgetsdxb.com/">
-    <!-- Open Graph -->
-    <meta property="og:title" content="GadgetsUAE - Your Tech Destination in the Emirates">
-    <meta property="og:description" content="Find the best deals on gadgets and technology in the UAE. Compare prices and save on your Amazon and other online purchases.">
+    <link rel="alternate" hreflang="en" href="https://gadgetsdxb.com/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Open Graph optimizado -->
+    <meta property="og:title" content="GadgetsUAE - Best Tech Deals & Amazon Products in UAE">
+    <meta property="og:description" content="Discover the best deals on gadgets, electronics, and technology in the UAE. Compare Amazon prices and find exclusive offers.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gadgetsdxb.com/">
-    <meta property="og:image" content="assets/images/banners/products.jpg">
-    <!-- Schema.org markup for products -->
+    <meta property="og:image" content="https://gadgetsdxb.com/assets/images/banners/products.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GadgetsUAE">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GadgetsUAE - Best Tech Deals in UAE">
+    <meta name="twitter:description" content="Find the best Amazon deals on gadgets and electronics in the UAE">
+    <meta name="twitter:image" content="https://gadgetsdxb.com/assets/images/banners/products.jpg">
+    
+    <!-- Schema.org mejorado para Amazon -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "GadgetsUAE",
         "description": "Your destination to find the best deals on gadgets and technology in the UAE",
-        "url": "https://gadgetsdxb.com"
+        "url": "https://gadgetsdxb.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://gadgetsdxb.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GadgetsUAE",
+            "url": "https://gadgetsdxb.com",
+            "areaServed": "UAE",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Electronics and Gadgets",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Product",
+                            "name": "Consumer Electronics",
+                            "category": "Electronics"
+                        }
+                    }
+                ]
+            }
+        }
     }
     </script>
-    <!-- Preload critical fonts -->
+    
+    <!-- Preload crítico optimizado -->
     <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="preload" href="assets/fonts/BebasNeue.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <!-- Preload CSS -->
     <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/fonts.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </noscript>
+    
+    <!-- DNS Prefetch para Amazon -->
+    <link rel="dns-prefetch" href="//amazon.com">
+    <link rel="dns-prefetch" href="//ssl-images-amazon.com">
+    <link rel="dns-prefetch" href="//media-amazon.com">
+    
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Optimización de imágenes -->
+    <style>
+        /* Lazy loading y optimización de imágenes */
+        img {
+            loading: lazy;
+            decoding: async;
+        }
+        
+        /* Imágenes críticas */
+        .hero img,
+        .prime-banner img {
+            loading: eager;
+        }
+        
+        /* Responsive images */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* WebP support */
+        .webp .product-image {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body id="index">
     <div id="menu-include"></div>
@@ -450,6 +530,63 @@
        });
        if (btn) btn.dataset.id = product.id;
      });
+   });
+   </script>
+
+   <!-- Script de optimización de imágenes -->
+   <script>
+   // Detectar soporte WebP
+   function supportsWebP() {
+       return new Promise(resolve => {
+           const webP = new Image();
+           webP.onload = webP.onerror = () => resolve(webP.height === 2);
+           webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+       });
+   }
+   
+   // Aplicar optimizaciones
+   supportsWebP().then(hasWebP => {
+       if (hasWebP) {
+           document.documentElement.classList.add('webp');
+       }
+   });
+   
+   // Lazy loading mejorado para imágenes
+   if ('IntersectionObserver' in window) {
+       const imageObserver = new IntersectionObserver((entries, observer) => {
+           entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                   const img = entry.target;
+                   if (img.dataset.src) {
+                       img.src = img.dataset.src;
+                       img.removeAttribute('data-src');
+                   }
+                   img.classList.remove('lazy');
+                   imageObserver.unobserve(img);
+               }
+           });
+       });
+       
+       document.querySelectorAll('img[data-src]').forEach(img => {
+           imageObserver.observe(img);
+       });
+   }
+   
+   // Optimización de rendimiento
+   window.addEventListener('load', () => {
+       // Precargar imágenes críticas
+       const criticalImages = [
+           'assets/images/prime/amazonPrime.png',
+           'assets/images/banners/products.jpg'
+       ];
+       
+       criticalImages.forEach(src => {
+           const link = document.createElement('link');
+           link.rel = 'preload';
+           link.as = 'image';
+           link.href = src;
+           document.head.appendChild(link);
+       });
    });
    </script>
 </body>

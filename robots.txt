@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gadgetsdxb.com/sitemap.xml
+
+# Amazon bot
+User-agent: Amazonbot
+Allow: /
+
+# Optimización para crawlers
+Crawl-delay: 1
