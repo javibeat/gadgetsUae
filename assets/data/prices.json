@@ -1,0 +1,38 @@
+{
+  "walkingpad": {
+    "current": "1399.00",
+    "original": "1899.00",
+    "discount": "-26%",
+    "lastUpdate": "2025-07-05T10:33:01.606Z"
+  },
+  "roborock": {
+    "current": "1699.00",
+    "original": "3099.00",
+    "discount": "-45%",
+    "lastUpdate": "2025-07-05T10:33:05.707Z"
+  },
+  "wemart": {
+    "current": "629.00",
+    "original": "729.00",
+    "discount": "-14%",
+    "lastUpdate": "2025-07-05T10:33:10.108Z"
+  },
+  "switch2": {
+    "current": "1825.00",
+    "original": "2899.00",
+    "discount": "-37%",
+    "lastUpdate": "2025-07-05T10:38:55.928Z"
+  },
+  "procontroller": {
+    "current": "347.97",
+    "original": null,
+    "discount": null,
+    "lastUpdate": "2025-07-05T10:33:18.832Z"
+  },
+  "sandisk-switch2-sd": {
+    "current": "223.03",
+    "original": null,
+    "discount": null,
+    "lastUpdate": "2025-07-05T10:33:39.628Z"
+  }
+}

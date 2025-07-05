@@ -1,8 +1,8 @@
-// Price Updater - Actualización automática de precios de Amazon
-// Usando web scraping a través de proxy backend
+// Price Updater - Sistema manual de actualización de precios
+// Lee precios desde un archivo JSON local para mayor confiabilidad
 class PriceUpdater {
     constructor() {
-        this.updateInterval = 12 * 60 * 60 * 1000; // 12 horas
+        this.updateInterval = 60 * 60 * 1000; // 1 hora
         this.products = [];
         this.isUpdating = false;
         this.init();
@@ -12,7 +12,27 @@ class PriceUpdater {
         if (window.products) {
             this.products = window.products;
             await this.loadCachedPrices();
+            await this.loadPricesFromFile();
             this.startAutoUpdate();
+        }
+    }
+
+    async loadPricesFromFile() {
+        try {
+            console.log('📦 Cargando precios desde archivo...');
+            const response = await fetch('assets/data/prices.json');
+            if (response.ok) {
+                const priceData = await response.json();
+                for (const [productId, data] of Object.entries(priceData)) {
+                    this.updateProductDisplay(productId, data);
+                    this.savePriceToStorage(productId, data);
+                }
+                console.log('✅ Precios cargados desde archivo');
+            } else {
+                console.log('⚠️ No se encontró archivo de precios, usando caché local');
+            }
+        } catch (error) {
+            console.log('⚠️ Error cargando precios desde archivo:', error.message);
         }
     }
 
@@ -35,144 +55,35 @@ class PriceUpdater {
         this.isUpdating = true;
         console.log('🔄 Actualizando precios...');
         
-        for (const product of this.products) {
-            try {
-                const amazonUrl = product.url;
-                const priceData = await this.scrapeAmazonPrice(amazonUrl);
-                
-                if (priceData) {
-                    await this.updateProductPrice(product.id, priceData);
-                    // Pausa entre requests para evitar bloqueos
-                    await this.delay(2000);
-                }
-            } catch (error) {
-                console.error(`Error actualizando precio para ${product.id}:`, error);
-            }
+        try {
+            await this.loadPricesFromFile();
+        } catch (error) {
+            console.error('Error actualizando precios:', error);
         }
         
         this.isUpdating = false;
         console.log('✅ Actualización completada');
     }
 
-    async scrapeAmazonPrice(url) {
-        const proxyServices = [
-            {
-                name: 'AllOrigins',
-                url: `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`,
-                parser: (data) => data.contents
-            },
-            {
-                name: 'CORS Anywhere',
-                url: `https://cors-anywhere.herokuapp.com/${url}`,
-                parser: (data) => data
-            },
-            {
-                name: 'JSONP',
-                url: `https://jsonp.afeld.me/?url=${encodeURIComponent(url)}`,
-                parser: (data) => data
-            }
-        ];
-
-        for (const service of proxyServices) {
-            try {
-                console.log(`🔄 Intentando con ${service.name}...`);
-                
-                const response = await fetch(service.url, {
-                    method: 'GET',
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                const html = service.parser(data);
-                
-                if (html) {
-                    const priceData = this.parseAmazonPrice(html);
-                    if (priceData) {
-                        console.log(`✅ Precio obtenido con ${service.name}`);
-                        return priceData;
-                    }
-                }
-                
-            } catch (error) {
-                console.error(`❌ Error con ${service.name}:`, error.message);
-                continue;
-            }
-        }
-        
-        console.error('❌ Todos los servicios de proxy fallaron');
-        return null;
-    }
-
-    parseAmazonPrice(html) {
-        try {
-            // Crear un DOM parser temporal
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            
-            // Buscar precio en diferentes selectores de Amazon
-            const priceSelectors = [
-                '.a-price-whole',
-                '.a-price .a-offscreen',
-                '#priceblock_ourprice',
-                '#priceblock_dealprice',
-                '.a-price-range .a-offscreen',
-                '[data-a-color="price"] .a-offscreen'
-            ];
-            
-            let priceText = null;
-            for (const selector of priceSelectors) {
-                const element = doc.querySelector(selector);
-                if (element) {
-                    priceText = element.textContent.trim();
-                    break;
-                }
-            }
-            
-            if (priceText) {
-                // Extraer solo números y decimales
-                const priceMatch = priceText.match(/[\d,]+\.?\d*/);
-                if (priceMatch) {
-                    const price = parseFloat(priceMatch[0].replace(/,/g, ''));
-                    return {
-                        current: price.toFixed(2),
-                        original: null,
-                        discount: null
-                    };
-                }
-            }
-            
-            return null;
-        } catch (error) {
-            console.error('Error parsing price:', error);
-            return null;
-        }
-    }
-
-    async updateProductPrice(productId, priceData) {
-        this.updateProductDisplay(productId, priceData);
-        this.savePriceToStorage(productId, priceData);
-        console.log(`✅ Precio actualizado para ${productId}: AED ${priceData.current}`);
-    }
-
     updateProductDisplay(productId, priceData) {
         // Buscar elementos por ID del producto o por contenido
         const productCard = this.findProductCard(productId);
-        if (!productCard) return;
+        if (!productCard) {
+            console.log(`⚠️ No se encontró tarjeta para producto: ${productId}`);
+            return;
+        }
 
         const priceElements = productCard.querySelectorAll('.current-price');
         const originalElements = productCard.querySelectorAll('.original-price');
         const discountElements = productCard.querySelectorAll('.discount');
         
-        priceElements.forEach(el => {
-            el.textContent = `AED ${priceData.current}`;
-            el.style.animation = 'priceUpdate 0.5s ease-in-out';
-        });
+        if (priceElements.length > 0) {
+            priceElements.forEach(el => {
+                el.textContent = `AED ${priceData.current}`;
+                el.style.animation = 'priceUpdate 0.5s ease-in-out';
+            });
+            console.log(`✅ Precio actualizado para ${productId}: AED ${priceData.current}`);
+        }
         
         if (priceData.original && originalElements.length > 0) {
             originalElements.forEach(el => {
@@ -220,16 +131,12 @@ class PriceUpdater {
 
     startAutoUpdate() {
         setInterval(() => {
-            this.updateAllPrices();
+            this.loadPricesFromFile();
         }, this.updateInterval);
     }
 
     async manualUpdate() {
         await this.updateAllPrices();
-    }
-
-    delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
     }
 }
 
