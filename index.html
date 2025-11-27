@@ -164,62 +164,80 @@
             <div class="container">
                 <!-- Banner Amazon Prime Carrusel -->
                 <div class="prime-banner" style="display: flex; justify-content: center; margin-bottom: 2rem;">
-                    <a href="https://amzn.to/3Tn9NkR" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 100%;">
+                    <a id="prime-carousel-link" href="https://amzn.to/3Tn9NkR" target="_blank" rel="noopener noreferrer" style="display: block; max-width: 100%;">
                         <img id="prime-carousel-img" src="assets/images/prime/amazonPrime.png" alt="Amazon Prime Banner" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: opacity 0.5s;">
                     </a>
                 </div>
                 <script>
-                const primeImages = [
-                  'assets/images/prime/amazonPrime.png',
-                  'assets/images/prime/bazaar.jpg'
+                const primeSlides = [
+                  {
+                    src: 'assets/images/prime/amazonPrime.png',
+                    link: 'https://amzn.to/3Tn9NkR',
+                    alt: 'Amazon Prime Banner'
+                  },
+                  {
+                    src: 'assets/images/banners/white.png',
+                    link: 'https://amzn.to/482r2Aa',
+                    alt: 'Amazon White Friday Mega Deals'
+                  },
+                  {
+                    src: 'assets/images/banners/card.png',
+                    link: 'https://amzn.to/4p63kJn',
+                    alt: 'Amazon Credit Card Unlimited Joy'
+                  }
                 ];
                 let primeIndex = 0;
                 setInterval(() => {
-                  primeIndex = (primeIndex + 1) % primeImages.length;
+                  primeIndex = (primeIndex + 1) % primeSlides.length;
                   const img = document.getElementById('prime-carousel-img');
-                  if(img) {
-                    img.style.opacity = 0;
-                    setTimeout(() => {
-                      img.src = primeImages[primeIndex];
-                      img.style.opacity = 1;
-                    }, 300);
-                  }
+                  const link = document.getElementById('prime-carousel-link');
+                  if(!img || !link) return;
+                  img.style.opacity = 0;
+                  setTimeout(() => {
+                    const slide = primeSlides[primeIndex];
+                    img.src = slide.src;
+                    img.alt = slide.alt;
+                    link.href = slide.link;
+                    img.style.opacity = 1;
+                  }, 300);
                 }, 5000);
                 </script>
-                <h2 class="section-title">Daily Deals</h2>
-                <div class="countdown-timer" id="dealCountdown">Ends in: 23:59:59</div>
+                <h2 class="section-title">Trending Hot Products</h2>
+                <div class="countdown-timer" id="dealCountdown">Ofertas destacadas actualizadas a diario</div>
                 <div class="products-grid daily-deals-products">
-                    <!-- Product 1: WalkingPad -->
+                    <!-- Product 1: Kindle Colorsoft -->
                     <div class="product-card">
                         <div class="product-badges">
                             <span class="badge prime">Prime</span>
                             <span class="badge shipping">Free Shipping</span>
+                            <span class="badge special">Black Friday</span>
                         </div>
-                        <div class="product-image-container walkingpad-gallery">
-                            <img src="assets/images/walkingpad/51-THl22eqL._AC_SL1000_.jpg" alt="KingSmith WalkingPad A1 Pro – Foldable Under Desk Treadmill" class="product-image main-image" id="walkingpad-main-img">
+                        <div class="product-image-container kindlecolor-gallery">
+                            <img src="assets/images/kindlecolor/1.jpg" alt="Amazon Kindle Colorsoft 16GB color display" class="product-image main-image" id="kindlecolor-main-img">
                             <div class="gallery-thumbnails">
-                                <img src="assets/images/walkingpad/51-THl22eqL._AC_SL1000_.jpg" alt="WalkingPad 1" class="thumb selected" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/51-THl22eqL._AC_SL1000_.jpg'; setSelectedThumb(this)">
-                                <img src="assets/images/walkingpad/51ObL5YsNtL._AC_SL1000_.jpg" alt="WalkingPad 2" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/51ObL5YsNtL._AC_SL1000_.jpg'; setSelectedThumb(this)">
-                                <img src="assets/images/walkingpad/61+IaebrWRL._AC_SL1500_.jpg" alt="WalkingPad 3" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/61+IaebrWRL._AC_SL1500_.jpg'; setSelectedThumb(this)">
-                                <img src="assets/images/walkingpad/61Nlixr3GDL._AC_SL1000_.jpg" alt="WalkingPad 4" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/61Nlixr3GDL._AC_SL1000_.jpg'; setSelectedThumb(this)">
-                                <img src="assets/images/walkingpad/61NWiPKv6ML._AC_SL1000_.jpg" alt="WalkingPad 5" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/61NWiPKv6ML._AC_SL1000_.jpg'; setSelectedThumb(this)">
-                                <img src="assets/images/walkingpad/61YfUU-rQBL._AC_SL1000_.jpg" alt="WalkingPad 6" class="thumb" onclick="document.getElementById('walkingpad-main-img').src='assets/images/walkingpad/61YfUU-rQBL._AC_SL1000_.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/1.jpg" alt="Kindle Colorsoft 1" class="thumb selected" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/1.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/2.jpg" alt="Kindle Colorsoft 2" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/2.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/3.jpg" alt="Kindle Colorsoft 3" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/3.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/4.jpg" alt="Kindle Colorsoft 4" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/4.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/5.jpg" alt="Kindle Colorsoft 5" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/5.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/6.jpg" alt="Kindle Colorsoft 6" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/6.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/kindlecolor/7.jpg" alt="Kindle Colorsoft 7" class="thumb" onclick="document.getElementById('kindlecolor-main-img').src='assets/images/kindlecolor/7.jpg'; setSelectedThumb(this)">
                             </div>
                         </div>
                         <div class="product-info">
                             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
-                                <h3 style="margin: 0;">KingSmith WalkingPad A1 Pro – Foldable Under Desk Treadmill</h3>
+                                <h3 style="margin: 0;">Introducing Amazon Kindle Colorsoft (16 GB)</h3>
                             </div>
-                            <p class="product-category">Fitness / Treadmills</p>
+                            <p class="product-category">E-Readers / Tablets</p>
                             <div class="product-footer">
                                 <div class="price-history" style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
-                                    <span class="discount" style="margin-bottom: 0;">-26%</span>
-                                    <span class="original-price" style="font-size: 0.95em;">AED 1,899.00</span>
-                                    <span class="current-price" id="walkingpad-price" style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED 1,399.00</span>
+                                    <span class="discount" style="margin-bottom: 0;">-29%</span>
+                                    <span class="original-price" style="font-size: 0.95em;">AED 959.00</span>
+                                    <span class="current-price" id="kindlecolor-price" style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED 679.00</span>
                                 </div>
-                                <a href="https://amzn.to/3TnS5h7" class="product-cta" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+                                <a href="https://amzn.to/4rvuvir" class="product-cta" target="_blank" rel="noopener noreferrer">View on Amazon</a>
                             </div>
-                            <button class="favorite-btn" data-id="walkingpad" aria-label="Add to favorites">&#9825;</button>
+                            <button class="favorite-btn" data-id="kindle-colorsoft" aria-label="Add to favorites">&#9825;</button>
                         </div>
                     </div>
                     <!-- Product 2: Roborock S7 Max Ultra -->
