@@ -18,21 +18,21 @@
     "lastUpdate": "2025-07-05T10:33:10.108Z"
   },
   "switch2": {
-    "current": "1825.00",
-    "original": "2899.00",
-    "discount": "-37%",
-    "lastUpdate": "2025-07-05T10:38:55.928Z"
+    "current": "1677.00",
+    "original": "1767.00",
+    "discount": "-5%",
+    "lastUpdate": "2025-11-27T09:55:00.000Z"
   },
   "procontroller": {
-    "current": "347.97",
-    "original": null,
-    "discount": null,
-    "lastUpdate": "2025-07-05T10:33:18.832Z"
+    "current": "330.00",
+    "original": "347.00",
+    "discount": "-5%",
+    "lastUpdate": "2025-11-27T09:55:00.000Z"
   },
   "sandisk-switch2-sd": {
-    "current": "223.03",
+    "current": "249.00",
     "original": null,
     "discount": null,
-    "lastUpdate": "2025-07-05T10:33:39.628Z"
+    "lastUpdate": "2025-11-27T09:55:00.000Z"
   }
 }
