@@ -1,27 +1,9 @@
 {
-  "walkingpad": {
-    "current": "1399.00",
-    "original": "1899.00",
-    "discount": "-26%",
-    "lastUpdate": "2025-07-05T10:33:01.606Z"
-  },
-  "roborock": {
-    "current": "1699.00",
-    "original": "3099.00",
-    "discount": "-45%",
-    "lastUpdate": "2025-07-05T10:33:05.707Z"
-  },
-  "wemart": {
-    "current": "629.00",
-    "original": "729.00",
-    "discount": "-14%",
-    "lastUpdate": "2025-07-05T10:33:10.108Z"
-  },
   "switch2": {
-    "current": "1677.00",
-    "original": "1767.00",
-    "discount": "-5%",
-    "lastUpdate": "2025-11-27T09:55:00.000Z"
+    "current": "1899.00",
+    "original": "1899.00",
+    "discount": null,
+    "lastUpdate": "2025-12-02T11:00:00.000Z"
   },
   "procontroller": {
     "current": "330.00",
@@ -34,5 +16,24 @@
     "original": null,
     "discount": null,
     "lastUpdate": "2025-11-27T09:55:00.000Z"
+  }
+,
+  "kindlecolor": {
+    "current": "959.00",
+    "original": null,
+    "discount": null,
+    "lastUpdate": "2025-12-02T10:00:00.000Z"
+  },
+  "xiaomivacuumx20": {
+    "current": "1402.95",
+    "original": "1699.00",
+    "discount": "-17%",
+    "lastUpdate": "2025-12-02T10:00:00.000Z"
+  },
+  "nespresso": {
+    "current": "338.00",
+    "original": "749.00",
+    "discount": "-55%",
+    "lastUpdate": "2025-12-02T10:00:00.000Z"
   }
 }
