@@ -50,5 +50,16 @@ body.post, body#blog { --menu-height: 50px; }
 /* Ensure post content sits below fixed header */
 body.post main.container { padding-top: calc(var(--menu-height)); }
 
+/* Post title block (placed between hero and article) */
+.post-title { text-align: center; margin: 0.5rem 0 1rem 0; }
+.post-title h1 { margin: 0; font-size: 2rem; color: #0b1220; }
+.post-excerpt { color: #6b7280; margin-top: 0.5rem; }
+
+/* Ensure there's spacing before the footer */
+body.post main.container { padding-bottom: 60px; }
+
+/* Slightly widen article max-width for reading */
+article { max-width: 900px; margin: 0 auto; line-height: 1.65; }
+
 /* Constrain regular images inside article so they don't overflow */
 article img { max-width: 100%; height: auto; display: block; border-radius: 8px; }

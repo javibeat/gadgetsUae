@@ -39,6 +39,11 @@ header {
     z-index: 1000;
 }
 
+:root { --menu-height: 72px; }
+
+/* Ensure the page content sits below the fixed header by default. */
+body { padding-top: var(--menu-height); }
+
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -139,7 +144,7 @@ header {
 
 .hero {
     max-width: 1200px;
-    margin: 140px auto 50px;
+    margin: 12px auto 50px;
     padding: 0 1.5rem;
     background: none;
 }
