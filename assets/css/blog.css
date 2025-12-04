@@ -61,5 +61,13 @@ body.post main.container { padding-bottom: 60px; }
 /* Slightly widen article max-width for reading */
 article { max-width: 900px; margin: 0 auto; line-height: 1.65; }
 
+/* Previous / Next post navigation */
+.post-nav { display:flex; justify-content:space-between; gap:12px; margin-top:2rem; margin-bottom:1.5rem; }
+.post-nav a { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; background:#fff; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.06); text-decoration:none; color:var(--black); font-weight:600; }
+.post-nav a:hover { transform:translateY(-2px); transition:transform .16s ease; }
+.post-nav .prev::before { content:'←'; margin-right:6px; opacity:0.8; }
+.post-nav .next::after { content:'→'; margin-left:6px; opacity:0.8; }
+.post-nav .disabled { opacity:0.45; pointer-events:none; }
+
 /* Constrain regular images inside article so they don't overflow */
 article img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
