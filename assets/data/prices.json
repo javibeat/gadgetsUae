@@ -1,9 +1,9 @@
 {
   "switch2": {
-    "current": "1899.00",
+    "current": "1710.00",
     "original": "1899.00",
-    "discount": null,
-    "lastUpdate": "2025-12-02T11:00:00.000Z"
+    "discount": "-10%",
+    "lastUpdate": "2025-12-04T10:00:00.000Z"
   },
   "procontroller": {
     "current": "330.00",
@@ -25,15 +25,15 @@
     "lastUpdate": "2025-12-02T10:00:00.000Z"
   },
   "xiaomivacuumx20": {
-    "current": "1402.95",
+    "current": "1384.36",
     "original": "1699.00",
-    "discount": "-17%",
-    "lastUpdate": "2025-12-02T10:00:00.000Z"
+    "discount": "-18%",
+    "lastUpdate": "2025-12-04T10:00:00.000Z"
   },
   "nespresso": {
-    "current": "338.00",
+    "current": "306.42",
     "original": "749.00",
-    "discount": "-55%",
-    "lastUpdate": "2025-12-02T10:00:00.000Z"
+    "discount": "-59%",
+    "lastUpdate": "2025-12-04T10:00:00.000Z"
   }
 }
