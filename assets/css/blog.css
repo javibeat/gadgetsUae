@@ -40,9 +40,15 @@ body#blog .hero-section h1 { font-size: 2rem !important; line-height: 1.05 !impo
 body#blog .hero-section p { margin: 0 !important; font-size: 0.95rem !important; color: rgba(255,255,255,0.92) !important; }
 
 /* Post pages: constrain hero image and spacing */
-.post-hero { max-height: 420px; overflow: hidden; border-radius: 12px; margin: 1rem 0; }
-.post-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Set a default menu height for posts and blog so hero sits below header */
+body.post, body#blog { --menu-height: 50px; }
+
+.post-hero { max-height: 560px; overflow: hidden; border-radius: 12px; margin: 1rem 0; display:flex; align-items:center; justify-content:center; }
+.post-hero img { width: 100%; height: auto; max-height: 540px; object-fit: contain; display: block; }
 @media (max-width: 640px) { .post-hero { max-height: 260px; } }
 
 /* Ensure post content sits below fixed header */
 body.post main.container { padding-top: calc(var(--menu-height)); }
+
+/* Constrain regular images inside article so they don't overflow */
+article img { max-width: 100%; height: auto; display: block; border-radius: 8px; }

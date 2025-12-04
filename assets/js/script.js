@@ -1,7 +1,7 @@
 // Load the menu
 document.addEventListener('DOMContentLoaded', function() {
-    // Load the menu
-    fetch('menu.html')
+    // Load the menu (use absolute path to work from any page path)
+    fetch('/menu.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -499,7 +499,7 @@ function includeHTML(selector, url, callback) {
 document.addEventListener('DOMContentLoaded', () => {
   // Include footer
   if(document.getElementById('footer-include')) {
-    includeHTML('#footer-include', 'footer.html');
+        includeHTML('#footer-include', '/footer.html');
   }
 });
 
