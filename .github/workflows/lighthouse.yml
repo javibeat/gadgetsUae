@@ -1,0 +1,21 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install lighthouse-ci
+        run: |
+          npm install -g @lhci/cli@0.8.x
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun --collect.settings.chromeFlags="--no-sandbox"

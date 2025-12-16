@@ -113,72 +113,19 @@
         }
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Amazon UAE Deals 2025",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                    "@type": "Product",
-                    "name": "Amazon Kindle Colorsoft (16 GB)",
-                    "image": "https://gadgetsdxb.com/assets/images/kindlecolor/1.jpg",
-                    "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "AED",
-                        "price": "959.00",
-                        "priceValidUntil": "2026-01-31",
-                        "availability": "https://schema.org/InStock",
-                        "url": "https://amzn.to/4rvuvir"
-                    }
-                }
-            },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "item": {
-                            "@type": "Product",
-                            "name": "Xiaomi Robot Vacuum X20 Pro",
-                            "image": "https://gadgetsdxb.com/assets/images/xiaomivacuumx20/1.jpg",
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "AED",
-                                "price": "1098.00",
-                                "priceValidUntil": "2026-01-31",
-                                "availability": "https://schema.org/InStock",
-                                "url": "https://amzn.to/48BJqQt"
-                            }
-                        }
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "item": {
-                            "@type": "Product",
-                            "name": "Nespresso Inissia coffee machine (UAE Version)",
-                            "image": "https://gadgetsdxb.com/assets/images/nespresso/1.jpg",
-                            "offers": {
-                                "@type": "Offer",
-                                "priceCurrency": "AED",
-                                "price": "375.00",
-                                "priceValidUntil": "2025-12-31",
-                                "availability": "https://schema.org/InStock",
-                                "url": "https://amzn.to/4oNisdJ"
-                            }
-                        }
-                    }
-        ]
-    }
-    </script>
+    <!-- ItemList JSON-LD will be injected dynamically from /assets/js/jsonld-injector.js -->
+    <script id="ld-itemlist-placeholder" type="application/ld+json"></script>
 
     <!-- Preload crítico optimizado -->
     <link rel="preload" href="assets/fonts/ClashGrotesk-Regular.otf" as="font" type="font/otf" crossorigin="anonymous">
     <link rel="preload" href="assets/fonts/BebasNeue.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Preload LCP product images -->
+    <link rel="preload" href="/assets/images/xiaomivacuumx20/1.jpg" as="image">
+    <link rel="preload" href="/assets/images/nespresso/1.jpg" as="image">
+    <link rel="preload" href="/assets/images/kindlecolor/1.jpg" as="image">
 
     <!-- DNS Prefetch para Amazon -->
     <link rel="preconnect" href="https://amzn.to">
@@ -363,7 +310,9 @@
                         </div>
                         <div class="product-image-container kindlecolor-gallery">
                             <img src="assets/images/kindlecolor/1.jpg" alt="Amazon Kindle Colorsoft 16GB color display"
-                                class="product-image main-image" id="kindlecolor-main-img" loading="lazy" decoding="async" width="800" height="800">
+                                class="product-image main-image" id="kindlecolor-main-img" loading="lazy" decoding="async" width="800" height="800"
+                                srcset="/assets/images/kindlecolor/1.jpg 1200w, /assets/images/kindlecolor/1.jpg 600w"
+                                sizes="(max-width:600px) 100vw, 600px">
                             <div class="gallery-thumbnails">
                                 <img src="assets/images/kindlecolor/1.jpg" alt="Kindle Colorsoft 1" loading="lazy" decoding="async" width="200" height="140"
                                     class="thumb selected"
@@ -414,7 +363,9 @@
                         <div class="product-image-container xiaomivacuum-gallery">
                             <img src="assets/images/xiaomivacuumx20/1.jpg"
                                 alt="Xiaomi Robot Vacuum X20 Pro with all-in-one station"
-                                class="product-image main-image" id="xiaomi-vacuum-main-img" loading="lazy" decoding="async" width="1000" height="700">
+                                class="product-image main-image" id="xiaomi-vacuum-main-img" loading="lazy" decoding="async" width="1000" height="700"
+                                srcset="/assets/images/xiaomivacuumx20/1.jpg 1200w, /assets/images/xiaomivacuumx20/1.jpg 600w"
+                                sizes="(max-width:600px) 100vw, 600px">
                             <div class="gallery-thumbnails">
                                 <img src="assets/images/xiaomivacuumx20/1.jpg" alt="Xiaomi X20 Pro 1" class="thumb selected" loading="lazy" decoding="async" width="140" height="90"
                                     onclick="document.getElementById('xiaomi-vacuum-main-img').src='assets/images/xiaomivacuumx20/1.jpg'; setSelectedThumb(this)">
@@ -475,7 +426,9 @@
                         </div>
                         <div class="product-image-container nespresso-gallery">
                             <img src="assets/images/nespresso/1.jpg" alt="Nespresso Inissia UAE White"
-                                class="product-image main-image" id="nespresso-main-img" loading="lazy" decoding="async" width="800" height="800">
+                                class="product-image main-image" id="nespresso-main-img" loading="lazy" decoding="async" width="800" height="800"
+                                srcset="/assets/images/nespresso/1.jpg 1200w, /assets/images/nespresso/1.jpg 600w"
+                                sizes="(max-width:600px) 100vw, 600px">
                             <div class="gallery-thumbnails">
                                 <img src="assets/images/nespresso/1.jpg" alt="Nespresso 1" class="thumb selected" loading="lazy" decoding="async" width="140" height="90"
                                     onclick="document.getElementById('nespresso-main-img').src='assets/images/nespresso/1.jpg'; setSelectedThumb(this)">
@@ -797,11 +750,12 @@
     <div id="footer-include"></div>
 
     <!-- Scripts -->
-    <script src="assets/js/products.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/price-updater.js"></script>
-    <script src="assets/js/daily-deals.js"></script>
-    <script src="assets/js/deals-scraper.js"></script>
+    <script src="assets/js/products.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/price-updater.js" defer></script>
+    <script src="assets/js/daily-deals.js" defer></script>
+    <script src="assets/js/deals-scraper.js" defer></script>
+    <script src="assets/js/jsonld-injector.js" defer></script>
     <script>
         function setSelectedThumb(el) {
             document.querySelectorAll('.gallery-thumbnails .thumb').forEach(t => t.classList.remove('selected'));
