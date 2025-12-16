@@ -23,9 +23,9 @@ const products = [
     title: 'Xiaomi Robot Vacuum X20 Pro with All-in-One Station',
     category: 'Home / Robotic Vacuums',
     image: 'assets/images/xiaomivacuumx20/1.jpg',
-    price: 'AED 1,370.00',
+    price: 'AED 1,098.00',
     original: 'AED 1,699.00',
-    discount: '-19%',
+    discount: '-35%',
     url: 'https://amzn.to/48BJqQt',
     gallery: [
       'assets/images/xiaomivacuumx20/1.jpg',
@@ -48,9 +48,9 @@ const products = [
     title: 'Nespresso Inissia coffee machine (UAE Version)',
     category: 'Kitchen / Coffee Machines',
     image: 'assets/images/nespresso/1.jpg',
-    price: 'AED 359.10',
+    price: 'AED 375.00',
     original: 'AED 749.00',
-    discount: '-52%',
+    discount: '-50%',
     url: 'https://amzn.to/4oNisdJ',
     gallery: [
       'assets/images/nespresso/1.jpg',
