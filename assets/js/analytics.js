@@ -418,6 +418,7 @@ class AnalyticsTracker {
                 removes: allEvents.filter(e => e.type === 'favorite' && e.action === 'remove').length
             },
             locations: this.getTopLocations(allEvents),
+            countries: this.getTopCountries(allEvents),
             sources: this.getTopSources(allEvents),
             referrers: this.getTopReferrers(allEvents),
             pages: this.getTopPages(allEvents),
@@ -511,6 +512,20 @@ class AnalyticsTracker {
         return Object.entries(locations)
             .sort((a, b) => b[1] - a[1])
             .map(([emirate, count]) => ({ emirate, count }));
+    }
+
+    // Get top countries
+    getTopCountries(events) {
+        const countries = {};
+        events.forEach(e => {
+            if (e.visitor && e.visitor.country) {
+                const country = e.visitor.country;
+                countries[country] = (countries[country] || 0) + 1;
+            }
+        });
+        return Object.entries(countries)
+            .sort((a, b) => b[1] - a[1])
+            .map(([country, count]) => ({ country, count }));
     }
 
     // Get top traffic sources

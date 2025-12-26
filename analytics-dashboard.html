@@ -304,6 +304,22 @@
                 </table>
             </div>
             <div class="section">
+                <h2>🌍 Top Countries</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Country</th>
+                            <th>Visits</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topCountriesTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="section">
                 <h2>🚥 Traffic Sources</h2>
                 <table class="table">
                     <thead>
@@ -316,21 +332,19 @@
                     <tbody id="topSourcesTable"></tbody>
                 </table>
             </div>
-        </div>
-
-        <!-- Top Referrers -->
-        <div class="section">
-            <h2>🌐 Top Referrers</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Domain</th>
-                        <th>Visits</th>
-                    </tr>
-                </thead>
-                <tbody id="topReferrersTable"></tbody>
-            </table>
+            <div class="section">
+                <h2>🌐 Top Referrers</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Domain</th>
+                            <th>Visits</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topReferrersTable"></tbody>
+                </table>
+            </div>
         </div>
 
         <!-- Recent Activity -->
@@ -341,7 +355,7 @@
                     <tr>
                         <th>Time</th>
                         <th>Event</th>
-                        <th>Location (Emirate)</th>
+                        <th>Location (City, Emirate, Country)</th>
                         <th>Source</th>
                         <th>IP Address</th>
                         <th>Type</th>
@@ -484,6 +498,16 @@
                 row.insertCell(2).textContent = l.count;
             });
 
+            // Top Countries
+            const countriesTable = document.getElementById('topCountriesTable');
+            countriesTable.innerHTML = '';
+            data.countries.slice(0, 10).forEach((c, i) => {
+                const row = countriesTable.insertRow();
+                row.insertCell(0).textContent = i + 1;
+                row.insertCell(1).textContent = c.country;
+                row.insertCell(2).textContent = c.count;
+            });
+
             // Top Sources
             const sourcesTable = document.getElementById('topSourcesTable');
             sourcesTable.innerHTML = '';
@@ -516,7 +540,7 @@
                 row.insertCell(0).textContent = time;
                 row.insertCell(1).textContent = e.type === 'pageview' ? `View: ${e.path}` : `${e.type}: ${e.productTitle || e.query || ''}`;
 
-                const loc = e.visitor ? `${e.visitor.emirate || ''} ${e.visitor.city || ''}` : 'Unknown';
+                const loc = e.visitor ? `${e.visitor.city || ''} ${e.visitor.emirate || ''} (${e.visitor.country || ''})`.trim() : 'Unknown';
                 row.insertCell(2).textContent = loc;
 
                 row.insertCell(3).textContent = e.visitor?.source || 'Direct';
