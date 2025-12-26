@@ -12,32 +12,38 @@ class AnalyticsTracker {
     init() {
         // Load existing events
         this.events = this.loadEvents();
-        
+
         // Track page view
         this.trackPageView();
-        
+
         // Track search functionality
         this.trackSearches();
-        
+
         // Track product interactions
         this.trackProductClicks();
-        
+
         // Track favorites
         this.trackFavorites();
-        
+
         // Auto-flush to prevent memory issues
         setInterval(() => this.flushEvents(), this.flushInterval);
-        
+
         // Flush on page unload
         window.addEventListener('beforeunload', () => this.flushEvents());
     }
 
     // Track page view
     trackPageView() {
+        // Skip tracking for the analytics dashboard itself
+        const currentPath = window.location.pathname;
+        if (currentPath.includes('analytics-dashboard')) {
+            return;
+        }
+
         const pageData = {
             type: 'pageview',
             url: window.location.href,
-            path: window.location.pathname,
+            path: currentPath,
             referrer: document.referrer,
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent,
@@ -45,9 +51,9 @@ class AnalyticsTracker {
             screenHeight: window.screen.height,
             language: navigator.language
         };
-        
+
         this.addEvent(pageData);
-        
+
         // Extract search terms from referrer
         if (document.referrer) {
             const searchTerms = this.extractSearchTerms(document.referrer);
@@ -62,7 +68,7 @@ class AnalyticsTracker {
         try {
             const url = new URL(referrer);
             const hostname = url.hostname.toLowerCase();
-            
+
             // Google search
             if (hostname.includes('google')) {
                 return url.searchParams.get('q');
@@ -89,7 +95,7 @@ class AnalyticsTracker {
     trackSearches() {
         const searchInput = document.querySelector('.search-input');
         const searchButton = document.querySelector('.search-button');
-        
+
         if (searchInput) {
             // Track search submissions
             if (searchButton) {
@@ -100,7 +106,7 @@ class AnalyticsTracker {
                     }
                 });
             }
-            
+
             // Track search on Enter key
             searchInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
@@ -122,7 +128,7 @@ class AnalyticsTracker {
             timestamp: new Date().toISOString(),
             url: window.location.href
         };
-        
+
         this.addEvent(searchData);
     }
 
@@ -137,7 +143,7 @@ class AnalyticsTracker {
                     const productId = productCard.querySelector('.favorite-btn')?.dataset.id;
                     const productTitle = productCard.querySelector('h3')?.textContent.trim();
                     const productPrice = productCard.querySelector('.current-price')?.textContent.trim();
-                    
+
                     this.trackProductClick({
                         productId: productId || 'unknown',
                         productTitle: productTitle || 'unknown',
@@ -146,7 +152,7 @@ class AnalyticsTracker {
                     });
                 }
             }
-            
+
             // Track "View on Amazon" buttons
             if (e.target.classList.contains('product-cta') || e.target.closest('.product-cta')) {
                 const link = e.target.href || e.target.closest('.product-cta')?.href;
@@ -154,7 +160,7 @@ class AnalyticsTracker {
                 if (productCard && link) {
                     const productId = productCard.querySelector('.favorite-btn')?.dataset.id;
                     const productTitle = productCard.querySelector('h3')?.textContent.trim();
-                    
+
                     this.trackProductClick({
                         productId: productId || 'unknown',
                         productTitle: productTitle || 'unknown',
@@ -179,7 +185,7 @@ class AnalyticsTracker {
             timestamp: new Date().toISOString(),
             page: window.location.pathname
         };
-        
+
         this.addEvent(clickData);
     }
 
@@ -191,10 +197,10 @@ class AnalyticsTracker {
                 const productId = btn.dataset.id;
                 const productCard = btn.closest('.product-card');
                 const productTitle = productCard?.querySelector('h3')?.textContent.trim();
-                
+
                 // Check if it's being added or removed
                 const isFavorite = btn.textContent.includes('♥') || btn.classList.contains('favorited');
-                
+
                 this.trackFavorite({
                     productId: productId || 'unknown',
                     productTitle: productTitle || 'unknown',
@@ -213,19 +219,19 @@ class AnalyticsTracker {
             action: data.action,
             timestamp: new Date().toISOString()
         };
-        
+
         this.addEvent(favoriteData);
     }
 
     // Add event to storage
     addEvent(event) {
         this.events.push(event);
-        
+
         // Limit events to prevent storage issues
         if (this.events.length > this.maxEvents) {
             this.events = this.events.slice(-this.maxEvents);
         }
-        
+
         // Save to localStorage
         this.saveEvents();
     }
@@ -263,7 +269,7 @@ class AnalyticsTracker {
     flushEvents() {
         // For now, just ensure events are saved
         this.saveEvents();
-        
+
         // In the future, you could send to a server endpoint:
         // fetch('/api/analytics', {
         //     method: 'POST',
@@ -279,7 +285,7 @@ class AnalyticsTracker {
         const last30d = new Date(now - 30 * 24 * 60 * 60 * 1000);
 
         const allEvents = this.events;
-        
+
         return {
             totalEvents: allEvents.length,
             pageViews: allEvents.filter(e => e.type === 'pageview').length,
@@ -314,11 +320,11 @@ class AnalyticsTracker {
     getTopSearches(events) {
         const searches = events.filter(e => e.type === 'search' && e.query);
         const queryCounts = {};
-        
+
         searches.forEach(e => {
             queryCounts[e.query] = (queryCounts[e.query] || 0) + 1;
         });
-        
+
         return Object.entries(queryCounts)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 20)
@@ -329,7 +335,7 @@ class AnalyticsTracker {
     getTopProducts(events) {
         const clicks = events.filter(e => e.type === 'product_click');
         const productCounts = {};
-        
+
         clicks.forEach(e => {
             const key = e.productId || e.productTitle;
             if (!productCounts[key]) {
@@ -341,7 +347,7 @@ class AnalyticsTracker {
             }
             productCounts[key].count++;
         });
-        
+
         return Object.values(productCounts)
             .sort((a, b) => b.count - a.count)
             .slice(0, 20);
@@ -351,7 +357,7 @@ class AnalyticsTracker {
     getTopReferrers(events) {
         const pageviews = events.filter(e => e.type === 'pageview' && e.referrer);
         const referrerCounts = {};
-        
+
         pageviews.forEach(e => {
             try {
                 const url = new URL(e.referrer);
@@ -361,7 +367,7 @@ class AnalyticsTracker {
                 // Skip invalid URLs
             }
         });
-        
+
         return Object.entries(referrerCounts)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 20)
@@ -372,12 +378,12 @@ class AnalyticsTracker {
     getTopPages(events) {
         const pageviews = events.filter(e => e.type === 'pageview');
         const pageCounts = {};
-        
+
         pageviews.forEach(e => {
             const path = e.path || '/';
             pageCounts[path] = (pageCounts[path] || 0) + 1;
         });
-        
+
         return Object.entries(pageCounts)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 20)
@@ -387,7 +393,7 @@ class AnalyticsTracker {
     // Get timeline data
     getTimeline(events) {
         const timeline = {};
-        
+
         events.forEach(e => {
             const date = new Date(e.timestamp).toISOString().split('T')[0];
             if (!timeline[date]) {
@@ -398,13 +404,13 @@ class AnalyticsTracker {
                     favorites: 0
                 };
             }
-            
+
             if (e.type === 'pageview') timeline[date].pageviews++;
             if (e.type === 'search') timeline[date].searches++;
             if (e.type === 'product_click') timeline[date].productClicks++;
             if (e.type === 'favorite') timeline[date].favorites++;
         });
-        
+
         return Object.entries(timeline)
             .sort((a, b) => a[0].localeCompare(b[0]))
             .map(([date, data]) => ({ date, ...data }));
@@ -425,7 +431,7 @@ class AnalyticsTracker {
     exportCSV() {
         const analytics = this.getAnalytics();
         let csv = 'Metric,Value\n';
-        
+
         csv += `Total Events,${analytics.totalEvents}\n`;
         csv += `Page Views,${analytics.pageViews}\n`;
         csv += `Total Searches,${analytics.searches.total}\n`;
@@ -434,22 +440,22 @@ class AnalyticsTracker {
         csv += `Product Clicks,${analytics.productClicks.total}\n`;
         csv += `Favorites Added,${analytics.favorites.adds}\n`;
         csv += `Favorites Removed,${analytics.favorites.removes}\n\n`;
-        
+
         csv += 'Top Search Queries,Count\n';
         analytics.searches.topQueries.forEach(q => {
             csv += `"${q.query}",${q.count}\n`;
         });
-        
+
         csv += '\nTop Products,Count\n';
         analytics.productClicks.topProducts.forEach(p => {
             csv += `"${p.title}",${p.count}\n`;
         });
-        
+
         csv += '\nTop Referrers,Count\n';
         analytics.referrers.forEach(r => {
             csv += `"${r.domain}",${r.count}\n`;
         });
-        
+
         return csv;
     }
 }
@@ -462,4 +468,6 @@ if (document.readyState === 'loading') {
 } else {
     window.analytics = new AnalyticsTracker();
 }
+
+
 

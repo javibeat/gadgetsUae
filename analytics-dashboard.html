@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,22 @@
             padding: 2rem;
             font-family: 'Clash Grotesk', sans-serif;
         }
-        
+
         .login-container {
             max-width: 400px;
             margin: 10rem auto;
             background: #1e293b;
             padding: 2rem;
             border-radius: 1rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
-        
+
         .login-container h1 {
             margin-top: 0;
             text-align: center;
             color: #60a5fa;
         }
-        
+
         .login-container input {
             width: 100%;
             padding: 0.75rem;
@@ -39,7 +40,7 @@
             color: #f8fafc;
             font-size: 1rem;
         }
-        
+
         .login-container button {
             width: 100%;
             padding: 0.75rem;
@@ -52,23 +53,23 @@
             font-weight: 600;
             cursor: pointer;
         }
-        
+
         .login-container button:hover {
             background: #1d4ed8;
         }
-        
+
         .error {
             color: #ef4444;
             margin-top: 0.5rem;
             font-size: 0.9rem;
         }
-        
+
         .dashboard {
             display: none;
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .dashboard-header {
             display: flex;
             justify-content: space-between;
@@ -77,17 +78,17 @@
             padding-bottom: 1rem;
             border-bottom: 1px solid #334155;
         }
-        
+
         .dashboard-header h1 {
             margin: 0;
             color: #60a5fa;
         }
-        
+
         .export-buttons {
             display: flex;
             gap: 1rem;
         }
-        
+
         .export-buttons button {
             padding: 0.5rem 1rem;
             background: #2563eb;
@@ -97,65 +98,65 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
-        
+
         .export-buttons button:hover {
             background: #1d4ed8;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-        
+
         .stat-card {
             background: #1e293b;
             padding: 1.5rem;
             border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-        
+
         .stat-card h3 {
             margin: 0 0 0.5rem 0;
             color: #94a3b8;
             font-size: 0.9rem;
             font-weight: 400;
         }
-        
+
         .stat-card .value {
             font-size: 2rem;
             font-weight: 700;
             color: #60a5fa;
         }
-        
+
         .stat-card .subvalue {
             font-size: 0.85rem;
             color: #64748b;
             margin-top: 0.5rem;
         }
-        
+
         .section {
             background: #1e293b;
             padding: 1.5rem;
             border-radius: 1rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
-        
+
         .section h2 {
             margin-top: 0;
             color: #60a5fa;
             border-bottom: 1px solid #334155;
             padding-bottom: 0.5rem;
         }
-        
+
         .table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1rem;
         }
-        
+
         .table th {
             text-align: left;
             padding: 0.75rem;
@@ -164,16 +165,16 @@
             font-weight: 600;
             border-bottom: 1px solid #334155;
         }
-        
+
         .table td {
             padding: 0.75rem;
             border-bottom: 1px solid #334155;
         }
-        
+
         .table tr:hover {
             background: #0f172a;
         }
-        
+
         .badge {
             display: inline-block;
             padding: 0.25rem 0.5rem;
@@ -182,7 +183,7 @@
             border-radius: 0.25rem;
             font-size: 0.8rem;
         }
-        
+
         .refresh-btn {
             padding: 0.5rem 1rem;
             background: #10b981;
@@ -192,12 +193,13 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
-        
+
         .refresh-btn:hover {
             background: #059669;
         }
     </style>
 </head>
+
 <body>
     <!-- Login Screen -->
     <div id="loginScreen" class="login-container">
@@ -206,7 +208,7 @@
         <button onclick="checkPassword()">Login</button>
         <div id="errorMsg" class="error"></div>
     </div>
-    
+
     <!-- Dashboard -->
     <div id="dashboard" class="dashboard">
         <div class="dashboard-header">
@@ -217,7 +219,7 @@
                 <button onclick="refreshData()" class="refresh-btn">🔄 Refresh</button>
             </div>
         </div>
-        
+
         <!-- Overview Stats -->
         <div class="stats-grid">
             <div class="stat-card">
@@ -244,7 +246,7 @@
                 <div class="subvalue" id="favoritesBreakdown"></div>
             </div>
         </div>
-        
+
         <!-- Top Search Queries -->
         <div class="section">
             <h2>🔍 Top Search Queries</h2>
@@ -259,7 +261,7 @@
                 <tbody id="topSearchesTable"></tbody>
             </table>
         </div>
-        
+
         <!-- Top Products -->
         <div class="section">
             <h2>🛍️ Most Clicked Products</h2>
@@ -274,7 +276,7 @@
                 <tbody id="topProductsTable"></tbody>
             </table>
         </div>
-        
+
         <!-- Top Referrers -->
         <div class="section">
             <h2>🌐 Top Referrers</h2>
@@ -289,7 +291,7 @@
                 <tbody id="topReferrersTable"></tbody>
             </table>
         </div>
-        
+
         <!-- Timeline -->
         <div class="section">
             <h2>📈 Activity Timeline (Last 30 Days)</h2>
@@ -307,19 +309,30 @@
             </table>
         </div>
     </div>
-    
+
     <script src="assets/js/analytics.js"></script>
     <script>
         // Password protection
         // For static sites, password is stored here (not ideal but works without backend)
         // Change this password to your desired one
         const DASHBOARD_PASSWORD = 'Humnuj-bygnim-1badra';
-        
+        const SESSION_KEY = 'gadgetsUAE_dashboard_auth';
+
+        // Check for existing session on page load
+        (function checkSession() {
+            if (sessionStorage.getItem(SESSION_KEY) === 'authenticated') {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                loadDashboard();
+            }
+        })();
+
         function checkPassword() {
             const input = document.getElementById('passwordInput');
             const error = document.getElementById('errorMsg');
-            
+
             if (input.value === DASHBOARD_PASSWORD) {
+                sessionStorage.setItem(SESSION_KEY, 'authenticated');
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'block';
                 loadDashboard();
@@ -328,35 +341,38 @@
                 input.value = '';
             }
         }
-        
+
         // Allow Enter key to submit
         document.getElementById('passwordInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 checkPassword();
             }
         });
-        
+
         function loadDashboard() {
             if (!window.analytics) {
                 alert('Analytics not loaded. Please visit the main site first.');
                 return;
             }
-            
+
+            // Reload events from localStorage to get the latest data
+            window.analytics.events = window.analytics.loadEvents();
+
             const data = window.analytics.getAnalytics();
-            
+
             // Update stats
             document.getElementById('totalEvents').textContent = data.totalEvents.toLocaleString();
             document.getElementById('pageViews').textContent = data.pageViews.toLocaleString();
             document.getElementById('totalSearches').textContent = data.searches.total.toLocaleString();
-            document.getElementById('searchBreakdown').textContent = 
+            document.getElementById('searchBreakdown').textContent =
                 `${data.searches.internal} internal, ${data.searches.referrer} from search engines`;
             document.getElementById('productClicks').textContent = data.productClicks.total.toLocaleString();
-            document.getElementById('clicksBreakdown').textContent = 
+            document.getElementById('clicksBreakdown').textContent =
                 `Last 24h: ${data.productClicks.last24h} | Last 7d: ${data.productClicks.last7d}`;
             document.getElementById('favorites').textContent = data.favorites.total.toLocaleString();
-            document.getElementById('favoritesBreakdown').textContent = 
+            document.getElementById('favoritesBreakdown').textContent =
                 `${data.favorites.adds} added, ${data.favorites.removes} removed`;
-            
+
             // Top searches
             const searchesTable = document.getElementById('topSearchesTable');
             searchesTable.innerHTML = '';
@@ -366,7 +382,7 @@
                 row.insertCell(1).textContent = q.query;
                 row.insertCell(2).textContent = q.count;
             });
-            
+
             // Top products
             const productsTable = document.getElementById('topProductsTable');
             productsTable.innerHTML = '';
@@ -376,7 +392,7 @@
                 row.insertCell(1).textContent = p.title || p.id;
                 row.insertCell(2).textContent = p.count;
             });
-            
+
             // Top referrers
             const referrersTable = document.getElementById('topReferrersTable');
             referrersTable.innerHTML = '';
@@ -386,7 +402,7 @@
                 row.insertCell(1).textContent = r.domain;
                 row.insertCell(2).textContent = r.count;
             });
-            
+
             // Timeline (last 30 entries)
             const timelineTable = document.getElementById('timelineTable');
             timelineTable.innerHTML = '';
@@ -399,17 +415,21 @@
                 row.insertCell(4).textContent = entry.favorites;
             });
         }
-        
+
         function refreshData() {
+            // Reload events from localStorage and update dashboard
+            if (window.analytics) {
+                window.analytics.events = window.analytics.loadEvents();
+            }
             loadDashboard();
         }
-        
+
         function exportJSON() {
             if (!window.analytics) {
                 alert('Analytics not loaded');
                 return;
             }
-            
+
             const json = window.analytics.exportJSON();
             const blob = new Blob([json], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
@@ -419,13 +439,13 @@
             a.click();
             URL.revokeObjectURL(url);
         }
-        
+
         function exportCSV() {
             if (!window.analytics) {
                 alert('Analytics not loaded');
                 return;
             }
-            
+
             const csv = window.analytics.exportCSV();
             const blob = new Blob([csv], { type: 'text/csv' });
             const url = URL.createObjectURL(blob);
@@ -437,5 +457,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>
