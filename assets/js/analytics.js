@@ -4,14 +4,22 @@
 class AnalyticsTracker {
     constructor() {
         this.storageKey = 'gadgetsUAE_analytics';
+        this.adminKey = 'gadgetsUAE_is_admin';
         this.maxEvents = 1000; // Maximum events to store locally
         this.flushInterval = 5 * 60 * 1000; // Flush to server every 5 minutes
+        this.visitorInfo = this.getStoredVisitorInfo();
         this.init();
     }
 
     init() {
         // Load existing events
         this.events = this.loadEvents();
+
+        // Check if user is admin (site owner)
+        this.isAdmin = localStorage.getItem(this.adminKey) === 'true';
+
+        // Fetch visitor info (IP, Location, Emirate)
+        this.fetchVisitorInfo();
 
         // Track page view
         this.trackPageView();
@@ -30,6 +38,50 @@ class AnalyticsTracker {
 
         // Flush on page unload
         window.addEventListener('beforeunload', () => this.flushEvents());
+    }
+
+    // Capture visitor location and IP safely
+    async fetchVisitorInfo() {
+        if (this.visitorInfo) return;
+
+        try {
+            const response = await fetch('https://ipapi.co/json/');
+            const data = await response.json();
+            this.visitorInfo = {
+                ip: data.ip,
+                emirate: data.region,
+                city: data.city,
+                country: data.country_name,
+                source: this.getTrafficSource(),
+                userAgent: navigator.userAgent
+            };
+            sessionStorage.setItem('gadgetsUAE_visitor_info', JSON.stringify(this.visitorInfo));
+        } catch (e) {
+            // Service might be blocked or down, fallback to referrer only
+            this.visitorInfo = { source: this.getTrafficSource() };
+        }
+    }
+
+    getStoredVisitorInfo() {
+        const stored = sessionStorage.getItem('gadgetsUAE_visitor_info');
+        return stored ? JSON.parse(stored) : null;
+    }
+
+    getTrafficSource() {
+        const referrer = document.referrer;
+        if (!referrer) return 'Direct';
+
+        try {
+            const url = new URL(referrer);
+            const host = url.hostname.toLowerCase();
+            if (host.includes('google')) return 'Google';
+            if (host.includes('facebook') || host.includes('t.co') || host.includes('instagram')) return 'Social';
+            if (host.includes('bing') || host.includes('yahoo')) return 'Search Engine';
+            if (host.includes('gadgetsdxb.com')) return 'Internal';
+            return host;
+        } catch (e) {
+            return 'Direct';
+        }
     }
 
     // Track page view
@@ -225,6 +277,16 @@ class AnalyticsTracker {
 
     // Add event to storage
     addEvent(event) {
+        // Mark as admin if owner is browsing
+        if (this.isAdmin) {
+            event.isAdmin = true;
+        }
+
+        // Enrich event with visitor info if available
+        if (this.visitorInfo) {
+            event.visitor = this.visitorInfo;
+        }
+
         this.events.push(event);
 
         // Limit events to prevent storage issues
@@ -310,6 +372,8 @@ class AnalyticsTracker {
                 adds: allEvents.filter(e => e.type === 'favorite' && e.action === 'add').length,
                 removes: allEvents.filter(e => e.type === 'favorite' && e.action === 'remove').length
             },
+            locations: this.getTopLocations(allEvents),
+            sources: this.getTopSources(allEvents),
             referrers: this.getTopReferrers(allEvents),
             pages: this.getTopPages(allEvents),
             timeline: this.getTimeline(allEvents)
@@ -390,6 +454,34 @@ class AnalyticsTracker {
             .map(([path, count]) => ({ path, count }));
     }
 
+    // Get top locations (Emirates)
+    getTopLocations(events) {
+        const locations = {};
+        events.forEach(e => {
+            if (e.visitor && e.visitor.emirate) {
+                const loc = e.visitor.emirate;
+                locations[loc] = (locations[loc] || 0) + 1;
+            }
+        });
+        return Object.entries(locations)
+            .sort((a, b) => b[1] - a[1])
+            .map(([emirate, count]) => ({ emirate, count }));
+    }
+
+    // Get top traffic sources
+    getTopSources(events) {
+        const sources = {};
+        events.forEach(e => {
+            if (e.visitor && e.visitor.source) {
+                const src = e.visitor.source;
+                sources[src] = (sources[src] || 0) + 1;
+            }
+        });
+        return Object.entries(sources)
+            .sort((a, b) => b[1] - a[1])
+            .map(([source, count]) => ({ source, count }));
+    }
+
     // Get timeline data
     getTimeline(events) {
         const timeline = {};
@@ -456,6 +548,22 @@ class AnalyticsTracker {
             csv += `"${r.domain}",${r.count}\n`;
         });
 
+        return csv;
+    }
+
+    // Export raw events with visitor info as CSV
+    exportRawEventsCSV() {
+        let csv = 'Timestamp,Type,Path/Info,UserType,Location,Source,IP\n';
+        this.events.slice().reverse().forEach(e => {
+            const time = new Date(e.timestamp).toISOString();
+            const info = e.type === 'pageview' ? e.path : (e.productTitle || e.query || '');
+            const userType = e.isAdmin ? 'Admin' : 'Visitor';
+            const loc = e.visitor ? `${e.visitor.emirate || ''} ${e.visitor.city || ''}`.trim() : 'Unknown';
+            const src = e.visitor?.source || 'Direct';
+            const ip = e.visitor?.ip || 'Anonymous';
+
+            csv += `"${time}","${e.type}","${info.replace(/"/g, '""')}","${userType}","${loc}","${src}","${ip}"\n`;
+        });
         return csv;
     }
 }

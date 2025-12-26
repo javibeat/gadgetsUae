@@ -197,6 +197,16 @@
         .refresh-btn:hover {
             background: #059669;
         }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -215,7 +225,8 @@
             <h1>📊 Analytics Dashboard</h1>
             <div class="export-buttons">
                 <button onclick="exportJSON()">📥 Export JSON</button>
-                <button onclick="exportCSV()">📥 Export CSV</button>
+                <button onclick="exportCSV()">📊 Export CSV (Summary)</button>
+                <button onclick="exportEventsCSV()">👥 Export CSV (Events)</button>
                 <button onclick="refreshData()" class="refresh-btn">🔄 Refresh</button>
             </div>
         </div>
@@ -277,6 +288,36 @@
             </table>
         </div>
 
+        <!-- Locations and Sources -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="section">
+                <h2>📍 Top Locations (Emirates)</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Emirate</th>
+                            <th>Visits</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topLocationsTable"></tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>🚥 Traffic Sources</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Source</th>
+                            <th>Visits</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topSourcesTable"></tbody>
+                </table>
+            </div>
+        </div>
+
         <!-- Top Referrers -->
         <div class="section">
             <h2>🌐 Top Referrers</h2>
@@ -289,6 +330,24 @@
                     </tr>
                 </thead>
                 <tbody id="topReferrersTable"></tbody>
+            </table>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="section">
+            <h2>👥 Recent Visitor Activity</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Location (Emirate)</th>
+                        <th>Source</th>
+                        <th>IP Address</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="recentActivityTable"></tbody>
             </table>
         </div>
 
@@ -308,6 +367,7 @@
                 <tbody id="timelineTable"></tbody>
             </table>
         </div>
+
     </div>
 
     <script src="assets/js/analytics.js"></script>
@@ -317,10 +377,12 @@
         // Change this password to your desired one
         const DASHBOARD_PASSWORD = 'Humnuj-bygnim-1badra';
         const SESSION_KEY = 'gadgetsUAE_dashboard_auth';
+        const ADMIN_KEY = 'gadgetsUAE_is_admin';
 
         // Check for existing session on page load
         (function checkSession() {
             if (sessionStorage.getItem(SESSION_KEY) === 'authenticated') {
+                localStorage.setItem(ADMIN_KEY, 'true'); // Identify the site owner
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'block';
                 loadDashboard();
@@ -333,6 +395,7 @@
 
             if (input.value === DASHBOARD_PASSWORD) {
                 sessionStorage.setItem(SESSION_KEY, 'authenticated');
+                localStorage.setItem(ADMIN_KEY, 'true'); // Identify site owner
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('dashboard').style.display = 'block';
                 loadDashboard();
@@ -403,6 +466,26 @@
                 row.insertCell(2).textContent = r.count;
             });
 
+            // Top Locations
+            const locationsTable = document.getElementById('topLocationsTable');
+            locationsTable.innerHTML = '';
+            data.locations.slice(0, 10).forEach((l, i) => {
+                const row = locationsTable.insertRow();
+                row.insertCell(0).textContent = i + 1;
+                row.insertCell(1).textContent = l.emirate;
+                row.insertCell(2).textContent = l.count;
+            });
+
+            // Top Sources
+            const sourcesTable = document.getElementById('topSourcesTable');
+            sourcesTable.innerHTML = '';
+            data.sources.slice(0, 10).forEach((s, i) => {
+                const row = sourcesTable.insertRow();
+                row.insertCell(0).textContent = i + 1;
+                row.insertCell(1).textContent = s.source;
+                row.insertCell(2).textContent = s.count;
+            });
+
             // Timeline (last 30 entries)
             const timelineTable = document.getElementById('timelineTable');
             timelineTable.innerHTML = '';
@@ -413,6 +496,30 @@
                 row.insertCell(2).textContent = entry.searches;
                 row.insertCell(3).textContent = entry.productClicks;
                 row.insertCell(4).textContent = entry.favorites;
+            });
+
+            // Recent Activity
+            const recentTable = document.getElementById('recentActivityTable');
+            recentTable.innerHTML = '';
+            const allEvents = window.analytics.events;
+            allEvents.slice(-20).reverse().forEach(e => {
+                const row = recentTable.insertRow();
+                const time = new Date(e.timestamp).toLocaleTimeString();
+                row.insertCell(0).textContent = time;
+                row.insertCell(1).textContent = e.type === 'pageview' ? `View: ${e.path}` : `${e.type}: ${e.productTitle || e.query || ''}`;
+
+                const loc = e.visitor ? `${e.visitor.emirate || ''} ${e.visitor.city || ''}` : 'Unknown';
+                row.insertCell(2).textContent = loc;
+
+                row.insertCell(3).textContent = e.visitor?.source || 'Direct';
+                row.insertCell(4).textContent = e.visitor?.ip || 'Anonymous';
+
+                const typeCell = row.insertCell(5);
+                if (e.isAdmin) {
+                    typeCell.innerHTML = '<span class="badge" style="background: #ef4444;">Admin</span>';
+                } else {
+                    typeCell.innerHTML = '<span class="badge" style="background: #10b981;">Visitor</span>';
+                }
             });
         }
 
@@ -451,7 +558,23 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `gadgetsUAE-analytics-${new Date().toISOString().split('T')[0]}.csv`;
+            a.download = `gadgetsUAE-summary-${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function exportEventsCSV() {
+            if (!window.analytics) {
+                alert('Analytics not loaded');
+                return;
+            }
+
+            const csv = window.analytics.exportRawEventsCSV();
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `gadgetsUAE-events-${new Date().toISOString().split('T')[0]}.csv`;
             a.click();
             URL.revokeObjectURL(url);
         }
