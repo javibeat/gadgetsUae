@@ -1,39 +1,38 @@
 {
   "switch2": {
-    "current": "1710.00",
+    "current": "1730.00",
     "original": "1899.00",
-    "discount": "-10%",
-    "lastUpdate": "2025-12-04T10:00:00.000Z"
+    "discount": "-9%",
+    "lastUpdate": "2025-12-27T10:00:00.000Z"
   },
   "procontroller": {
-    "current": "330.00",
-    "original": "347.00",
-    "discount": "-5%",
-    "lastUpdate": "2025-11-27T09:55:00.000Z"
+    "current": "296.00",
+    "original": "330.00",
+    "discount": "-10%",
+    "lastUpdate": "2025-12-27T10:00:00.000Z"
   },
   "sandisk-switch2-sd": {
     "current": "249.00",
     "original": null,
     "discount": null,
     "lastUpdate": "2025-11-27T09:55:00.000Z"
-  }
-,
+  },
   "kindlecolor": {
-    "current": "959.00",
-    "original": null,
-    "discount": null,
-    "lastUpdate": "2025-12-02T10:00:00.000Z"
+    "current": "759.00",
+    "original": "959.00",
+    "discount": "-21%",
+    "lastUpdate": "2025-12-27T10:00:00.000Z"
   },
   "xiaomivacuumx20": {
-    "current": "1098.00",
+    "current": "1390.90",
     "original": "1699.00",
-    "discount": "-35%",
-    "lastUpdate": "2025-12-09T00:00:00.000Z"
+    "discount": "-18%",
+    "lastUpdate": "2025-12-27T10:00:00.000Z"
   },
   "nespresso": {
-    "current": "375.00",
+    "current": "377.00",
     "original": "749.00",
     "discount": "-50%",
-    "lastUpdate": "2025-12-09T00:00:00.000Z"
+    "lastUpdate": "2025-12-27T10:00:00.000Z"
   }
 }
