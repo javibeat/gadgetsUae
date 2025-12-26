@@ -113,7 +113,7 @@ const products = [
     title: 'SanDisk microSD Express 256GB for Nintendo Switch 2',
     category: 'Video Games / Storage',
     image: 'assets/images/nintendo/sd/sd1.jpg',
-    price: 'AED 249.00',
+    price: 'AED 223.03',
     url: 'https://amzn.to/3Tmgofm',
     gallery: [
       'assets/images/nintendo/sd/sd1.jpg',

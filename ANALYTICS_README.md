@@ -199,3 +199,5 @@ trackProductClick(data) {
 - Cada usuario tiene sus propios datos (no se comparten entre navegadores)
 - Para ver datos agregados de todos los usuarios, necesitarías un backend
 
+
+
