@@ -413,8 +413,9 @@
         });
 
         function loadDashboard() {
+            // Wait for analytics to be ready (it loads async)
             if (!window.analytics) {
-                alert('Analytics not loaded. Please visit the main site first.');
+                setTimeout(loadDashboard, 100); // Retry in 100ms
                 return;
             }
 
