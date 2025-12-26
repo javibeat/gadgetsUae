@@ -1,5 +1,21 @@
 // Analytics System for GadgetsUAE
 // Tracks user behavior, searches, product clicks, and more
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCup55Bnb1t5MopmPRjJJU_X34CkIVha-U",
+    authDomain: "gadgetsdxb-8a23f.firebaseapp.com",
+    projectId: "gadgetsdxb-8a23f",
+    storageBucket: "gadgetsdxb-8a23f.firebasestorage.app",
+    messagingSenderId: "188473253964",
+    appId: "1:188473253964:web:03a200c8da00179dd0d4e9",
+    measurementId: "G-313VE0B714"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 class AnalyticsTracker {
     constructor() {
@@ -289,6 +305,9 @@ class AnalyticsTracker {
 
         this.events.push(event);
 
+        // Sync to Firebase (Background)
+        this.syncToFirebase(event);
+
         // Limit events to prevent storage issues
         if (this.events.length > this.maxEvents) {
             this.events = this.events.slice(-this.maxEvents);
@@ -296,6 +315,32 @@ class AnalyticsTracker {
 
         // Save to localStorage
         this.saveEvents();
+    }
+
+    async syncToFirebase(event) {
+        try {
+            // Clean up event for Firebase (avoid circular refs if any)
+            const dbEvent = { ...event, serverTime: serverTimestamp() };
+            await addDoc(collection(db, "gadgetsUAE_events"), dbEvent);
+        } catch (e) {
+            console.warn('Firebase Sync Error:', e);
+        }
+    }
+
+    // Load events from Firebase for the dashboard
+    async loadGlobalEvents() {
+        try {
+            const q = query(collection(db, "gadgetsUAE_events"), orderBy("timestamp", "desc"), limit(1000));
+            const querySnapshot = await getDocs(q);
+            const globalEvents = [];
+            querySnapshot.forEach((doc) => {
+                globalEvents.push(doc.data());
+            });
+            return globalEvents;
+        } catch (e) {
+            console.error('Error loading global events:', e);
+            return this.events; // Fallback to local
+        }
     }
 
     // Load events from localStorage

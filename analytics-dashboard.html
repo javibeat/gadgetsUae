@@ -370,7 +370,7 @@
 
     </div>
 
-    <script src="assets/js/analytics.js"></script>
+    <script type="module" src="assets/js/analytics.js"></script>
     <script>
         // Password protection
         // For static sites, password is stored here (not ideal but works without backend)
@@ -412,17 +412,24 @@
             }
         });
 
-        function loadDashboard() {
+        async function loadDashboard() {
             // Wait for analytics to be ready (it loads async)
             if (!window.analytics) {
                 setTimeout(loadDashboard, 100); // Retry in 100ms
                 return;
             }
 
-            // Reload events from localStorage to get the latest data
-            window.analytics.events = window.analytics.loadEvents();
+            // SHOW LOADING STATE
+            const btn = document.querySelector('.refresh-btn');
+            const originalText = btn.textContent;
+            btn.textContent = '⏳ Fetching Cloud Data...';
+
+            // Fetch GLOBAL events from Firebase
+            window.analytics.events = await window.analytics.loadGlobalEvents();
 
             const data = window.analytics.getAnalytics();
+
+            btn.textContent = originalText;
 
             // Update stats
             document.getElementById('totalEvents').textContent = data.totalEvents.toLocaleString();
@@ -524,19 +531,19 @@
             });
         }
 
-        function refreshData() {
+        async function refreshData() {
             const btn = document.querySelector('.refresh-btn');
-            btn.textContent = '⏳ Loading...';
+            btn.textContent = '⏳ Syncing...';
 
-            // Reload events from localStorage and update dashboard
+            // Reload events from Firebase and update dashboard
             if (window.analytics) {
-                window.analytics.events = window.analytics.loadEvents();
+                window.analytics.events = await window.analytics.loadGlobalEvents();
             }
 
-            loadDashboard();
+            await loadDashboard();
 
             // Show success feedback
-            btn.textContent = '✅ Updated!';
+            btn.textContent = '✅ Cloud Synced!';
             setTimeout(() => {
                 btn.textContent = '🔄 Refresh';
             }, 1500);
