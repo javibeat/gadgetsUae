@@ -525,11 +525,21 @@
         }
 
         function refreshData() {
+            const btn = document.querySelector('.refresh-btn');
+            btn.textContent = '⏳ Loading...';
+
             // Reload events from localStorage and update dashboard
             if (window.analytics) {
                 window.analytics.events = window.analytics.loadEvents();
             }
+
             loadDashboard();
+
+            // Show success feedback
+            btn.textContent = '✅ Updated!';
+            setTimeout(() => {
+                btn.textContent = '🔄 Refresh';
+            }, 1500);
         }
 
         function exportJSON() {
