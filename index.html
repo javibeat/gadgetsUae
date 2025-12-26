@@ -198,6 +198,10 @@
             text-decoration: none;
         }
         
+        .faq {
+            padding: 4rem 0;
+        }
+        
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -628,21 +632,33 @@
             </div>
         </section>
 
-        <section class="faq" id="black-friday-faq">
+        <section class="faq" id="faq">
             <div class="container">
-                <h2 class="section-title">Preguntas frecuentes Black Friday UAE</h2>
+                <h2 class="section-title">Frequently Asked Questions</h2>
                 <div class="faq-grid">
                     <article class="faq-item">
-                        <h3>¿Cuándo es Black Friday / White Friday en Amazon.ae?</h3>
-                        <p>El evento arranca el 28 de noviembre con early access para miembros Prime y suele extenderse hasta el domingo 30. Las mejores unidades vuelan durante las primeras 24 horas.</p>
+                        <h3>Does Amazon.ae deliver to all UAE cities?</h3>
+                        <p>Yes, Amazon.ae offers Prime delivery to major cities including Dubai, Abu Dhabi, Sharjah, and Ajman. Most products qualify for same-day or next-day delivery when ordered with Prime membership. Free shipping is available for orders over AED 100.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>¿Los envíos y devoluciones aplican en Emiratos?</h3>
-                        <p>Sí, las ofertas mostradas son vendidas o gestionadas por Amazon.ae, incluyen entrega Prime en Dubai/Abu Dhabi y devoluciones gratuitas durante 15 días (según política local).</p>
+                        <h3>What is the return policy for electronics in UAE?</h3>
+                        <p>Amazon.ae provides a 15-day return policy for most electronics and gadgets. Products must be in original packaging with all accessories included. Free returns are available for Prime members, and items are typically processed within 5-7 business days.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>¿Cómo aprovecho cuotas o cashback?</h3>
-                        <p>Puedes dividir el pago en cuotas 0% con bancos elegibles o usar la Amazon Credit Card para obtener hasta 6% de retorno y bonos de bienvenida. Algunas promos requieren códigos HSBC100, ADIB150 o similares al finalizar la compra.</p>
+                        <h3>Can I pay in installments for tech products?</h3>
+                        <p>Yes, you can split payments into 0% interest installments using eligible bank credit cards from HSBC, ADIB, Emirates Islamic, and Citibank. The Amazon Credit Card also offers up to 6% cashback and welcome bonuses. Some promotions require discount codes at checkout.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Are products on Amazon.ae authentic and covered by warranty?</h3>
+                        <p>All products listed on GadgetsUAE are sold by Amazon.ae or authorized sellers, ensuring authenticity. Most electronics come with manufacturer warranty (typically 1-2 years) and are eligible for Amazon's A-to-Z guarantee. Check product listings for specific warranty details.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>What are the benefits of Amazon Prime in UAE?</h3>
+                        <p>Amazon Prime UAE offers free same-day and next-day delivery, exclusive deals, Prime Video streaming, Prime Gaming benefits, and early access to sales. Prime membership costs AED 16/month or AED 140/year, making it ideal for frequent online shoppers in Dubai and Abu Dhabi.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>How do I find the best tech deals on Amazon.ae?</h3>
+                        <p>GadgetsUAE curates the latest deals on electronics, gaming consoles, smart home devices, and gadgets available on Amazon.ae. We update prices daily and highlight products with significant discounts, Prime eligibility, and customer ratings. Check our trending products section for current offers.</p>
                     </article>
                 </div>
             </div>
@@ -656,6 +672,7 @@
    <script src="assets/js/price-updater.js"></script>
    <script src="assets/js/daily-deals.js"></script>
    <script src="assets/js/deals-scraper.js"></script>
+   <script src="assets/js/analytics.js"></script>
    <script>
    function setSelectedThumb(el) {
      document.querySelectorAll('.gallery-thumbnails .thumb').forEach(t => t.classList.remove('selected'));
@@ -751,26 +768,50 @@
        "mainEntity": [
            {
                "@type": "Question",
-               "name": "¿Cuándo es Black Friday / White Friday en Amazon.ae?",
+               "name": "Does Amazon.ae deliver to all UAE cities?",
                "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "El evento arranca el 28 de noviembre con acceso anticipado para usuarios Prime y se extiende hasta el domingo 30. Las unidades con mayor descuento suelen agotarse en las primeras 24 horas."
+                   "text": "Yes, Amazon.ae offers Prime delivery to major cities including Dubai, Abu Dhabi, Sharjah, and Ajman. Most products qualify for same-day or next-day delivery when ordered with Prime membership. Free shipping is available for orders over AED 100."
                }
            },
            {
                "@type": "Question",
-               "name": "¿Los envíos y devoluciones aplican en Emiratos?",
+               "name": "What is the return policy for electronics in UAE?",
                "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "Sí, Amazon.ae ofrece envío Prime dentro de EAU y devoluciones gratuitas en 15 días para la mayoría de los productos incluidos en Black Friday siempre que se mantenga el embalaje original."
+                   "text": "Amazon.ae provides a 15-day return policy for most electronics and gadgets. Products must be in original packaging with all accessories included. Free returns are available for Prime members, and items are typically processed within 5-7 business days."
                }
            },
            {
                "@type": "Question",
-               "name": "¿Cómo aprovechar cuotas o cashback en Amazon UAE?",
+               "name": "Can I pay in installments for tech products?",
                "acceptedAnswer": {
                    "@type": "Answer",
-                   "text": "Puedes usar la Amazon Credit Card o tarjetas de HSBC, ADIB y Emirates Islamic para obtener cuotas 0% y hasta 6% de retorno. Algunos descuentos requieren códigos como HSBC100 o ADIB150 durante la compra."
+                   "text": "Yes, you can split payments into 0% interest installments using eligible bank credit cards from HSBC, ADIB, Emirates Islamic, and Citibank. The Amazon Credit Card also offers up to 6% cashback and welcome bonuses. Some promotions require discount codes at checkout."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "Are products on Amazon.ae authentic and covered by warranty?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "All products listed on GadgetsUAE are sold by Amazon.ae or authorized sellers, ensuring authenticity. Most electronics come with manufacturer warranty (typically 1-2 years) and are eligible for Amazon's A-to-Z guarantee. Check product listings for specific warranty details."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "What are the benefits of Amazon Prime in UAE?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "Amazon Prime UAE offers free same-day and next-day delivery, exclusive deals, Prime Video streaming, Prime Gaming benefits, and early access to sales. Prime membership costs AED 16/month or AED 140/year, making it ideal for frequent online shoppers in Dubai and Abu Dhabi."
+               }
+           },
+           {
+               "@type": "Question",
+               "name": "How do I find the best tech deals on Amazon.ae?",
+               "acceptedAnswer": {
+                   "@type": "Answer",
+                   "text": "GadgetsUAE curates the latest deals on electronics, gaming consoles, smart home devices, and gadgets available on Amazon.ae. We update prices daily and highlight products with significant discounts, Prime eligibility, and customer ratings. Check our trending products section for current offers."
                }
            }
        ]
