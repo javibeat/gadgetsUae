@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites - GadgetsUAE</title>
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-   <div id="menu-include"></div>
-   <div class="page-banner" style="display: flex; justify-content: center; margin: 2.5rem auto 2rem auto; max-width: 1200px;">
-    <img src="/assets/images/banners/products.jpg" alt="Favorites Banner" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
-</div>
-   <main>
-        <section class="trending">
-            <div class="container">
-                <h2 class="section-title">Your Favorites</h2>
-                <div class="products-grid" id="favoritesGrid">
-                    <!-- Favorites will be rendered here -->
-                </div>
-            </div>
-        </section>
-   </main>
-   <div id="footer-include"></div>
-   <script src="assets/js/products.js"></script>
-   <script src="assets/js/script.js"></script>
-   <script>
-function getFavorites() {
-  return JSON.parse(localStorage.getItem('favorites') || '[]');
-}
 
-function renderFavorites() {
-  const favs = getFavorites();
-  const grid = document.getElementById('favoritesGrid');
-  grid.innerHTML = '';
-  const favProducts = (window.products || []).filter(p => favs.includes(p.id));
-  if (favProducts.length === 0) {
-    grid.innerHTML = '<p>No favorite products yet.</p>';
-    return;
-  }
-  favProducts.forEach(product => {
-    grid.innerHTML += `
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites - GadgetsUAE</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div id="menu-include"></div>
+  <div class="page-banner"
+    style="display: flex; justify-content: center; margin: 2.5rem auto 2rem auto; max-width: 1200px;">
+    <img src="/assets/images/banners/products.jpg" alt="Favorites Banner"
+      style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+  </div>
+  <main>
+    <section class="trending">
+      <div class="container">
+        <h2 class="section-title">Your Favorites</h2>
+        <div class="products-grid" id="favoritesGrid">
+          <!-- Favorites will be rendered here -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-include"></div>
+  <script type="module" src="assets/js/analytics.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    function getFavorites() {
+      return JSON.parse(localStorage.getItem('favorites') || '[]');
+    }
+
+    function renderFavorites() {
+      const favs = getFavorites();
+      const grid = document.getElementById('favoritesGrid');
+      grid.innerHTML = '';
+      const favProducts = (window.products || []).filter(p => favs.includes(p.id));
+      if (favProducts.length === 0) {
+        grid.innerHTML = '<p>No favorite products yet.</p>';
+        return;
+      }
+      favProducts.forEach(product => {
+        grid.innerHTML += `
       <div class="product-card">
         <button class="favorite-btn active" data-id="${product.id}" aria-label="Remove from favorites">❤️</button>
         <div class="product-image-container">
           <img src="${product.image}" alt="${product.title}" class="product-image main-image">
           <div class="gallery-thumbnails">
-            ${product.gallery.map((img, i) => `<img src="${img}" alt="${product.title} - ${i+1}" class="thumb">`).join('')}
+            ${product.gallery.map((img, i) => `<img src="${img}" alt="${product.title} - ${i + 1}" class="thumb">`).join('')}
           </div>
         </div>
         <div class="product-info">
@@ -66,19 +71,20 @@ function renderFavorites() {
         </div>
       </div>
     `;
-  });
-  document.querySelectorAll('.favorite-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      let favs = getFavorites();
-      favs = favs.filter(f => f !== this.dataset.id);
-      localStorage.setItem('favorites', JSON.stringify(favs));
-      renderFavorites();
-    });
-  });
-}
+      });
+      document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          let favs = getFavorites();
+          favs = favs.filter(f => f !== this.dataset.id);
+          localStorage.setItem('favorites', JSON.stringify(favs));
+          renderFavorites();
+        });
+      });
+    }
 
-document.addEventListener('DOMContentLoaded', renderFavorites);
-   </script>
+    document.addEventListener('DOMContentLoaded', renderFavorites);
+  </script>
 </body>
-</html> 
+
+</html>
