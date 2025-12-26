@@ -308,15 +308,12 @@
         </div>
     </div>
     
-    <!-- Load configuration (config.js is in .gitignore) -->
-    <script src="assets/js/config.js"></script>
     <script src="assets/js/analytics.js"></script>
     <script>
-        // Password protection - loaded from config.js
-        // If config.js doesn't exist, use default (should not happen in production)
-        const DASHBOARD_PASSWORD = (window.GADGETSUAE_CONFIG && window.GADGETSUAE_CONFIG.analytics && window.GADGETSUAE_CONFIG.analytics.dashboardPassword) 
-            ? window.GADGETSUAE_CONFIG.analytics.dashboardPassword 
-            : 'CHANGE_THIS_PASSWORD';
+        // Password protection
+        // For static sites, password is stored here (not ideal but works without backend)
+        // Change this password to your desired one
+        const DASHBOARD_PASSWORD = 'Humnuj-bygnim-1badra';
         
         function checkPassword() {
             const input = document.getElementById('passwordInput');
