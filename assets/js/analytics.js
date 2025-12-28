@@ -21,10 +21,58 @@ class AnalyticsTracker {
     constructor() {
         this.storageKey = 'gadgetsUAE_analytics';
         this.adminKey = 'gadgetsUAE_is_admin';
+        this.visitorIdKey = 'gadgetsUAE_visitor_id';
+        this.sessionKey = 'gadgetsUAE_session';
         this.maxEvents = 1000; // Maximum events to store locally
         this.flushInterval = 5 * 60 * 1000; // Flush to server every 5 minutes
         this.visitorInfo = this.getStoredVisitorInfo();
+        this.visitorId = this.getOrCreateVisitorId();
+        this.sessionId = this.getOrCreateSession();
         this.init();
+    }
+
+    // Generate or retrieve unique visitor ID
+    getOrCreateVisitorId() {
+        let visitorId = localStorage.getItem(this.visitorIdKey);
+        if (!visitorId) {
+            visitorId = 'v_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 9);
+            localStorage.setItem(this.visitorIdKey, visitorId);
+        }
+        return visitorId;
+    }
+
+    // Track session (new session after 30 min inactivity)
+    getOrCreateSession() {
+        const stored = sessionStorage.getItem(this.sessionKey);
+        if (stored) {
+            const session = JSON.parse(stored);
+            const now = Date.now();
+            // If last activity was more than 30 min ago, new session
+            if (now - session.lastActivity > 30 * 60 * 1000) {
+                return this.createNewSession();
+            }
+            session.lastActivity = now;
+            sessionStorage.setItem(this.sessionKey, JSON.stringify(session));
+            return session;
+        }
+        return this.createNewSession();
+    }
+
+    createNewSession() {
+        const session = {
+            id: 's_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 5),
+            startTime: Date.now(),
+            lastActivity: Date.now(),
+            pageCount: 0
+        };
+        sessionStorage.setItem(this.sessionKey, JSON.stringify(session));
+        return session;
+    }
+
+    updateSession() {
+        this.sessionId.lastActivity = Date.now();
+        this.sessionId.pageCount++;
+        sessionStorage.setItem(this.sessionKey, JSON.stringify(this.sessionId));
     }
 
     init() {
@@ -108,12 +156,18 @@ class AnalyticsTracker {
             return;
         }
 
+        // Update session
+        this.updateSession();
+
         const pageData = {
             type: 'pageview',
             url: window.location.href,
             path: currentPath,
             referrer: document.referrer,
             timestamp: new Date().toISOString(),
+            visitorId: this.visitorId,
+            sessionId: this.sessionId.id,
+            sessionPageCount: this.sessionId.pageCount,
             userAgent: navigator.userAgent,
             screenWidth: window.screen.width,
             screenHeight: window.screen.height,
@@ -392,10 +446,31 @@ class AnalyticsTracker {
         const last30d = new Date(now - 30 * 24 * 60 * 60 * 1000);
 
         const allEvents = this.events;
+        const pageviews = allEvents.filter(e => e.type === 'pageview');
+
+        // Calculate unique visitors and sessions
+        const uniqueVisitors = new Set(pageviews.map(e => e.visitorId || e.visitor?.ip).filter(Boolean)).size;
+        const uniqueSessions = new Set(pageviews.map(e => e.sessionId).filter(Boolean)).size;
+
+        // Calculate bounce rate (sessions with only 1 page view)
+        const sessionPageCounts = {};
+        pageviews.forEach(e => {
+            if (e.sessionId) {
+                sessionPageCounts[e.sessionId] = (sessionPageCounts[e.sessionId] || 0) + 1;
+            }
+        });
+        const totalSessions = Object.keys(sessionPageCounts).length;
+        const bouncedSessions = Object.values(sessionPageCounts).filter(count => count === 1).length;
+        const bounceRate = totalSessions > 0 ? ((bouncedSessions / totalSessions) * 100).toFixed(1) : 0;
+        const avgPagesPerSession = totalSessions > 0 ? (pageviews.length / totalSessions).toFixed(1) : 0;
 
         return {
             totalEvents: allEvents.length,
-            pageViews: allEvents.filter(e => e.type === 'pageview').length,
+            pageViews: pageviews.length,
+            uniqueVisitors: uniqueVisitors,
+            uniqueSessions: uniqueSessions,
+            bounceRate: bounceRate,
+            avgPagesPerSession: avgPagesPerSession,
             searches: {
                 total: allEvents.filter(e => e.type === 'search').length,
                 internal: allEvents.filter(e => e.type === 'search' && e.source === 'internal').length,

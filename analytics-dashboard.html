@@ -7,6 +7,7 @@
     <title>Analytics Dashboard - GadgetsUAE</title>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             background: #0f172a;
@@ -258,6 +259,36 @@
             </div>
         </div>
 
+        <!-- Engagement Metrics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>👤 Unique Visitors</h3>
+                <div class="value" id="uniqueVisitors">0</div>
+                <div class="subvalue">Distinct users</div>
+            </div>
+            <div class="stat-card">
+                <h3>📊 Sessions</h3>
+                <div class="value" id="uniqueSessions">0</div>
+                <div class="subvalue">30-min timeout</div>
+            </div>
+            <div class="stat-card">
+                <h3>↩️ Bounce Rate</h3>
+                <div class="value" id="bounceRate">0%</div>
+                <div class="subvalue">Single-page visits</div>
+            </div>
+            <div class="stat-card">
+                <h3>📄 Avg Pages/Session</h3>
+                <div class="value" id="avgPagesPerSession">0</div>
+                <div class="subvalue">Engagement depth</div>
+            </div>
+        </div>
+
+        <!-- Activity Chart -->
+        <div class="section">
+            <h2>📈 Traffic Overview (Last 30 Days)</h2>
+            <canvas id="trafficChart" height="100"></canvas>
+        </div>
+
         <!-- Top Search Queries -->
         <div class="section">
             <h2>🔍 Top Search Queries</h2>
@@ -345,6 +376,21 @@
                     <tbody id="topReferrersTable"></tbody>
                 </table>
             </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="section">
+            <h2>📄 Top Pages</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Page</th>
+                        <th>Views</th>
+                    </tr>
+                </thead>
+                <tbody id="topPagesTable"></tbody>
+            </table>
         </div>
 
         <!-- Recent Activity -->
@@ -458,6 +504,12 @@
             document.getElementById('favoritesBreakdown').textContent =
                 `${data.favorites.adds} added, ${data.favorites.removes} removed`;
 
+            // Engagement metrics
+            document.getElementById('uniqueVisitors').textContent = data.uniqueVisitors.toLocaleString();
+            document.getElementById('uniqueSessions').textContent = data.uniqueSessions.toLocaleString();
+            document.getElementById('bounceRate').textContent = data.bounceRate + '%';
+            document.getElementById('avgPagesPerSession').textContent = data.avgPagesPerSession;
+
             // Top searches
             const searchesTable = document.getElementById('topSearchesTable');
             searchesTable.innerHTML = '';
@@ -521,13 +573,83 @@
             // Timeline (last 30 entries)
             const timelineTable = document.getElementById('timelineTable');
             timelineTable.innerHTML = '';
-            data.timeline.slice(-30).forEach(entry => {
+            const timelineData = data.timeline.slice(-30);
+            timelineData.forEach(entry => {
                 const row = timelineTable.insertRow();
                 row.insertCell(0).textContent = entry.date;
                 row.insertCell(1).textContent = entry.pageviews;
                 row.insertCell(2).textContent = entry.searches;
                 row.insertCell(3).textContent = entry.productClicks;
                 row.insertCell(4).textContent = entry.favorites;
+            });
+
+            // Top Pages table
+            const pagesTable = document.getElementById('topPagesTable');
+            pagesTable.innerHTML = '';
+            data.pages.slice(0, 15).forEach((p, i) => {
+                const row = pagesTable.insertRow();
+                row.insertCell(0).textContent = i + 1;
+                row.insertCell(1).textContent = p.path;
+                row.insertCell(2).textContent = p.count;
+            });
+
+            // Traffic Chart (Chart.js)
+            const ctx = document.getElementById('trafficChart').getContext('2d');
+
+            // Destroy existing chart if any
+            if (window.trafficChartInstance) {
+                window.trafficChartInstance.destroy();
+            }
+
+            window.trafficChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: timelineData.map(d => d.date.substring(5)), // MM-DD format
+                    datasets: [
+                        {
+                            label: 'Page Views',
+                            data: timelineData.map(d => d.pageviews),
+                            borderColor: '#60a5fa',
+                            backgroundColor: 'rgba(96, 165, 250, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Searches',
+                            data: timelineData.map(d => d.searches),
+                            borderColor: '#34d399',
+                            backgroundColor: 'rgba(52, 211, 153, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Product Clicks',
+                            data: timelineData.map(d => d.productClicks),
+                            borderColor: '#f472b6',
+                            backgroundColor: 'rgba(244, 114, 182, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#94a3b8' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#64748b' },
+                            grid: { color: '#1e293b' }
+                        },
+                        y: {
+                            ticks: { color: '#64748b' },
+                            grid: { color: '#1e293b' }
+                        }
+                    }
+                }
             });
 
             // Recent Activity
