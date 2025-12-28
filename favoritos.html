@@ -15,7 +15,7 @@
     style="display: flex; justify-content: center; margin: 2.5rem auto 2rem auto; max-width: 1200px;">
     <a href="https://amzn.to/4qqgdOu" target="_blank" rel="noopener noreferrer">
       <img src="/assets/images/banners/products.jpg" alt="Favorites Banner"
-        style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+        style="max-width: 600px; width: 100%; height: auto; max-height: 180px; object-fit: cover; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.15);">
     </a>
   </div>
   <main>
@@ -83,6 +83,11 @@
           renderFavorites();
         });
       });
+
+      // Initialize spotlight effect for the new cards
+      if (typeof initializeSpotlightEffect === 'function') {
+        initializeSpotlightEffect();
+      }
     }
 
     document.addEventListener('DOMContentLoaded', renderFavorites);

@@ -167,65 +167,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Optimización de imágenes -->
-    <style>
-        /* Lazy loading y optimización de imágenes */
-        img[data-lazy="true"] {
-            filter: blur(4px);
-            transition: filter 0.3s ease;
-        }
 
-        img[data-lazy="true"].loaded {
-            filter: none;
-        }
-
-        /* Responsive images */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* WebP support */
-        .webp .product-image {
-            background-size: cover;
-            background-position: center;
-        }
-
-        .primary-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: linear-gradient(135deg, #111827, #ec4899);
-            color: #fff;
-            padding: 0.9rem 1.5rem;
-            border-radius: 999px;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            text-decoration: none;
-        }
-
-        .faq {
-            padding: 4rem 0;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .faq-item {
-            background: #0f172a;
-            color: #f8fafc;
-            border-radius: 1rem;
-            padding: 1.5rem;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
-        }
-
-        .faq-item h3 {
-            margin-top: 0;
-            margin-bottom: 0.6rem;
-        }
-    </style>
 </head>
 
 <body id="index">
@@ -490,6 +432,143 @@
                                 aria-label="Add to favorites">&#9825;</button>
                         </div>
                     </div>
+                    <!-- Product 4: Bambu Lab A1 Combo 3D Printer -->
+                    <div class="product-card">
+                        <div class="product-badges">
+                            <span class="badge prime">Prime</span>
+                            <span class="badge shipping">Free Shipping</span>
+                            <span class="badge special">Only 3 Left</span>
+                        </div>
+                        <div class="product-image-container bambulaba1-gallery">
+                            <img src="assets/images/bambulaba1/1.jpg" alt="Bambu Lab A1 Combo 3D Printer with AMS Lite"
+                                class="product-image main-image" id="bambulaba1-main-img">
+                            <div class="gallery-thumbnails">
+                                <img src="assets/images/bambulaba1/1.jpg" alt="Bambu Lab A1 1" class="thumb selected"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/1.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/2.jpg" alt="Bambu Lab A1 2" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/2.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/3.jpg" alt="Bambu Lab A1 3" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/3.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/4.jpg" alt="Bambu Lab A1 4" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/4.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/5.jpg" alt="Bambu Lab A1 5" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/5.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/6.jpg" alt="Bambu Lab A1 6" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/6.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/bambulaba1/7.jpg" alt="Bambu Lab A1 7" class="thumb"
+                                    onclick="document.getElementById('bambulaba1-main-img').src='assets/images/bambulaba1/7.jpg'; setSelectedThumb(this)">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
+                                <h3 style="margin: 0;">Bambu Lab A1 Combo 3D Printer with AMS Lite</h3>
+                            </div>
+                            <p class="product-category">3D Printing / 3D Printers</p>
+                            <div class="product-footer">
+                                <div class="price-history"
+                                    style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                                    <span class="discount" style="margin-bottom: 0;">-5%</span>
+                                    <span class="original-price" style="font-size: 0.95em;">AED 3,140.00</span>
+                                    <span class="current-price" id="bambulaba1-price"
+                                        style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED
+                                        2,985.00</span>
+                                </div>
+                                <a href="https://amzn.to/4pX45F7" class="product-cta" target="_blank"
+                                    rel="noopener noreferrer">View on Amazon</a>
+                            </div>
+                            <button class="favorite-btn" data-id="bambulaba1-combo"
+                                aria-label="Add to favorites">&#9825;</button>
+                        </div>
+                    </div>
+                    <!-- Product 5: Elgato Stream Deck Neo -->
+                    <div class="product-card">
+                        <div class="product-badges">
+                            <span class="badge prime">Prime</span>
+                            <span class="badge special">Amazon's Choice</span>
+                        </div>
+                        <div class="product-image-container neo-gallery">
+                            <img src="assets/images/neo/1.jpg" alt="Elgato Stream Deck Neo with 8 customizable keys"
+                                class="product-image main-image" id="neo-main-img">
+                            <div class="gallery-thumbnails">
+                                <img src="assets/images/neo/1.jpg" alt="Stream Deck Neo 1" class="thumb selected"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/1.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/neo/2.jpg" alt="Stream Deck Neo 2" class="thumb"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/2.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/neo/3.jpg" alt="Stream Deck Neo 3" class="thumb"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/3.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/neo/4.jpg" alt="Stream Deck Neo 4" class="thumb"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/4.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/neo/5.jpg" alt="Stream Deck Neo 5" class="thumb"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/5.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/neo/6.jpg" alt="Stream Deck Neo 6" class="thumb"
+                                    onclick="document.getElementById('neo-main-img').src='assets/images/neo/6.jpg'; setSelectedThumb(this)">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
+                                <h3 style="margin: 0;">Elgato Stream Deck Neo - 8 Customizable Keys</h3>
+                            </div>
+                            <p class="product-category">Computers / Streaming Accessories</p>
+                            <div class="product-footer">
+                                <div class="price-history"
+                                    style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                                    <span class="current-price" id="neo-price"
+                                        style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED
+                                        399.00</span>
+                                </div>
+                                <a href="https://amzn.to/3N0nVAv" class="product-cta" target="_blank"
+                                    rel="noopener noreferrer">View on Amazon</a>
+                            </div>
+                            <button class="favorite-btn" data-id="streamdeck-neo"
+                                aria-label="Add to favorites">&#9825;</button>
+                        </div>
+                    </div>
+                    <!-- Product 6: iPhone 17 Pro Max -->
+                    <div class="product-card">
+                        <div class="product-badges">
+                            <span class="badge prime">Prime</span>
+                            <span class="badge special">Amazon's Choice</span>
+                        </div>
+                        <div class="product-image-container iphone-gallery">
+                            <img src="assets/images/iphone/1.jpg" alt="Apple iPhone 17 Pro Max 256GB Cosmic Orange"
+                                class="product-image main-image" id="iphone-main-img">
+                            <div class="gallery-thumbnails">
+                                <img src="assets/images/iphone/1.jpg" alt="iPhone 17 Pro Max 1" class="thumb selected"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/1.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/iphone/2.jpg" alt="iPhone 17 Pro Max 2" class="thumb"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/2.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/iphone/3.jpg" alt="iPhone 17 Pro Max 3" class="thumb"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/3.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/iphone/4.jpg" alt="iPhone 17 Pro Max 4" class="thumb"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/4.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/iphone/5.jpg" alt="iPhone 17 Pro Max 5" class="thumb"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/5.jpg'; setSelectedThumb(this)">
+                                <img src="assets/images/iphone/6.jpg" alt="iPhone 17 Pro Max 6" class="thumb"
+                                    onclick="document.getElementById('iphone-main-img').src='assets/images/iphone/6.jpg'; setSelectedThumb(this)">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-top: 0;">
+                                <h3 style="margin: 0;">Apple iPhone 17 Pro Max 256GB - Cosmic Orange</h3>
+                            </div>
+                            <p class="product-category">Smartphones / Apple</p>
+                            <div class="product-footer">
+                                <div class="price-history"
+                                    style="flex-direction: column; align-items: flex-start; gap: 0.2rem;">
+                                    <span class="current-price" id="iphone-price"
+                                        style="margin-top: 0.5rem; font-size: 1.25rem; font-weight: bold; color: #2563eb;">AED
+                                        4,949.00</span>
+                                </div>
+                                <a href="https://amzn.to/3MV6kdu" class="product-cta" target="_blank"
+                                    rel="noopener noreferrer">View on Amazon</a>
+                            </div>
+                            <button class="favorite-btn" data-id="iphone17promax"
+                                aria-label="Add to favorites">&#9825;</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -507,10 +586,10 @@
             </div>
         </section>
 
-        <section class="trending">
+        <section class="trending section-bg-dim">
             <div class="container">
                 <h2 class="section-title">Trending Now</h2>
-                <p class="section-subtitle">Discover what's popular right now</p>
+                <p class="section-subtitle">The gadgets everyone is talking about in Dubai and Abu Dhabi</p>
 
                 <div class="products-grid">
                     <!-- Producto 1 -->
@@ -762,49 +841,106 @@
             </div>
         </section>
 
-        <section class="faq" id="faq">
+        <section class="faq section-bg-accent" id="faq">
             <div class="container">
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <article class="faq-item">
-                        <h3>Does Amazon.ae deliver to all UAE cities?</h3>
-                        <p>Yes, Amazon.ae offers Prime delivery to major cities including Dubai, Abu Dhabi, Sharjah, and
-                            Ajman. Most products qualify for same-day or next-day delivery when ordered with Prime
-                            membership. Free shipping is available for orders over AED 100.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>What is the return policy for electronics in UAE?</h3>
-                        <p>Amazon.ae provides a 15-day return policy for most electronics and gadgets. Products must be
-                            in original packaging with all accessories included. Free returns are available for Prime
-                            members, and items are typically processed within 5-7 business days.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Can I pay in installments for tech products?</h3>
-                        <p>Yes, you can split payments into 0% interest installments using eligible bank credit cards
-                            from HSBC, ADIB, Emirates Islamic, and Citibank. The Amazon Credit Card also offers up to 6%
-                            cashback and welcome bonuses. Some promotions require discount codes at checkout.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Are products on Amazon.ae authentic and covered by warranty?</h3>
-                        <p>All products listed on GadgetsUAE are sold by Amazon.ae or authorized sellers, ensuring
-                            authenticity. Most electronics come with manufacturer warranty (typically 1-2 years) and are
-                            eligible for Amazon's A-to-Z guarantee. Check product listings for specific warranty
-                            details.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>What are the benefits of Amazon Prime in UAE?</h3>
-                        <p>Amazon Prime UAE offers free same-day and next-day delivery, exclusive deals, Prime Video
-                            streaming, Prime Gaming benefits, and early access to sales. Prime membership costs AED
-                            16/month or AED 140/year, making it ideal for frequent online shoppers in Dubai and Abu
-                            Dhabi.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>How do I find the best tech deals on Amazon.ae?</h3>
-                        <p>GadgetsUAE curates the latest deals on electronics, gaming consoles, smart home devices, and
-                            gadgets available on Amazon.ae. We update prices daily and highlight products with
-                            significant discounts, Prime eligibility, and customer ratings. Check our trending products
-                            section for current offers.</p>
-                    </article>
+                <p class="section-subtitle">Everything you need to know about shopping with GadgetsUAE</p>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Does Amazon.ae deliver to all UAE cities?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, Amazon.ae offers Prime delivery to major cities including Dubai, Abu Dhabi, Sharjah,
+                                and
+                                Ajman. Most products qualify for same-day or next-day delivery when ordered with Prime
+                                membership. Free shipping is available for orders over AED 100.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What is the return policy for electronics in UAE?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Amazon.ae provides a 15-day return policy for most electronics and gadgets. Products must
+                                be
+                                in original packaging with all accessories included. Free returns are available for
+                                Prime
+                                members, and items are typically processed within 5-7 business days.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I pay in installments for tech products?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, you can split payments into 0% interest installments using eligible bank credit
+                                cards
+                                from HSBC, ADIB, Emirates Islamic, and Citibank. The Amazon Credit Card also offers up
+                                to 6%
+                                cashback and welcome bonuses. Some promotions require discount codes at checkout.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Are products on Amazon.ae authentic and covered by warranty?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>All products listed on GadgetsUAE are sold by Amazon.ae or authorized sellers, ensuring
+                                authenticity. Most electronics come with manufacturer warranty (typically 1-2 years) and
+                                are
+                                eligible for Amazon's A-to-Z guarantee. Check product listings for specific warranty
+                                details.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What are the benefits of Amazon Prime in UAE?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Amazon Prime UAE offers free same-day and next-day delivery, exclusive deals, Prime Video
+                                streaming, Prime Gaming benefits, and early access to sales. Prime membership costs AED
+                                16/month or AED 140/year, making it ideal for frequent online shoppers in Dubai and Abu
+                                Dhabi.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How do I find the best tech deals on Amazon.ae?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>GadgetsUAE curates the latest deals on electronics, gaming consoles, smart home devices,
+                                and
+                                gadgets available on Amazon.ae. We update prices daily and highlight products with
+                                significant discounts, Prime eligibility, and customer ratings. Check our trending
+                                products
+                                section for current offers.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -962,6 +1098,44 @@
        ]
    }
    </script>
+
+    <!-- Dot Gallery Conversion Script (Option A: Apple Store Clean) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Convert thumbnail galleries to dot navigation
+            document.querySelectorAll('.product-image-container').forEach(container => {
+                const thumbnails = container.querySelector('.gallery-thumbnails');
+                if (!thumbnails) return;
+
+                const thumbs = thumbnails.querySelectorAll('.thumb');
+                if (thumbs.length <= 1) return;
+
+                const mainImg = container.querySelector('.main-image');
+                if (!mainImg) return;
+
+                // Create dots container
+                const dotsContainer = document.createElement('div');
+                dotsContainer.className = 'gallery-dots';
+
+                // Store image sources
+                const images = Array.from(thumbs).map(thumb => thumb.src);
+
+                // Create dots
+                images.forEach((src, index) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'dot' + (index === 0 ? ' active' : '');
+                    dot.addEventListener('click', () => {
+                        mainImg.src = src;
+                        dotsContainer.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                        dot.classList.add('active');
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                container.appendChild(dotsContainer);
+            });
+        });
+    </script>
 </body>
 
 <!-- Search Overlay -->
