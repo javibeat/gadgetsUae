@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home - Best Deals UAE | GadgetsUAE</title>
+    <meta name="description"
+        content="Shop smart home devices on Amazon.ae. Robot vacuums, smart lighting, and more with fast UAE delivery.">
+    <link rel="canonical" href="https://gadgetsdxb.com/home.html">
+    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+</head>
+
+<body>
+    <div id="menu-include"></div>
+
+    <main>
+        <section class="category-hero">
+            <div class="container">
+                <h1 class="category-title">Smart Home</h1>
+                <p class="category-description">Robot vacuums, smart lighting, and home automation. Prime delivery
+                    across UAE.</p>
+            </div>
+        </section>
+
+        <section class="category-products">
+            <div class="container">
+                <div class="products-grid" id="category-products-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script src="assets/js/products.js?v=2.0"></script>
+    <script src="assets/js/product-renderer.js?v=2.0"></script>
+    <script src="assets/js/script.js?v=2.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.products) return;
+            const renderer = window.initRenderer(window.products);
+            renderer.render('category-products-grid', { category: 'Smart Home', limit: 24 });
+        });
+    </script>
+</body>
+
+</html>

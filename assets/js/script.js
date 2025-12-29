@@ -26,19 +26,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function highlightActiveLink() {
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-list a');
+    const currentHash = window.location.hash;
+    const navLinks = document.querySelectorAll('.nav-list a, .dropdown-menu a');
 
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (currentPath === linkPath || (currentPath === '/' && linkPath === '/index.html')) {
+        const linkHref = link.getAttribute('href');
+
+        // Remove active from all first
+        link.classList.remove('active');
+
+        // Check path matching
+        const isPathMatch = currentPath === linkHref || (currentPath === '/' && linkHref === '/index.html');
+
+        // Check hash matching (for categories)
+        const isHashMatch = currentHash && linkHref.includes(currentHash);
+
+        if (isHashMatch || (isPathMatch && !currentHash)) {
             link.classList.add('active');
-        } else if (currentPath.includes(linkPath) && linkPath !== '/index.html' && linkPath !== '/') {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
+            // If it's a dropdown item, also highlight the parent trigger
+            const dropdownTrigger = link.closest('.dropdown')?.querySelector('.dropdown-trigger');
+            if (dropdownTrigger) dropdownTrigger.classList.add('active');
         }
     });
 }
+
+// Update on hash change
+window.addEventListener('hashchange', highlightActiveLink);
 
 // Mobile menu setup
 function setupMobileMenu() {

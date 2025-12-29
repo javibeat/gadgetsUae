@@ -19,7 +19,7 @@ class PriceUpdater {
 
     async loadPricesFromFile() {
         try {
-            console.log('📦 Cargando precios desde archivo...');
+            console.log('📦 Loading prices from file...');
             const response = await fetch('assets/data/prices.json');
             if (response.ok) {
                 const priceData = await response.json();
@@ -27,19 +27,19 @@ class PriceUpdater {
                     this.updateProductDisplay(productId, data);
                     this.savePriceToStorage(productId, data);
                 }
-                console.log('✅ Precios cargados desde archivo');
+                console.log('✅ Prices loaded from file');
             } else {
-                console.log('⚠️ No se encontró archivo de precios, usando caché local');
+                console.log('⚠️ Prices file not found, using local cache');
             }
         } catch (error) {
-            console.log('⚠️ Error cargando precios desde archivo:', error.message);
+            console.log('⚠️ Error loading prices from file:', error.message);
         }
     }
 
     async loadCachedPrices() {
         const cached = this.loadPricesFromStorage();
         if (Object.keys(cached).length > 0) {
-            console.log('📦 Cargando precios en caché...');
+            console.log('📦 Loading cached prices...');
             for (const [productId, data] of Object.entries(cached)) {
                 this.updateProductDisplay(productId, data);
             }
@@ -48,49 +48,49 @@ class PriceUpdater {
 
     async updateAllPrices() {
         if (this.isUpdating) {
-            console.log('⏳ Actualización ya en progreso...');
+            console.log('⏳ Update already in progress...');
             return;
         }
 
         this.isUpdating = true;
-        console.log('🔄 Actualizando precios...');
-        
+        console.log('🔄 Updating prices...');
+
         try {
             await this.loadPricesFromFile();
         } catch (error) {
             console.error('Error actualizando precios:', error);
         }
-        
+
         this.isUpdating = false;
-        console.log('✅ Actualización completada');
+        console.log('✅ Update completed');
     }
 
     updateProductDisplay(productId, priceData) {
-        // Buscar elementos por ID del producto o por contenido
+        // Find elements by product ID or content
         const productCard = this.findProductCard(productId);
         if (!productCard) {
-            console.log(`⚠️ No se encontró tarjeta para producto: ${productId}`);
+            console.log(`⚠️ Card not found for product: ${productId}`);
             return;
         }
 
         const priceElements = productCard.querySelectorAll('.current-price');
         const originalElements = productCard.querySelectorAll('.original-price');
         const discountElements = productCard.querySelectorAll('.discount');
-        
+
         if (priceElements.length > 0) {
             priceElements.forEach(el => {
                 el.textContent = `AED ${priceData.current}`;
                 el.style.animation = 'priceUpdate 0.5s ease-in-out';
             });
-            console.log(`✅ Precio actualizado para ${productId}: AED ${priceData.current}`);
+            console.log(`✅ Price updated for ${productId}: AED ${priceData.current}`);
         }
-        
+
         if (priceData.original && originalElements.length > 0) {
             originalElements.forEach(el => {
                 el.textContent = `AED ${priceData.original}`;
             });
         }
-        
+
         if (priceData.discount && discountElements.length > 0) {
             discountElements.forEach(el => {
                 el.textContent = priceData.discount;
@@ -99,10 +99,14 @@ class PriceUpdater {
     }
 
     findProductCard(productId) {
-        // Buscar por data-product-id primero
-        let card = document.querySelector(`[data-product-id="${productId}"]`);
+        // Search by data-id (used by ProductRenderer)
+        let card = document.querySelector(`[data-id="${productId}"]`);
         if (card) return card;
-        
+
+        // Search by data-product-id (legacy)
+        card = document.querySelector(`[data-product-id="${productId}"]`);
+        if (card) return card;
+
         // Buscar por contenido del título
         const titles = document.querySelectorAll('h3');
         for (const title of titles) {
@@ -111,7 +115,7 @@ class PriceUpdater {
                 return title.closest('.product-card');
             }
         }
-        
+
         return null;
     }
 
@@ -207,10 +211,10 @@ function showUpdateStatus(message, duration = 3000) {
         statusEl.className = 'update-status';
         document.body.appendChild(statusEl);
     }
-    
+
     statusEl.textContent = message;
     statusEl.classList.add('show');
-    
+
     setTimeout(() => {
         statusEl.classList.remove('show');
     }, duration);

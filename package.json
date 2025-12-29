@@ -1,0 +1,15 @@
+{
+    "name": "gadgetsuae-sync",
+    "version": "1.0.0",
+    "description": "Amazon Affiliate API Sync Script",
+    "main": "scripts/amazon-sync.js",
+    "scripts": {
+        "sync": "node scripts/amazon-sync.js",
+        "search": "node scripts/amazon-search.js",
+        "discovery": "node scripts/amazon-discovery.js"
+    },
+    "dependencies": {
+        "amazon-paapi": "^1.0.7",
+        "dotenv": "^16.6.1"
+    }
+}
