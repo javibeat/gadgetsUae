@@ -231,6 +231,43 @@ const products = [
     url: 'https://www.amazon.ae/dp/B09TMR67G8?tag=gadgetsdxb-21',
     asin: 'B09TMR67G8',
     gallery: ['https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg']
+  },
+  // Additional products to ensure 3+ per category
+  {
+    id: 'iphone-15',
+    title: 'Apple iPhone 15, 128GB, Black',
+    category: 'Mobiles',
+    image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg',
+    price: 'AED 2,949.00',
+    original: 'AED 3,399.00',
+    discount: '-13%',
+    url: 'https://www.amazon.ae/dp/B0CHX1W1XY?tag=gadgetsdxb-21',
+    asin: 'B0CHX1W1XY',
+    gallery: ['https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg']
+  },
+  {
+    id: 'samsung-buds-pro',
+    title: 'Samsung Galaxy Buds2 Pro, Graphite',
+    category: 'Audio',
+    image: 'https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_SL1500_.jpg',
+    price: 'AED 449.00',
+    original: 'AED 699.00',
+    discount: '-36%',
+    url: 'https://www.amazon.ae/dp/B0B8F7XVNJ?tag=gadgetsdxb-21',
+    asin: 'B0B8F7XVNJ',
+    gallery: ['https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_SL1500_.jpg']
+  },
+  {
+    id: 'ipad-10th-gen',
+    title: 'Apple iPad 10th Gen, 64GB, Wi-Fi, Blue',
+    category: 'Tech',
+    image: 'https://m.media-amazon.com/images/I/61nKf1zdbDL._AC_SL1500_.jpg',
+    price: 'AED 1,549.00',
+    original: 'AED 1,899.00',
+    discount: '-18%',
+    url: 'https://www.amazon.ae/dp/B0BJLXMVMV?tag=gadgetsdxb-21',
+    asin: 'B0BJLXMVMV',
+    gallery: ['https://m.media-amazon.com/images/I/61nKf1zdbDL._AC_SL1500_.jpg']
   }
 ];
 window.products = products;
