@@ -222,7 +222,7 @@ const products = [
   },
   {
     id: 'kindle-paperwhite',
-    title: 'Kindle Paperwhite (16 GB) – 6.8” display, waterproof, USB-C',
+    title: 'Kindle Paperwhite (16 GB) – 6.8" display, waterproof, USB-C',
     category: 'Kindle & E-Readers',
     image: 'https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg',
     price: 'AED 549.00',
@@ -231,121 +231,6 @@ const products = [
     url: 'https://www.amazon.ae/dp/B09TMR67G8?tag=gadgetsdxb-21',
     asin: 'B09TMR67G8',
     gallery: ['https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg']
-  },
-  // Additional Gaming Products
-  {
-    id: 'ps5-console',
-    title: 'Sony PlayStation 5 Console (Disc Edition)',
-    category: 'Gaming',
-    image: 'https://m.media-amazon.com/images/I/51fMNmF9KqL._SL1500_.jpg',
-    price: 'AED 2,099.00',
-    original: 'AED 2,499.00',
-    discount: '-16%',
-    url: 'https://www.amazon.ae/dp/B09DFCB66S?tag=gadgetsdxb-21',
-    asin: 'B09DFCB66S',
-    gallery: ['https://m.media-amazon.com/images/I/51fMNmF9KqL._SL1500_.jpg']
-  },
-  {
-    id: 'xbox-series-x',
-    title: 'Xbox Series X 1TB Console',
-    category: 'Gaming',
-    image: 'https://m.media-amazon.com/images/I/51ojzJk77qL._SL1500_.jpg',
-    price: 'AED 1,999.00',
-    url: 'https://www.amazon.ae/dp/B08H93ZRK9?tag=gadgetsdxb-21',
-    asin: 'B08H93ZRK9',
-    gallery: ['https://m.media-amazon.com/images/I/51ojzJk77qL._SL1500_.jpg']
-  },
-  // Additional Mobiles
-  {
-    id: 'pixel-9-pro',
-    title: 'Google Pixel 9 Pro, 256GB, Obsidian',
-    category: 'Mobiles',
-    image: 'https://m.media-amazon.com/images/I/71MJ6MLRRJL._AC_SL1500_.jpg',
-    price: 'AED 3,999.00',
-    url: 'https://www.amazon.ae/dp/B0D7R959GJ?tag=gadgetsdxb-21',
-    asin: 'B0D7R959GJ',
-    gallery: ['https://m.media-amazon.com/images/I/71MJ6MLRRJL._AC_SL1500_.jpg']
-  },
-  {
-    id: 'oneplus-12',
-    title: 'OnePlus 12 5G, 256GB, Silky Black',
-    category: 'Mobiles',
-    image: 'https://m.media-amazon.com/images/I/71j5+HE+qsL._AC_SL1500_.jpg',
-    price: 'AED 2,999.00',
-    original: 'AED 3,499.00',
-    discount: '-14%',
-    url: 'https://www.amazon.ae/dp/B0CQKR7J4M?tag=gadgetsdxb-21',
-    asin: 'B0CQKR7J4M',
-    gallery: ['https://m.media-amazon.com/images/I/71j5+HE+qsL._AC_SL1500_.jpg']
-  },
-  // Additional Audio
-  {
-    id: 'bose-qc-ultra',
-    title: 'Bose QuietComfort Ultra Headphones',
-    category: 'Audio',
-    image: 'https://m.media-amazon.com/images/I/51+Bh+RhxoL._AC_SL1500_.jpg',
-    price: 'AED 1,499.00',
-    url: 'https://www.amazon.ae/dp/B0CCYR6STJ?tag=gadgetsdxb-21',
-    asin: 'B0CCYR6STJ',
-    gallery: ['https://m.media-amazon.com/images/I/51+Bh+RhxoL._AC_SL1500_.jpg']
-  },
-  {
-    id: 'jbl-charge-5',
-    title: 'JBL Charge 5 Portable Bluetooth Speaker',
-    category: 'Audio',
-    image: 'https://m.media-amazon.com/images/I/71Rz09DLELL._AC_SL1500_.jpg',
-    price: 'AED 599.00',
-    original: 'AED 799.00',
-    discount: '-25%',
-    url: 'https://www.amazon.ae/dp/B08WG5P3S7?tag=gadgetsdxb-21',
-    asin: 'B08WG5P3S7',
-    gallery: ['https://m.media-amazon.com/images/I/71Rz09DLELL._AC_SL1500_.jpg']
-  },
-  // Additional Tech
-  {
-    id: 'ipad-pro-m4',
-    title: 'Apple iPad Pro 13-inch (M4), 256GB, Space Black',
-    category: 'Tech',
-    image: 'https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_SL1500_.jpg',
-    price: 'AED 5,499.00',
-    url: 'https://www.amazon.ae/dp/B0D3J9JDWN?tag=gadgetsdxb-21',
-    asin: 'B0D3J9JDWN',
-    gallery: ['https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_SL1500_.jpg']
-  },
-  {
-    id: 'dell-xps-15',
-    title: 'Dell XPS 15 Laptop, Intel Core i7, 16GB RAM',
-    category: 'Tech',
-    image: 'https://m.media-amazon.com/images/I/91MXLpouhoL._AC_SL1500_.jpg',
-    price: 'AED 5,999.00',
-    original: 'AED 6,999.00',
-    discount: '-14%',
-    url: 'https://www.amazon.ae/dp/B0CHXJ1VLT?tag=gadgetsdxb-21',
-    asin: 'B0CHXJ1VLT',
-    gallery: ['https://m.media-amazon.com/images/I/91MXLpouhoL._AC_SL1500_.jpg']
-  },
-  // Additional Smart Home
-  {
-    id: 'ecobee-thermostat',
-    title: 'ecobee Smart Thermostat Premium',
-    category: 'Smart Home',
-    image: 'https://m.media-amazon.com/images/I/61UZEwEOvZL._AC_SL1500_.jpg',
-    price: 'AED 899.00',
-    url: 'https://www.amazon.ae/dp/B09XXTQPXC?tag=gadgetsdxb-21',
-    asin: 'B09XXTQPXC',
-    gallery: ['https://m.media-amazon.com/images/I/61UZEwEOvZL._AC_SL1500_.jpg']
-  },
-  {
-    id: 'echo-show-10',
-    title: 'Amazon Echo Show 10 (3rd Gen) HD Smart Display',
-    category: 'Smart Home',
-    image: 'https://m.media-amazon.com/images/I/61UPU0C+u-L._AC_SL1000_.jpg',
-    price: 'AED 799.00',
-    original: 'AED 999.00',
-    discount: '-20%',
-    url: 'https://www.amazon.ae/dp/B084DCJKSL?tag=gadgetsdxb-21',
-    asin: 'B084DCJKSL',
-    gallery: ['https://m.media-amazon.com/images/I/61UPU0C+u-L._AC_SL1000_.jpg']
   }
 ];
 window.products = products;
