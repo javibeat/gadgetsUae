@@ -441,11 +441,11 @@
 
             // Render Sections
             renderer.render('container-hot-deals', { limit: 6 }); // Top 6 as Hot Deals
-            renderer.render('container-gaming', { category: 'Gaming', limit: 12 });
-            renderer.render('container-mobiles', { category: 'Mobiles', limit: 12 });
-            renderer.render('container-audio', { category: 'Audio', limit: 12 });
-            renderer.render('container-computers', { category: 'Tech', limit: 12 });
-            renderer.render('container-home', { category: 'Smart Home', limit: 12 });
+            renderer.render('container-gaming', { category: 'Gaming', limit: 3 });
+            renderer.render('container-mobiles', { category: 'Mobiles', limit: 3 });
+            renderer.render('container-audio', { category: 'Audio', limit: 3 });
+            renderer.render('container-computers', { category: 'Tech', limit: 3 });
+            renderer.render('container-home', { category: 'Smart Home', limit: 3 });
 
             // Ensure prices are updated after rendering
             if (window.priceUpdater) {

@@ -129,10 +129,16 @@ header .section-container:hover {
 
 .nav-list {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 0.25rem;
     margin: 0;
     padding: 0;
+}
+
+.nav-list>li {
+    display: flex;
+    align-items: center;
 }
 
 .nav-list a {

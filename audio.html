@@ -27,6 +27,10 @@
         <section class="category-products">
             <div class="container">
                 <div class="products-grid" id="category-products-grid"></div>
+                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
+                    <a href="https://www.amazon.ae/s?k=headphones+speakers&tag=gadgetsdxb-21" class="primary-cta"
+                        target="_blank" rel="noopener noreferrer">View More on Amazon</a>
+                </div>
             </div>
         </section>
     </main>
@@ -41,7 +45,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.products) return;
             const renderer = window.initRenderer(window.products);
-            renderer.render('category-products-grid', { category: 'Audio', limit: 24 });
+            renderer.render('category-products-grid', { category: 'Audio', limit: 12 });
         });
     </script>
 </body>
