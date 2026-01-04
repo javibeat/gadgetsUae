@@ -29,6 +29,7 @@ class ProductRenderer {
 
         container.innerHTML = productsToRender.map(product => this.createCard(product)).join('');
         this.initGalleries(container);
+        this.initFavorites(container);
     }
 
     createCard(p) {
@@ -90,6 +91,36 @@ class ProductRenderer {
     initGalleries(container) {
         // Dot clicks are handled by the onclick attribute for simplicity now
         // But we could add more advanced listeners here if needed (swipe, etc)
+    }
+
+    initFavorites(container) {
+        container.querySelectorAll('.favorite-btn').forEach(btn => {
+            // Remove any existing listeners to be safe (though usually these are new elements)
+            const newBtn = btn.cloneNode(true);
+            btn.parentNode.replaceChild(newBtn, btn);
+
+            newBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = newBtn.dataset.id;
+                if (window.toggleFavorite) {
+                    window.toggleFavorite(id);
+                } else {
+                    console.error('toggleFavorite function not found');
+                }
+            });
+
+            // Set initial state
+            if (window.getFavorites) {
+                const favs = window.getFavorites();
+                if (favs.includes(newBtn.dataset.id)) {
+                    newBtn.innerHTML = '❤️';
+                    newBtn.classList.add('active');
+                } else {
+                    newBtn.innerHTML = '\u2661';
+                    newBtn.classList.remove('active');
+                }
+            }
+        });
     }
 }
 
