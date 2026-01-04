@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing - Best Printers & Accessories UAE | GadgetsUAE</title>
+    <meta name="description"
+        content="Shop the best 3D printers and accessories in UAE. Bambu Lab, upgrades, and more with fast delivery.">
+    <link rel="canonical" href="https://gadgetsdxb.com/3d-printing.html">
+    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+</head>
+
+<body>
+    <div id="menu-include"></div>
+
+    <main>
+        <section class="category-hero">
+            <div class="container">
+                <h1 class="category-title">3D Printing</h1>
+                <p class="category-description">Discover the future of making. Top-rated 3D printers and essential
+                    accessories for beginners and pros.</p>
+            </div>
+        </section>
+
+        <section class="category-products">
+            <div class="container">
+                <div class="products-grid" id="category-products-grid"></div>
+                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
+                    <a href="https://www.amazon.ae/s?k=3d+printing&tag=gadgetsdxb-21" class="primary-cta"
+                        target="_blank" rel="noopener noreferrer">View More on Amazon</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-include"></div>
+
+    <script src="assets/js/products.js?v=2.0"></script>
+    <script src="assets/js/product-renderer.js?v=2.0"></script>
+    <script src="assets/js/script.js?v=2.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.products) return;
+            const renderer = window.initRenderer(window.products);
+            renderer.render('category-products-grid', { category: '3D Printing', limit: 12 });
+        });
+    </script>
+</body>
+
+</html>

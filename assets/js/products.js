@@ -1,5 +1,20 @@
 const products = [
   {
+    id: 'bambu-lab-a1',
+    title: 'Bambu Lab A1 Combo with AMS Lite 3D Printer',
+    category: '3D Printing',
+    image: 'assets/images/bambulaba1/1.jpg',
+    price: 'AED 2,985.00',
+    original: 'AED 3,140.00',
+    discount: '-5%',
+    url: 'https://amzn.to/4pX45F7',
+    asin: 'B0D382K3XF',
+    gallery: [
+      'assets/images/bambulaba1/1.jpg',
+      'assets/images/bambulaba1/2.jpg'
+    ]
+  },
+  {
     id: 'kindlecolor',
     title: 'Amazon Kindle Colorsoft (16 GB)',
     category: 'Kindle & E-Readers',
@@ -131,119 +146,131 @@ const products = [
     id: 's24-ultra',
     title: 'Samsung Galaxy S24 Ultra, 256GB, Titanium Gray',
     category: 'Mobiles',
-    image: 'https://m.media-amazon.com/images/I/71WjsZ8nBDL._AC_SL1500_.jpg',
+    image: 'assets/images/generated/samsung_s24_ultra_lifestyle.png',
     price: 'AED 3,499.00',
     original: 'AED 5,099.00',
     discount: '-31%',
     url: 'https://www.amazon.ae/dp/B0CS8X4GJS?tag=gadgetsdxb-21',
     asin: 'B0CS8X4GJS',
-    gallery: ['https://m.media-amazon.com/images/I/71WjsZ8nBDL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/samsung_s24_ultra_lifestyle.png', 'https://m.media-amazon.com/images/I/71WjsZ8nBDL._AC_SL1500_.jpg']
   },
   {
     id: 'iphone-16-pro',
     title: 'Apple iPhone 16 Pro Max, 256GB, Desert Titanium',
     category: 'Mobiles',
-    image: 'https://m.media-amazon.com/images/I/61fI2lGq-5L._AC_SL1500_.jpg',
+    image: 'assets/images/generated/iphone_16_pro_lifestyle.png',
     price: 'AED 5,099.00',
     original: 'AED 5,099.00',
     url: 'https://www.amazon.ae/dp/B0DHX997C8?tag=gadgetsdxb-21',
     asin: 'B0DHX997C8',
-    gallery: ['https://m.media-amazon.com/images/I/61fI2lGq-5L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/iphone_16_pro_lifestyle.png', 'https://m.media-amazon.com/images/I/61fI2lGq-5L._AC_SL1500_.jpg']
   },
   {
     id: 'sony-wh1000xm5',
     title: 'Sony WH-1000XM5 Wireless Noise Cancelling Headphones',
     category: 'Audio',
-    image: 'https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1200_.jpg',
+    image: 'assets/images/generated/sony_headphones_lifestyle.png',
     price: 'AED 1,049.00',
     original: 'AED 1,499.00',
     discount: '-30%',
     url: 'https://www.amazon.ae/dp/B09XVHJG6X?tag=gadgetsdxb-21',
     asin: 'B09XVHJG6X',
-    gallery: ['https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1200_.jpg']
+    gallery: ['assets/images/generated/sony_headphones_lifestyle.png', 'https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1200_.jpg']
+  },
+  {
+    id: 'neo-cable-txm',
+    title: 'Neo Products d+ TXM Class B / 2.0m - Audio Cable TRS Male to XLR Male',
+    category: 'Audio',
+    image: 'assets/images/cable/71EnCXTCfpL._AC_SL1500_.jpg',
+    price: 'AED 175.00',
+    url: 'https://amzn.to/3LtQqGo',
+    asin: 'B007ROO26E', // Extracted from product page or placeholder if unknown
+    gallery: [
+      'assets/images/cable/71EnCXTCfpL._AC_SL1500_.jpg'
+    ]
   },
   {
     id: 'airpods-pro-2',
     title: 'Apple AirPods Pro (2nd Generation) with MagSafe Case (USB-C)',
     category: 'Audio',
-    image: 'https://m.media-amazon.com/images/I/61SUj2W5yXL._AC_SL1500_.jpg',
+    image: 'assets/images/generated/airpods_pro_lifestyle.png',
     price: 'AED 789.00',
     original: 'AED 949.00',
     discount: '-17%',
     url: 'https://www.amazon.ae/dp/B0CHXB8MT8?tag=gadgetsdxb-21',
     asin: 'B0CHXB8MT8',
-    gallery: ['https://m.media-amazon.com/images/I/61SUj2W5yXL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/airpods_pro_lifestyle.png', 'https://m.media-amazon.com/images/I/61SUj2W5yXL._AC_SL1500_.jpg']
   },
   {
     id: 'macbook-air-m3',
     title: 'Apple 2024 MacBook Air 13-inch Laptop with M3 chip',
     category: 'Tech',
-    image: 'https://m.media-amazon.com/images/I/71ItMQuojUL._AC_SL1500_.jpg',
+    image: 'assets/images/generated/macbook_air_lifestyle.png',
     price: 'AED 4,099.00',
     original: 'AED 4,599.00',
     discount: '-11%',
     url: 'https://www.amazon.ae/dp/B0CX25XGNP?tag=gadgetsdxb-21',
     asin: 'B0CX25XGNP',
-    gallery: ['https://m.media-amazon.com/images/I/71ItMQuojUL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/macbook_air_lifestyle.png', 'https://m.media-amazon.com/images/I/71ItMQuojUL._AC_SL1500_.jpg']
   },
   {
     id: 'rog-zephyrus-g14',
     title: 'ASUS ROG Zephyrus G14 (2024) Gaming Laptop',
     category: 'Tech',
-    image: 'https://m.media-amazon.com/images/I/71f-0eM6t+L._AC_SL1500_.jpg',
+    image: 'assets/images/generated/rog_zephyrus_lifestyle.png',
     price: 'AED 6,999.00',
     url: 'https://www.amazon.ae/dp/B0D1G5Y8Z6?tag=gadgetsdxb-21',
     asin: 'B0D1G5Y8Z6',
-    gallery: ['https://m.media-amazon.com/images/I/71f-0eM6t+L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/rog_zephyrus_lifestyle.png', 'https://m.media-amazon.com/images/I/71f-0eM6t+L._AC_SL1500_.jpg']
   },
   {
     id: 'philips-hue-starter',
     title: 'Philips Hue Smart Bridge and White/Color Bulbs Starter Kit',
     category: 'Smart Home',
-    image: 'https://m.media-amazon.com/images/I/61L9pY-z2+L._AC_SL1500_.jpg',
+    image: 'assets/images/generated/philips_hue_lifestyle.png',
     price: 'AED 649.00',
     original: 'AED 849.00',
     discount: '-24%',
     url: 'https://www.amazon.ae/dp/B07351P9QD?tag=gadgetsdxb-21',
     asin: 'B07351P9QD',
-    gallery: ['https://m.media-amazon.com/images/I/61L9pY-z2+L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/philips_hue_lifestyle.png', 'https://m.media-amazon.com/images/I/61L9pY-z2+L._AC_SL1500_.jpg']
   },
   {
     id: 'ring-video-doorbell',
     title: 'Ring Video Doorbell (2nd Gen) - 1080p HD Video',
     category: 'Smart Home',
-    image: 'https://m.media-amazon.com/images/I/51A31q12RML._AC_SL1000_.jpg',
+    image: 'assets/images/generated/ring_doorbell_lifestyle.png',
     price: 'AED 249.00',
     original: 'AED 399.00',
     discount: '-38%',
     url: 'https://www.amazon.ae/dp/B08N5S5S8G?tag=gadgetsdxb-21',
     asin: 'B08N5S5S8G',
-    gallery: ['https://m.media-amazon.com/images/I/51A31q12RML._AC_SL1000_.jpg']
+    gallery: ['assets/images/generated/ring_doorbell_lifestyle.png', 'https://m.media-amazon.com/images/I/51A31q12RML._AC_SL1000_.jpg']
   },
   {
     id: 'kindle-paperwhite',
     title: 'Kindle Paperwhite (16 GB) – 6.8" display, waterproof, USB-C',
     category: 'Kindle & E-Readers',
-    image: 'https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg',
+    image: 'assets/images/generated/kindle_paperwhite_lifestyle.png',
     price: 'AED 549.00',
     original: 'AED 749.00',
     discount: '-27%',
     url: 'https://www.amazon.ae/dp/B09TMR67G8?tag=gadgetsdxb-21',
     asin: 'B09TMR67G8',
-    gallery: ['https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg']
+    gallery: ['assets/images/generated/kindle_paperwhite_lifestyle.png', 'https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg']
   },
   // Additional products to ensure 3+ per category
   {
     id: 'iphone-15',
     title: 'Apple iPhone 15, 128GB, Black',
     category: 'Mobiles',
-    image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg',
+    image: 'assets/images/iphone/1.jpg',
     price: 'AED 2,949.00',
     original: 'AED 3,399.00',
     discount: '-13%',
     url: 'https://www.amazon.ae/dp/B0CHX1W1XY?tag=gadgetsdxb-21',
     asin: 'B0CHX1W1XY',
-    gallery: ['https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg']
+    gallery: ['assets/images/iphone/1.jpg']
   },
   {
     id: 'samsung-buds-pro',
@@ -268,6 +295,19 @@ const products = [
     url: 'https://www.amazon.ae/dp/B0BJLXMVMV?tag=gadgetsdxb-21',
     asin: 'B0BJLXMVMV',
     gallery: ['https://m.media-amazon.com/images/I/61nKf1zdbDL._AC_SL1500_.jpg']
+  },
+  // Bambu Lab A1 moved to top
+  {
+    id: 'biqu-panda',
+    title: 'BIQU Panda Build Plate CryoGrip™ Pro Glacier 257x257mm for Bambu Lab',
+    category: '3D Printing',
+    image: 'assets/images/biqu/61P3DzQvkgL._AC_SL1500_.jpg',
+    price: 'AED 167.00',
+    url: 'https://amzn.to/4aErWEH',
+    gallery: [
+      'assets/images/biqu/61P3DzQvkgL._AC_SL1500_.jpg',
+      'assets/images/biqu/61sTSxt0-IL._AC_SL1500_.jpg'
+    ]
   }
 ];
 window.products = products;
