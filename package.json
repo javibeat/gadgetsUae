@@ -5,11 +5,13 @@
     "main": "scripts/amazon-sync.js",
     "scripts": {
         "sync": "node scripts/amazon-sync.js",
+        "sync-creators": "node scripts/amazon-creators-sync.js",
         "search": "node scripts/amazon-search.js",
         "discovery": "node scripts/amazon-discovery.js"
     },
     "dependencies": {
         "amazon-paapi": "^1.0.7",
+        "axios": "^1.13.2",
         "dotenv": "^16.6.1"
     }
 }

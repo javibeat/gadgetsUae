@@ -148,6 +148,18 @@ class AnalyticsTracker {
         }
     }
 
+    // Detect device type
+    getDeviceType() {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return 'Tablet';
+        }
+        if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+            return 'Mobile';
+        }
+        return 'Desktop';
+    }
+
     // Track page view
     trackPageView() {
         // Skip tracking for the analytics dashboard itself
@@ -171,7 +183,9 @@ class AnalyticsTracker {
             userAgent: navigator.userAgent,
             screenWidth: window.screen.width,
             screenHeight: window.screen.height,
-            language: navigator.language
+            language: navigator.language,
+            deviceType: this.getDeviceType(),
+            hour: new Date().getHours()
         };
 
         this.addEvent(pageData);
@@ -497,7 +511,11 @@ class AnalyticsTracker {
             sources: this.getTopSources(allEvents),
             referrers: this.getTopReferrers(allEvents),
             pages: this.getTopPages(allEvents),
-            timeline: this.getTimeline(allEvents)
+            timeline: this.getTimeline(allEvents),
+            conversionRate: this.getConversionRate(allEvents),
+            devices: this.getDeviceBreakdown(allEvents),
+            activityHours: this.getActivityByHour(allEvents),
+            weekComparison: this.getWeekComparison(allEvents)
         };
     }
 
@@ -615,6 +633,79 @@ class AnalyticsTracker {
         return Object.entries(sources)
             .sort((a, b) => b[1] - a[1])
             .map(([source, count]) => ({ source, count }));
+    }
+
+    // Calculate conversion rate (clicks to Amazon / pageviews)
+    getConversionRate(events) {
+        const pageviews = events.filter(e => e.type === 'pageview').length;
+        const clicks = events.filter(e => e.type === 'product_click').length;
+        const rate = pageviews > 0 ? ((clicks / pageviews) * 100).toFixed(2) : 0;
+        return {
+            rate: rate,
+            pageviews: pageviews,
+            clicks: clicks
+        };
+    }
+
+    // Get device breakdown
+    getDeviceBreakdown(events) {
+        const devices = {};
+        events.filter(e => e.type === 'pageview').forEach(e => {
+            const device = e.deviceType || 'Unknown';
+            devices[device] = (devices[device] || 0) + 1;
+        });
+        return Object.entries(devices)
+            .sort((a, b) => b[1] - a[1])
+            .map(([device, count]) => ({ device, count }));
+    }
+
+    // Get activity by hour
+    getActivityByHour(events) {
+        const hours = Array(24).fill(0);
+        events.filter(e => e.type === 'pageview').forEach(e => {
+            const hour = e.hour !== undefined ? e.hour : new Date(e.timestamp).getHours();
+            hours[hour]++;
+        });
+        return hours.map((count, hour) => ({ hour, count }));
+    }
+
+    // Get week-over-week comparison
+    getWeekComparison(events) {
+        const now = new Date();
+        const thisWeekStart = new Date(now - 7 * 24 * 60 * 60 * 1000);
+        const lastWeekStart = new Date(now - 14 * 24 * 60 * 60 * 1000);
+
+        const thisWeek = events.filter(e => new Date(e.timestamp) > thisWeekStart);
+        const lastWeek = events.filter(e => {
+            const d = new Date(e.timestamp);
+            return d > lastWeekStart && d <= thisWeekStart;
+        });
+
+        const calc = (week) => ({
+            pageviews: week.filter(e => e.type === 'pageview').length,
+            searches: week.filter(e => e.type === 'search').length,
+            clicks: week.filter(e => e.type === 'product_click').length,
+            uniqueVisitors: new Set(week.filter(e => e.type === 'pageview').map(e => e.visitorId)).size
+        });
+
+        const thisWeekData = calc(thisWeek);
+        const lastWeekData = calc(lastWeek);
+
+        const change = (metric) => {
+            if (lastWeekData[metric] === 0) return thisWeekData[metric] > 0 ? 100 : 0;
+            return (((thisWeekData[metric] - lastWeekData[metric]) / lastWeekData[metric]) * 100).toFixed(1);
+        };
+
+        return {
+            thisWeek: thisWeekData,
+            lastWeek: lastWeekData,
+            change: {
+                pageviews: change('pageviews'),
+                searches: change('searches'),
+                clicks: change('clicks'),
+                uniqueVisitors: change('uniqueVisitors')
+            }
+        };
     }
 
     // Get timeline data

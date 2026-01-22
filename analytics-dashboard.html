@@ -283,10 +283,51 @@
             </div>
         </div>
 
+        <!-- New Metrics: Conversion & Week Comparison -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>💰 Conversion Rate</h3>
+                <div class="value" id="conversionRate">0%</div>
+                <div class="subvalue" id="conversionDetails"></div>
+            </div>
+            <div class="stat-card">
+                <h3>📱 Device Breakdown</h3>
+                <div class="value" style="font-size: 1.2rem;" id="deviceBreakdown">-</div>
+                <div class="subvalue">Distribution</div>
+            </div>
+            <div class="stat-card" style="grid-column: span 2;">
+                <h3>📊 Week over Week</h3>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem;">
+                    <div>
+                        <div style="font-size: 0.8rem; color: #94a3b8;">Pageviews</div>
+                        <div id="weekCompPageviews" style="font-size: 1.5rem; font-weight: 700; color: #60a5fa;">-</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: #94a3b8;">Searches</div>
+                        <div id="weekCompSearches" style="font-size: 1.5rem; font-weight: 700; color: #34d399;">-</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: #94a3b8;">Clicks</div>
+                        <div id="weekCompClicks" style="font-size: 1.5rem; font-weight: 700; color: #f472b6;">-</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: #94a3b8;">Visitors</div>
+                        <div id="weekCompVisitors" style="font-size: 1.5rem; font-weight: 700; color: #fbbf24;">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Activity Chart -->
         <div class="section">
             <h2>📈 Traffic Overview (Last 30 Days)</h2>
             <canvas id="trafficChart" height="100"></canvas>
+        </div>
+
+        <!-- Activity by Hour Chart -->
+        <div class="section">
+            <h2>🕐 Activity by Hour (24h)</h2>
+            <canvas id="activityHoursChart" height="80"></canvas>
         </div>
 
         <!-- Top Search Queries -->
@@ -510,6 +551,27 @@
             document.getElementById('bounceRate').textContent = data.bounceRate + '%';
             document.getElementById('avgPagesPerSession').textContent = data.avgPagesPerSession;
 
+            // NEW: Conversion Rate
+            document.getElementById('conversionRate').textContent = data.conversionRate.rate + '%';
+            document.getElementById('conversionDetails').textContent =
+                `${data.conversionRate.clicks} clicks / ${data.conversionRate.pageviews} views`;
+
+            // NEW: Device Breakdown
+            const deviceText = data.devices.map(d => `${d.device}: ${d.count}`).join(' | ');
+            document.getElementById('deviceBreakdown').textContent = deviceText || 'No data';
+
+            // NEW: Week over Week Comparison
+            const formatChange = (change) => {
+                const num = parseFloat(change);
+                const color = num >= 0 ? '#10b981' : '#ef4444';
+                const arrow = num >= 0 ? '↗' : '↘';
+                return `<span style="color: ${color};">${arrow} ${Math.abs(num)}%</span>`;
+            };
+            document.getElementById('weekCompPageviews').innerHTML = formatChange(data.weekComparison.change.pageviews);
+            document.getElementById('weekCompSearches').innerHTML = formatChange(data.weekComparison.change.searches);
+            document.getElementById('weekCompClicks').innerHTML = formatChange(data.weekComparison.change.clicks);
+            document.getElementById('weekCompVisitors').innerHTML = formatChange(data.weekComparison.change.uniqueVisitors);
+
             // Top searches
             const searchesTable = document.getElementById('topSearchesTable');
             searchesTable.innerHTML = '';
@@ -646,6 +708,46 @@
                         },
                         y: {
                             ticks: { color: '#64748b' },
+                            grid: { color: '#1e293b' }
+                        }
+                    }
+                }
+            });
+
+            // NEW: Activity Hours Chart
+            const activityHoursCtx = document.getElementById('activityHoursChart').getContext('2d');
+
+            // Destroy existing chart if any
+            if (window.activityHoursChartInstance) {
+                window.activityHoursChartInstance.destroy();
+            }
+
+            window.activityHoursChartInstance = new Chart(activityHoursCtx, {
+                type: 'bar',
+                data: {
+                    labels: data.activityHours.map(h => `${h.hour}:00`),
+                    datasets: [{
+                        label: 'Page Views',
+                        data: data.activityHours.map(h => h.count),
+                        backgroundColor: 'rgba(96, 165, 250, 0.6)',
+                        borderColor: '#60a5fa',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#64748b' },
+                            grid: { color: '#1e293b' }
+                        },
+                        y: {
+                            ticks: { color: '#64748b', stepSize: 1 },
                             grid: { color: '#1e293b' }
                         }
                     }
