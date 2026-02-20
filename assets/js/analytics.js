@@ -2,20 +2,21 @@
 // Tracks user behavior, searches, product clicks, and more
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+import { GADGETSUAE_CONFIG } from './config.js';
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCup55Bnb1t5MopmPRjJJU_X34CkIVha-U",
-    authDomain: "gadgetsdxb-8a23f.firebaseapp.com",
-    projectId: "gadgetsdxb-8a23f",
-    storageBucket: "gadgetsdxb-8a23f.firebasestorage.app",
-    messagingSenderId: "188473253964",
-    appId: "1:188473253964:web:03a200c8da00179dd0d4e9",
-    measurementId: "G-313VE0B714"
-};
+// Firebase configuration from config.js
+const firebaseConfig = GADGETSUAE_CONFIG.firebase;
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+if (!firebaseConfig || !firebaseConfig.apiKey) {
+    console.warn('Firebase configuration missing in config.js. Analytics will not be initialized.');
+}
+
+// Initialize Firebase safely
+let app, db;
+if (firebaseConfig && firebaseConfig.apiKey) {
+    app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+}
 
 class AnalyticsTracker {
     constructor() {
@@ -389,7 +390,9 @@ class AnalyticsTracker {
         try {
             // Clean up event for Firebase (avoid circular refs if any)
             const dbEvent = { ...event, serverTime: serverTimestamp() };
-            await addDoc(collection(db, "gadgetsUAE_events"), dbEvent);
+            if (db) {
+                await addDoc(collection(db, "gadgetsUAE_events"), dbEvent);
+            }
         } catch (e) {
             console.warn('Firebase Sync Error:', e);
         }
@@ -397,6 +400,7 @@ class AnalyticsTracker {
 
     // Load events from Firebase for the dashboard
     async loadGlobalEvents() {
+        if (!db) return this.events;
         try {
             const q = query(collection(db, "gadgetsUAE_events"), orderBy("timestamp", "desc"), limit(1000));
             const querySnapshot = await getDocs(q);
