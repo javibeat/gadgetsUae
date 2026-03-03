@@ -8,14 +8,19 @@ import { GADGETSUAE_CONFIG } from './config.js';
 const firebaseConfig = GADGETSUAE_CONFIG.firebase;
 
 if (!firebaseConfig || !firebaseConfig.apiKey) {
-    console.warn('Firebase configuration missing in config.js. Analytics will not be initialized.');
+    console.warn('⚠️ Analytics: Firebase configuration missing in config.js. Analytics will not be initialized.');
+} else {
+    console.log('✅ Analytics: Configuration loaded successfully.');
 }
 
-// Initialize Firebase safely
-let app, db;
 if (firebaseConfig && firebaseConfig.apiKey) {
-    app = initializeApp(firebaseConfig);
-    db = getFirestore(app);
+    try {
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        console.log('✅ Analytics: Firebase initialized.');
+    } catch (error) {
+        console.error('❌ Analytics: Firebase initialization failed:', error);
+    }
 }
 
 class AnalyticsTracker {

@@ -6,14 +6,14 @@
     <!-- CSP optimizado para Amazon -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' 'unsafe-inline' *.amazon.com *.amazon-adsystem.com;
+        script-src 'self' 'unsafe-inline' https://www.gstatic.com *.amazon.com *.amazon-adsystem.com;
         style-src 'self' 'unsafe-inline';
         font-src 'self' data:;
         img-src 'self' data: https: *.amazon.com *.ssl-images-amazon.com *.media-amazon.com;
         object-src 'none';
         base-uri 'self';
         form-action 'self';
-        connect-src 'self' *.amazon.com;
+        connect-src 'self' *.amazon.com https://*.googleapis.com https://*.firebaseio.com https://ipapi.co;
     ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
