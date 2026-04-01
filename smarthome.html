@@ -4,32 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home - Best Deals UAE | GadgetsUAE</title>
+    <title>Best Smart Home Deals UAE 2026 - Vacuums, Speakers & More | GadgetsUAE</title>
     <meta name="description"
-        content="Shop smart home devices on Amazon.ae. Robot vacuums, smart lighting, and more with fast UAE delivery.">
-    <link rel="canonical" href="https://gadgetsdxb.com/home.html">
-    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
-    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+        content="Find the best smart home deals on Amazon.ae — robot vacuums, smart speakers, lighting and home automation with Prime delivery across UAE.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://gadgetsdxb.com/smarthome.html">
+
+    <meta property="og:title" content="Best Smart Home Deals UAE 2026 | GadgetsUAE">
+    <meta property="og:description" content="Robot vacuums, smart speakers and home gadgets on Amazon.ae with Prime delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/smarthome.html">
+
+    <link rel="stylesheet" href="assets/css/fonts.css?v=3.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 
-<body>
+<body data-category="Smart Home">
     <div id="menu-include"></div>
 
     <main>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <strong>Smart Home</strong>
+            </nav>
+        </div>
+
         <section class="category-hero">
             <div class="container">
-                <h1 class="category-title">Smart Home</h1>
-                <p class="category-description">Robot vacuums, smart lighting, and home automation. Prime delivery
-                    across UAE.</p>
+                <h1 class="category-title">Smart Home & Living</h1>
+                <p class="category-description">Robot vacuums, smart speakers, lighting and home automation. Prime delivery across UAE.</p>
             </div>
         </section>
 
         <section class="category-products">
             <div class="container">
                 <div class="products-grid" id="category-products-grid"></div>
-                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
-                    <a href="https://www.amazon.ae/s?k=smart+home&tag=gadgetsdxb-21" class="primary-cta" target="_blank"
-                        rel="noopener noreferrer">View More on Amazon</a>
+                <div class="view-all-container">
+                    <a href="https://www.amazon.ae/s?k=smart+home&tag=gadgetsdxb-21" class="primary-cta"
+                        target="_blank" rel="sponsored noopener noreferrer">View More on Amazon.ae</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-bg-accent">
+            <div class="container">
+                <h2 class="section-title">Smart Home FAQs</h2>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Which robot vacuum is best for UAE apartments?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>For UAE apartments with tile and marble floors, robot vacuums with strong mopping capability are ideal. The Xiaomi X20 Pro and Roborock series handle both vacuuming and mopping well on hard floors and deal with the sand/dust common in UAE homes.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -37,15 +66,19 @@
 
     <div id="footer-include"></div>
 
-    <script src="assets/js/products.js?v=2.0"></script>
-    <script src="assets/js/product-renderer.js?v=2.0"></script>
-    <script src="assets/js/script.js?v=2.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script src="assets/js/products.js?v=3.0"></script>
+    <script src="assets/js/product-renderer.js?v=3.0"></script>
+    <script src="assets/js/script.js?v=3.0"></script>
+    <script src="assets/js/price-updater.js?v=3.0"></script>
+    <script src="assets/js/jsonld-injector.js?v=3.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=3.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.products) return;
             const renderer = window.initRenderer(window.products);
             renderer.render('category-products-grid', { category: 'Smart Home', limit: 12 });
+            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
+            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
         });
     </script>
 </body>

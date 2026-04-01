@@ -2,35 +2,67 @@ name: Amazon Price & Product Sync
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Every night at midnight
-  workflow_dispatch: # Allows manual trigger
+    - cron: '0 20 * * *' # 8 PM UTC = midnight UAE (UTC+4)
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'false'
+        type: boolean
+
+# Prevent GitHub from disabling the workflow due to inactivity
+permissions:
+  contents: write
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci || npm install
 
-      - name: Run Amazon Sync & Discovery
+      - name: Run Amazon Price Sync
         env:
-          AMAZON_ACCESS_KEY: ${{ secrets.AMAZON_ACCESS_KEY }}
-          AMAZON_SECRET_KEY: ${{ secrets.AMAZON_SECRET_KEY }}
+          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
           AMAZON_ASSOCIATE_TAG: ${{ secrets.AMAZON_ASSOCIATE_TAG }}
-        run: |
-          npm run sync
-          npm run discovery
+          # Legacy fallback (remove after confirming Creators API works)
+          AMAZON_ACCESS_KEY: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          AMAZON_SECRET_KEY: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+        run: npm run sync
 
-      - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Run Product Discovery
+        env:
+          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+          AMAZON_ASSOCIATE_TAG: ${{ secrets.AMAZON_ASSOCIATE_TAG }}
+          AMAZON_ACCESS_KEY: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          AMAZON_SECRET_KEY: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+        run: npm run discovery
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Auto-update: Latest prices and trending products"
+          commit_message: "sync: update prices and products from Amazon.ae"
           file_pattern: "assets/data/prices.json assets/js/products.js"
+
+  # Keep workflow alive — GitHub disables scheduled workflows after 60 days of repo inactivity
+  keepalive:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Keepalive ping
+        uses: gautamkrishnar/keepalive-workflow@v2

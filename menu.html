@@ -1,31 +1,39 @@
+<div class="affiliate-disclosure">
+    As an Amazon Associate, we earn from qualifying purchases. <a href="/about.html">Learn more</a>
+</div>
 <header>
-  <div class="section-container">
-    <nav class="nav-container">
-      <a href="/index.html" class="logo">GADGETS UAE</a>
+    <div class="section-container">
+        <nav class="nav-container" aria-label="Main navigation">
+            <a href="/index.html" class="logo" aria-label="GadgetsUAE Home">GADGETS UAE</a>
 
-      <button id="mobile-menu" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+            <button id="mobile-menu" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-      <ul class="nav-list">
-        <li><a href="/index.html">HOME</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-trigger">GADGETS <small>▼</small></a>
-          <ul class="dropdown-menu">
-            <li><a href="/gaming.html">Gaming</a></li>
-            <li><a href="/mobiles.html">Mobiles</a></li>
-            <li><a href="/audio.html">Audio</a></li>
-            <li><a href="/tech.html">Tech</a></li>
-            <li><a href="/smarthome.html">Smart Home</a></li>
-            <li><a href="/3d-printing.html">3D Printing</a></li>
-          </ul>
-        </li>
-        <li><a href="/favoritos.html">FAVORITES</a></li>
-        <li><a href="/blog.html">BLOG</a></li>
-        <li><a href="/about.html">ABOUT</a></li>
-      </ul>
-    </nav>
-  </div>
+            <ul class="nav-list" role="menubar">
+                <li role="none"><a href="/index.html" role="menuitem">HOME</a></li>
+                <li class="dropdown" role="none">
+                    <a href="/products.html" class="dropdown-trigger" role="menuitem" aria-haspopup="true">GADGETS ▾</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="/gaming.html" role="menuitem">Gaming</a></li>
+                        <li role="none"><a href="/mobiles.html" role="menuitem">Mobiles</a></li>
+                        <li role="none"><a href="/audio.html" role="menuitem">Audio</a></li>
+                        <li role="none"><a href="/tech.html" role="menuitem">Tech</a></li>
+                        <li role="none"><a href="/smarthome.html" role="menuitem">Smart Home</a></li>
+                        <li role="none"><a href="/3d-printing.html" role="menuitem">3D Printing</a></li>
+                    </ul>
+                </li>
+                <li role="none"><a href="/deals.html" role="menuitem">DEALS</a></li>
+                <li role="none"><a href="/blog.html" role="menuitem">BLOG</a></li>
+                <li role="none"><a href="/about.html" role="menuitem">ABOUT</a></li>
+                <li role="none"><a href="/favoritos.html" role="menuitem">♡</a></li>
+            </ul>
+
+            <button class="nav-search-btn" aria-label="Search products" onclick="document.querySelector('.search-input')?.focus()">
+                🔍
+            </button>
+        </nav>
+    </div>
 </header>

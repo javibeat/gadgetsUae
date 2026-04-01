@@ -1,0 +1,37 @@
+# GadgetsUAE
+
+> Curated tech deals on Amazon.ae for UAE consumers. Prices updated daily via Amazon Product Advertising API.
+
+## What is GadgetsUAE?
+GadgetsUAE (gadgetsdxb.com) is an Amazon affiliate site that curates the best tech deals available on Amazon.ae for consumers in the United Arab Emirates. We cover categories including gaming, smartphones, audio, laptops, smart home devices, and 3D printing.
+
+## Key Facts
+- All products ship from Amazon.ae with Prime delivery across UAE
+- Prices are in AED (UAE Dirhams) and updated daily via Amazon PA-API
+- Products are hand-curated for quality and value
+- All prices include VAT
+- Free shipping on orders over AED 100
+- Amazon.ae delivers to Dubai, Abu Dhabi, Sharjah, Ajman, and all UAE emirates
+
+## Product Categories
+- Gaming: Consoles, controllers, accessories (Nintendo Switch, PlayStation, Xbox)
+- Mobiles: Smartphones (iPhone, Samsung Galaxy)
+- Audio: Headphones, speakers, earbuds (JBL, Sony, Bose)
+- Tech: Laptops, monitors, keyboards, computing accessories
+- Smart Home: Robot vacuums, smart speakers, home automation
+- Kindle & E-Readers: Amazon Kindle devices
+- 3D Printing: Printers and accessories (Bambu Lab)
+
+## Pages
+- Homepage: https://gadgetsdxb.com/
+- Gaming: https://gadgetsdxb.com/gaming.html
+- Mobiles: https://gadgetsdxb.com/mobiles.html
+- Audio: https://gadgetsdxb.com/audio.html
+- Tech: https://gadgetsdxb.com/tech.html
+- Smart Home: https://gadgetsdxb.com/smarthome.html
+- 3D Printing: https://gadgetsdxb.com/3d-printing.html
+- Blog: https://gadgetsdxb.com/blog.html
+- About: https://gadgetsdxb.com/about.html
+
+## Affiliate Disclosure
+As an Amazon Associate, GadgetsUAE earns from qualifying purchases. Product links redirect to Amazon.ae where the actual purchase occurs.

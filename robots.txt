@@ -1,11 +1,24 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 Sitemap: https://gadgetsdxb.com/sitemap.xml
 
-# Amazon bot
+# AI agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Amazonbot
 Allow: /
 
-# Optimización para crawlers
-Crawl-delay: 1
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# LLM-readable site info
+# See https://gadgetsdxb.com/llms.txt

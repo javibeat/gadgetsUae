@@ -4,32 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptops & Computing - Best Deals UAE | GadgetsUAE</title>
+    <title>Best Laptop & Computer Deals UAE 2026 | GadgetsUAE</title>
     <meta name="description"
-        content="Shop the best laptops and computers on Amazon.ae. MacBook, gaming laptops, and more with fast UAE delivery.">
+        content="Compare the best laptop and computing deals on Amazon.ae — MacBook, gaming laptops, monitors and accessories with Prime delivery across UAE.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://gadgetsdxb.com/tech.html">
-    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
-    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+
+    <meta property="og:title" content="Best Laptop & Computer Deals UAE 2026 | GadgetsUAE">
+    <meta property="og:description" content="MacBooks, gaming laptops and computing accessories on Amazon.ae with Prime delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/tech.html">
+
+    <link rel="stylesheet" href="assets/css/fonts.css?v=3.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 
-<body>
+<body data-category="Tech">
     <div id="menu-include"></div>
 
     <main>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <strong>Laptops & Computing</strong>
+            </nav>
+        </div>
+
         <section class="category-hero">
             <div class="container">
                 <h1 class="category-title">Laptops & Computing</h1>
-                <p class="category-description">MacBooks, gaming laptops, and productivity devices. Prime delivery
-                    across UAE.</p>
+                <p class="category-description">MacBooks, gaming laptops, monitors and productivity devices. Prime delivery across UAE.</p>
             </div>
         </section>
 
         <section class="category-products">
             <div class="container">
                 <div class="products-grid" id="category-products-grid"></div>
-                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
+                <div class="view-all-container">
                     <a href="https://www.amazon.ae/s?k=laptops+computers&tag=gadgetsdxb-21" class="primary-cta"
-                        target="_blank" rel="noopener noreferrer">View More on Amazon</a>
+                        target="_blank" rel="sponsored noopener noreferrer">View More on Amazon.ae</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-bg-accent">
+            <div class="container">
+                <h2 class="section-title">Laptop FAQs</h2>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Is it better to buy laptops from Amazon.ae or retail stores in UAE?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Amazon.ae often offers competitive prices, easy returns (15 days), and 0% installment options. With Prime, you also get free same-day delivery. We compare prices across sources to help you find the best deal.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -37,15 +66,19 @@
 
     <div id="footer-include"></div>
 
-    <script src="assets/js/products.js?v=2.0"></script>
-    <script src="assets/js/product-renderer.js?v=2.0"></script>
-    <script src="assets/js/script.js?v=2.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script src="assets/js/products.js?v=3.0"></script>
+    <script src="assets/js/product-renderer.js?v=3.0"></script>
+    <script src="assets/js/script.js?v=3.0"></script>
+    <script src="assets/js/price-updater.js?v=3.0"></script>
+    <script src="assets/js/jsonld-injector.js?v=3.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=3.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.products) return;
             const renderer = window.initRenderer(window.products);
             renderer.render('category-products-grid', { category: 'Tech', limit: 12 });
+            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
+            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
         });
     </script>
 </body>

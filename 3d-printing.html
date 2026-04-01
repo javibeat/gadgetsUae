@@ -4,32 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Printing - Best Printers & Accessories UAE | GadgetsUAE</title>
+    <title>Best 3D Printing Deals UAE 2026 - Printers & Accessories | GadgetsUAE</title>
     <meta name="description"
-        content="Shop the best 3D printers and accessories in UAE. Bambu Lab, upgrades, and more with fast delivery.">
+        content="Find the best 3D printers and accessories on Amazon.ae — Bambu Lab, Creality and more with fast delivery across UAE. Compare prices updated daily.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://gadgetsdxb.com/3d-printing.html">
-    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
-    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+
+    <meta property="og:title" content="Best 3D Printing Deals UAE 2026 | GadgetsUAE">
+    <meta property="og:description" content="3D printers and accessories on Amazon.ae with delivery across UAE.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/3d-printing.html">
+
+    <link rel="stylesheet" href="assets/css/fonts.css?v=3.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 
-<body>
+<body data-category="3D Printing">
     <div id="menu-include"></div>
 
     <main>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <strong>3D Printing</strong>
+            </nav>
+        </div>
+
         <section class="category-hero">
             <div class="container">
                 <h1 class="category-title">3D Printing</h1>
-                <p class="category-description">Discover the future of making. Top-rated 3D printers and essential
-                    accessories for beginners and pros.</p>
+                <p class="category-description">Discover the future of making. Top-rated 3D printers and essential accessories for beginners and pros.</p>
             </div>
         </section>
 
         <section class="category-products">
             <div class="container">
                 <div class="products-grid" id="category-products-grid"></div>
-                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
-                    <a href="https://www.amazon.ae/s?k=3d+printing&tag=gadgetsdxb-21" class="primary-cta"
-                        target="_blank" rel="noopener noreferrer">View More on Amazon</a>
+                <div class="view-all-container">
+                    <a href="https://www.amazon.ae/s?k=3d+printer&tag=gadgetsdxb-21" class="primary-cta"
+                        target="_blank" rel="sponsored noopener noreferrer">View More on Amazon.ae</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-bg-accent">
+            <div class="container">
+                <h2 class="section-title">3D Printing FAQs</h2>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What is the best 3D printer for beginners in UAE?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The Bambu Lab A1 Combo is an excellent choice for beginners — it offers auto-leveling, multi-color printing with AMS, and requires minimal setup. It's available on Amazon.ae with Prime delivery to all UAE cities.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -37,15 +66,19 @@
 
     <div id="footer-include"></div>
 
-    <script src="assets/js/products.js?v=2.0"></script>
-    <script src="assets/js/product-renderer.js?v=2.0"></script>
-    <script src="assets/js/script.js?v=2.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script src="assets/js/products.js?v=3.0"></script>
+    <script src="assets/js/product-renderer.js?v=3.0"></script>
+    <script src="assets/js/script.js?v=3.0"></script>
+    <script src="assets/js/price-updater.js?v=3.0"></script>
+    <script src="assets/js/jsonld-injector.js?v=3.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=3.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.products) return;
             const renderer = window.initRenderer(window.products);
             renderer.render('category-products-grid', { category: '3D Printing', limit: 12 });
+            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
+            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
         });
     </script>
 </body>

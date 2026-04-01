@@ -4,32 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Audio - Best Deals UAE | GadgetsUAE</title>
+    <title>Best Audio Deals UAE 2026 - Headphones, Speakers & Earbuds | GadgetsUAE</title>
     <meta name="description"
-        content="Shop premium headphones, earbuds, and speakers on Amazon.ae. Sony, Apple AirPods, and more with fast UAE delivery.">
+        content="Discover the best headphones, wireless earbuds, and speakers on Amazon.ae — Sony, JBL, Bose and more with Prime delivery across UAE.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://gadgetsdxb.com/audio.html">
-    <link rel="stylesheet" href="assets/css/fonts.css?v=2.0">
-    <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+
+    <meta property="og:title" content="Best Audio Deals UAE 2026 | GadgetsUAE">
+    <meta property="og:description" content="Premium headphones, speakers and earbuds on Amazon.ae with Prime delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/audio.html">
+
+    <link rel="stylesheet" href="assets/css/fonts.css?v=3.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 
-<body>
+<body data-category="Audio">
     <div id="menu-include"></div>
 
     <main>
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> <span>/</span> <strong>Audio</strong>
+            </nav>
+        </div>
+
         <section class="category-hero">
             <div class="container">
                 <h1 class="category-title">Premium Audio</h1>
-                <p class="category-description">Top-rated headphones, wireless earbuds, and speakers. Prime delivery
-                    across UAE.</p>
+                <p class="category-description">Top-rated headphones, wireless earbuds, and speakers. Prime delivery across UAE.</p>
             </div>
         </section>
 
         <section class="category-products">
             <div class="container">
                 <div class="products-grid" id="category-products-grid"></div>
-                <div class="view-all-container" style="margin-top: 2rem; text-align: center;">
+                <div class="view-all-container">
                     <a href="https://www.amazon.ae/s?k=headphones+speakers&tag=gadgetsdxb-21" class="primary-cta"
-                        target="_blank" rel="noopener noreferrer">View More on Amazon</a>
+                        target="_blank" rel="sponsored noopener noreferrer">View More on Amazon.ae</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-bg-accent">
+            <div class="container">
+                <h2 class="section-title">Audio FAQs</h2>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Which wireless earbuds are best for UAE weather?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>For UAE's hot climate, look for earbuds with IPX4 or higher sweat resistance. The Apple AirPods Pro, Sony WF-1000XM5, and Samsung Galaxy Buds are all rated for moisture resistance and perform well in warm conditions.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -37,15 +66,19 @@
 
     <div id="footer-include"></div>
 
-    <script src="assets/js/products.js?v=2.0"></script>
-    <script src="assets/js/product-renderer.js?v=2.0"></script>
-    <script src="assets/js/script.js?v=2.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=2.0"></script>
+    <script src="assets/js/products.js?v=3.0"></script>
+    <script src="assets/js/product-renderer.js?v=3.0"></script>
+    <script src="assets/js/script.js?v=3.0"></script>
+    <script src="assets/js/price-updater.js?v=3.0"></script>
+    <script src="assets/js/jsonld-injector.js?v=3.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=3.0"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             if (!window.products) return;
             const renderer = window.initRenderer(window.products);
             renderer.render('category-products-grid', { category: 'Audio', limit: 12 });
+            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
+            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
         });
     </script>
 </body>
