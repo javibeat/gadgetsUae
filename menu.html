@@ -1,39 +1,41 @@
 <div class="affiliate-disclosure">
-    As an Amazon Associate, we earn from qualifying purchases. <a href="/about.html">Learn more</a>
+    <p>As an Amazon Associate, we earn from qualifying purchases. <a href="/about.html">Learn more</a></p>
 </div>
-<header>
-    <div class="section-container">
-        <nav class="nav-container" aria-label="Main navigation">
-            <a href="/index.html" class="logo" aria-label="GadgetsUAE Home">GADGETS UAE</a>
 
-            <button id="mobile-menu" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+        <a href="/" class="nav-logo">GADGETS UAE</a>
+
+        <div class="nav-links" id="navLinks" role="menubar">
+            <a href="/" role="menuitem">Home</a>
+
+            <div class="nav-dropdown" role="menuitem" aria-haspopup="true">
+                <span>Gadgets <small>&#9662;</small></span>
+                <div class="nav-dropdown-menu" role="menu">
+                    <a href="/gaming.html" role="menuitem">Gaming</a>
+                    <a href="/mobiles.html" role="menuitem">Mobiles</a>
+                    <a href="/audio.html" role="menuitem">Audio</a>
+                    <a href="/tech.html" role="menuitem">Tech</a>
+                    <a href="/smarthome.html" role="menuitem">Smart Home</a>
+                    <a href="/3d-printing.html" role="menuitem">3D Printing</a>
+                </div>
+            </div>
+
+            <a href="/products.html" role="menuitem">Deals</a>
+            <a href="/blog.html" role="menuitem">Blog</a>
+            <a href="/about.html" role="menuitem">About</a>
+        </div>
+
+        <div class="nav-actions">
+            <button id="searchToggle" aria-label="Search products" title="Search">&#x1F50D;</button>
+            <a href="/favoritos.html" aria-label="Favorites" title="Favorites">&#9825;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <ul class="nav-list" role="menubar">
-                <li role="none"><a href="/index.html" role="menuitem">HOME</a></li>
-                <li class="dropdown" role="none">
-                    <a href="/products.html" class="dropdown-trigger" role="menuitem" aria-haspopup="true">GADGETS ▾</a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li role="none"><a href="/gaming.html" role="menuitem">Gaming</a></li>
-                        <li role="none"><a href="/mobiles.html" role="menuitem">Mobiles</a></li>
-                        <li role="none"><a href="/audio.html" role="menuitem">Audio</a></li>
-                        <li role="none"><a href="/tech.html" role="menuitem">Tech</a></li>
-                        <li role="none"><a href="/smarthome.html" role="menuitem">Smart Home</a></li>
-                        <li role="none"><a href="/3d-printing.html" role="menuitem">3D Printing</a></li>
-                    </ul>
-                </li>
-                <li role="none"><a href="/deals.html" role="menuitem">DEALS</a></li>
-                <li role="none"><a href="/blog.html" role="menuitem">BLOG</a></li>
-                <li role="none"><a href="/about.html" role="menuitem">ABOUT</a></li>
-                <li role="none"><a href="/favoritos.html" role="menuitem">♡</a></li>
-            </ul>
-
-            <button class="nav-search-btn" aria-label="Search products" onclick="document.querySelector('.search-input')?.focus()">
-                🔍
-            </button>
-        </nav>
+        </div>
     </div>
-</header>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
