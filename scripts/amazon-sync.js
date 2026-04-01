@@ -9,8 +9,8 @@ const CREDENTIAL_SECRET = process.env.CREATORS_CREDENTIAL_SECRET || process.env.
 const ASSOCIATE_TAG = process.env.AMAZON_ASSOCIATE_TAG;
 const MARKETPLACE = 'www.amazon.ae';
 
-// Creators API v2.2 (Europe region — includes UAE)
-const TOKEN_URL = 'https://creatorsapi.auth.eu-south-2.amazoncognito.com/oauth2/token';
+// Creators API v3.2 (Login with Amazon OAuth — EU region includes UAE)
+const TOKEN_URL = 'https://api.amazon.co.uk/auth/o2/token';
 const API_BASE = 'https://creatorsapi.amazon/catalog/v1';
 
 const productsFilePath = path.join(__dirname, '../assets/js/products.js');
@@ -55,10 +55,14 @@ async function getAccessToken() {
     console.log('🔐 Requesting OAuth token from Creators API...');
 
     try {
-        const response = await axios.post(TOKEN_URL,
-            `grant_type=client_credentials&client_id=${encodeURIComponent(CREDENTIAL_ID)}&client_secret=${encodeURIComponent(CREDENTIAL_SECRET)}&scope=creatorsapi/default`, {
+        const response = await axios.post(TOKEN_URL, {
+            grant_type: 'client_credentials',
+            client_id: CREDENTIAL_ID,
+            client_secret: CREDENTIAL_SECRET,
+            scope: 'creatorsapi::default'
+        }, {
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             }
         });
 
@@ -142,7 +146,7 @@ async function fetchAmazonData(asins, retries = 3) {
         try {
             const response = await axios.post(`${API_BASE}/getItems`, requestBody, {
                 headers: {
-                    'Authorization': `Bearer ${token}, Version 2.2`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
                     'x-marketplace': MARKETPLACE
                 }
