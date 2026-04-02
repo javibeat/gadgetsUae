@@ -44,14 +44,12 @@ function highlightActiveLink() {
 function setupMobileMenu() {
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
-    const overlay = document.getElementById('mobileOverlay');
     if (!toggle || !links) return;
 
     function closeMenu() {
         links.classList.remove('mobile-open');
         toggle.classList.remove('active');
         toggle.setAttribute('aria-expanded', 'false');
-        overlay?.classList.remove('active');
         document.body.classList.remove('menu-open');
     }
 
@@ -59,7 +57,6 @@ function setupMobileMenu() {
         links.classList.add('mobile-open');
         toggle.classList.add('active');
         toggle.setAttribute('aria-expanded', 'true');
-        overlay?.classList.add('active');
         document.body.classList.add('menu-open');
     }
 
@@ -67,11 +64,9 @@ function setupMobileMenu() {
         links.classList.contains('mobile-open') ? closeMenu() : openMenu();
     });
 
-    overlay?.addEventListener('click', closeMenu);
-
     links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', () => {
-            if (window.innerWidth <= 900) closeMenu();
+            if (window.innerWidth <= 768) closeMenu();
         });
     });
 

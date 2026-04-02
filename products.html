@@ -2,123 +2,75 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - GadgetsUAE</title>
-  <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products — GadgetsUAE | Browse Tech Deals UAE</title>
+    <meta name="description" content="Browse all curated tech products on GadgetsUAE. Gaming, smartphones, audio, laptops, smart home and more with Amazon.ae Prime delivery.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gadgetsdxb.com/products.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fonts.css?v=5.0">
+    <link rel="stylesheet" href="assets/css/style.css?v=5.0">
 </head>
 
 <body>
-  <div id="menu-include"></div>
-  <div class="page-banner">
-    <a href="https://amzn.to/4kQtuhe" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/images/banners/products.jpg" alt="Products Banner"
-        style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
-    </a>
-  </div>
+    <div id="menu-include"></div>
 
-  <!-- Contenedor flotante para desplegables -->
-  <div id="dropdown-container" class="dropdown-container"></div>
+    <main>
+        <div class="container">
+            <section class="page-hero">
+                <h1>All Products</h1>
+                <p>Browse our curated selection of the best tech available in the UAE.</p>
+            </section>
 
-  <div class="product-submenu">
-    <button class="categories-toggle" type="button" aria-expanded="false" aria-controls="categories-list">Browse
-      Categories</button>
-    <nav class="categories-nav">
-      <ul class="categories-list" id="categories-list">
-        <li class="category-item">
-          <button class="category-btn" data-category="gadgets">Gadgets</button>
-          <ul class="subcategory-list" data-for="gadgets">
-            <li>Smartwatches</li>
-            <li>Drones</li>
-            <li>Wearables</li>
-            <li>VR & AR</li>
-            <li>Fitness Trackers</li>
-            <li>Smart Glasses</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="accessories">Accessories</button>
-          <ul class="subcategory-list" data-for="accessories">
-            <li>Cases & Covers</li>
-            <li>Chargers</li>
-            <li>Stands & Holders</li>
-            <li>Cables & Adapters</li>
-            <li>Screen Protectors</li>
-            <li>Power Banks</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="electronics">Electronics</button>
-          <ul class="subcategory-list" data-for="electronics">
-            <li>Audio</li>
-            <li>Video</li>
-            <li>Smart Home</li>
-            <li>TV & Streaming</li>
-            <li>Projectors</li>
-            <li>Monitors</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="computers">Computers</button>
-          <ul class="subcategory-list" data-for="computers">
-            <li>Laptops</li>
-            <li>Desktops</li>
-            <li>Tablets</li>
-            <li>Keyboards</li>
-            <li>Mice</li>
-            <li>Storage</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="mobile">Mobile Phones</button>
-          <ul class="subcategory-list" data-for="mobile">
-            <li>Smartphones</li>
-            <li>Feature Phones</li>
-            <li>SIM Cards</li>
-            <li>Phone Accessories</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="gaming">Gaming</button>
-          <ul class="subcategory-list" data-for="gaming">
-            <li>Consoles</li>
-            <li>Controllers</li>
-            <li>Headsets</li>
-            <li>Games</li>
-            <li>Gaming Chairs</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="appliances">Home Appliances</button>
-          <ul class="subcategory-list" data-for="appliances">
-            <li>Vacuum Cleaners</li>
-            <li>Air Purifiers</li>
-            <li>Kitchen Appliances</li>
-            <li>Smart Lighting</li>
-          </ul>
-        </li>
-        <li class="category-item">
-          <button class="category-btn" data-category="health">Health & Personal Care</button>
-          <ul class="subcategory-list" data-for="health">
-            <li>Electric Toothbrushes</li>
-            <li>Hair Dryers</li>
-            <li>Massagers</li>
-            <li>Thermometers</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <main>
-    <section class="container" style="padding: 4rem 0;">
-      <h1>Products</h1>
-      <p>Browse our selection of the latest and greatest gadgets available in the UAE.</p>
-    </section>
-  </main>
-  <div id="footer-include"></div>
-  <script src="assets/js/script.js"></script>
-  <script type="module" src="assets/js/analytics.js"></script>
+            <section class="section">
+                <div class="products-grid stagger" id="all-products-grid"></div>
+                <div class="view-more-wrap">
+                    <a href="https://www.amazon.ae/s?k=electronics&tag=gadgetsdxb-21" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse Amazon.ae &#8594;</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="container">
+            <div class="search-header">
+                <div class="search-input-wrap">
+                    <input type="text" id="searchOverlayInput" placeholder="Search products..." aria-label="Search">
+                </div>
+                <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+            <div class="search-results">
+                <div class="products-grid" id="searchResultsContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-include"></div>
+    <script src="assets/js/products.js?v=5.0"></script>
+    <script src="assets/js/product-renderer.js?v=5.0"></script>
+    <script src="assets/js/script.js?v=5.0"></script>
+    <script src="assets/js/price-updater.js?v=5.0"></script>
+    <script src="assets/js/jsonld-injector.js?v=5.0"></script>
+    <script type="module" src="assets/js/analytics.js?v=5.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (!window.products) return;
+            const renderer = window.initRenderer(window.products);
+            renderer.render('all-products-grid', { limit: 50 });
+            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
+            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
+
+            const obs = new IntersectionObserver(entries => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.product-card').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+        });
+    </script>
 </body>
 
 </html>
