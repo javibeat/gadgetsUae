@@ -152,7 +152,7 @@ const products = [
     discount: '-31%',
     url: 'https://www.amazon.ae/dp/B0CS8X4GJS?tag=gadgetsdxb-21',
     asin: 'B0CS8X4GJS',
-    gallery: ['assets/images/generated/samsung_s24_ultra_lifestyle.png', 'https://m.media-amazon.com/images/I/71WjsZ8nBDL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/samsung_s24_ultra_lifestyle.png']
   },
   {
     id: 'iphone-16-pro',
@@ -163,7 +163,7 @@ const products = [
     original: 'AED 5,099.00',
     url: 'https://www.amazon.ae/dp/B0DHX997C8?tag=gadgetsdxb-21',
     asin: 'B0DHX997C8',
-    gallery: ['assets/images/generated/iphone_16_pro_lifestyle.png', 'https://m.media-amazon.com/images/I/61fI2lGq-5L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/iphone_16_pro_lifestyle.png']
   },
   {
     id: 'sony-wh1000xm5',
@@ -199,7 +199,7 @@ const products = [
     discount: '-17%',
     url: 'https://www.amazon.ae/dp/B0CHXB8MT8?tag=gadgetsdxb-21',
     asin: 'B0CHXB8MT8',
-    gallery: ['assets/images/generated/airpods_pro_lifestyle.png', 'https://m.media-amazon.com/images/I/61SUj2W5yXL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/airpods_pro_lifestyle.png']
   },
   {
     id: 'macbook-air-m3',
@@ -211,7 +211,7 @@ const products = [
     discount: '-11%',
     url: 'https://www.amazon.ae/dp/B0CX25XGNP?tag=gadgetsdxb-21',
     asin: 'B0CX25XGNP',
-    gallery: ['assets/images/generated/macbook_air_lifestyle.png', 'https://m.media-amazon.com/images/I/71ItMQuojUL._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/macbook_air_lifestyle.png']
   },
   {
     id: 'rog-zephyrus-g14',
@@ -221,7 +221,7 @@ const products = [
     price: 'AED 6,999.00',
     url: 'https://www.amazon.ae/dp/B0D1G5Y8Z6?tag=gadgetsdxb-21',
     asin: 'B0D1G5Y8Z6',
-    gallery: ['assets/images/generated/rog_zephyrus_lifestyle.png', 'https://m.media-amazon.com/images/I/71f-0eM6t+L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/rog_zephyrus_lifestyle.png']
   },
   {
     id: 'philips-hue-starter',
@@ -233,7 +233,7 @@ const products = [
     discount: '-24%',
     url: 'https://www.amazon.ae/dp/B07351P9QD?tag=gadgetsdxb-21',
     asin: 'B07351P9QD',
-    gallery: ['assets/images/generated/philips_hue_lifestyle.png', 'https://m.media-amazon.com/images/I/61L9pY-z2+L._AC_SL1500_.jpg']
+    gallery: ['assets/images/generated/philips_hue_lifestyle.png']
   },
   {
     id: 'ring-video-doorbell',
@@ -245,7 +245,7 @@ const products = [
     discount: '-38%',
     url: 'https://www.amazon.ae/dp/B08N5S5S8G?tag=gadgetsdxb-21',
     asin: 'B08N5S5S8G',
-    gallery: ['assets/images/generated/ring_doorbell_lifestyle.png', 'https://m.media-amazon.com/images/I/51A31q12RML._AC_SL1000_.jpg']
+    gallery: ['assets/images/generated/ring_doorbell_lifestyle.png']
   },
   {
     id: 'kindle-paperwhite',
@@ -257,7 +257,7 @@ const products = [
     discount: '-27%',
     url: 'https://www.amazon.ae/dp/B09TMR67G8?tag=gadgetsdxb-21',
     asin: 'B09TMR67G8',
-    gallery: ['assets/images/generated/kindle_paperwhite_lifestyle.png', 'https://m.media-amazon.com/images/I/51f9Vq4Wk4L._AC_SL1000_.jpg']
+    gallery: ['assets/images/generated/kindle_paperwhite_lifestyle.png']
   },
   // Additional products to ensure 3+ per category
   {
