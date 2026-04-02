@@ -482,6 +482,8 @@ h1, h2, h3, h4 {
     border-radius: var(--r);
     overflow: hidden;
     transition: border-color var(--t-normal) ease, box-shadow var(--t-normal) ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -601,6 +603,7 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    flex: 1;
 }
 
 .card-category {
@@ -666,7 +669,7 @@ h1, h2, h3, h4 {
     gap: var(--s-sm);
     width: 100%;
     padding: 12px;
-    margin-top: var(--s-sm);
+    margin-top: auto;
     background: var(--text);
     color: var(--text-inv);
     font-size: var(--fs-small);
