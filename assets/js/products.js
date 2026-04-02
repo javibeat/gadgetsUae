@@ -288,13 +288,13 @@ const products = [
     id: 'ipad-10th-gen',
     title: 'Apple iPad 10th Gen, 64GB, Wi-Fi, Blue',
     category: 'Tech',
-    image: 'https://m.media-amazon.com/images/I/61nKf1zdbDL._AC_SL1500_.jpg',
+    image: 'https://m.media-amazon.com/images/I/61NGnpjoRDL._AC_SL1500_.jpg',
     price: 'AED 1,549.00',
     original: 'AED 1,899.00',
     discount: '-18%',
     url: 'https://www.amazon.ae/dp/B0BJLXMVMV?tag=gadgetsdxb-21',
     asin: 'B0BJLXMVMV',
-    gallery: ['https://m.media-amazon.com/images/I/61nKf1zdbDL._AC_SL1500_.jpg']
+    gallery: ['https://m.media-amazon.com/images/I/61NGnpjoRDL._AC_SL1500_.jpg']
   },
   // Bambu Lab A1 moved to top
   {

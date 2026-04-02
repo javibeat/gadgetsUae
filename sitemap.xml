@@ -144,4 +144,34 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://gadgetsdxb.com/posts/sony-wh1000xm5.html</loc>
+        <lastmod>2026-04-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gadgetsdxb.com/posts/airpods-pro-2.html</loc>
+        <lastmod>2026-04-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gadgetsdxb.com/posts/macbook-air-m3.html</loc>
+        <lastmod>2026-04-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gadgetsdxb.com/posts/samsung-s24-ultra.html</loc>
+        <lastmod>2026-04-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://gadgetsdxb.com/posts/ipad-10th-gen.html</loc>
+        <lastmod>2026-04-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
