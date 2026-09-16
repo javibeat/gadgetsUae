@@ -108,6 +108,9 @@ const CATALOG_IMAGES = {
   "dyson-v15-detect": [
     "/assets/images/dyson-v15-detect/1.jpg"
   ],
+  "echo-dot-5th-gen": [
+    "/assets/images/echo-dot-5th-gen/1.jpg"
+  ],
   "echo-show-8": [
     "/assets/images/echo-show-8/1.jpg"
   ],
@@ -133,7 +136,7 @@ const CATALOG_IMAGES = {
     "/assets/images/galaxy-ring/1.webp"
   ],
   "galaxy-s26-ultra": [
-    "/assets/images/galaxy-s26-ultra/1.png"
+    "/assets/images/galaxy-s26-ultra/1.webp"
   ],
   "galaxy-tab-s10-fe": [
     "/assets/images/galaxy-tab-s10-fe/1.jpg"
@@ -146,6 +149,9 @@ const CATALOG_IMAGES = {
   ],
   "galaxy-watch8-classic": [
     "/assets/images/galaxy-watch8-classic/1.webp"
+  ],
+  "galaxy-z-fold7": [
+    "/assets/images/galaxy-z-fold7/1.webp"
   ],
   "garmin-fenix-8": [
     "/assets/images/garmin-fenix-8/1.jpg"

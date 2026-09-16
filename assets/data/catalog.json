@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T09:07:23.585Z",
+  "generatedAt": "2026-09-16T14:58:12.965Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -1262,7 +1262,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20S26%20Ultra%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": "https://gadgetsdxb.com/assets/images/galaxy-s26-ultra/1.png",
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-s26-ultra/1.webp",
       "added": "2026-09",
       "heat": 92
     },
@@ -1314,7 +1314,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Z%20Fold7%20512GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-z-fold7/1.webp",
       "added": "2026-09",
       "heat": 76
     },
@@ -2927,7 +2927,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazon%20Echo%20Dot%205th%20Gen&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/echo-dot-5th-gen/1.jpg",
       "added": "2026-09",
       "heat": 72
     },

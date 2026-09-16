@@ -18,5 +18,8 @@
         "amazon-paapi": "^1.0.7",
         "axios": "^1.13.2",
         "dotenv": "^16.6.1"
+    },
+    "devDependencies": {
+        "sharp": "^0.34.3"
     }
 }
