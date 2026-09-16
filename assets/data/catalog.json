@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T14:58:12.965Z",
+  "generatedAt": "2026-09-16T22:42:32.528Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20712,
-    "dealOfDay": "ipad-10th-gen",
+    "dayIndex": 20713,
+    "dealOfDay": "jbl-flip-7",
     "trending": [
-      "steelseries-arctis-nova-7",
+      "logitech-g502-x-lightspeed",
       "dyson-v15-detect",
       "asus-zenbook-a14",
       "samsung-t9-2tb",
       "garmin-forerunner-570",
       "xiaomivacuumx20",
-      "galaxy-tab-s10-fe",
-      "xbox-series-x"
+      "ipad-air-m3",
+      "galaxy-tab-s11-ultra"
     ]
   },
   "products": [
