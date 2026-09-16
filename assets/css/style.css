@@ -1840,3 +1840,11 @@ details.faq-item .faq-answer {
     .hero-grid .deal-hero.has-photo .card-media img { padding: 6px; }
     .deal-hero .card-media .badge-cat { display: inline-flex; }
 }
+
+
+/* ===== OFFICIAL PRODUCT RENDERS (auto-discovered photos) ===== */
+
+.card-media.fit-contain { background: #fff; }
+.card-media.fit-contain img { object-fit: contain; padding: 10%; }
+.deal-hero .card-media.fit-contain img { padding: 8%; }
+.product-card:hover .card-media.fit-contain img { transform: scale(1.03); }

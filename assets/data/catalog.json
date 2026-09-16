@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T07:13:11.823Z",
+  "generatedAt": "2026-09-16T09:07:23.585Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -570,7 +570,7 @@
       ],
       "url": "https://www.amazon.ae/dp/B0B8F7XVNJ?tag=gadgetsdxb-21",
       "asin": "B0B8F7XVNJ",
-      "image": "https://m.media-amazon.com/images/I/61Qqg+T8nsL._AC_SL1500_.jpg",
+      "image": "https://gadgetsdxb.com/assets/images/samsung-buds-pro/1.jpg",
       "added": "2026-04",
       "heat": 62
     },
@@ -595,14 +595,14 @@
       ],
       "url": "https://www.amazon.ae/dp/B0BJLXMVMV?tag=gadgetsdxb-21",
       "asin": "B0BJLXMVMV",
-      "image": "https://m.media-amazon.com/images/I/61NGnpjoRDL._AC_SL1500_.jpg",
+      "image": "https://gadgetsdxb.com/assets/images/ipad-10th-gen/1.jpg",
       "added": "2026-04",
       "heat": 74
     },
     {
       "id": "biqu-panda",
       "brand": "BIQU",
-      "model": "Panda Touch",
+      "model": "Panda CryoGrip Pro",
       "title": "BIQU Panda Build Plate CryoGrip™ Pro Glacier 257x257mm for Bambu Lab",
       "category": "3D Printing",
       "sub": "3D Printer Upgrade",
@@ -610,13 +610,13 @@
       "tags": [
         "bambu",
         "upgrade",
-        "maker"
+        "build-plate"
       ],
-      "blurb": "Touchscreen control for Bambu Lab printers — start, monitor and tweak prints without a phone.",
+      "blurb": "Cold-plate that grips PLA and PETG without glue and releases prints as it cools — a favourite Bambu upgrade.",
       "specs": [
-        "5\" touchscreen",
-        "Bambu Lab",
-        "Wi-Fi"
+        "257×257 mm",
+        "Glacier finish",
+        "Bambu Lab"
       ],
       "url": "https://amzn.to/4aErWEH",
       "asin": null,
@@ -646,7 +646,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20PlayStation%205%20Pro%20console&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ps5-pro/1.jpg",
       "added": "2026-09",
       "heat": 90
     },
@@ -671,7 +671,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20PlayStation%205%20Slim%20console%20disc&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ps5-slim/1.jpg",
       "added": "2026-09",
       "heat": 88
     },
@@ -696,7 +696,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20DualSense%20Edge%20wireless%20controller%20PS5&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dualsense-edge/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -721,7 +721,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20DualSense%20wireless%20controller%20PS5&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dualsense-controller/1.jpg",
       "added": "2026-09",
       "heat": 85
     },
@@ -746,7 +746,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20PlayStation%20Portal%20remote%20player&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/playstation-portal/1.jpg",
       "added": "2026-09",
       "heat": 72
     },
@@ -772,7 +772,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Microsoft%20Xbox%20Series%20X%20console%201TB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xbox-series-x/1.jpg",
       "added": "2026-09",
       "heat": 78
     },
@@ -798,7 +798,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Microsoft%20Xbox%20Series%20S%20console&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xbox-series-s/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -824,7 +824,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Microsoft%20Xbox%20Wireless%20Controller&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xbox-wireless-controller/1.jpg",
       "added": "2026-09",
       "heat": 80
     },
@@ -850,7 +850,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Xbox%20Elite%20Wireless%20Controller%20Series%202&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xbox-elite-series-2/1.jpg",
       "added": "2026-09",
       "heat": 62
     },
@@ -876,7 +876,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Valve%20Steam%20Deck%20OLED%201TB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/steam-deck-oled/1.jpg",
       "added": "2026-09",
       "heat": 80
     },
@@ -902,7 +902,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=ASUS%20ROG%20Ally%20X%20handheld%20gaming%20PC&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/rog-ally-x/1.webp",
       "added": "2026-09",
       "heat": 68
     },
@@ -927,7 +927,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Meta%20Quest%203S%20128GB%20VR%20headset&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/meta-quest-3s/1.webp",
       "added": "2026-09",
       "heat": 74
     },
@@ -953,7 +953,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Meta%20Quest%203%20512GB%20mixed%20reality%20headset&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/meta-quest-3/1.webp",
       "added": "2026-09",
       "heat": 66
     },
@@ -979,7 +979,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Logitech%20G%20Pro%20X%20Superlight%202%20wireless%20gaming%20mouse&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/logitech-g-pro-x-superlight-2/1.jpg",
       "added": "2026-09",
       "heat": 76
     },
@@ -1005,7 +1005,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Razer%20Basilisk%20V3%20Pro%20wireless%20gaming%20mouse&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/razer-basilisk-v3-pro/1.webp",
       "added": "2026-09",
       "heat": 60
     },
@@ -1030,7 +1030,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Logitech%20G502%20X%20Lightspeed%20wireless%20gaming%20mouse&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/logitech-g502-x-lightspeed/1.jpg",
       "added": "2026-09",
       "heat": 64
     },
@@ -1055,7 +1055,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=SteelSeries%20Arctis%20Nova%207%20wireless%20gaming%20headset&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/steelseries-arctis-nova-7/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -1080,7 +1080,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Razer%20Barracuda%20X%20wireless%20gaming%20headset&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/razer-barracuda-x/1.jpg",
       "added": "2026-09",
       "heat": 55
     },
@@ -1106,7 +1106,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=8BitDo%20Ultimate%202C%20wireless%20controller&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/8bitdo-ultimate-2c/1.jpg",
       "added": "2026-09",
       "heat": 50
     },
@@ -1132,7 +1132,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Backbone%20One%20USB-C%20mobile%20gaming%20controller&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/backbone-one-usb-c/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -1158,7 +1158,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPhone%2017%20Pro%20Max%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-17-pro-max/1.jpg",
       "added": "2026-09",
       "heat": 95
     },
@@ -1183,7 +1183,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPhone%2017%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-17/1.webp",
       "added": "2026-09",
       "heat": 90
     },
@@ -1209,7 +1209,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPhone%20Air%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-air/1.png",
       "added": "2026-09",
       "heat": 80
     },
@@ -1235,7 +1235,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPhone%2016e%20128GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-16e/1.jpg",
       "added": "2026-09",
       "heat": 72
     },
@@ -1262,7 +1262,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20S26%20Ultra%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-s26-ultra/1.png",
       "added": "2026-09",
       "heat": 92
     },
@@ -1288,7 +1288,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20A56%205G%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-a56/1.jpg",
       "added": "2026-09",
       "heat": 74
     },
@@ -1340,7 +1340,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Google%20Pixel%2010%20Pro%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/pixel-10-pro/1.png",
       "added": "2026-09",
       "heat": 70
     },
@@ -1366,7 +1366,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Google%20Pixel%2010a%20128GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/pixel-10a/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -1392,7 +1392,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Nothing%20Phone%203a%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/nothing-phone-3a/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -1418,7 +1418,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=OnePlus%2015%205G%20512GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/oneplus-15/1.webp",
       "added": "2026-09",
       "heat": 74
     },
@@ -1444,7 +1444,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Xiaomi%2015T%20Pro%20512GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xiaomi-15t-pro/1.webp",
       "added": "2026-09",
       "heat": 68
     },
@@ -1470,7 +1470,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Xiaomi%20Redmi%20Note%2014%20Pro%20Plus%205G&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/redmi-note-14-pro-plus/1.webp",
       "added": "2026-09",
       "heat": 66
     },
@@ -1497,7 +1497,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPad%20Pro%2013-inch%20M5%20Wi-Fi%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ipad-pro-m5/1.jpg",
       "added": "2026-09",
       "heat": 78
     },
@@ -1523,7 +1523,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPad%20Air%2011-inch%20M3%20Wi-Fi%20128GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ipad-air-m3/1.webp",
       "added": "2026-09",
       "heat": 82
     },
@@ -1549,7 +1549,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20iPad%20mini%20A17%20Pro%20Wi-Fi%20128GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ipad-mini-a17-pro/1.jpg",
       "added": "2026-09",
       "heat": 68
     },
@@ -1576,7 +1576,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Tab%20S11%20Ultra%20Wi-Fi%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-tab-s11-ultra/1.webp",
       "added": "2026-09",
       "heat": 66
     },
@@ -1602,7 +1602,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Tab%20S10%20FE%20Wi-Fi%20128GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-tab-s10-fe/1.jpg",
       "added": "2026-09",
       "heat": 64
     },
@@ -1628,7 +1628,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20WH-1000XM6%20headphones&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/sony-wh-1000xm6/1.jpg",
       "added": "2026-09",
       "heat": 88
     },
@@ -1654,7 +1654,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20AirPods%20Pro%203&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/airpods-pro-3/1.webp",
       "added": "2026-09",
       "heat": 94
     },
@@ -1680,7 +1680,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20AirPods%204%20Active%20Noise%20Cancellation&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/airpods-4-anc/1.png",
       "added": "2026-09",
       "heat": 80
     },
@@ -1706,7 +1706,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20AirPods%20Max%20USB-C&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/airpods-max-usb-c/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -1732,7 +1732,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bose%20QuietComfort%20Ultra%20Headphones%202nd%20Gen&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bose-qc-ultra-headphones-2/1.jpg",
       "added": "2026-09",
       "heat": 72
     },
@@ -1757,7 +1757,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bose%20QuietComfort%20Ultra%20Earbuds%202nd%20Gen&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bose-qc-ultra-earbuds-2/1.jpg",
       "added": "2026-09",
       "heat": 66
     },
@@ -1783,7 +1783,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Buds3%20Pro&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-buds3-pro/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -1809,7 +1809,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20WF-1000XM5%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/sony-wf-1000xm5/1.jpg",
       "added": "2026-09",
       "heat": 72
     },
@@ -1835,7 +1835,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20WH-CH720N%20headphones&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/sony-wh-ch720n/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -1861,7 +1861,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=JBL%20Tune%20770NC%20headphones&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/jbl-tune-770nc/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -1887,7 +1887,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=JBL%20Flip%207%20Bluetooth%20speaker&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/jbl-flip-7/1.jpg",
       "added": "2026-09",
       "heat": 78
     },
@@ -1913,7 +1913,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=JBL%20Charge%206%20Bluetooth%20speaker&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/jbl-charge-6/1.jpg",
       "added": "2026-09",
       "heat": 74
     },
@@ -1939,7 +1939,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=JBL%20Go%204%20Bluetooth%20speaker&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/jbl-go-4/1.webp",
       "added": "2026-09",
       "heat": 66
     },
@@ -1965,7 +1965,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Marshall%20Emberton%20III%20Bluetooth%20speaker&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/marshall-emberton-iii/1.webp",
       "added": "2026-09",
       "heat": 60
     },
@@ -1991,7 +1991,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Marshall%20Major%20V%20headphones&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/marshall-major-v/1.webp",
       "added": "2026-09",
       "heat": 54
     },
@@ -2017,7 +2017,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20Soundcore%20Liberty%205%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/soundcore-liberty-5/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -2043,7 +2043,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Nothing%20Ear%203%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/nothing-ear-3/1.webp",
       "added": "2026-09",
       "heat": 56
     },
@@ -2069,7 +2069,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Beats%20Powerbeats%20Pro%202%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/powerbeats-pro-2/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2095,7 +2095,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20MacBook%20Air%2013-inch%20M4%2016GB%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/macbook-air-m4-13/1.webp",
       "added": "2026-09",
       "heat": 90
     },
@@ -2121,7 +2121,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20MacBook%20Pro%2014-inch%20M5%20512GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/macbook-pro-m5-14/1.png",
       "added": "2026-09",
       "heat": 78
     },
@@ -2147,7 +2147,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20Mac%20mini%20M4%2016GB%20256GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/mac-mini-m4/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -2173,7 +2173,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=ASUS%20Zenbook%20A14%20Copilot%2B%20laptop&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/asus-zenbook-a14/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2199,7 +2199,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Lenovo%20Yoga%20Slim%207i%20Aura%20Edition%20laptop&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/lenovo-yoga-slim-7i-aura/1.webp",
       "added": "2026-09",
       "heat": 52
     },
@@ -2225,7 +2225,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Lenovo%20IdeaPad%20Slim%203%2015%20inch%20Ryzen%205%20laptop&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/lenovo-ideapad-slim-3/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -2251,7 +2251,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=ASUS%20TUF%20Gaming%20A15%20RTX%204060%20laptop&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/asus-tuf-gaming-a15/1.webp",
       "added": "2026-09",
       "heat": 64
     },
@@ -2277,7 +2277,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Odyssey%20OLED%20G6%2027%20inch%20360Hz%20monitor&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/samsung-odyssey-oled-g6/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -2303,7 +2303,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Dell%20UltraSharp%20U2725QE%2027%20inch%204K%20monitor&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dell-u2725qe/1.webp",
       "added": "2026-09",
       "heat": 54
     },
@@ -2329,7 +2329,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Odyssey%20G5%2027%20inch%20165Hz%20curved%20monitor&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/samsung-odyssey-g5-27/1.webp",
       "added": "2026-09",
       "heat": 60
     },
@@ -2355,7 +2355,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazon%20Kindle%20Scribe%202024%20Premium%20Pen%2016GB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/kindle-scribe-2024/1.jpg",
       "added": "2026-09",
       "heat": 66
     },
@@ -2381,7 +2381,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazon%20Kindle%202024%2016GB%20e-reader&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/kindle-2024/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -2407,7 +2407,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Kobo%20Clara%20Colour%20e-reader&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/kobo-clara-colour/1.webp",
       "added": "2026-09",
       "heat": 44
     },
@@ -2433,7 +2433,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20T9%20Portable%20SSD%202TB&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/samsung-t9-2tb/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -2459,7 +2459,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20990%20PRO%202TB%20NVMe%20heatsink&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/samsung-990-pro-2tb/1.webp",
       "added": "2026-09",
       "heat": 68
     },
@@ -2485,7 +2485,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=TP-Link%20Deco%20BE63%20Wi-Fi%207%20mesh%203%20pack&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/tp-link-deco-be63/1.jpg",
       "added": "2026-09",
       "heat": 56
     },
@@ -2511,7 +2511,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=TP-Link%20Archer%20BE550%20Wi-Fi%207%20router&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/tp-link-archer-be550/1.jpg",
       "added": "2026-09",
       "heat": 52
     },
@@ -2537,7 +2537,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Logitech%20MX%20Master%204%20wireless%20mouse&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/logitech-mx-master-4/1.png",
       "added": "2026-09",
       "heat": 78
     },
@@ -2563,7 +2563,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Logitech%20MX%20Keys%20S%20wireless%20keyboard&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/logitech-mx-keys-s/1.png",
       "added": "2026-09",
       "heat": 66
     },
@@ -2589,7 +2589,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Keychron%20K2%20HE%20magnetic%20switch%20keyboard&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/keychron-k2-he/1.jpg",
       "added": "2026-09",
       "heat": 50
     },
@@ -2615,7 +2615,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Elgato%20Stream%20Deck%20MK.2&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/elgato-stream-deck-mk2/1.webp",
       "added": "2026-09",
       "heat": 54
     },
@@ -2641,7 +2641,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Dyson%20V15%20Detect%20Absolute%20cordless%20vacuum&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dyson-v15-detect/1.jpg",
       "added": "2026-09",
       "heat": 80
     },
@@ -2667,7 +2667,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Dyson%20Purifier%20Cool%20Gen1%20TP10&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dyson-purifier-cool-gen1/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2693,7 +2693,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Philips%20Hue%20Lightstrip%20Plus%202m%20base%20kit&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/philips-hue-lightstrip-plus/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2719,7 +2719,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Philips%20Hue%20Play%20light%20bar%202%20pack&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/philips-hue-play-light-bar/1.jpg",
       "added": "2026-09",
       "heat": 54
     },
@@ -2745,7 +2745,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Ring%20Battery%20Video%20Doorbell%20Pro&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ring-battery-doorbell-pro/1.jpg",
       "added": "2026-09",
       "heat": 62
     },
@@ -2771,7 +2771,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Ring%20Indoor%20Cam%202nd%20Gen&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ring-indoor-cam-2nd-gen/1.jpg",
       "added": "2026-09",
       "heat": 56
     },
@@ -2797,7 +2797,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Eufy%20X10%20Pro%20Omni%20robot%20vacuum&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/eufy-x10-pro-omni/1.webp",
       "added": "2026-09",
       "heat": 66
     },
@@ -2823,7 +2823,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Eufy%20Video%20Doorbell%20E340%20dual%20camera&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/eufy-video-doorbell-e340/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -2849,7 +2849,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Roborock%20Qrevo%20Curv%20robot%20vacuum&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/roborock-qrevo-curv/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2875,7 +2875,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=TP-Link%20Tapo%20C210%20pan%20tilt%20camera&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/tapo-c210/1.jpg",
       "added": "2026-09",
       "heat": 64
     },
@@ -2901,7 +2901,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=TP-Link%20Tapo%20P100%20smart%20plug%202%20pack&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/tapo-p100/1.jpg",
       "added": "2026-09",
       "heat": 62
     },
@@ -2953,7 +2953,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazon%20Echo%20Show%208&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/echo-show-8/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -2979,7 +2979,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Xiaomi%20Smart%20Air%20Purifier%204&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xiaomi-smart-air-purifier-4/1.webp",
       "added": "2026-09",
       "heat": 56
     },
@@ -3005,7 +3005,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Govee%20Envisual%20TV%20Backlight%20T2&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/govee-tv-backlight-t2/1.webp",
       "added": "2026-09",
       "heat": 52
     },
@@ -3031,7 +3031,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20Watch%20Series%2011%20GPS%2046mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-watch-series-11/1.jpg",
       "added": "2026-09",
       "heat": 88
     },
@@ -3057,7 +3057,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20Watch%20Ultra%203%2049mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-watch-ultra-3/1.jpg",
       "added": "2026-09",
       "heat": 78
     },
@@ -3083,7 +3083,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20Watch%20SE%203%20GPS%2044mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-watch-se-3/1.jpg",
       "added": "2026-09",
       "heat": 74
     },
@@ -3109,7 +3109,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Watch8%2044mm%20Bluetooth&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-watch8/1.png",
       "added": "2026-09",
       "heat": 72
     },
@@ -3135,7 +3135,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Watch8%20Classic%2046mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-watch8-classic/1.webp",
       "added": "2026-09",
       "heat": 64
     },
@@ -3161,7 +3161,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20Ring&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/galaxy-ring/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -3188,7 +3188,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Garmin%20fenix%208%2047mm%20AMOLED&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/garmin-fenix-8/1.jpg",
       "added": "2026-09",
       "heat": 66
     },
@@ -3214,7 +3214,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Garmin%20Forerunner%20570%2047mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/garmin-forerunner-570/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -3240,7 +3240,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Google%20Pixel%20Watch%204%2045mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/pixel-watch-4/1.jpg",
       "added": "2026-09",
       "heat": 56
     },
@@ -3266,7 +3266,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Xiaomi%20Smart%20Band%2010&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/xiaomi-smart-band-10/1.webp",
       "added": "2026-09",
       "heat": 70
     },
@@ -3292,7 +3292,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Huawei%20Watch%20GT%206%2046mm&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/huawei-watch-gt-6/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -3318,7 +3318,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazfit%20Active%202%20smartwatch&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/amazfit-active-2/1.jpg",
       "added": "2026-09",
       "heat": 52
     },
@@ -3344,7 +3344,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Ray-Ban%20Meta%20Gen%202%20Wayfarer%20smart%20glasses&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ray-ban-meta-gen-2/1.jpg",
       "added": "2026-09",
       "heat": 64
     },
@@ -3370,7 +3370,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20Prime%20Power%20Bank%2026250mAh%20300W&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-prime-26k-300w/1.webp",
       "added": "2026-09",
       "heat": 68
     },
@@ -3396,7 +3396,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20Nano%20Power%20Bank%2010000mAh%2030W%20built-in%20USB-C%20cable&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-nano-power-bank-10k/1.webp",
       "added": "2026-09",
       "heat": 74
     },
@@ -3404,7 +3404,7 @@
       "id": "anker-prime-100w-charger",
       "brand": "Anker",
       "model": "Prime 100W GaN",
-      "title": "Anker Prime 100W GaN Wall Charger 3-Port",
+      "title": "Anker Prime Charger 100W 3-Port GaN",
       "category": "Accessories",
       "sub": "Charger",
       "tier": "mid",
@@ -3420,9 +3420,9 @@
         "3 ports",
         "GaN compact"
       ],
-      "url": "https://www.amazon.ae/s?k=Anker%20Prime%20100W%20GaN%20wall%20charger%203-port&tag=gadgetsdxb-21",
+      "url": "https://www.amazon.ae/s?k=Anker%20Prime%20Charger%20100W%203%20ports%20GaN&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-prime-100w-charger/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -3448,7 +3448,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20Nano%2065W%20USB-C%20charger%203-port&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-nano-65w/1.webp",
       "added": "2026-09",
       "heat": 64
     },
@@ -3474,7 +3474,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20MagGo%203-in-1%20wireless%20charging%20station%20Qi2&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-maggo-3-in-1/1.webp",
       "added": "2026-09",
       "heat": 60
     },
@@ -3500,7 +3500,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20555%20USB-C%20Hub%208-in-1&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-555-hub/1.webp",
       "added": "2026-09",
       "heat": 58
     },
@@ -3526,7 +3526,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Belkin%20BoostCharge%20Pro%203-in-1%20Qi2%20wireless%20charging%20stand&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/belkin-boostcharge-pro-3-in-1/1.jpg",
       "added": "2026-09",
       "heat": 56
     },
@@ -3552,7 +3552,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20MagSafe%20Charger%2025W%202m&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-magsafe-charger-25w/1.jpg",
       "added": "2026-09",
       "heat": 66
     },
@@ -3578,7 +3578,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=UGREEN%20Nexode%20100W%20GaN%20charger%204-port&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ugreen-nexode-100w/1.webp",
       "added": "2026-09",
       "heat": 56
     },
@@ -3604,7 +3604,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Belkin%20Car%20Vent%20Mount%20PRO%20MagSafe&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/belkin-car-vent-mount-pro/1.jpg",
       "added": "2026-09",
       "heat": 60
     },
@@ -3630,7 +3630,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Samsung%2045W%20USB-C%20Super%20Fast%20Charging%20travel%20adapter&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/samsung-45w-travel-adapter/1.webp",
       "added": "2026-09",
       "heat": 62
     },
@@ -3656,7 +3656,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20Pencil%20Pro&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-pencil-pro/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -3682,7 +3682,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Apple%20AirTag%204%20Pack&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/airtag-4-pack/1.png",
       "added": "2026-09",
       "heat": 78
     },
@@ -3708,7 +3708,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20P1S%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bambu-lab-p1s/1.jpg",
       "added": "2026-09",
       "heat": 72
     },
@@ -3734,7 +3734,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20A1%20mini%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bambu-lab-a1-mini/1.jpg",
       "added": "2026-09",
       "heat": 70
     },
@@ -3760,7 +3760,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20H2D%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bambu-lab-h2d/1.jpg",
       "added": "2026-09",
       "heat": 58
     },
@@ -3786,7 +3786,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Creality%20K1C%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/creality-k1c/1.webp",
       "added": "2026-09",
       "heat": 54
     },
@@ -3812,7 +3812,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Creality%20Ender-3%20V3%20SE%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/creality-ender-3-v3-se/1.webp",
       "added": "2026-09",
       "heat": 56
     },
@@ -3838,7 +3838,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Elegoo%20Centauri%20Carbon%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/elegoo-centauri-carbon/1.jpg",
       "added": "2026-09",
       "heat": 50
     },
@@ -3864,7 +3864,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20PLA%20Basic%20filament%201kg&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/bambu-pla-basic/1.jpg",
       "added": "2026-09",
       "heat": 48
     },
@@ -3890,7 +3890,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anycubic%20Kobra%203%20Combo%20ACE%20Pro%203D%20printer&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anycubic-kobra-3-combo/1.jpg",
       "added": "2026-09",
       "heat": 46
     }

@@ -39,5 +39,11 @@ test('discovered photos flow into curated items but never override legacy galler
     assert.equal(x.hasImage, true);
     assert.equal(x.gallery.length, 2);
     assert.equal(y.image, '/assets/images/y/1.jpg');
+    assert.equal(x.imageFit, 'contain');
+    assert.equal(y.imageFit, 'cover');
     assert.equal(Catalog.build(curated, [], {})[0].hasImage, false);
+    const ext = [{ id: 'z', title: 'Z', category: 'Audio', image: 'https://m.media-amazon.com/x.jpg', url: 'https://amzn.to/z' }];
+    const z = Catalog.build([], ext, { z: ['/assets/images/z/1.png'] })[0];
+    assert.equal(z.image, '/assets/images/z/1.png', 'self-hosted photo replaces an externally hosted legacy image');
+    assert.equal(Catalog.build([], ext, {})[0].image, 'https://m.media-amazon.com/x.jpg');
 });

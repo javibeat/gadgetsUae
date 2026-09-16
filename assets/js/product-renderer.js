@@ -127,7 +127,7 @@
         media(p, cls) {
             const c = catInfo(p);
             if (p.hasImage) {
-                return '<div class="card-media ' + (cls || '') + '">' +
+                return '<div class="card-media ' + (cls || '') + (p.imageFit === 'contain' ? ' fit-contain' : '') + '">' +
                     '<img src="' + esc(p.image) + '" alt="' + esc(p.title) + '" loading="lazy" decoding="async" width="600" height="450" ' +
                     'onerror="this.onerror=null;this.closest(\'.product-card\')&&this.closest(\'.product-card\').classList.replace(\'has-photo\',\'no-photo\');this.remove();">' +
                     this.galleryDots(p.gallery) + '</div>';

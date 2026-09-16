@@ -57,7 +57,7 @@
         'iphone-15':          { brand: 'Apple', model: 'iPhone 15', sub: 'Smartphone', tier: 'mid', tags: ['ios', 'apple', 'value'], blurb: 'Dynamic Island, USB-C and a 48 MP camera at the lowest current iPhone price point.', specs: ['A16 Bionic', '48 MP', 'USB-C'], heat: 76 },
         'samsung-buds-pro':   { brand: 'Samsung', model: 'Galaxy Buds2 Pro', sub: 'Earbuds', tier: 'mid', tags: ['android', 'anc', 'earbuds'], blurb: 'Compact ANC earbuds that pair seamlessly with Galaxy phones and watches.', specs: ['24-bit audio', 'ANC', 'IPX7'], heat: 62 },
         'ipad-10th-gen':      { brand: 'Apple', model: 'iPad (10th gen)', sub: 'Tablet', tier: 'mid', tags: ['apple', 'tablet', 'students'], blurb: 'The entry iPad with USB-C and a 10.9-inch screen — ideal for students and streaming.', specs: ['10.9" Liquid', 'A14 Bionic', 'USB-C'], heat: 74 },
-        'biqu-panda':         { brand: 'BIQU', model: 'Panda Touch', sub: '3D Printer Upgrade', tier: 'budget', tags: ['bambu', 'upgrade', 'maker'], blurb: 'Touchscreen control for Bambu Lab printers — start, monitor and tweak prints without a phone.', specs: ['5" touchscreen', 'Bambu Lab', 'Wi-Fi'], heat: 45 }
+        'biqu-panda':         { brand: 'BIQU', model: 'Panda CryoGrip Pro', sub: '3D Printer Upgrade', tier: 'budget', tags: ['bambu', 'upgrade', 'build-plate'], blurb: 'Cold-plate that grips PLA and PETG without glue and releases prints as it cools — a favourite Bambu upgrade.', specs: ['257×257 mm', 'Glacier finish', 'Bambu Lab'], heat: 45 }
     };
 
     /** Make local asset paths root-absolute so they work from /guides/ too. */
@@ -77,7 +77,10 @@
         const category = LEGACY_CATEGORY_MAP[raw.category] || raw.category;
         const meta = legacy ? (LEGACY_META[raw.id] || {}) : {};
         const found = images && images[raw.id] && images[raw.id].length ? images[raw.id] : null;
-        const own = raw.gallery && raw.gallery.length ? raw.gallery : (raw.image ? [raw.image] : []);
+        let own = raw.gallery && raw.gallery.length ? raw.gallery : (raw.image ? [raw.image] : []);
+        // Externally hosted legacy images (e.g. Amazon CDN) give way to photos we host ourselves.
+        if (found && own.length && own.every(src => /^https?:\/\//.test(src))) own = [];
+        const useFound = !own.length && !!found;
         const gallery = (own.length ? own : (found || [])).map(rootPath);
         const item = {
             id: raw.id,
@@ -99,6 +102,7 @@
         };
         item.url = affiliateUrl(Object.assign({}, raw, item));
         item.hasImage = !!item.image;
+        item.imageFit = useFound ? 'contain' : 'cover'; // official renders sit on clean backgrounds → never crop them
         return item;
     }
 
