@@ -4,30 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products — GadgetsUAE | Browse Tech Deals UAE</title>
-    <meta name="description" content="Browse all curated tech products on GadgetsUAE. Gaming, smartphones, audio, laptops, smart home and more with Amazon.ae Prime delivery.">
-    <meta name="robots" content="index, follow">
+    <title>All Products — 147 Hand-Picked Gadgets on Amazon.ae | GadgetsUAE</title>
+    <meta name="description" content="Browse every curated product on GadgetsUAE. Filter by category, budget and brand; gaming, phones, audio, laptops, smart home, wearables and accessories with Prime delivery in the UAE.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://gadgetsdxb.com/products.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta property="og:title" content="All Products — 147 Hand-Picked Gadgets on Amazon.ae | GadgetsUAE">
+    <meta property="og:description" content="Browse every curated product on GadgetsUAE. Filter by category, budget and brand; gaming, phones, audio, laptops, smart home, wearables and accessories with Prime delivery in the UAE.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/products.html">
+    <meta property="og:image" content="https://gadgetsdxb.com/assets/images/banners/products.jpg?v=7">
+    <meta property="og:site_name" content="GadgetsUAE">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=6.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7.0">
 </head>
-
-<body>
+<body data-page="products">
     <div id="menu-include"></div>
 
     <main>
+
         <div class="container">
             <section class="page-hero">
-                <h1>All Products</h1>
-                <p>Browse our curated selection of the best tech available in the UAE.</p>
+                <div class="eyebrow">Full catalog</div>
+                <h1>All products</h1>
+                <p>Every pick in one place. Filter by category, budget or brand, or search. The order reshuffles daily so nothing gets buried.</p>
             </section>
 
-            <section class="section">
+            <section class="section tight">
+                <div class="toolbar">
+                    <label class="catalog-search">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <input type="search" id="catalog-search" placeholder="Search brand, model or type…" aria-label="Search the catalog" autocomplete="off">
+                    </label>
+                    <span class="result-count"><span data-result-count>147</span> products</span>
+                </div>
+                <div class="filter-bar" id="filter-bar"></div>
                 <div class="products-grid stagger" id="all-products-grid"></div>
                 <div class="view-more-wrap">
-                    <a href="https://www.amazon.ae/s?k=electronics&tag=gadgetsdxb-21" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse Amazon.ae &#8594;</a>
+                    <a href="https://www.amazon.ae/s?k=electronics&tag=gadgetsdxb-21" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse Amazon.ae electronics &#8594;</a>
                 </div>
             </section>
         </div>
@@ -38,7 +56,7 @@
         <div class="container">
             <div class="search-header">
                 <div class="search-input-wrap">
-                    <input type="text" id="searchOverlayInput" placeholder="Search products..." aria-label="Search">
+                    <input type="text" id="searchOverlayInput" placeholder="Search 140+ products…" aria-label="Search">
                 </div>
                 <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
             </div>
@@ -50,26 +68,16 @@
     </div>
 
     <div id="footer-include"></div>
-    <script src="assets/js/products.js?v=6.0"></script>
-    <script src="assets/js/product-renderer.js?v=6.0"></script>
-    <script src="assets/js/script.js?v=6.0"></script>
-    <script src="assets/js/price-updater.js?v=6.0"></script>
-    <script src="assets/js/jsonld-injector.js?v=6.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=6.0"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (!window.products) return;
-            const renderer = window.initRenderer(window.products);
-            renderer.render('all-products-grid', { limit: 50 });
-            if (window.priceUpdater) window.priceUpdater.updateAllPrices();
-            fetch('/assets/data/prices.json').then(r=>r.json()).then(d=>ProductRenderer.updateTimestamps(d)).catch(()=>{});
 
-            const obs = new IntersectionObserver(entries => {
-                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.product-card').forEach(el => { el.classList.add('reveal'); obs.observe(el); });
-        });
-    </script>
+    <script src="/assets/js/products.js?v=7.0"></script>
+    <script src="/assets/data/catalog-items.js?v=7.0"></script>
+    <script src="/assets/js/catalog.js?v=7.0"></script>
+    <script src="/assets/js/rotation.js?v=7.0"></script>
+    <script src="/assets/js/product-renderer.js?v=7.0"></script>
+    <script src="/assets/js/script.js?v=7.0"></script>
+    <script src="/assets/js/page.js?v=7.0"></script>
+    <script src="/assets/js/jsonld-injector.js?v=7.0"></script>
+    <script type="module" src="/assets/js/analytics.js?v=7.0"></script>
 </body>
 
 </html>

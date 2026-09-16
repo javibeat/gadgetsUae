@@ -7,7 +7,11 @@
         "sync": "node scripts/amazon-sync.js",
         "sync-creators": "node scripts/amazon-creators-sync.js",
         "search": "node scripts/amazon-search.js",
-        "discovery": "node scripts/amazon-discovery.js"
+        "discovery": "node scripts/amazon-discovery.js",
+        "test": "node --test tests/*.test.js",
+        "build:data": "node scripts/build-data.js",
+        "build:pages": "node scripts/build-pages.js",
+        "build": "npm run build:data && npm run build:pages && node scripts/generate-sitemap.js"
     },
     "dependencies": {
         "amazon-paapi": "^1.0.7",

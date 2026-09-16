@@ -1,0 +1,29 @@
+name: Daily build (catalog feed + sitemap)
+
+# Rebuilds the public JSON feed (used by the Nibango app) with today's rotation
+# and refreshes the sitemap. No Amazon API involved.
+on:
+  schedule:
+    - cron: '5 20 * * *' # 00:05 UAE (UTC+4)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci || npm install
+      - run: npm test
+      - run: npm run build
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: daily catalog feed + sitemap"
+          file_pattern: "assets/data/catalog.json sitemap.xml"

@@ -1,15 +1,14 @@
 # GadgetsUAE
 
-> Curated tech deals on Amazon.ae for UAE consumers. Prices updated daily via Amazon Product Advertising API.
+> Hand-picked tech products on Amazon.ae for UAE shoppers, with a pick of the day and category spotlights that rotate daily.
 
 ## What is GadgetsUAE?
 GadgetsUAE (gadgetsdxb.com) is an Amazon affiliate site that curates the best tech deals available on Amazon.ae for consumers in the United Arab Emirates. We cover categories including gaming, smartphones, audio, laptops, smart home devices, and 3D printing.
 
 ## Key Facts
 - All products ship from Amazon.ae with Prime delivery across UAE
-- Prices are in AED (UAE Dirhams) and updated daily via Amazon PA-API
+- No prices are published on the site; every product links to its live Amazon.ae page (prices in AED)
 - Products are hand-curated for quality and value
-- All prices include VAT
 - Free shipping on orders over AED 100
 - Amazon.ae delivers to Dubai, Abu Dhabi, Sharjah, Ajman, and all UAE emirates
 

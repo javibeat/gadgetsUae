@@ -157,25 +157,22 @@ function performSearch(query) {
         return;
     }
 
-    const term = query.toLowerCase();
-    const products = window.products || [];
-    const matches = products.filter(p =>
-        p.title.toLowerCase().includes(term) ||
-        p.category.toLowerCase().includes(term)
-    );
-
+    const catalog = window.CATALOG || [];
+    const matches = window.Catalog ? window.Catalog.search(catalog, query) : [];
     if (suggestions) suggestions.innerHTML = '';
 
+    if (window.analyticsTracker && window.analyticsTracker.trackSearch) {
+        window.analyticsTracker.trackSearch(query, matches.length);
+    }
+
     if (matches.length > 0 && window.renderer) {
-        content.innerHTML = matches.slice(0, 12).map(p => window.renderer.createCard(p)).join('');
-        window.renderer.initFavorites(content);
-        window.renderer.initSwipe(content);
+        window.renderer.render(content, { items: matches.slice(0, 12) });
         updateFavoriteButtons();
     } else {
         content.innerHTML = `
             <div class="no-results">
                 <h3>No products found</h3>
-                <p style="color:var(--text-2)">Try searching for "gaming", "kindle", "audio" or "smart home"</p>
+                <p style="color:var(--text-2)">Try "earbuds", "switch 2", "robot vacuum" or a brand like "anker".</p>
             </div>
         `;
     }
@@ -198,21 +195,21 @@ window.toggleFavorite = function(id) {
 
     // Track analytics
     if (window.analyticsTracker) {
-        const product = window.products?.find(p => p.id === id);
+        const product = (window.CATALOG || []).find(p => p.id === id);
         if (product) {
             window.analyticsTracker.trackFavorite(id, product.title, favs.includes(id) ? 'add' : 'remove');
         }
     }
 };
 
-function updateFavoriteButtons() {
+window.updateFavoriteButtons = function updateFavoriteButtons() {
     const favs = getFavorites();
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         const isFav = favs.includes(btn.dataset.id);
-        btn.innerHTML = isFav ? '&#10084;' : '&#9825;';
         btn.classList.toggle('active', isFav);
+        btn.setAttribute('aria-pressed', String(isFav));
     });
-}
+};
 
 document.addEventListener('DOMContentLoaded', updateFavoriteButtons);
 

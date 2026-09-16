@@ -4,41 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Deals — GadgetsUAE | Best Amazon.ae Offers</title>
-    <meta name="description" content="Today's best tech deals on Amazon.ae. Updated daily with verified prices and Prime delivery across the UAE.">
-    <meta name="robots" content="index, follow">
+    <title>Today's Picks — Pick of the Day &amp; Trending Tech in UAE | GadgetsUAE</title>
+    <meta name="description" content="Today's pick of the day plus twelve fresh product picks from Amazon.ae, reshuffled every midnight UAE. Gaming, phones, audio, laptops, smart home and more.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://gadgetsdxb.com/deals.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta property="og:title" content="Today's Picks — Pick of the Day &amp; Trending Tech in UAE | GadgetsUAE">
+    <meta property="og:description" content="Today's pick of the day plus twelve fresh product picks from Amazon.ae, reshuffled every midnight UAE. Gaming, phones, audio, laptops, smart home and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/deals.html">
+    <meta property="og:image" content="https://gadgetsdxb.com/assets/images/banners/products.jpg?v=7">
+    <meta property="og:site_name" content="GadgetsUAE">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=6.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7.0">
 </head>
-
-<body>
+<body data-page="deals">
     <div id="menu-include"></div>
 
     <main>
+
         <div class="container">
             <section class="page-hero">
-                <h1>Daily Deals</h1>
-                <p>The best tech offers on Amazon.ae, updated every day. Check back often for the latest discounts.</p>
+                <div class="eyebrow">Today · <span data-day-label></span></div>
+                <h1>Today's picks</h1>
+                <p>A new pick of the day and twelve fresh suggestions every midnight UAE. Prices and stock are live on Amazon.ae.</p>
             </section>
 
-            <section class="page-content">
+            <section class="section tight">
+                <div id="deal-of-day" aria-live="polite"></div>
+            </section>
+
+            <section class="section tight">
+                <div class="section-header">
+                    <div class="section-title-row"><h2>Twelve for today</h2><span class="section-tag">Rotates daily</span></div>
+                    <a href="/products.html" class="view-all">All products &#8594;</a>
+                </div>
+                <div class="products-grid stagger" id="container-today"></div>
+            </section>
+
+            <section class="section tight">
+                <div class="section-header">
+                    <div class="section-title-row"><h2>Trending this week</h2><span class="section-tag">Refreshes Mondays</span></div>
+                </div>
+                <div class="products-grid stagger" id="container-trending"></div>
+            </section>
+
+            <section class="section tight">
                 <div class="deals-banner">
                     <div class="deals-banner-text">
                         <h3>Amazon Prime UAE</h3>
-                        <p>Unlock exclusive deals, free same-day delivery and Prime Video.</p>
+                        <p>Free same-day delivery in Dubai and Abu Dhabi, Prime Video and early access to sales.</p>
                     </div>
-                    <a href="https://amzn.to/3Tn9NkR" target="_blank" rel="sponsored noopener noreferrer" class="cta-btn">Try Prime Free &#8594;</a>
+                    <a href="https://amzn.to/3Tn9NkR" target="_blank" rel="sponsored noopener noreferrer" class="cta-btn">Try Prime free &#8594;</a>
                 </div>
             </section>
         </div>
     </main>
 
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="container">
+            <div class="search-header">
+                <div class="search-input-wrap">
+                    <input type="text" id="searchOverlayInput" placeholder="Search 140+ products…" aria-label="Search">
+                </div>
+                <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+            <div class="search-results">
+                <div class="products-grid" id="searchResultsContent"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-include"></div>
-    <script src="assets/js/script.js?v=6.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=6.0"></script>
+
+    <script src="/assets/js/products.js?v=7.0"></script>
+    <script src="/assets/data/catalog-items.js?v=7.0"></script>
+    <script src="/assets/js/catalog.js?v=7.0"></script>
+    <script src="/assets/js/rotation.js?v=7.0"></script>
+    <script src="/assets/js/product-renderer.js?v=7.0"></script>
+    <script src="/assets/js/script.js?v=7.0"></script>
+    <script src="/assets/js/page.js?v=7.0"></script>
+    <script src="/assets/js/jsonld-injector.js?v=7.0"></script>
+    <script type="module" src="/assets/js/analytics.js?v=7.0"></script>
 </body>
 
 </html>

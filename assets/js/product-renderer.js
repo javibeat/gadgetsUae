@@ -1,154 +1,230 @@
 /**
- * ProductRenderer — Generates product cards for the new design system
+ * ProductRenderer v7 — cards for the merged catalog (window.CATALOG).
+ *
+ * Two card looks:
+ *  - photo card  : legacy products with local images
+ *  - visual card : curated products without photos → typographic tile
+ *                  (brand + model + category glyph on a tinted surface)
+ * Plus a large "pick of the day" hero and a compact row for lists.
+ * No prices are rendered anywhere (see catalog.js for why).
  */
-class ProductRenderer {
-    constructor(products) {
-        this.products = products || [];
+(function (root) {
+    'use strict';
+
+    const ICONS = {
+        gamepad: '<path d="M7 6h10a5 5 0 0 1 5 5v2.5a3.5 3.5 0 0 1-6.3 2.1L14.5 14h-5l-1.2 1.6A3.5 3.5 0 0 1 2 13.5V11a5 5 0 0 1 5-5z"/><path d="M6 11h4M8 9v4"/><circle cx="16" cy="10.5" r=".9"/><circle cx="18.5" cy="12.5" r=".9"/>',
+        phone: '<rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/>',
+        headphones: '<path d="M4 15v-4a8 8 0 0 1 16 0v4"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>',
+        laptop: '<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/>',
+        home: '<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>',
+        watch: '<rect x="7" y="7" width="10" height="10" rx="3"/><path d="M9 7l.5-4h5l.5 4M9 17l.5 4h5l.5-4M12 10v2l1.5 1"/>',
+        plug: '<path d="M9 2v5M15 2v5M7 7h10v4a5 5 0 0 1-10 0zM12 16v6"/>',
+        cube: '<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12L3 7M12 12v10"/>',
+        arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+        heart: '<path d="M12 20.5s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.6a4.5 4.5 0 0 1 7.5 2.9c0 5.4-7.5 10-7.5 10z"/>',
+        spark: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'
+    };
+
+    function icon(name, cls) {
+        return '<svg class="' + (cls || 'icon') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[name] || '') + '</svg>';
     }
 
-    render(containerId, options = {}) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
+    function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
 
-        const { category, limit = 12, excludeId } = options;
+    function catInfo(p) {
+        const C = root.Catalog;
+        return (C && C.category(p.category)) || { hue: 220, icon: 'spark', label: p.category, page: '/products.html' };
+    }
 
-        let filtered = this.products;
-        if (category) filtered = filtered.filter(p => p.category === category);
-        if (excludeId) filtered = filtered.filter(p => p.id !== excludeId);
+    const TIER_LABEL = { budget: 'Value pick', mid: 'Sweet spot', premium: 'Premium' };
+    const LINK_ATTRS = 'target="_blank" rel="sponsored noopener noreferrer"';
 
-        const items = filtered.slice(0, limit);
-
-        if (items.length === 0) {
-            container.innerHTML = '<p style="color:var(--text-2);text-align:center;padding:2rem">No products found in this category.</p>';
-            return;
+    class ProductRenderer {
+        constructor(products) {
+            this.products = products || root.CATALOG || [];
         }
 
-        container.innerHTML = items.map(p => this.createCard(p)).join('');
-        this.initFavorites(container);
-        this.initSwipe(container);
-    }
+        /**
+         * Render into a container.
+         * options.items   explicit list (already ordered)
+         * options.category / limit / excludeId  simple filters (legacy API)
+         */
+        render(containerId, options) {
+            const container = typeof containerId === 'string' ? document.getElementById(containerId) : containerId;
+            if (!container) return [];
+            const o = options || {};
+            let items = o.items;
+            if (!items) {
+                items = this.products;
+                if (o.category) items = items.filter(p => p.category === o.category);
+                if (o.excludeId) items = items.filter(p => p.id !== o.excludeId);
+                items = items.slice(0, o.limit || 12);
+            }
+            if (!items.length) {
+                container.innerHTML = '<p class="empty-state">' + esc(o.emptyText || 'Nothing here yet.') + '</p>';
+                return [];
+            }
+            container.innerHTML = items.map((p, i) => this.createCard(p, { index: i })).join('');
+            this.bind(container);
+            return items;
+        }
 
-    createCard(p) {
-        const img = p.image || (p.gallery && p.gallery[0]) || '';
-        const galleryDots = this.createGalleryDots(p.gallery, p.id);
+        bind(container) {
+            this.initFavorites(container);
+            this.initSwipe(container);
+            this.trackClicks(container);
+        }
 
-        return `
-            <article class="product-card" data-id="${p.id}" data-asin="${p.asin || ''}">
-                <div class="card-image">
-                    <div class="card-badges">
-                        <span class="badge badge-prime">Prime</span>
-                        ${p.discount ? `<span class="badge badge-discount">${p.discount}</span>` : ''}
-                    </div>
-                    <button class="favorite-btn" data-id="${p.id}" aria-label="Add ${p.title} to favorites">&#9825;</button>
-                    <img src="${img}"
-                         alt="${p.title}"
-                         class="main-image"
-                         loading="lazy"
-                         decoding="async"
-                         width="400"
-                         height="300"
-                         onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%23f2f2f2%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2214%22%3EImage unavailable%3C/text%3E%3C/svg%3E';">
-                    ${galleryDots}
-                </div>
-                <div class="card-body">
-                    <span class="card-category">${p.category}</span>
-                    <h3 class="card-title"><a href="${p.url}" target="_blank" rel="sponsored noopener noreferrer">${p.title}</a></h3>
-                    <div class="card-price">
-                        <span class="price-current" data-product-id="${p.id}">${p.price}</span>
-                        ${p.original ? `<span class="price-original">${p.original}</span>` : ''}
-                        ${p.discount ? `<span class="price-discount">${p.discount}</span>` : ''}
-                        <span class="price-timestamp" data-updated-id="${p.id}"></span>
-                    </div>
-                    <a href="${p.url}" class="card-cta" target="_blank" rel="sponsored noopener noreferrer" data-product-id="${p.id}">
-                        Check Price <span class="arrow">&#8594;</span>
-                    </a>
-                </div>
-            </article>
-        `;
-    }
+        media(p, cls) {
+            const c = catInfo(p);
+            if (p.hasImage) {
+                return '<div class="card-media ' + (cls || '') + '">' +
+                    '<img src="' + esc(p.image) + '" alt="' + esc(p.title) + '" loading="lazy" decoding="async" width="600" height="450" ' +
+                    'onerror="this.onerror=null;this.closest(\'.product-card\')&&this.closest(\'.product-card\').classList.replace(\'has-photo\',\'no-photo\');this.remove();">' +
+                    this.galleryDots(p.gallery) + '</div>';
+            }
+            return '<div class="card-media card-visual ' + (cls || '') + '">' +
+                '<span class="visual-brand">' + esc(p.brand) + '</span>' +
+                '<span class="visual-model">' + esc(p.model) + '</span>' +
+                icon(c.icon, 'visual-icon') +
+                '</div>';
+        }
 
-    createGalleryDots(gallery, productId) {
-        if (!gallery || gallery.length <= 1) return '';
-        const dots = gallery.map((img, i) => `
-            <button class="gallery-dot ${i === 0 ? 'active' : ''}"
-                    data-img="${img}"
-                    aria-label="Image ${i + 1}"
-                    onclick="window.renderer.switchImage(this)"></button>
-        `).join('');
-        return `<div class="gallery-dots">${dots}</div>`;
-    }
+        badges(p) {
+            const c = catInfo(p);
+            const out = ['<a class="badge badge-cat" href="' + c.page + '">' + esc(c.label) + '</a>'];
+            if (p.added === '2026-09') out.push('<span class="badge badge-new">New</span>');
+            if (p.heat >= 88) out.push('<span class="badge badge-hot">Top pick</span>');
+            return '<div class="card-badges">' + out.join('') + '</div>';
+        }
 
-    switchImage(dot) {
-        const card = dot.closest('.product-card');
-        const mainImg = card.querySelector('.main-image');
-        const dots = card.querySelectorAll('.gallery-dot');
+        specs(p) {
+            if (!p.specs || !p.specs.length) return '';
+            return '<ul class="spec-pills">' + p.specs.map(s => '<li>' + esc(s) + '</li>').join('') + '</ul>';
+        }
 
-        mainImg.src = dot.getAttribute('data-img');
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
-    }
+        createCard(p, opts) {
+            const c = catInfo(p);
+            const o = opts || {};
+            return '<article class="product-card ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" data-category="' + esc(p.category) + '" style="--hue:' + c.hue + (o.index != null ? ';--i:' + o.index : '') + '">' +
+                '<a class="card-media-link" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' tabindex="-1" aria-hidden="true">' + this.media(p) + '</a>' +
+                this.badges(p) +
+                '<button class="favorite-btn" data-id="' + esc(p.id) + '" aria-label="Save ' + esc(p.title) + '" aria-pressed="false">' + icon('heart') + '</button>' +
+                '<div class="card-body">' +
+                    '<div class="card-meta"><span>' + esc(p.sub) + '</span><span class="sep"></span><span>' + esc(TIER_LABEL[p.tier] || p.tier) + '</span></div>' +
+                    '<h3 class="card-title"><a href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">' + esc(p.title) + '</a></h3>' +
+                    (p.blurb ? '<p class="card-blurb">' + esc(p.blurb) + '</p>' : '') +
+                    this.specs(p) +
+                    '<a href="' + esc(p.url) + '" class="card-cta" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">View on Amazon.ae ' + icon('arrow') + '</a>' +
+                '</div>' +
+            '</article>';
+        }
 
-    initFavorites(container) {
-        container.querySelectorAll('.favorite-btn').forEach(btn => {
-            const fresh = btn.cloneNode(true);
-            btn.parentNode.replaceChild(fresh, btn);
+        /** Large hero for the pick of the day. */
+        createHero(p, meta) {
+            const c = catInfo(p);
+            const m = meta || {};
+            return '<article class="deal-hero ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" style="--hue:' + c.hue + '">' +
+                '<a class="deal-hero-media" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' aria-label="' + esc(p.title) + '">' + this.media(p, 'hero') + '</a>' +
+                '<div class="deal-hero-body">' +
+                    '<div class="eyebrow">' + icon('spark') + ' Pick of the day' + (m.dayLabel ? ' <span class="eyebrow-date">' + esc(m.dayLabel) + '</span>' : '') + '</div>' +
+                    '<div class="card-meta"><a href="' + c.page + '">' + esc(c.label) + '</a><span class="sep"></span><span>' + esc(p.sub) + '</span><span class="sep"></span><span>' + esc(TIER_LABEL[p.tier] || p.tier) + '</span></div>' +
+                    '<h2 class="deal-hero-title"><a href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">' + esc(p.title) + '</a></h2>' +
+                    (p.blurb ? '<p class="deal-hero-blurb">' + esc(p.blurb) + '</p>' : '') +
+                    this.specs(p) +
+                    '<div class="deal-hero-actions">' +
+                        '<a href="' + esc(p.url) + '" class="btn-primary" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">View on Amazon.ae ' + icon('arrow') + '</a>' +
+                        '<button class="favorite-btn inline" data-id="' + esc(p.id) + '" aria-label="Save ' + esc(p.title) + '" aria-pressed="false">' + icon('heart') + ' <span>Save</span></button>' +
+                    '</div>' +
+                    '<p class="deal-hero-note">New pick every midnight UAE · <span class="countdown" data-countdown></span> left</p>' +
+                '</div>' +
+            '</article>';
+        }
 
-            fresh.addEventListener('click', (e) => {
-                e.stopPropagation();
-                e.preventDefault();
-                if (window.toggleFavorite) window.toggleFavorite(fresh.dataset.id);
+        /** Compact row for ranked lists and guides. */
+        createRow(p, rank) {
+            const c = catInfo(p);
+            return '<a class="product-row" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '" style="--hue:' + c.hue + '">' +
+                (rank != null ? '<span class="row-rank">' + rank + '</span>' : '') +
+                '<span class="row-thumb">' + (p.hasImage ? '<img src="' + esc(p.image) + '" alt="" loading="lazy" width="80" height="80">' : icon(c.icon)) + '</span>' +
+                '<span class="row-text"><strong>' + esc(p.title) + '</strong><small>' + esc(p.brand) + ' · ' + esc(p.sub) + '</small></span>' +
+                icon('arrow', 'row-arrow') +
+            '</a>';
+        }
+
+        renderRows(containerId, items, startRank) {
+            const container = typeof containerId === 'string' ? document.getElementById(containerId) : containerId;
+            if (!container) return;
+            container.innerHTML = items.map((p, i) => this.createRow(p, startRank != null ? startRank + i : null)).join('');
+            this.trackClicks(container);
+        }
+
+        galleryDots(gallery) {
+            if (!gallery || gallery.length <= 1) return '';
+            return '<div class="gallery-dots">' + gallery.map((img, i) =>
+                '<button class="gallery-dot' + (i === 0 ? ' active' : '') + '" data-img="' + esc(img) + '" aria-label="Image ' + (i + 1) + '"></button>').join('') + '</div>';
+        }
+
+        switchImage(dot) {
+            const media = dot.closest('.card-media');
+            const img = media && media.querySelector('img');
+            if (!img) return;
+            img.src = dot.getAttribute('data-img');
+            media.querySelectorAll('.gallery-dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+        }
+
+        initFavorites(container) {
+            const favs = root.getFavorites ? root.getFavorites() : [];
+            container.querySelectorAll('.favorite-btn').forEach(btn => {
+                const fresh = btn.cloneNode(true);
+                btn.parentNode.replaceChild(fresh, btn);
+                const on = favs.includes(fresh.dataset.id);
+                fresh.classList.toggle('active', on);
+                fresh.setAttribute('aria-pressed', String(on));
+                fresh.addEventListener('click', e => {
+                    e.preventDefault(); e.stopPropagation();
+                    if (root.toggleFavorite) root.toggleFavorite(fresh.dataset.id);
+                });
             });
+        }
 
-            if (window.getFavorites) {
-                const favs = window.getFavorites();
-                if (favs.includes(fresh.dataset.id)) {
-                    fresh.innerHTML = '&#10084;';
-                    fresh.classList.add('active');
-                }
-            }
-        });
+        initSwipe(container) {
+            container.querySelectorAll('.card-media').forEach(wrap => {
+                const dots = wrap.querySelectorAll('.gallery-dot');
+                if (!dots.length) return;
+                dots.forEach(d => d.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); this.switchImage(d); }));
+                let startX = 0, idx = 0;
+                wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+                wrap.addEventListener('touchend', e => {
+                    const diff = startX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) < 40) return;
+                    if (diff > 0 && idx < dots.length - 1) idx++;
+                    else if (diff < 0 && idx > 0) idx--;
+                    this.switchImage(dots[idx]);
+                }, { passive: true });
+            });
+        }
+
+        trackClicks(container) {
+            container.querySelectorAll('[data-product-id]').forEach(a => {
+                a.addEventListener('click', () => {
+                    const p = this.products.find(x => x.id === a.dataset.productId);
+                    if (p && root.analyticsTracker && root.analyticsTracker.trackProductClick) {
+                        root.analyticsTracker.trackProductClick(p.id, p.title, p.category);
+                    }
+                });
+            });
+        }
+
+        static icon(name, cls) { return icon(name, cls); }
     }
 
-    initSwipe(container) {
-        container.querySelectorAll('.card-image').forEach(wrap => {
-            const dots = wrap.querySelectorAll('.gallery-dot');
-            if (dots.length <= 1) return;
-
-            let startX = 0, idx = 0;
-
-            wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-            wrap.addEventListener('touchend', e => {
-                const diff = startX - e.changedTouches[0].clientX;
-                if (Math.abs(diff) < 40) return;
-                if (diff > 0 && idx < dots.length - 1) idx++;
-                else if (diff < 0 && idx > 0) idx--;
-                dots[idx]?.click();
-            }, { passive: true });
-        });
-    }
-
-    static updateTimestamps(pricesData) {
-        if (!pricesData) return;
-        Object.entries(pricesData).forEach(([id, data]) => {
-            const el = document.querySelector(`[data-updated-id="${id}"]`);
-            if (el && data.lastUpdate) {
-                el.textContent = `Updated ${ProductRenderer.timeAgo(new Date(data.lastUpdate))}`;
-            }
-        });
-    }
-
-    static timeAgo(date) {
-        const s = Math.floor((Date.now() - date) / 1000);
-        if (s < 3600) return `${Math.floor(s / 60)}m ago`;
-        if (s < 86400) return `${Math.floor(s / 3600)}h ago`;
-        const d = Math.floor(s / 86400);
-        if (d === 1) return 'yesterday';
-        if (d < 30) return `${d}d ago`;
-        return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-    }
-}
-
-window.initRenderer = (products) => {
-    window.renderer = new ProductRenderer(products);
-    return window.renderer;
-};
+    root.ProductRenderer = ProductRenderer;
+    root.initRenderer = function (products) {
+        root.renderer = new ProductRenderer(products);
+        return root.renderer;
+    };
+})(window);

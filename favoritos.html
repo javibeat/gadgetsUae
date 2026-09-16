@@ -4,51 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites — GadgetsUAE</title>
-    <meta name="robots" content="noindex, nofollow">
+    <title>Your Favourites | GadgetsUAE</title>
+    <meta name="description" content="Products you saved on GadgetsUAE.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://gadgetsdxb.com/favoritos.html">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta property="og:title" content="Your Favourites | GadgetsUAE">
+    <meta property="og:description" content="Products you saved on GadgetsUAE.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gadgetsdxb.com/favoritos.html">
+    <meta property="og:image" content="https://gadgetsdxb.com/assets/images/banners/products.jpg?v=7">
+    <meta property="og:site_name" content="GadgetsUAE">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=6.0">
+    <link rel="stylesheet" href="/assets/css/style.css?v=7.0">
 </head>
-
-<body>
+<body data-page="favorites">
     <div id="menu-include"></div>
 
     <main>
+
         <div class="container">
             <section class="page-hero">
-                <h1>Your Favorites</h1>
-                <p>Products you've saved for later.</p>
+                <div class="eyebrow">Saved on this device</div>
+                <h1>Your favourites</h1>
+                <p>Products you tapped the heart on. They are stored in this browser only.</p>
             </section>
-
-            <section class="section">
+            <section class="section tight">
                 <div class="products-grid" id="favoritesGrid"></div>
             </section>
         </div>
     </main>
 
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="container">
+            <div class="search-header">
+                <div class="search-input-wrap">
+                    <input type="text" id="searchOverlayInput" placeholder="Search 140+ products…" aria-label="Search">
+                </div>
+                <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+            <div class="search-results">
+                <div class="products-grid" id="searchResultsContent"></div>
+            </div>
+        </div>
+    </div>
+
     <div id="footer-include"></div>
-    <script src="assets/js/products.js?v=6.0"></script>
-    <script src="assets/js/product-renderer.js?v=6.0"></script>
-    <script src="assets/js/script.js?v=6.0"></script>
-    <script type="module" src="assets/js/analytics.js?v=6.0"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const favs = JSON.parse(localStorage.getItem('favorites') || '[]');
-            const grid = document.getElementById('favoritesGrid');
-            if (!grid || !window.products) return;
 
-            const favProducts = window.products.filter(p => favs.includes(p.id));
-            if (favProducts.length === 0) {
-                grid.innerHTML = '<p style="color:var(--text-2);text-align:center;padding:var(--s-2xl)">No favorites yet. Browse products and tap the heart icon to save them here.</p>';
-                return;
-            }
-
-            const renderer = new ProductRenderer(favProducts);
-            renderer.render('favoritesGrid', { limit: 50 });
-        });
-    </script>
+    <script src="/assets/js/products.js?v=7.0"></script>
+    <script src="/assets/data/catalog-items.js?v=7.0"></script>
+    <script src="/assets/js/catalog.js?v=7.0"></script>
+    <script src="/assets/js/rotation.js?v=7.0"></script>
+    <script src="/assets/js/product-renderer.js?v=7.0"></script>
+    <script src="/assets/js/script.js?v=7.0"></script>
+    <script src="/assets/js/page.js?v=7.0"></script>
+    <script src="/assets/js/jsonld-injector.js?v=7.0"></script>
+    <script type="module" src="/assets/js/analytics.js?v=7.0"></script>
 </body>
 
 </html>
