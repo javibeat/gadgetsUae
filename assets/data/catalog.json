@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T06:34:48.147Z",
+  "generatedAt": "2026-09-16T07:13:11.823Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -31,7 +31,7 @@
       "slug": "tech",
       "label": "Computers & Tech",
       "page": "https://gadgetsdxb.com/tech.html",
-      "count": 26
+      "count": 27
     },
     {
       "key": "Smart Home",
@@ -66,14 +66,14 @@
     "dayIndex": 20712,
     "dealOfDay": "ipad-10th-gen",
     "trending": [
-      "razer-barracuda-x",
-      "samsung-990-pro-2tb",
-      "lenovo-yoga-slim-7i-aura",
-      "dyson-purifier-cool-gen1",
+      "steelseries-arctis-nova-7",
+      "dyson-v15-detect",
+      "asus-zenbook-a14",
+      "samsung-t9-2tb",
+      "garmin-forerunner-570",
       "xiaomivacuumx20",
-      "pixel-watch-4",
-      "sony-wh-1000xm6",
-      "s24-ultra"
+      "galaxy-tab-s10-fe",
+      "xbox-series-x"
     ]
   },
   "products": [
@@ -327,11 +327,36 @@
     },
     {
       "id": "neo-cable-txm",
-      "brand": "Elgato",
-      "model": "Stream Deck Neo",
+      "brand": "Neo by Oyaide",
+      "model": "d+ TXM Cable",
       "title": "Neo Products d+ TXM Class B / 2.0m - Audio Cable TRS Male to XLR Male",
       "category": "Audio",
-      "sub": "Streaming",
+      "sub": "Audio Cable",
+      "tier": "budget",
+      "tags": [
+        "studio",
+        "cable",
+        "xlr"
+      ],
+      "blurb": "Studio-grade TRS to XLR cable for monitors and interfaces — the reliable link most home studios skip.",
+      "specs": [
+        "TRS to XLR",
+        "2.0 m",
+        "Class B"
+      ],
+      "url": "https://amzn.to/3LtQqGo",
+      "asin": "B007ROO26E",
+      "image": "https://gadgetsdxb.com/assets/images/cable/71EnCXTCfpL._AC_SL1500_.jpg",
+      "added": "2026-04",
+      "heat": 30
+    },
+    {
+      "id": "streamdeck-neo",
+      "brand": "Elgato",
+      "model": "Stream Deck Neo",
+      "title": "Elgato Stream Deck Neo — 8 Customizable LCD Keys",
+      "category": "Tech",
+      "sub": "Stream Controller",
       "tier": "mid",
       "tags": [
         "streaming",
@@ -344,9 +369,9 @@
         "Info bar",
         "USB-C"
       ],
-      "url": "https://amzn.to/3LtQqGo",
-      "asin": "B007ROO26E",
-      "image": "https://gadgetsdxb.com/assets/images/cable/71EnCXTCfpL._AC_SL1500_.jpg",
+      "url": "https://www.amazon.ae/s?k=Elgato%20Stream%20Deck%20Neo&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/streamneo/1.jpg",
       "added": "2026-04",
       "heat": 55
     },

@@ -1,5 +1,5 @@
 {
-    "name": "GadgetsUAE - Best Tech Deals",
+    "name": "GadgetsUAE — Hand-picked tech on Amazon.ae",
     "short_name": "GadgetsUAE",
     "icons": [
         {
@@ -13,7 +13,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#111827",
+    "theme_color": "#f2f2f2",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "description": "Curated tech picks for UAE shoppers, rotating daily. Prices live on Amazon.ae.",
+    "start_url": "/"
 }

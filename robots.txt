@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /analytics-dashboard.html
+Disallow: /favoritos.html
 Crawl-delay: 1
 
 Sitemap: https://gadgetsdxb.com/sitemap.xml

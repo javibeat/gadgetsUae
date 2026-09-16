@@ -9,6 +9,7 @@ const path = require('path');
 const Catalog = require('../assets/js/catalog.js');
 const Rotation = require('../assets/js/rotation.js');
 const { CATALOG_ITEMS } = require('../assets/data/catalog-items.js');
+const { discover } = require('./build-images.js');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://gadgetsdxb.com';
@@ -48,7 +49,8 @@ function toFeed(catalog, now) {
 }
 
 if (require.main === module) {
-    const catalog = Catalog.build(CATALOG_ITEMS, loadLegacy());
+    const legacy = loadLegacy();
+    const catalog = Catalog.build(CATALOG_ITEMS, legacy, discover(CATALOG_ITEMS.map(p => p.id).concat(legacy.map(p => p.id))));
     const feed = toFeed(catalog, new Date());
     const out = path.join(ROOT, 'assets/data/catalog.json');
     fs.writeFileSync(out, JSON.stringify(feed, null, 2) + '\n');

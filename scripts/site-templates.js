@@ -62,6 +62,7 @@ function scripts() {
     return `
     <script src="/assets/js/products.js?v=${V}"></script>
     <script src="/assets/data/catalog-items.js?v=${V}"></script>
+    <script src="/assets/data/catalog-images.js?v=${V}"></script>
     <script src="/assets/js/catalog.js?v=${V}"></script>
     <script src="/assets/js/rotation.js?v=${V}"></script>
     <script src="/assets/js/product-renderer.js?v=${V}"></script>

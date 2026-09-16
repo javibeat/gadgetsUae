@@ -134,13 +134,31 @@
         const input = $('#catalog-search');
         if (input) input.value = state.q;
 
-        function apply() {
+        const PAGE = 24;
+        let shown = PAGE;
+        let more = $('#load-more');
+        if (!more && grid) {
+            const wrap = document.createElement('div');
+            wrap.className = 'load-more-wrap';
+            wrap.innerHTML = '<button class="btn-outline" id="load-more" type="button">Show more</button>';
+            grid.insertAdjacentElement('afterend', wrap);
+            more = wrap.firstChild;
+            more.addEventListener('click', () => { shown += PAGE; apply(true); });
+        }
+
+        function apply(keep) {
+            if (!keep) shown = PAGE;
             let list = state.q.length >= 2 ? C().search(items, state.q) : R().dailyOrder(items, now, 'all');
             if (state.cat !== 'all') list = list.filter(p => p.category === state.cat);
             if (state.tier !== 'all') list = list.filter(p => p.tier === state.tier);
             if (state.brand !== 'all') list = list.filter(p => p.brand === state.brand);
-            r.render(grid, { items: list, emptyText: 'No products match. Try another brand or clear the search.' });
+            r.render(grid, { items: list.slice(0, shown), emptyText: 'No products match. Try another brand or clear the search.' });
             setText('[data-result-count]', list.length + ' of ' + items.length);
+            if (more) {
+                const left = list.length - shown;
+                more.parentElement.hidden = left <= 0;
+                more.textContent = 'Show ' + Math.min(PAGE, Math.max(left, 0)) + ' more';
+            }
             reveal(grid);
         }
         if (bar) {
@@ -205,7 +223,11 @@
         }
     }
 
-    const controllers = { home, category, products, deals, favorites, guide };
+    function notfound() {
+        renderer().render('container-trending', { items: R().trending(all(), 8, new Date()) });
+    }
+
+    const controllers = { home, category, products, deals, favorites, guide, notfound };
 
     function boot() {
         const body = document.body;

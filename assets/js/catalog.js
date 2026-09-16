@@ -46,7 +46,8 @@
         's24-ultra':          { brand: 'Samsung', model: 'Galaxy S24 Ultra', sub: 'Smartphone', tier: 'premium', tags: ['android', 'camera', 's-pen'], blurb: 'Still the S Pen flagship to beat on value now that newer models have landed.', specs: ['200 MP camera', 'S Pen', 'Titanium'], heat: 72 },
         'iphone-16-pro':      { brand: 'Apple', model: 'iPhone 16 Pro', sub: 'Smartphone', tier: 'premium', tags: ['ios', 'camera', 'apple'], blurb: 'Pro camera system and A18 Pro at a lower price than the 17 series — the smart iPhone buy this year.', specs: ['A18 Pro', '48 MP Fusion', '120 Hz'], heat: 85 },
         'sony-wh1000xm5':     { brand: 'Sony', model: 'WH-1000XM5', sub: 'Headphones', tier: 'premium', tags: ['anc', 'wireless', 'travel'], blurb: 'Excellent noise cancelling and comfort; the previous flagship, now the value pick for flyers.', specs: ['30 h battery', 'ANC', 'Multipoint'], heat: 80 },
-        'neo-cable-txm':      { brand: 'Elgato', model: 'Stream Deck Neo', sub: 'Streaming', tier: 'mid', tags: ['streaming', 'productivity', 'desk'], blurb: 'Eight customisable keys for shortcuts, scenes and apps — handy far beyond streaming.', specs: ['8 LCD keys', 'Info bar', 'USB-C'], heat: 55 },
+        'neo-cable-txm':      { brand: 'Neo by Oyaide', model: 'd+ TXM Cable', sub: 'Audio Cable', tier: 'budget', tags: ['studio', 'cable', 'xlr'], blurb: 'Studio-grade TRS to XLR cable for monitors and interfaces — the reliable link most home studios skip.', specs: ['TRS to XLR', '2.0 m', 'Class B'], heat: 30 },
+        'streamdeck-neo':     { brand: 'Elgato', model: 'Stream Deck Neo', sub: 'Stream Controller', tier: 'mid', tags: ['streaming', 'productivity', 'desk'], blurb: 'Eight customisable keys for shortcuts, scenes and apps — handy far beyond streaming.', specs: ['8 LCD keys', 'Info bar', 'USB-C'], heat: 55 },
         'airpods-pro-2':      { brand: 'Apple', model: 'AirPods Pro 2', sub: 'Earbuds', tier: 'premium', tags: ['ios', 'anc', 'earbuds'], blurb: 'Best earbuds for iPhone owners with hearing-aid features and adaptive noise control.', specs: ['USB-C', 'Adaptive ANC', 'Hearing aid'], heat: 88 },
         'macbook-air-m3':     { brand: 'Apple', model: 'MacBook Air M3', sub: 'Laptop', tier: 'premium', tags: ['apple', 'laptop', 'ultrabook'], blurb: 'Fanless, 18-hour battery and dual external displays — the default laptop for most people.', specs: ['M3 chip', '18 h battery', '13.6" Liquid'], heat: 82 },
         'rog-zephyrus-g14':   { brand: 'ASUS', model: 'ROG Zephyrus G14', sub: 'Gaming Laptop', tier: 'premium', tags: ['gaming', 'laptop', 'oled'], blurb: 'A 14-inch OLED gaming laptop that still fits a backpack — power without the brick-sized chassis.', specs: ['14" OLED 120 Hz', 'RTX 40', '1.5 kg'], heat: 70 },
@@ -72,10 +73,12 @@
         return 'https://www.amazon.ae/s?k=' + encodeURIComponent(q) + '&tag=' + TAG;
     }
 
-    function normalize(raw, legacy) {
+    function normalize(raw, legacy, images) {
         const category = LEGACY_CATEGORY_MAP[raw.category] || raw.category;
         const meta = legacy ? (LEGACY_META[raw.id] || {}) : {};
-        const gallery = (raw.gallery && raw.gallery.length ? raw.gallery : (raw.image ? [raw.image] : [])).map(rootPath);
+        const found = images && images[raw.id] && images[raw.id].length ? images[raw.id] : null;
+        const own = raw.gallery && raw.gallery.length ? raw.gallery : (raw.image ? [raw.image] : []);
+        const gallery = (own.length ? own : (found || [])).map(rootPath);
         const item = {
             id: raw.id,
             brand: raw.brand || meta.brand || raw.title.split(' ')[0],
@@ -101,14 +104,15 @@
 
     /**
      * Build the merged catalog.
-     * @param {Array} items   curated items (CATALOG_ITEMS)
-     * @param {Array} legacy  legacy products with photos (window.products)
+     * @param {Array}  items   curated items (CATALOG_ITEMS)
+     * @param {Array}  legacy  legacy products with photos (window.products)
+     * @param {Object} images  optional map id → [image paths] discovered in assets/images/<id>/ (CATALOG_IMAGES)
      */
-    function build(items, legacy) {
+    function build(items, legacy, images) {
         const seen = new Set();
         const out = [];
-        (legacy || []).forEach(p => { if (!seen.has(p.id)) { seen.add(p.id); out.push(normalize(p, true)); } });
-        (items || []).forEach(p => { if (!seen.has(p.id)) { seen.add(p.id); out.push(normalize(p, false)); } });
+        (legacy || []).forEach(p => { if (!seen.has(p.id)) { seen.add(p.id); out.push(normalize(p, true, images)); } });
+        (items || []).forEach(p => { if (!seen.has(p.id)) { seen.add(p.id); out.push(normalize(p, false, images)); } });
         return out;
     }
 
@@ -141,5 +145,5 @@
 
 // Browser bootstrap: expose the merged list as window.CATALOG
 if (typeof window !== 'undefined' && window.Catalog) {
-    window.CATALOG = window.Catalog.build(window.CATALOG_ITEMS || [], window.products || []);
+    window.CATALOG = window.Catalog.build(window.CATALOG_ITEMS || [], window.products || [], window.CATALOG_IMAGES || {});
 }

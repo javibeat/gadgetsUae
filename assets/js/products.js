@@ -190,6 +190,19 @@ const products = [
     ]
   },
   {
+    id: 'streamdeck-neo',
+    title: 'Elgato Stream Deck Neo — 8 Customizable LCD Keys',
+    category: 'Tech',
+    image: 'assets/images/streamneo/1.jpg',
+    query: 'Elgato Stream Deck Neo',
+    gallery: [
+      'assets/images/streamneo/1.jpg',
+      'assets/images/streamneo/2.jpg',
+      'assets/images/streamneo/3.jpg',
+      'assets/images/streamneo/4.jpg'
+    ]
+  },
+  {
     id: 'airpods-pro-2',
     title: 'Apple AirPods Pro (2nd Generation) with MagSafe Case (USB-C)',
     category: 'Audio',

@@ -9,11 +9,12 @@ const T = require('./site-templates');
 const { CATEGORY_PAGES, GUIDES } = require('./site-content');
 const Catalog = require('../assets/js/catalog.js');
 const { CATALOG_ITEMS } = require('../assets/data/catalog-items.js');
+const { discover } = require('./build-images.js');
 
 const ROOT = path.join(__dirname, '..');
 const legacySrc = fs.readFileSync(path.join(ROOT, 'assets/js/products.js'), 'utf8');
 const legacy = new Function(legacySrc.replace('window.products = products;', 'return products;'))();
-const catalog = Catalog.build(CATALOG_ITEMS, legacy);
+const catalog = Catalog.build(CATALOG_ITEMS, legacy, discover(CATALOG_ITEMS.map(p => p.id).concat(legacy.map(p => p.id))));
 const byId = Object.fromEntries(catalog.map(p => [p.id, p]));
 
 function write(rel, html) {
@@ -175,6 +176,127 @@ ${GUIDES.map(guideCard).join('\n')}
         main
     });
 }
+
+/* ---------- Hand-designed pages that share the template ---------- */
+function productsPage() {
+    return T.page({
+        title: 'All Products — ' + catalog.length + ' Hand-Picked Gadgets on Amazon.ae | GadgetsUAE',
+        description: 'Browse every curated product on GadgetsUAE. Filter by category, budget and brand; gaming, phones, audio, laptops, smart home, wearables and accessories with Prime delivery in the UAE.',
+        path: '/products.html', bodyAttrs: 'data-page="products"',
+        main: `
+        <div class="container">
+            <section class="page-hero">
+                <div class="eyebrow">Full catalog</div>
+                <h1>All products</h1>
+                <p>Every pick in one place. Filter by category, budget or brand, or search. The order reshuffles daily so nothing gets buried.</p>
+            </section>
+
+            <section class="section tight">
+                <h2 class="sr-only">Products</h2>
+                <div class="toolbar">
+                    <label class="catalog-search">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <input type="search" id="catalog-search" placeholder="Search brand, model or type…" aria-label="Search the catalog" autocomplete="off">
+                    </label>
+                    <span class="result-count"><span data-result-count>${catalog.length}</span> products</span>
+                </div>
+                <div class="filter-bar" id="filter-bar"></div>
+                <div class="products-grid stagger" id="all-products-grid"></div>
+                <div class="view-more-wrap">
+                    <a href="https://www.amazon.ae/s?k=electronics&tag=${Catalog.TAG}" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse Amazon.ae electronics &#8594;</a>
+                </div>
+            </section>
+        </div>`
+    });
+}
+
+function dealsPage() {
+    return T.page({
+        title: "Today's Picks — Pick of the Day & Trending Tech in UAE | GadgetsUAE",
+        description: "Today's pick of the day plus twelve fresh product picks from Amazon.ae, reshuffled every midnight UAE. Gaming, phones, audio, laptops, smart home and more.",
+        path: '/deals.html', bodyAttrs: 'data-page="deals"',
+        main: `
+        <div class="container">
+            <section class="page-hero">
+                <div class="eyebrow">Today · <span data-day-label></span></div>
+                <h1>Today's picks</h1>
+                <p>A new pick of the day and twelve fresh suggestions every midnight UAE. Prices and stock are live on Amazon.ae.</p>
+            </section>
+
+            <section class="section tight">
+                <div id="deal-of-day" aria-live="polite"></div>
+            </section>
+
+            <section class="section tight">
+                <div class="section-header">
+                    <div class="section-title-row"><h2>Twelve for today</h2><span class="section-tag">Rotates daily</span></div>
+                    <a href="/products.html" class="view-all">All products &#8594;</a>
+                </div>
+                <div class="products-grid stagger" id="container-today"></div>
+            </section>
+
+            <section class="section tight">
+                <div class="section-header">
+                    <div class="section-title-row"><h2>Trending this week</h2><span class="section-tag">Refreshes Mondays</span></div>
+                </div>
+                <div class="products-grid stagger" id="container-trending"></div>
+            </section>
+
+            <section class="section tight">
+                <div class="deals-banner">
+                    <div class="deals-banner-text">
+                        <h3>Amazon Prime UAE</h3>
+                        <p>Free same-day delivery in Dubai and Abu Dhabi, Prime Video and early access to sales.</p>
+                    </div>
+                    <a href="https://amzn.to/3Tn9NkR" target="_blank" rel="sponsored noopener noreferrer" class="cta-btn">Try Prime free &#8594;</a>
+                </div>
+            </section>
+        </div>`
+    });
+}
+
+function favoritesPage() {
+    return T.page({
+        title: 'Your Favourites | GadgetsUAE',
+        description: 'Products you saved on GadgetsUAE.',
+        path: '/favoritos.html', bodyAttrs: 'data-page="favorites"', robots: 'noindex, follow',
+        main: `
+        <div class="container">
+            <section class="page-hero">
+                <div class="eyebrow">Saved on this device</div>
+                <h1>Your favourites</h1>
+                <p>Products you tapped the heart on. They are stored in this browser only.</p>
+            </section>
+            <section class="section tight">
+                <div class="products-grid" id="favoritesGrid"></div>
+            </section>
+        </div>`
+    });
+}
+
+function notFoundPage() {
+    return T.page({
+        title: 'Page not found | GadgetsUAE', description: 'That page does not exist. Here are some picks instead.',
+        path: '/404.html', bodyAttrs: 'data-page="notfound"', robots: 'noindex, follow',
+        main: `
+        <div class="container">
+            <section class="page-hero">
+                <div class="eyebrow">Error 404</div>
+                <h1>That page has moved on</h1>
+                <p>The link is old or mistyped. Try the <a href="/products.html">full catalog</a>, <a href="/guides.html">buying guides</a> or today's picks below.</p>
+            </section>
+            <section class="section tight">
+                <div class="section-header"><div class="section-title-row"><h2>Trending this week</h2></div><a href="/deals.html" class="view-all">Today's picks &#8594;</a></div>
+                <div class="products-grid" id="container-trending"></div>
+            </section>
+        </div>`
+    });
+}
+
+write('404.html', notFoundPage());
+write('products.html', productsPage());
+write('deals.html', dealsPage());
+write('favoritos.html', favoritesPage());
 
 Catalog.CATEGORIES.forEach(cat => {
     const content = CATEGORY_PAGES[cat.key];
