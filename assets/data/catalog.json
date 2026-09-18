@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T22:42:44.816Z",
+  "generatedAt": "2026-09-18T22:22:32.359Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20714,
-    "dealOfDay": "galaxy-watch8",
+    "dayIndex": 20715,
+    "dealOfDay": "steam-deck-oled",
     "trending": [
-      "logitech-g502-x-lightspeed",
-      "mac-mini-m4",
+      "steelseries-arctis-nova-7",
+      "dyson-v15-detect",
+      "asus-zenbook-a14",
+      "samsung-t9-2tb",
       "garmin-forerunner-570",
       "xiaomivacuumx20",
-      "elgato-stream-deck-mk2",
-      "kobo-clara-colour",
-      "ipad-air-m3",
-      "galaxy-tab-s11-ultra"
+      "galaxy-tab-s10-fe",
+      "ipad-mini-a17-pro"
     ]
   },
   "products": [
