@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T22:15:20.701Z",
+  "generatedAt": "2026-09-21T05:06:15.935Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,7 +10,7 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 23
+      "count": 24
     },
     {
       "key": "Mobiles",
@@ -24,28 +24,28 @@
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 22
+      "count": 24
     },
     {
       "key": "Tech",
       "slug": "tech",
       "label": "Computers & Tech",
       "page": "https://gadgetsdxb.com/tech.html",
-      "count": 27
+      "count": 28
     },
     {
       "key": "Smart Home",
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 19
+      "count": 20
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 13
+      "count": 14
     },
     {
       "key": "Accessories",
@@ -3893,6 +3893,162 @@
       "image": "https://gadgetsdxb.com/assets/images/anycubic-kobra-3-combo/1.jpg",
       "added": "2026-09",
       "heat": 46
+    },
+    {
+      "id": "insta360-x6",
+      "brand": "Insta360",
+      "model": "X6",
+      "title": "Insta360 X6 8K 360-Degree Action Camera",
+      "category": "Tech",
+      "sub": "Action Camera",
+      "tier": "premium",
+      "tags": [
+        "action-camera",
+        "360-camera",
+        "8k",
+        "waterproof"
+      ],
+      "blurb": "Shoot full 8K 360 video, then reframe it as a flat 4K action clip after the fact.",
+      "specs": [
+        "8K 360 video",
+        "Dual AI chips",
+        "IP68 waterproof"
+      ],
+      "url": "https://www.amazon.ae/s?k=Insta360%20X6%20360%20camera&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 80
+    },
+    {
+      "id": "nothing-ear-3a",
+      "brand": "Nothing",
+      "model": "Ear (3a)",
+      "title": "Nothing Ear (3a) Wireless Earbuds with ANC",
+      "category": "Audio",
+      "sub": "Earbuds",
+      "tier": "budget",
+      "tags": [
+        "earbuds",
+        "anc",
+        "wireless",
+        "budget"
+      ],
+      "blurb": "Budget earbuds with strong active noise cancelling and on-device call recording.",
+      "specs": [
+        "45dB ANC",
+        "42h battery",
+        "Call recording"
+      ],
+      "url": "https://www.amazon.ae/s?k=Nothing%20Ear%203a%20earbuds&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 75
+    },
+    {
+      "id": "sony-wh-1000xm4c",
+      "brand": "Sony",
+      "model": "WH-1000XM4C",
+      "title": "Sony WH-1000XM4C Wireless Noise Cancelling Headphones",
+      "category": "Audio",
+      "sub": "Headphones",
+      "tier": "mid",
+      "tags": [
+        "anc",
+        "wireless",
+        "headphones",
+        "foldable"
+      ],
+      "blurb": "The return of Sony's favourite ANC headphones, now at a friendlier price point.",
+      "specs": [
+        "1000X ANC",
+        "27h battery",
+        "Foldable"
+      ],
+      "url": "https://www.amazon.ae/s?k=Sony%20WH-1000XM4C%20headphones&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 72
+    },
+    {
+      "id": "eufy-omni-e35",
+      "brand": "Eufy",
+      "model": "Omni E35",
+      "title": "Eufy Robot Vacuum Omni E35 with Self-Cleaning Roller Mop",
+      "category": "Smart Home",
+      "sub": "Robot Vacuum",
+      "tier": "premium",
+      "tags": [
+        "robot-vacuum",
+        "self-clean",
+        "mop",
+        "smart-home"
+      ],
+      "blurb": "Strong suction with a self-washing roller mop and an auto-empty, auto-fill dock.",
+      "specs": [
+        "35000Pa suction",
+        "Self-wash mop",
+        "Auto-empty dock"
+      ],
+      "url": "https://www.amazon.ae/s?k=Eufy%20Robot%20Vacuum%20Omni%20E35&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 70
+    },
+    {
+      "id": "amazfit-balance-3",
+      "brand": "Amazfit",
+      "model": "Balance 3",
+      "title": "Amazfit Balance 3 Smartwatch with 21-Day Battery",
+      "category": "Wearables",
+      "sub": "Smartwatch",
+      "tier": "mid",
+      "tags": [
+        "smartwatch",
+        "fitness",
+        "amoled",
+        "long-battery"
+      ],
+      "blurb": "A Garmin-rivalling training watch with three weeks of battery life and offline maps.",
+      "specs": [
+        "21-day battery",
+        "1.5in AMOLED",
+        "170+ sports"
+      ],
+      "url": "https://www.amazon.ae/s?k=Amazfit%20Balance%203%20smartwatch&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 68
+    },
+    {
+      "id": "logitech-g325-lightspeed",
+      "brand": "Logitech",
+      "model": "G325 Lightspeed",
+      "title": "Logitech G325 Lightspeed Wireless Gaming Headset",
+      "category": "Gaming",
+      "sub": "Gaming Headset",
+      "tier": "budget",
+      "tags": [
+        "headset",
+        "wireless",
+        "gaming",
+        "lightweight"
+      ],
+      "blurb": "A featherweight wireless headset with 24-bit audio and over 24 hours of battery.",
+      "specs": [
+        "24-bit audio",
+        "24h+ battery",
+        "212g weight"
+      ],
+      "url": "https://www.amazon.ae/s?k=Logitech%20G325%20Lightspeed%20gaming%20headset&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 62
     }
   ]
 }
