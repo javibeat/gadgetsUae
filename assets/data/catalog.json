@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T23:03:32.042Z",
+  "generatedAt": "2026-09-22T22:47:32.530Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,16 +63,16 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20718,
-    "dealOfDay": "apple-watch-series-11",
+    "dayIndex": 20719,
+    "dealOfDay": "playstation-portal",
     "trending": [
-      "lenovo-ideapad-slim-3",
+      "asus-tuf-gaming-a15",
+      "meta-quest-3s",
       "ps5-pro",
-      "rog-ally-x",
-      "galaxy-z-fold7",
-      "xbox-series-x",
-      "jbl-charge-6",
-      "oneplus-15",
+      "pixel-10-pro",
+      "xbox-series-s",
+      "jbl-go-4",
+      "xiaomi-15t-pro",
       "philips-hue-starter"
     ]
   },
