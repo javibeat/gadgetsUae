@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T22:51:59.115Z",
+  "generatedAt": "2026-09-28T05:07:13.571Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,7 +10,7 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 24
+      "count": 25
     },
     {
       "key": "Mobiles",
@@ -24,28 +24,28 @@
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 24
+      "count": 25
     },
     {
       "key": "Tech",
       "slug": "tech",
       "label": "Computers & Tech",
       "page": "https://gadgetsdxb.com/tech.html",
-      "count": 28
+      "count": 29
     },
     {
       "key": "Smart Home",
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 20
+      "count": 21
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 14
+      "count": 15
     },
     {
       "key": "Accessories",
@@ -64,7 +64,7 @@
   ],
   "rotation": {
     "dayIndex": 20724,
-    "dealOfDay": "iphone-16e",
+    "dealOfDay": "playstation-portal",
     "trending": [
       "airpods-max-usb-c",
       "elegoo-centauri-carbon",
@@ -73,7 +73,7 @@
       "ipad-mini-a17-pro",
       "sony-wh1000xm5",
       "dell-u2725qe",
-      "iphone-17-pro-max"
+      "galaxy-ring"
     ]
   },
   "products": [
@@ -4049,6 +4049,136 @@
       "image": null,
       "added": "2026-09",
       "heat": 62
+    },
+    {
+      "id": "ecovacs-deebot-x12s-omnicyclone",
+      "brand": "Ecovacs",
+      "model": "Deebot X12S",
+      "title": "Ecovacs Deebot X12S OmniCyclone Robot Vacuum and Mop",
+      "category": "Smart Home",
+      "sub": "Robot Vacuum",
+      "tier": "premium",
+      "tags": [
+        "robot-vacuum",
+        "self-empty",
+        "mopping",
+        "wifi"
+      ],
+      "blurb": "A sealed dust-mite chamber and a wide mop roller tackle carpets and hard floors in one pass.",
+      "specs": [
+        "27000Pa suction",
+        "OZMO Roller 3.0",
+        "Auto-empty dock"
+      ],
+      "url": "https://www.amazon.ae/s?k=Ecovacs%20Deebot%20X12S%20OmniCyclone%20robot%20vacuum&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 74
+    },
+    {
+      "id": "beyerdynamic-aventho-y",
+      "brand": "Beyerdynamic",
+      "model": "Aventho Y",
+      "title": "Beyerdynamic Aventho Y Wireless ANC Headphones",
+      "category": "Audio",
+      "sub": "Headphones",
+      "tier": "budget",
+      "tags": [
+        "anc",
+        "wireless",
+        "bluetooth",
+        "repairable"
+      ],
+      "blurb": "Modular ANC headphones with a swappable battery and magnetic earpads built to last for years.",
+      "specs": [
+        "90h battery",
+        "Bluetooth 6.0",
+        "Replaceable batt"
+      ],
+      "url": "https://www.amazon.ae/s?k=beyerdynamic%20Aventho%20Y%20wireless%20headphones&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 70
+    },
+    {
+      "id": "lenovo-googlebook-15",
+      "brand": "Lenovo",
+      "model": "Googlebook 15",
+      "title": "Lenovo Googlebook 15 OLED Laptop with Gemini AI",
+      "category": "Tech",
+      "sub": "Laptop",
+      "tier": "premium",
+      "tags": [
+        "laptop",
+        "oled",
+        "ai",
+        "chromeos"
+      ],
+      "blurb": "A 15.3-inch OLED laptop on Google's new hybrid OS with built-in Gemini AI features.",
+      "specs": [
+        "15.3\" 120Hz OLED",
+        "Core Ultra 3",
+        "Google Gemini AI"
+      ],
+      "url": "https://www.amazon.ae/s?k=Lenovo%20Googlebook%2015%20laptop&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 68
+    },
+    {
+      "id": "rayneo-air-4-pro",
+      "brand": "RayNeo",
+      "model": "Air 4 Pro",
+      "title": "RayNeo Air 4 Pro AR Smart Glasses with HDR10",
+      "category": "Wearables",
+      "sub": "Smart Glasses",
+      "tier": "mid",
+      "tags": [
+        "ar",
+        "smart-glasses",
+        "hdr10",
+        "bluetooth"
+      ],
+      "blurb": "HDR10 AR glasses with Micro-OLED displays and Bang & Olufsen sound for movies on the go.",
+      "specs": [
+        "HDR10 Micro-OLED",
+        "201-inch screen",
+        "B&O 4-speaker"
+      ],
+      "url": "https://www.amazon.ae/s?k=RayNeo%20Air%204%20Pro%20AR%20smart%20glasses&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 72
+    },
+    {
+      "id": "logitech-pro-x3-superstrike",
+      "brand": "Logitech",
+      "model": "PRO X3 Superstrike",
+      "title": "Logitech G PRO X3 Superstrike Wireless Gaming Mouse",
+      "category": "Gaming",
+      "sub": "Gaming Mouse",
+      "tier": "premium",
+      "tags": [
+        "wireless",
+        "esports",
+        "lightweight",
+        "gaming"
+      ],
+      "blurb": "A featherweight esports mouse with new HITS tech for near-instant click response.",
+      "specs": [
+        "HITS technology",
+        "Lightweight",
+        "Wireless esports"
+      ],
+      "url": "https://www.amazon.ae/s?k=Logitech%20G%20PRO%20X3%20Superstrike%20gaming%20mouse&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-09",
+      "heat": 71
     }
   ]
 }
