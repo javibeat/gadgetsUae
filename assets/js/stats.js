@@ -42,7 +42,24 @@
         return { query: q, results: Number(results) || 0 };
     }
 
+    // ?notrack excluye este navegador de las estadísticas (Umami respeta "umami.disabled"); ?track lo revierte
+    function trackingFlag(search) {
+        const params = new URLSearchParams(search || '');
+        if (params.has('notrack')) return 'off';
+        if (params.has('track')) return 'on';
+        return null;
+    }
+
+    function applyTrackingFlag(win) {
+        const flag = trackingFlag(win.location.search);
+        try {
+            if (flag === 'off') win.localStorage.setItem('umami.disabled', '1');
+            if (flag === 'on') win.localStorage.removeItem('umami.disabled');
+        } catch (e) { /* almacenamiento bloqueado: se ignora */ }
+    }
+
     function init(win) {
+        applyTrackingFlag(win);
         const doc = win.document;
         const pending = [];
         let searchTimer = null;
@@ -84,5 +101,5 @@
         }, true);
     }
 
-    return { shouldLoad, isAmazonLink, amazonClickData, searchEventData, init };
+    return { shouldLoad, isAmazonLink, amazonClickData, searchEventData, trackingFlag, init };
 }));

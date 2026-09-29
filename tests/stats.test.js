@@ -33,3 +33,11 @@ test('search events are normalised and skip empty queries', () => {
     assert.equal(S.searchEventData(undefined, 0), null);
     assert.equal(S.searchEventData('x'.repeat(100), 0).query.length, 60);
 });
+
+test('?notrack and ?track toggle the owner exclusion', () => {
+    assert.equal(S.trackingFlag('?notrack'), 'off');
+    assert.equal(S.trackingFlag('?a=1&notrack=1'), 'off');
+    assert.equal(S.trackingFlag('?track'), 'on');
+    assert.equal(S.trackingFlag(''), null);
+    assert.equal(S.trackingFlag('?q=notrack'), null);
+});
