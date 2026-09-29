@@ -69,7 +69,7 @@ function scripts() {
     <script src="/assets/js/script.js?v=${V}"></script>
     <script src="/assets/js/page.js?v=${V}"></script>
     <script src="/assets/js/jsonld-injector.js?v=${V}"></script>
-    <script type="module" src="/assets/js/analytics.js?v=${V}"></script>
+    <script src="/assets/js/stats.js?v=${V}"></script>
 `;
 }
 

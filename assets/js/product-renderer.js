@@ -121,7 +121,6 @@
         bind(container) {
             this.initFavorites(container);
             this.initSwipe(container);
-            this.trackClicks(container);
         }
 
         media(p, cls) {
@@ -205,7 +204,6 @@
             const container = typeof containerId === 'string' ? document.getElementById(containerId) : containerId;
             if (!container) return;
             container.innerHTML = items.map((p, i) => this.createRow(p, startRank != null ? startRank + i : null)).join('');
-            this.trackClicks(container);
         }
 
         galleryDots(gallery) {
@@ -252,17 +250,6 @@
                     else if (diff < 0 && idx > 0) idx--;
                     this.switchImage(dots[idx]);
                 }, { passive: true });
-            });
-        }
-
-        trackClicks(container) {
-            container.querySelectorAll('[data-product-id]').forEach(a => {
-                a.addEventListener('click', () => {
-                    const p = this.products.find(x => x.id === a.dataset.productId);
-                    if (p && root.analyticsTracker && root.analyticsTracker.trackProductClick) {
-                        root.analyticsTracker.trackProductClick(p.id, p.title, p.category);
-                    }
-                });
             });
         }
 
