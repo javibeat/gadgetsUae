@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T05:07:13.571Z",
+  "generatedAt": "2026-09-29T00:14:49.701Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20724,
-    "dealOfDay": "playstation-portal",
+    "dayIndex": 20725,
+    "dealOfDay": "apple-watch-ultra-3",
     "trending": [
-      "airpods-max-usb-c",
+      "airpods-4-anc",
       "elegoo-centauri-carbon",
       "logitech-g325-lightspeed",
+      "ipad-air-m3",
       "streamdeck-neo",
-      "ipad-mini-a17-pro",
       "sony-wh1000xm5",
-      "dell-u2725qe",
-      "galaxy-ring"
+      "samsung-odyssey-oled-g6",
+      "marshall-emberton-iii"
     ]
   },
   "products": [
