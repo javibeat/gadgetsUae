@@ -10,7 +10,7 @@
     'use strict';
 
     // ID público del sitio en Umami (Settings → Websites). Vacío = estadísticas desactivadas.
-    const UMAMI_WEBSITE_ID = '';
+    const UMAMI_WEBSITE_ID = '82d3cca2-6851-4c0e-a80f-6fa68ca6d565';
     const UMAMI_SCRIPT = 'https://cloud.umami.is/script.js';
     const SITE_HOSTS = ['gadgetsdxb.com', 'www.gadgetsdxb.com'];
     const SEARCH_DEBOUNCE_MS = 1500;
