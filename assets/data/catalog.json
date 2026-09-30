@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T23:31:26.220Z",
+  "generatedAt": "2026-09-30T23:32:40.271Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,8 +63,8 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20726,
-    "dealOfDay": "playstation-portal",
+    "dayIndex": 20727,
+    "dealOfDay": "iphone-15",
     "trending": [
       "airpods-max-usb-c",
       "elegoo-centauri-carbon",
@@ -72,8 +72,8 @@
       "streamdeck-neo",
       "ipad-mini-a17-pro",
       "sony-wh1000xm5",
-      "dell-u2725qe",
-      "galaxy-ring"
+      "dualsense-controller",
+      "dell-u2725qe"
     ]
   },
   "products": [
