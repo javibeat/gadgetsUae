@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T23:36:04.398Z",
+  "generatedAt": "2026-10-03T22:44:06.046Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20729,
-    "dealOfDay": "dualsense-controller",
+    "dayIndex": 20730,
+    "dealOfDay": "bose-qc-ultra-headphones-2",
     "trending": [
-      "airpods-max-usb-c",
+      "airpods-4-anc",
       "elegoo-centauri-carbon",
       "logitech-g325-lightspeed",
+      "ipad-air-m3",
       "streamdeck-neo",
-      "ipad-mini-a17-pro",
       "sony-wh1000xm5",
       "dell-u2725qe",
-      "galaxy-ring"
+      "oneplus-15"
     ]
   },
   "products": [
