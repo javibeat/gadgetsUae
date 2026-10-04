@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T22:44:06.046Z",
+  "generatedAt": "2026-10-04T22:51:22.995Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20730,
-    "dealOfDay": "bose-qc-ultra-headphones-2",
+    "dayIndex": 20731,
+    "dealOfDay": "logitech-mx-master-4",
     "trending": [
-      "airpods-4-anc",
-      "elegoo-centauri-carbon",
+      "beyerdynamic-aventho-y",
+      "galaxy-s26-ultra",
+      "eufy-x10-pro-omni",
+      "galaxy-tab-s10-fe",
+      "kindle-paperwhite",
       "logitech-g325-lightspeed",
-      "ipad-air-m3",
-      "streamdeck-neo",
       "sony-wh1000xm5",
-      "dell-u2725qe",
-      "oneplus-15"
+      "rayneo-air-4-pro"
     ]
   },
   "products": [
