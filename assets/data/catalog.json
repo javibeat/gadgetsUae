@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T22:51:22.995Z",
+  "generatedAt": "2026-10-06T01:11:02.593Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,16 +63,16 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20731,
-    "dealOfDay": "logitech-mx-master-4",
+    "dayIndex": 20732,
+    "dealOfDay": "sony-wh1000xm5",
     "trending": [
       "beyerdynamic-aventho-y",
-      "galaxy-s26-ultra",
+      "galaxy-a56",
       "eufy-x10-pro-omni",
-      "galaxy-tab-s10-fe",
-      "kindle-paperwhite",
+      "sony-wh-1000xm6",
+      "iphone-15",
       "logitech-g325-lightspeed",
-      "sony-wh1000xm5",
+      "backbone-one-usb-c",
       "rayneo-air-4-pro"
     ]
   },
