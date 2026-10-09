@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T00:11:21.603Z",
+  "generatedAt": "2026-10-09T23:52:04.397Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20735,
-    "dealOfDay": "steam-deck-oled",
+    "dayIndex": 20736,
+    "dealOfDay": "apple-watch-ultra-3",
     "trending": [
       "beyerdynamic-aventho-y",
-      "galaxy-a56",
-      "eufy-x10-pro-omni",
-      "sony-wh-1000xm6",
+      "galaxy-s26-ultra",
+      "ring-indoor-cam-2nd-gen",
+      "galaxy-tab-s10-fe",
       "kindle-paperwhite",
       "logitech-g325-lightspeed",
-      "backbone-one-usb-c",
-      "sony-wh1000xm5"
+      "sony-wh1000xm5",
+      "rayneo-air-4-pro"
     ]
   },
   "products": [
