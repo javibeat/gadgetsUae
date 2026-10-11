@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T23:19:13.806Z",
+  "generatedAt": "2026-10-11T23:29:30.451Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20737,
-    "dealOfDay": "xbox-series-x",
+    "dayIndex": 20738,
+    "dealOfDay": "galaxy-a56",
     "trending": [
-      "beyerdynamic-aventho-y",
-      "galaxy-a56",
-      "eufy-x10-pro-omni",
-      "sony-wh-1000xm6",
-      "kindle-paperwhite",
-      "logitech-g325-lightspeed",
-      "backbone-one-usb-c",
-      "sony-wh1000xm5"
+      "bambu-lab-p1s",
+      "samsung-45w-travel-adapter",
+      "mac-mini-m4",
+      "eufy-video-doorbell-e340",
+      "razer-barracuda-x",
+      "echo-show-8",
+      "ecovacs-deebot-x12s-omnicyclone",
+      "kobo-clara-colour"
     ]
   },
   "products": [
