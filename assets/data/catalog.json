@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T23:29:30.451Z",
+  "generatedAt": "2026-10-12T05:09:34.554Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,21 +10,21 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 25
+      "count": 26
     },
     {
       "key": "Mobiles",
       "slug": "mobiles",
       "label": "Phones & Tablets",
       "page": "https://gadgetsdxb.com/mobiles.html",
-      "count": 21
+      "count": 22
     },
     {
       "key": "Audio",
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 25
+      "count": 26
     },
     {
       "key": "Tech",
@@ -38,14 +38,14 @@
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 21
+      "count": 22
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 15
+      "count": 16
     },
     {
       "key": "Accessories",
@@ -59,12 +59,12 @@
       "slug": "3d-printing",
       "label": "3D Printing",
       "page": "https://gadgetsdxb.com/3d-printing.html",
-      "count": 10
+      "count": 11
     }
   ],
   "rotation": {
     "dayIndex": 20738,
-    "dealOfDay": "galaxy-a56",
+    "dealOfDay": "bose-qc-ultra-headphones-2",
     "trending": [
       "bambu-lab-p1s",
       "samsung-45w-travel-adapter",
@@ -4179,6 +4179,160 @@
       "image": null,
       "added": "2026-09",
       "heat": 71
+    },
+    {
+      "id": "samsung-galaxy-s26-fe",
+      "brand": "Samsung",
+      "model": "Galaxy S26 FE",
+      "title": "Samsung Galaxy S26 FE 5G 128GB",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "mid",
+      "tags": [
+        "samsung",
+        "android",
+        "5g",
+        "smartphone"
+      ],
+      "blurb": "A lighter Samsung flagship with a 6.7-inch display and all-day battery for daily use.",
+      "specs": [
+        "6.7\" FHD+",
+        "4900mAh",
+        "Exynos 2500"
+      ],
+      "url": "https://www.amazon.ae/s?k=Samsung%20Galaxy%20S26%20FE%20128GB&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 75
+    },
+    {
+      "id": "apple-watch-series-12",
+      "brand": "Apple",
+      "model": "Watch Series 12",
+      "title": "Apple Watch Series 12 GPS 46mm Aluminium",
+      "category": "Wearables",
+      "sub": "Smartwatch",
+      "tier": "premium",
+      "tags": [
+        "smartwatch",
+        "apple",
+        "health",
+        "fitness"
+      ],
+      "blurb": "Apple's latest watch gets a tougher screen, better heart-rate sensing and longer outdoor tracking.",
+      "specs": [
+        "S11 chip",
+        "Ceramic Shield 2",
+        "10h outdoor GPS"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20Watch%20Series%2012%20GPS%2046mm&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 85
+    },
+    {
+      "id": "acer-predator-atlas-8",
+      "brand": "Acer",
+      "model": "Predator Atlas 8",
+      "title": "Acer Predator Atlas 8 Handheld Gaming PC",
+      "category": "Gaming",
+      "sub": "Handheld",
+      "tier": "premium",
+      "tags": [
+        "handheld",
+        "gaming-pc",
+        "intel-arc",
+        "portable"
+      ],
+      "blurb": "A handheld gaming PC with Intel Arc graphics for AAA titles away from the desk.",
+      "specs": [
+        "Intel Arc G3",
+        "7\" 120Hz",
+        "Handheld PC"
+      ],
+      "url": "https://www.amazon.ae/s?k=Acer%20Predator%20Atlas%208%20handheld&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 74
+    },
+    {
+      "id": "bambu-lab-a2l-combo",
+      "brand": "Bambu Lab",
+      "model": "A2L Combo",
+      "title": "Bambu Lab A2L Combo Large-Format 3D Printer",
+      "category": "3D Printing",
+      "sub": "3D Printer",
+      "tier": "mid",
+      "tags": [
+        "3d-printer",
+        "multi-color",
+        "large-format"
+      ],
+      "blurb": "A large-format bed-slinger with automatic multi-colour printing for bigger single-piece prints.",
+      "specs": [
+        "330x320x325mm",
+        "AMS lite ready",
+        "500mm/s speed"
+      ],
+      "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20A2L%20Combo%203D%20printer&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 68
+    },
+    {
+      "id": "roborock-saros-20-sonic",
+      "brand": "Roborock",
+      "model": "Saros 20 Sonic",
+      "title": "Roborock Saros 20 Sonic Robot Vacuum and Mop",
+      "category": "Smart Home",
+      "sub": "Robot Vacuum",
+      "tier": "premium",
+      "tags": [
+        "robot-vacuum",
+        "mop",
+        "smart-home"
+      ],
+      "blurb": "A flagship robot vacuum with hot-water mop washing and strong suction for UAE floors.",
+      "specs": [
+        "36000Pa suction",
+        "Hot-water mop",
+        "Auto-empty dock"
+      ],
+      "url": "https://www.amazon.ae/s?k=Roborock%20Saros%2020%20Sonic%20robot%20vacuum&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 76
+    },
+    {
+      "id": "anker-soundcore-boom-go-3i",
+      "brand": "Anker",
+      "model": "Boom Go 3i",
+      "title": "Anker Soundcore Boom Go 3i Portable Speaker",
+      "category": "Audio",
+      "sub": "Speaker",
+      "tier": "budget",
+      "tags": [
+        "speaker",
+        "waterproof",
+        "portable",
+        "bluetooth"
+      ],
+      "blurb": "A pocket-sized, waterproof speaker with 24 hours of playtime and a rugged IP68 build.",
+      "specs": [
+        "24h playtime",
+        "IP68 rating",
+        "Bluetooth 6.0"
+      ],
+      "url": "https://www.amazon.ae/s?k=Anker%20Soundcore%20Boom%20Go%203i%20speaker&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 65
     }
   ]
 }
