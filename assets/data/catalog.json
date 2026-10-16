@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T22:55:42.494Z",
+  "generatedAt": "2026-10-16T22:38:52.326Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,15 +63,15 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20742,
-    "dealOfDay": "procontroller",
+    "dayIndex": 20743,
+    "dealOfDay": "oneplus-15",
     "trending": [
       "bambu-lab-p1s",
       "samsung-45w-travel-adapter",
       "mac-mini-m4",
       "eufy-video-doorbell-e340",
+      "razer-barracuda-x",
       "echo-show-8",
-      "8bitdo-ultimate-2c",
       "ecovacs-deebot-x12s-omnicyclone",
       "kobo-clara-colour"
     ]
