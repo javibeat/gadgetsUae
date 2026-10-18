@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-17T21:59:53.983Z",
+  "generatedAt": "2026-10-18T22:16:39.966Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20744,
-    "dealOfDay": "jbl-charge-6",
+    "dayIndex": 20745,
+    "dealOfDay": "ecovacs-deebot-x12s-omnicyclone",
     "trending": [
-      "bambu-lab-p1s",
-      "samsung-45w-travel-adapter",
-      "mac-mini-m4",
-      "eufy-video-doorbell-e340",
-      "razer-barracuda-x",
-      "echo-show-8",
-      "ecovacs-deebot-x12s-omnicyclone",
-      "kobo-clara-colour"
+      "xbox-series-s",
+      "kindle-scribe-2024",
+      "pixel-10a",
+      "bambu-lab-h2d",
+      "xbox-elite-series-2",
+      "amazfit-active-2",
+      "samsung-990-pro-2tb",
+      "anker-prime-26k-300w"
     ]
   },
   "products": [
