@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T05:14:42.933Z",
+  "generatedAt": "2026-10-19T23:24:30.041Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20745,
-    "dealOfDay": "ecovacs-deebot-x12s-omnicyclone",
+    "dayIndex": 20746,
+    "dealOfDay": "xiaomivacuumx20",
     "trending": [
-      "xbox-series-s",
-      "kindle-scribe-2024",
-      "pixel-10a",
-      "bambu-lab-h2d",
-      "xbox-elite-series-2",
-      "amazfit-active-2",
-      "samsung-990-pro-2tb",
-      "anker-prime-26k-300w"
+      "xbox-wireless-controller",
+      "kindle-2024",
+      "nothing-phone-3a",
+      "steam-deck-oled",
+      "ray-ban-meta-gen-2",
+      "creality-k1c",
+      "tp-link-deco-be63",
+      "anker-nano-power-bank-10k"
     ]
   },
   "products": [
