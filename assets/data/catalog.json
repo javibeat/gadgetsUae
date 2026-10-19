@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T22:16:39.966Z",
+  "generatedAt": "2026-10-19T05:14:42.933Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,14 +10,14 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 26
+      "count": 27
     },
     {
       "key": "Mobiles",
       "slug": "mobiles",
       "label": "Phones & Tablets",
       "page": "https://gadgetsdxb.com/mobiles.html",
-      "count": 22
+      "count": 23
     },
     {
       "key": "Audio",
@@ -38,21 +38,21 @@
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 22
+      "count": 23
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 16
+      "count": 17
     },
     {
       "key": "Accessories",
       "slug": "accessories",
       "label": "Accessories",
       "page": "https://gadgetsdxb.com/accessories.html",
-      "count": 13
+      "count": 14
     },
     {
       "key": "3D Printing",
@@ -4333,6 +4333,136 @@
       "image": null,
       "added": "2026-10",
       "heat": 65
+    },
+    {
+      "id": "jbl-quantum-520x",
+      "brand": "JBL",
+      "model": "Quantum 520X",
+      "title": "JBL Quantum 520X Wireless Gaming Headset",
+      "category": "Gaming",
+      "sub": "Gaming Headset",
+      "tier": "mid",
+      "tags": [
+        "gaming-headset",
+        "wireless",
+        "xbox",
+        "spatial-audio"
+      ],
+      "blurb": "Carbon drivers and spatial sound with a detachable mic, tuned for Xbox and PC play.",
+      "specs": [
+        "37h battery",
+        "2.4GHz + BT 5.4",
+        "Detachable mic"
+      ],
+      "url": "https://www.amazon.ae/s?k=JBL%20Quantum%20520X%20gaming%20headset&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 72
+    },
+    {
+      "id": "apple-homepod-mini-2",
+      "brand": "Apple",
+      "model": "HomePod mini 2",
+      "title": "Apple HomePod mini 2 Smart Speaker",
+      "category": "Smart Home",
+      "sub": "Smart Speaker",
+      "tier": "mid",
+      "tags": [
+        "smart-speaker",
+        "apple",
+        "homekit",
+        "wifi-6e"
+      ],
+      "blurb": "A refreshed mini speaker from Apple with a new chip and Wi-Fi 6E for richer, smarter sound.",
+      "specs": [
+        "S10 chip",
+        "Wi-Fi 6E",
+        "5 colours"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20HomePod%20mini%202%20smart%20speaker&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 74
+    },
+    {
+      "id": "anker-maggo-power-bank-2-pro",
+      "brand": "Anker",
+      "model": "MagGo PB 2 Pro",
+      "title": "Anker MagGo Power Bank 2 Pro Magnetic Wireless 10K",
+      "category": "Accessories",
+      "sub": "Power Bank",
+      "tier": "mid",
+      "tags": [
+        "power-bank",
+        "magnetic",
+        "wireless-charging",
+        "anker"
+      ],
+      "blurb": "Magnetic 10,000mAh power bank with 25W wireless charging and a built-in cooling fan.",
+      "specs": [
+        "10000mAh",
+        "25W wireless",
+        "Active cooling"
+      ],
+      "url": "https://www.amazon.ae/s?k=Anker%20MagGo%20Power%20Bank%202%20Pro%20magnetic%20wireless%20charger&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 70
+    },
+    {
+      "id": "garmin-cirqa",
+      "brand": "Garmin",
+      "model": "Cirqa",
+      "title": "Garmin Cirqa Screen-Free Smart Fitness Band",
+      "category": "Wearables",
+      "sub": "Fitness Tracker",
+      "tier": "mid",
+      "tags": [
+        "fitness-tracker",
+        "screen-free",
+        "garmin",
+        "sleep-tracking"
+      ],
+      "blurb": "A 20g screen-free fitness band focused on sleep and recovery tracking, not notifications.",
+      "specs": [
+        "20g weight",
+        "10-day battery",
+        "Sleep tracking"
+      ],
+      "url": "https://www.amazon.ae/s?k=Garmin%20Cirqa%20smart%20fitness%20band&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 71
+    },
+    {
+      "id": "nothing-phone-4b",
+      "brand": "Nothing",
+      "model": "Phone (4b)",
+      "title": "Nothing Phone (4b) 5G 256GB",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "mid",
+      "tags": [
+        "nothing",
+        "5g",
+        "value",
+        "amoled"
+      ],
+      "blurb": "A value Nothing phone with a 120Hz AMOLED screen and a big battery in the brand's signature design.",
+      "specs": [
+        "120Hz AMOLED",
+        "Snapdragon 6 G4",
+        "6000mAh batt"
+      ],
+      "url": "https://www.amazon.ae/s?k=Nothing%20Phone%204b%20256GB&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 73
     }
   ]
 }
