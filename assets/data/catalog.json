@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T23:03:21.974Z",
+  "generatedAt": "2026-10-22T23:01:18.236Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,15 +63,15 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20748,
-    "dealOfDay": "switch2",
+    "dayIndex": 20749,
+    "dealOfDay": "iphone-16e",
     "trending": [
-      "xbox-wireless-controller",
+      "xbox-series-s",
       "kindle-2024",
       "nothing-phone-3a",
-      "steam-deck-oled",
       "ray-ban-meta-gen-2",
       "creality-k1c",
+      "xbox-elite-series-2",
       "tp-link-deco-be63",
       "anker-nano-power-bank-10k"
     ]
