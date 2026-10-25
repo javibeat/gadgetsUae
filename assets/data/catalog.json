@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-24T22:17:22.965Z",
+  "generatedAt": "2026-10-25T22:21:38.950Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20751,
-    "dealOfDay": "ps5-slim",
+    "dayIndex": 20752,
+    "dealOfDay": "galaxy-a56",
     "trending": [
-      "xbox-wireless-controller",
-      "kindle-2024",
-      "nothing-phone-3a",
-      "steam-deck-oled",
-      "ray-ban-meta-gen-2",
-      "creality-k1c",
-      "tp-link-deco-be63",
-      "anker-nano-power-bank-10k"
+      "anker-nano-65w",
+      "belkin-boostcharge-pro-3-in-1",
+      "razer-basilisk-v3-pro",
+      "samsung-990-pro-2tb",
+      "airtag-4-pack",
+      "ipad-mini-a17-pro",
+      "xbox-series-s",
+      "samsung-odyssey-g5-27"
     ]
   },
   "products": [
