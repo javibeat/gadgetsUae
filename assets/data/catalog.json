@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-25T22:21:38.950Z",
+  "generatedAt": "2026-10-26T05:09:41.821Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,21 +10,21 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 27
+      "count": 28
     },
     {
       "key": "Mobiles",
       "slug": "mobiles",
       "label": "Phones & Tablets",
       "page": "https://gadgetsdxb.com/mobiles.html",
-      "count": 23
+      "count": 24
     },
     {
       "key": "Audio",
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 26
+      "count": 27
     },
     {
       "key": "Tech",
@@ -38,14 +38,14 @@
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 23
+      "count": 24
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 17
+      "count": 18
     },
     {
       "key": "Accessories",
@@ -64,15 +64,15 @@
   ],
   "rotation": {
     "dayIndex": 20752,
-    "dealOfDay": "galaxy-a56",
+    "dealOfDay": "procontroller",
     "trending": [
       "anker-nano-65w",
       "belkin-boostcharge-pro-3-in-1",
-      "razer-basilisk-v3-pro",
+      "logitech-g502-x-lightspeed",
       "samsung-990-pro-2tb",
       "airtag-4-pack",
       "ipad-mini-a17-pro",
-      "xbox-series-s",
+      "xbox-wireless-controller",
       "samsung-odyssey-g5-27"
     ]
   },
@@ -4463,6 +4463,136 @@
       "image": null,
       "added": "2026-10",
       "heat": 73
+    },
+    {
+      "id": "sony-wf-1000xm6",
+      "brand": "Sony",
+      "model": "WF-1000XM6",
+      "title": "Sony WF-1000XM6 Wireless Noise Cancelling Earbuds",
+      "category": "Audio",
+      "sub": "Earbuds",
+      "tier": "premium",
+      "tags": [
+        "anc",
+        "earbuds",
+        "wireless",
+        "sony"
+      ],
+      "blurb": "Smaller, lighter buds with stronger noise cancelling than the XM5 and clearer calls.",
+      "specs": [
+        "QN3e NC chip",
+        "8h+16h battery",
+        "Auracast ready"
+      ],
+      "url": "https://www.amazon.ae/s?k=Sony%20WF-1000XM6%20earbuds&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 80
+    },
+    {
+      "id": "oura-ring-5",
+      "brand": "Oura",
+      "model": "Ring 5",
+      "title": "Oura Ring 5 Smart Ring",
+      "category": "Wearables",
+      "sub": "Smart Ring",
+      "tier": "premium",
+      "tags": [
+        "smart-ring",
+        "sleep",
+        "health",
+        "oura"
+      ],
+      "blurb": "The smallest Oura ring yet, with sharper sleep and readiness tracking for up to a week.",
+      "specs": [
+        "40% smaller",
+        "6-9 day battery",
+        "Titanium body"
+      ],
+      "url": "https://www.amazon.ae/s?k=Oura%20Ring%205%20smart%20ring&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 75
+    },
+    {
+      "id": "pixel-11-pro",
+      "brand": "Google",
+      "model": "Pixel 11 Pro",
+      "title": "Google Pixel 11 Pro 256GB",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "premium",
+      "tags": [
+        "pixel",
+        "camera",
+        "ai",
+        "android"
+      ],
+      "blurb": "Tensor G6 chip, a sharper 120Hz display and longer camera reach — note UAE Pixel support is unofficial.",
+      "specs": [
+        "Tensor G6",
+        "120Hz LTPO OLED",
+        "7 yrs updates"
+      ],
+      "url": "https://www.amazon.ae/s?k=Google%20Pixel%2011%20Pro%20256GB&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 78
+    },
+    {
+      "id": "8bitdo-ultimate-3e",
+      "brand": "8BitDo",
+      "model": "Ultimate 3E",
+      "title": "8BitDo Ultimate 3E Wireless Controller for Xbox and PC",
+      "category": "Gaming",
+      "sub": "Controller",
+      "tier": "mid",
+      "tags": [
+        "controller",
+        "xbox",
+        "hall-effect",
+        "wireless"
+      ],
+      "blurb": "Swappable sticks, D-pads and buttons with Hall-effect triggers for a pro-style modular pad.",
+      "specs": [
+        "TMR joysticks",
+        "Hall triggers",
+        "Swappable parts"
+      ],
+      "url": "https://www.amazon.ae/s?k=8BitDo%20Ultimate%203E%20controller%20for%20Xbox&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 72
+    },
+    {
+      "id": "eufy-video-doorbell-s4",
+      "brand": "Eufy",
+      "model": "Doorbell S4",
+      "title": "Eufy Security Video Doorbell S4 with AI Tracking",
+      "category": "Smart Home",
+      "sub": "Video Doorbell",
+      "tier": "mid",
+      "tags": [
+        "doorbell",
+        "security",
+        "ai-tracking",
+        "no-subscription"
+      ],
+      "blurb": "A wider-angle 3K camera with AI tracking and local storage, so there is no monthly fee.",
+      "specs": [
+        "3K HDR camera",
+        "180° view",
+        "Local storage"
+      ],
+      "url": "https://www.amazon.ae/s?k=Eufy%20Video%20Doorbell%20S4&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-10",
+      "heat": 70
     }
   ]
 }
