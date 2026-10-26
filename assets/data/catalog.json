@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T05:09:41.821Z",
+  "generatedAt": "2026-10-26T23:37:20.112Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,16 +63,16 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20752,
-    "dealOfDay": "procontroller",
+    "dayIndex": 20753,
+    "dealOfDay": "airpods-4-anc",
     "trending": [
       "anker-nano-65w",
       "belkin-boostcharge-pro-3-in-1",
-      "logitech-g502-x-lightspeed",
+      "razer-basilisk-v3-pro",
       "samsung-990-pro-2tb",
+      "ipad-air-m3",
       "airtag-4-pack",
-      "ipad-mini-a17-pro",
-      "xbox-wireless-controller",
+      "xbox-series-s",
       "samsung-odyssey-g5-27"
     ]
   },
