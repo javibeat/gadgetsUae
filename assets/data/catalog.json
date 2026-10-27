@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T23:37:20.112Z",
+  "generatedAt": "2026-10-27T23:35:56.142Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20753,
-    "dealOfDay": "airpods-4-anc",
+    "dayIndex": 20754,
+    "dealOfDay": "apple-watch-se-3",
     "trending": [
       "anker-nano-65w",
       "belkin-boostcharge-pro-3-in-1",
       "razer-basilisk-v3-pro",
-      "samsung-990-pro-2tb",
+      "samsung-t9-2tb",
       "ipad-air-m3",
       "airtag-4-pack",
       "xbox-series-s",
-      "samsung-odyssey-g5-27"
+      "dell-u2725qe"
     ]
   },
   "products": [
