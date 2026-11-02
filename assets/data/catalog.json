@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T23:24:35.409Z",
+  "generatedAt": "2026-11-02T05:08:36.980Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -24,21 +24,21 @@
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 27
+      "count": 28
     },
     {
       "key": "Tech",
       "slug": "tech",
       "label": "Computers & Tech",
       "page": "https://gadgetsdxb.com/tech.html",
-      "count": 29
+      "count": 31
     },
     {
       "key": "Smart Home",
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 24
+      "count": 25
     },
     {
       "key": "Wearables",
@@ -59,21 +59,21 @@
       "slug": "3d-printing",
       "label": "3D Printing",
       "page": "https://gadgetsdxb.com/3d-printing.html",
-      "count": 11
+      "count": 12
     }
   ],
   "rotation": {
     "dayIndex": 20759,
     "dealOfDay": "jbl-flip-7",
     "trending": [
+      "anker-soundcore-liberty-5-pro-max",
       "elegoo-centauri-carbon",
       "galaxy-watch8-classic",
       "apple-magsafe-charger-25w",
       "dualsense-edge",
       "ipad-pro-m5",
       "sony-wh-1000xm4c",
-      "lenovo-ideapad-slim-3",
-      "xiaomi-15t-pro"
+      "lenovo-ideapad-slim-3"
     ]
   },
   "products": [
@@ -4593,6 +4593,136 @@
       "image": null,
       "added": "2026-10",
       "heat": 70
+    },
+    {
+      "id": "anker-soundcore-liberty-5-pro-max",
+      "brand": "Anker",
+      "model": "Liberty 5 Pro Max",
+      "title": "Anker Soundcore Liberty 5 Pro Max AI Earbuds",
+      "category": "Audio",
+      "sub": "Earbuds",
+      "tier": "premium",
+      "tags": [
+        "earbuds",
+        "anc",
+        "ai",
+        "wireless"
+      ],
+      "blurb": "AI note-taking earbuds with adaptive ANC and a touch-screen charging case for quick recaps.",
+      "specs": [
+        "AI voice notes",
+        "Adaptive ANC",
+        "AMOLED case"
+      ],
+      "url": "https://www.amazon.ae/s?k=Anker%20Soundcore%20Liberty%205%20Pro%20Max%20earbuds&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 76
+    },
+    {
+      "id": "kindle-colorsoft-signature-2026",
+      "brand": "Amazon",
+      "model": "Colorsoft (2026)",
+      "title": "Amazon Kindle Colorsoft Signature Edition (2026)",
+      "category": "Tech",
+      "sub": "E-Reader",
+      "tier": "premium",
+      "tags": [
+        "e-reader",
+        "color-screen",
+        "aluminium",
+        "kindle"
+      ],
+      "blurb": "The first aluminium Kindle, with a flush color screen for comics and magazines without glare.",
+      "specs": [
+        "Color E Ink",
+        "Aluminium body",
+        "32GB storage"
+      ],
+      "url": "https://www.amazon.ae/s?k=Amazon%20Kindle%20Colorsoft%20Signature%20Edition%202026&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 74
+    },
+    {
+      "id": "bambu-lab-x2d",
+      "brand": "Bambu Lab",
+      "model": "X2D",
+      "title": "Bambu Lab X2D Dual-Extrusion 3D Printer",
+      "category": "3D Printing",
+      "sub": "3D Printer",
+      "tier": "premium",
+      "tags": [
+        "3d-printer",
+        "dual-nozzle",
+        "multi-material",
+        "fdm"
+      ],
+      "blurb": "Two nozzles swap mid-print for clean multi-color parts without multi-material waste.",
+      "specs": [
+        "Dual nozzle",
+        "256mm build",
+        "Heated chamber"
+      ],
+      "url": "https://www.amazon.ae/s?k=Bambu%20Lab%20X2D%203D%20printer&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 73
+    },
+    {
+      "id": "dji-osmo-pocket-4",
+      "brand": "DJI",
+      "model": "Osmo Pocket 4",
+      "title": "DJI Osmo Pocket 4 1-Inch Sensor Vlogging Camera",
+      "category": "Tech",
+      "sub": "Action Camera",
+      "tier": "premium",
+      "tags": [
+        "vlogging",
+        "gimbal",
+        "4k",
+        "compact"
+      ],
+      "blurb": "A pocket gimbal camera with a 1-inch sensor and tracking that follows the subject automatically.",
+      "specs": [
+        "1-inch sensor",
+        "3-axis gimbal",
+        "4K/120fps"
+      ],
+      "url": "https://www.amazon.ae/s?k=DJI%20Osmo%20Pocket%204%20camera&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 77
+    },
+    {
+      "id": "aqara-camera-hub-g350",
+      "brand": "Aqara",
+      "model": "Camera Hub G350",
+      "title": "Aqara Camera Hub G350 Matter Security Camera",
+      "category": "Smart Home",
+      "sub": "Security Camera",
+      "tier": "mid",
+      "tags": [
+        "matter",
+        "security",
+        "camera",
+        "zigbee-hub"
+      ],
+      "blurb": "The first Matter-certified camera, doubling as a Zigbee hub so it works across smart home apps.",
+      "specs": [
+        "Matter camera",
+        "Zigbee hub",
+        "2K video"
+      ],
+      "url": "https://www.amazon.ae/s?k=Aqara%20Camera%20Hub%20G350&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 71
     }
   ]
 }
