@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T00:52:35.112Z",
+  "generatedAt": "2026-11-06T23:58:50.378Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20763,
-    "dealOfDay": "iphone-16-pro",
+    "dayIndex": 20764,
+    "dealOfDay": "galaxy-z-fold7",
     "trending": [
       "anker-soundcore-liberty-5-pro-max",
       "elegoo-centauri-carbon",
       "galaxy-watch8-classic",
       "apple-magsafe-charger-25w",
-      "dualsense-controller",
+      "dualsense-edge",
       "ipad-air-m3",
       "sony-wh-1000xm4c",
-      "kindle-paperwhite"
+      "oneplus-15"
     ]
   },
   "products": [
