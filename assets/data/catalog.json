@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T23:58:50.378Z",
+  "generatedAt": "2026-11-07T23:29:08.201Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20764,
-    "dealOfDay": "galaxy-z-fold7",
+    "dayIndex": 20765,
+    "dealOfDay": "nothing-ear-3a",
     "trending": [
       "anker-soundcore-liberty-5-pro-max",
-      "elegoo-centauri-carbon",
-      "galaxy-watch8-classic",
-      "apple-magsafe-charger-25w",
+      "creality-ender-3-v3-se",
+      "galaxy-watch8",
+      "belkin-boostcharge-pro-3-in-1",
       "dualsense-edge",
-      "ipad-air-m3",
+      "ipad-pro-m5",
       "sony-wh-1000xm4c",
-      "oneplus-15"
+      "xiaomi-15t-pro"
     ]
   },
   "products": [
