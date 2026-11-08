@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-07T23:29:08.201Z",
+  "generatedAt": "2026-11-08T23:28:12.898Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20765,
-    "dealOfDay": "nothing-ear-3a",
+    "dayIndex": 20766,
+    "dealOfDay": "oura-ring-5",
     "trending": [
-      "anker-soundcore-liberty-5-pro-max",
-      "creality-ender-3-v3-se",
+      "ps5-pro",
+      "switch2",
+      "galaxy-watch8-classic",
       "galaxy-watch8",
-      "belkin-boostcharge-pro-3-in-1",
-      "dualsense-edge",
-      "ipad-pro-m5",
-      "sony-wh-1000xm4c",
-      "xiaomi-15t-pro"
+      "lenovo-googlebook-15",
+      "apple-pencil-pro",
+      "airpods-pro-3",
+      "macbook-pro-m5-14"
     ]
   },
   "products": [
