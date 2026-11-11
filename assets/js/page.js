@@ -51,7 +51,21 @@
         const heroWrap = $('#deal-of-day');
         if (heroWrap && deal) { heroWrap.innerHTML = r.createHero(deal, { dayLabel: R().dayLabel(now) }); r.bind(heroWrap); }
 
-        const trending = R().trending(items, 8, now, deal ? [deal.id] : []);
+        // Magazine strip: the three hottest recent products with photos, each from a different category.
+        const strip = $('#cover-strip');
+        const stripIds = [];
+        if (strip) {
+            const seenCats = new Set(deal ? [deal.category] : []);
+            const pool = R().fresh(items, 60).filter(p => p.hasImage && (!deal || p.id !== deal.id)).sort((a, b) => b.heat - a.heat);
+            for (const p of pool) {
+                if (stripIds.length === 3) break;
+                if (seenCats.has(p.category)) continue;
+                seenCats.add(p.category); stripIds.push(p.id);
+            }
+            strip.insertAdjacentHTML('afterbegin', stripIds.map(id => r.createTile(items.find(p => p.id === id))).join(''));
+        }
+
+        const trending = R().trending(items, 8, now, (deal ? [deal.id] : []).concat(stripIds));
         r.render('container-trending', { items: trending });
 
         // Category bento tiles with live counts
@@ -59,7 +73,7 @@
         if (tiles) {
             tiles.innerHTML = C().CATEGORIES.map(c => {
                 const n = items.filter(p => p.category === c.key).length;
-                return '<a class="cat-tile" href="' + c.page + '" style="--hue:' + c.hue + '">' +
+                return '<a class="cat-tile" href="' + c.page + '" style="--hue:' + c.hue + ';--cat:' + c.color + '">' +
                     root.ProductRenderer.icon(c.icon, 'cat-tile-icon') +
                     '<span class="cat-tile-count">' + n + ' picks</span>' +
                     '<strong>' + c.label + '</strong><small>' + c.tagline + '</small></a>';
@@ -68,7 +82,7 @@
 
         r.render('container-fresh', { items: R().fresh(items, 4) });
 
-        const used = new Set([deal && deal.id].concat(trending.map(p => p.id)));
+        const used = new Set([deal && deal.id].concat(stripIds, trending.map(p => p.id)));
         ['Gaming', 'Mobiles', 'Audio', 'Tech', 'Smart Home'].forEach(key => {
             const id = 'container-' + C().category(key).slug;
             if (!$('#' + id)) return;

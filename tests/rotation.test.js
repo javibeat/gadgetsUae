@@ -96,3 +96,15 @@ test('related prefers same category and sub, never returns itself', () => {
 test('dayLabel formats in UAE time', () => {
     assert.equal(R.dayLabel(new Date('2026-09-16T21:00:00Z')), 'Thu 17 Sept'.replace('Sept', 'Sept')); // 01:00 UAE next day
 });
+
+test('pick of the day prefers products with a photo when enough exist', () => {
+    const pics = Array.from({ length: 8 }, (_, i) => ({ id: 'pic' + i, heat: 50, hasImage: true }));
+    const hot = Array.from({ length: 8 }, (_, i) => ({ id: 'hot' + i, heat: 99, hasImage: false }));
+    for (let d = 0; d < 20; d++) {
+        const deal = R.dealOfDay(pics.concat(hot), new Date(Date.UTC(2026, 10, 1 + d, 12)));
+        assert.ok(deal.hasImage, 'day ' + d + ' picked ' + deal.id);
+    }
+    // Too few photos → falls back to the whole catalog instead of repeating the same few.
+    const few = [{ id: 'a', heat: 10, hasImage: true }].concat(hot);
+    assert.ok(R.dealOfDay(few, new Date(Date.UTC(2026, 10, 1, 12))));
+});

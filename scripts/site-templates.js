@@ -2,7 +2,7 @@
  * Shared HTML fragments for generated pages (categories, guides).
  * Pure functions, no I/O — unit tested in tests/templates.test.js.
  */
-const V = '7.1';
+const V = '8.0';
 const SITE = 'https://gadgetsdxb.com';
 
 function esc(s) {
@@ -32,7 +32,7 @@ function head({ title, description, path, image, extraHead, robots }) {
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css?v=${V}">
 ${extraHead || ''}</head>
 `;

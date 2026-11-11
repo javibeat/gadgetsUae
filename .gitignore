@@ -36,3 +36,4 @@ build/
 .agents/
 .claude/
 skills-lock.json
+.impeccable/

@@ -31,7 +31,7 @@ function categoryPage(cat, content) {
             ${T.breadcrumb([{ label: 'Home', href: '/' }, { label: content.h1 }])}
         </div>
 
-        <section class="category-hero">
+        <section class="category-hero mag-hero" style="--cat:${cat.color}">
             <div class="container">
                 <div class="eyebrow">${cat.label} · <span data-catalog-count>${count}</span> curated picks</div>
                 <h1>${T.esc(content.h1)}</h1>
@@ -93,7 +93,7 @@ function guideCard(g) {
 
 /* ---------- Guide pages ---------- */
 const DEFAULT_UPDATED = 'September 2026';
-const ALL_CATEGORIES = { key: '', label: 'All categories', page: '/products.html' };
+const ALL_CATEGORIES = { key: '', label: 'All categories', page: '/products.html', color: '#1e1b2e' };
 
 /** Article JSON-LD: tells search engines and AI assistants who wrote the guide and when it was last updated. */
 function articleJsonLd(g) {
@@ -122,7 +122,7 @@ function guidePage(g) {
             ${T.breadcrumb([{ label: 'Home', href: '/' }, { label: 'Guides', href: '/guides.html' }, { label: g.title }])}
         </div>
 
-        <section class="category-hero guide-hero">
+        <section class="category-hero guide-hero mag-hero" style="--cat:${cat.color || '#1e1b2e'}">
             <div class="container">
                 <div class="eyebrow">Buying guide · <a href="${cat.page}">${cat.label}</a> · Updated ${T.esc(g.updated || DEFAULT_UPDATED)}</div>
                 <h1>${T.esc(g.title)}</h1>

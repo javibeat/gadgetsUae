@@ -21,14 +21,14 @@
     const TAG = 'gadgetsdxb-21';
 
     const CATEGORIES = [
-        { key: 'Gaming',      slug: 'gaming',      label: 'Gaming',            page: '/gaming.html',      hue: 262, icon: 'gamepad',  tagline: 'Consoles, controllers, handhelds and PC gaming gear.' },
-        { key: 'Mobiles',     slug: 'mobiles',     label: 'Phones & Tablets',  page: '/mobiles.html',     hue: 205, icon: 'phone',    tagline: 'Flagships, value phones and tablets with UAE warranty.' },
-        { key: 'Audio',       slug: 'audio',       label: 'Audio',             page: '/audio.html',       hue: 335, icon: 'headphones', tagline: 'Headphones, earbuds and speakers for commutes and home.' },
-        { key: 'Tech',        slug: 'tech',        label: 'Computers & Tech',  page: '/tech.html',        hue: 225, icon: 'laptop',   tagline: 'Laptops, monitors, e-readers, storage and peripherals.' },
-        { key: 'Smart Home',  slug: 'smarthome',   label: 'Smart Home',        page: '/smarthome.html',   hue: 155, icon: 'home',     tagline: 'Robot vacuums, lighting, security and kitchen tech.' },
-        { key: 'Wearables',   slug: 'wearables',   label: 'Wearables',         page: '/wearables.html',   hue: 25,  icon: 'watch',    tagline: 'Smartwatches, fitness bands and health trackers.' },
-        { key: 'Accessories', slug: 'accessories', label: 'Accessories',       page: '/accessories.html', hue: 45,  icon: 'plug',     tagline: 'Chargers, power banks, hubs, cables and mounts.' },
-        { key: '3D Printing', slug: '3d-printing', label: '3D Printing',       page: '/3d-printing.html', hue: 180, icon: 'cube',     tagline: 'Printers, filament and upgrades for makers.' }
+        { key: 'Gaming',      slug: 'gaming',      label: 'Gaming',            page: '/gaming.html',      color: '#7c3aed', hue: 262, icon: 'gamepad',  tagline: 'Consoles, controllers, handhelds and PC gaming gear.' },
+        { key: 'Mobiles',     slug: 'mobiles',     label: 'Phones & Tablets',  page: '/mobiles.html',     color: '#2563eb', hue: 205, icon: 'phone',    tagline: 'Flagships, value phones and tablets with UAE warranty.' },
+        { key: 'Audio',       slug: 'audio',       label: 'Audio',             page: '/audio.html',       color: '#be185d', hue: 335, icon: 'headphones', tagline: 'Headphones, earbuds and speakers for commutes and home.' },
+        { key: 'Tech',        slug: 'tech',        label: 'Computers & Tech',  page: '/tech.html',        color: '#c2410c', hue: 225, icon: 'laptop',   tagline: 'Laptops, monitors, e-readers, storage and peripherals.' },
+        { key: 'Smart Home',  slug: 'smarthome',   label: 'Smart Home',        page: '/smarthome.html',   color: '#047857', hue: 155, icon: 'home',     tagline: 'Robot vacuums, lighting, security and kitchen tech.' },
+        { key: 'Wearables',   slug: 'wearables',   label: 'Wearables',         page: '/wearables.html',   color: '#dc2626', hue: 25,  icon: 'watch',    tagline: 'Smartwatches, fitness bands and health trackers.' },
+        { key: 'Accessories', slug: 'accessories', label: 'Accessories',       page: '/accessories.html', color: '#1e1b2e', hue: 45,  icon: 'plug',     tagline: 'Chargers, power banks, hubs, cables and mounts.' },
+        { key: '3D Printing', slug: '3d-printing', label: '3D Printing',       page: '/3d-printing.html', color: '#0e7490', hue: 180, icon: 'cube',     tagline: 'Printers, filament and upgrades for makers.' }
     ];
 
     const CATEGORY_BY_KEY = Object.fromEntries(CATEGORIES.map(c => [c.key, c]));

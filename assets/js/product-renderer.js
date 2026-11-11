@@ -82,7 +82,7 @@
 
     function catInfo(p) {
         const C = root.Catalog;
-        return (C && C.category(p.category)) || { hue: 220, icon: 'spark', label: p.category, page: '/products.html' };
+        return (C && C.category(p.category)) || { hue: 220, color: '#1e1b2e', icon: 'spark', label: p.category, page: '/products.html' };
     }
 
     const TIER_LABEL = { budget: 'Value pick', mid: 'Sweet spot', premium: 'Premium' };
@@ -91,7 +91,11 @@
     class ProductRenderer {
         constructor(products) {
             this.products = products || root.CATALOG || [];
+            // "New" = added in the most recent month present in the catalog (no hard-coded month).
+            this.newMonth = this.products.reduce((m, p) => (p.added && p.added > m ? p.added : m), '');
         }
+
+        isNew(p) { return !!this.newMonth && p.added === this.newMonth; }
 
         /**
          * Render into a container.
@@ -141,7 +145,7 @@
         badges(p) {
             const c = catInfo(p);
             const out = ['<a class="badge badge-cat" href="' + c.page + '">' + esc(c.label) + '</a>'];
-            if (p.added === '2026-09') out.push('<span class="badge badge-new">New</span>');
+            if (this.isNew(p)) out.push('<span class="badge badge-new">New</span>');
             if (p.heat >= 88) out.push('<span class="badge badge-hot">Top pick</span>');
             return '<div class="card-badges">' + out.join('') + '</div>';
         }
@@ -154,7 +158,7 @@
         createCard(p, opts) {
             const c = catInfo(p);
             const o = opts || {};
-            return '<article class="product-card ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" data-category="' + esc(p.category) + '" style="--hue:' + c.hue + (o.index != null ? ';--i:' + o.index : '') + '">' +
+            return '<article class="product-card ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" data-category="' + esc(p.category) + '" style="--hue:' + c.hue + ';--cat:' + c.color + (o.index != null ? ';--i:' + o.index : '') + '">' +
                 '<a class="card-media-link" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' tabindex="-1" aria-hidden="true">' + this.media(p) + '</a>' +
                 this.badges(p) +
                 '<button class="favorite-btn" data-id="' + esc(p.id) + '" aria-label="Save ' + esc(p.title) + '" aria-pressed="false">' + icon('heart') + '</button>' +
@@ -168,31 +172,45 @@
             '</article>';
         }
 
-        /** Large hero for the pick of the day. */
+        /** Magazine-cover hero for the pick of the day (colour block + photo + stamp). */
         createHero(p, meta) {
             const c = catInfo(p);
             const m = meta || {};
-            return '<article class="deal-hero ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" style="--hue:' + c.hue + '">' +
-                '<a class="deal-hero-media" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' aria-label="' + esc(p.title) + '">' + this.media(p, 'hero') + '</a>' +
-                '<div class="deal-hero-body">' +
-                    '<div class="eyebrow">' + icon('spark') + ' Pick of the day' + (m.dayLabel ? ' <span class="eyebrow-date">' + esc(m.dayLabel) + '</span>' : '') + '</div>' +
-                    '<div class="card-meta"><a href="' + c.page + '">' + esc(c.label) + '</a><span class="sep"></span><span>' + esc(p.sub) + '</span><span class="sep"></span><span>' + esc(TIER_LABEL[p.tier] || p.tier) + '</span></div>' +
-                    '<h2 class="deal-hero-title"><a href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">' + esc(p.title) + '</a></h2>' +
-                    (p.blurb ? '<p class="deal-hero-blurb">' + esc(p.blurb) + '</p>' : '') +
-                    this.specs(p) +
-                    '<div class="deal-hero-actions">' +
-                        '<a href="' + esc(p.url) + '" class="btn-primary" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">View on Amazon.ae ' + icon('arrow') + '</a>' +
+            return '<article class="cover-hero ' + (p.hasImage ? 'has-photo' : 'no-photo') + '" data-id="' + esc(p.id) + '" style="--hue:' + c.hue + ';--cat:' + c.color + '">' +
+                '<div class="cover-text">' +
+                    '<div class="cover-issue">Pick of the day' + (m.dayLabel ? ' · ' + esc(m.dayLabel) : '') + ' · <a href="' + c.page + '">' + esc(c.label) + '</a></div>' +
+                    '<h2 class="cover-title"><a href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">' + esc(p.model) + '</a></h2>' +
+                    '<p class="cover-sub">' + esc(p.title) + '</p>' +
+                    (p.blurb ? '<p class="cover-blurb">' + esc(p.blurb) + '</p>' : '') +
+                    '<div class="cover-actions">' +
+                        '<a href="' + esc(p.url) + '" class="btn-amazon" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '">View on Amazon.ae ' + icon('arrow') + '</a>' +
                         '<button class="favorite-btn inline" data-id="' + esc(p.id) + '" aria-label="Save ' + esc(p.title) + '" aria-pressed="false">' + icon('heart') + ' <span>Save</span></button>' +
                     '</div>' +
-                    '<p class="deal-hero-note">New pick every midnight UAE · <span class="countdown" data-countdown></span> left</p>' +
+                    '<p class="cover-note">New pick every midnight UAE · <span class="countdown" data-countdown></span> left</p>' +
                 '</div>' +
+                '<a class="cover-media" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' tabindex="-1" aria-hidden="true">' + this.media(p, 'cover-img') +
+                    '<span class="cover-stamp">' + (this.isNew(p) ? 'Just<br>landed' : 'Today\'s<br>pick') + '</span></a>' +
             '</article>';
+        }
+
+        /** Colourful magazine tile (home strip): label, model, photo, Amazon link. */
+        createTile(p) {
+            const c = catInfo(p);
+            const label = (this.isNew(p) ? 'New · ' : '') + c.label;
+            return '<a class="strip-tile" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '" style="--cat:' + c.color + '">' +
+                '<small>' + esc(label) + '</small>' +
+                '<h3>' + esc(p.model) + '</h3>' +
+                '<span class="strip-img' + (p.imageFit === 'contain' ? ' fit-contain' : '') + '">' +
+                    (p.hasImage ? '<img src="' + esc(p.image) + '" alt="' + esc(p.title) + '" loading="lazy" width="400" height="240">' : icon(productIcon(p))) +
+                '</span>' +
+                '<span class="strip-go">View on Amazon.ae ' + icon('arrow') + '</span>' +
+            '</a>';
         }
 
         /** Compact row for ranked lists and guides. */
         createRow(p, rank) {
             const c = catInfo(p);
-            return '<a class="product-row" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '" style="--hue:' + c.hue + '">' +
+            return '<a class="product-row" href="' + esc(p.url) + '" ' + LINK_ATTRS + ' data-product-id="' + esc(p.id) + '" style="--hue:' + c.hue + ';--cat:' + c.color + '">' +
                 (rank != null ? '<span class="row-rank">' + rank + '</span>' : '') +
                 '<span class="row-thumb">' + (p.hasImage ? '<img src="' + esc(p.image) + '" alt="" loading="lazy" width="80" height="80">' : icon(productIcon(p))) + '</span>' +
                 '<span class="row-text"><strong>' + esc(p.title) + '</strong><small>' + esc(p.brand) + ' · ' + esc(p.sub) + '</small></span>' +

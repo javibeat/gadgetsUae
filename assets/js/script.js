@@ -96,7 +96,7 @@ function setupSearchToggle() {
     const overlay = document.getElementById('searchOverlay');
     const closeBtn = document.getElementById('closeSearch');
     const overlayInput = document.getElementById('searchOverlayInput');
-    const heroInput = document.querySelector('.hero-search input');
+    const heroInput = document.querySelector('.mast-search input, .hero-search input');
 
     if (!overlay) return;
 

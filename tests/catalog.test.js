@@ -66,3 +66,8 @@ test('brands are counted and sorted by frequency', () => {
     assert.ok(b.every(x => x.count === 1));
     assert.deepEqual(b.map(x => x.name), ['Amazon', 'Anker', 'Sony']);
 });
+
+test('every category has a magazine colour (hex) for its cover, tiles and pills', () => {
+    for (const c of C.CATEGORIES) assert.match(c.color, /^#[0-9a-f]{6}$/i, c.key);
+    assert.equal(new Set(C.CATEGORIES.map(c => c.color)).size, C.CATEGORIES.length, 'colours must be distinct');
+});

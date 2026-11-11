@@ -1870,3 +1870,257 @@ details.faq-item .faq-answer {
 @media (max-width: 700px) {
     .season-banner { flex-direction: column; align-items: flex-start; padding: var(--s-lg); }
 }
+
+
+/* ============================================================
+   v8 — COLOUR MAGAZINE
+   Cream paper, one saturated colour per category (--cat, set inline
+   from Catalog.CATEGORIES[].color), Bricolage Grotesque display type,
+   2px ink outlines, yellow Amazon buttons with a hard ink drop.
+   ============================================================ */
+:root {
+    --bg: #fbf7ef;
+    --ink: #121019;
+    --text: #121019;
+    --text-2: #4b4858;
+    --text-3: #5f5b6b;
+    --border: #e7e0d2;
+    --border-hover: #cfc6b4;
+    --surface-2: #f6f1e6;
+    --accent: #7c3aed;
+    --accent-text: #6d28d9;
+    --accent-soft: rgba(124, 58, 237, 0.08);
+    --accent-border: rgba(124, 58, 237, 0.25);
+    --yellow: #ffe14d;
+    --pink: #ff3e7f;
+    --display: 'Bricolage Grotesque', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body { background: var(--bg); color: var(--text); }
+
+/* Display type */
+.section-header h2, .category-hero h1, .page-hero h1, .guide-pick-text h2,
+.faq-section h2, .mast h1, .cat-tile strong, .guide-card h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+.section-header h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.02; }
+
+/* ---------- Navigation ---------- */
+.nav-wrapper { background: rgba(251, 247, 239, 0.92); border-bottom: 2px solid var(--ink); }
+.nav-logo { font-family: var(--display); font-size: 1.625rem; font-weight: 800; letter-spacing: -0.045em; }
+.nav-logo span { color: var(--accent); }
+.nav-links { background: none; border: 0; padding: 0; gap: 6px; }
+.nav-links a.nav-cat {
+    background: var(--cat);
+    color: #fff;
+    font-weight: 700;
+    padding: 8px 14px;
+    transition: transform var(--t-fast) ease, box-shadow var(--t-fast) ease;
+}
+.nav-links a.nav-cat:hover { color: #fff; background: var(--cat); transform: translateY(-1px); }
+.nav-links a.nav-cat.active { color: #fff; background: var(--cat); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--cat); }
+.nav-links a.nav-guides { background: var(--ink); color: #fff; font-weight: 700; }
+.nav-links a.nav-guides:hover, .nav-links a.nav-guides.active { background: var(--ink); color: var(--yellow); }
+.nav-links .nav-dropdown > span { border: 2px solid var(--ink); color: var(--ink); font-weight: 700; padding: 6px 12px; }
+.nav-dropdown-menu { border: 2px solid var(--ink); box-shadow: 0 6px 0 var(--ink); }
+.nav-actions button, .nav-actions a { border: 2px solid var(--ink); color: var(--ink); background: #fff; }
+.nav-toggle { border: 2px solid var(--ink) !important; }
+@media (max-width: 768px) {
+    .nav-links.mobile-open a.nav-cat, .nav-links.mobile-open a.nav-guides {
+        background: none; color: var(--text); box-shadow: none; transform: none;
+        display: flex; align-items: center; gap: 14px;
+    }
+    .nav-links.mobile-open a.nav-cat::before {
+        content: ''; width: 18px; height: 18px; border-radius: 6px; background: var(--cat); flex-shrink: 0;
+    }
+    .nav-links.mobile-open .nav-dropdown > span { border: 0; padding: var(--s-md) 0; }
+}
+
+/* ---------- Home masthead ---------- */
+.mag-top { padding: 22px 0 8px; }
+.mast { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+.mast h1 { font-size: clamp(1.75rem, 3.4vw, 2.75rem); line-height: 1.02; max-width: 21ch; text-wrap: balance; }
+.mast h1 span { color: var(--accent); }
+.mast-search { display: flex; flex: 0 0 min(360px, 100%); background: #fff; border: 2px solid var(--ink); border-radius: 14px; overflow: hidden; }
+.mast-search input { flex: 1; min-width: 0; border: 0; background: none; padding: 13px 16px; font: 500 0.9375rem var(--font); color: var(--text); outline: none; }
+.mast-search button { border: 0; background: var(--yellow); padding: 0 16px; font-size: 1rem; border-left: 2px solid var(--ink); }
+.mast-stats { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 16px; font-size: 0.8125rem; color: var(--text-2); }
+.mast-stats strong { color: var(--ink); font-weight: 800; }
+
+/* ---------- Magazine cover (pick of the day) ---------- */
+.cover-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 440px;
+    border-radius: 26px;
+    overflow: hidden;
+    background: var(--cat, var(--accent));
+    color: #fff;
+}
+.cover-text { display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 3.4vw, 40px); }
+.cover-issue { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.92; }
+.cover-issue a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.cover-title { font-family: var(--display); font-weight: 800; font-size: clamp(2.6rem, 5.6vw, 4.75rem); line-height: 0.92; letter-spacing: -0.05em; text-wrap: balance; }
+.cover-title a { color: #fff; }
+.cover-title a:hover { color: var(--yellow); }
+.cover-sub { font-size: 0.875rem; font-weight: 600; opacity: 0.85; }
+.cover-blurb { font-size: 1.0625rem; line-height: 1.5; max-width: 34em; }
+.cover-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 10px; }
+.btn-amazon {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--yellow); color: var(--ink);
+    font-weight: 800; font-size: 1rem;
+    padding: 15px 22px; border-radius: 14px;
+    box-shadow: 0 5px 0 var(--ink);
+    transition: transform var(--t-fast) ease, box-shadow var(--t-fast) ease;
+}
+.btn-amazon:hover { color: var(--ink); transform: translateY(2px); box-shadow: 0 3px 0 var(--ink); }
+.btn-amazon .icon { width: 18px; height: 18px; }
+.cover-hero .favorite-btn.inline { background: transparent; border: 2px solid rgba(255, 255, 255, 0.85); color: #fff; border-radius: 14px; }
+.cover-hero .favorite-btn.inline.active { color: var(--yellow); border-color: var(--yellow); }
+.cover-note { font-size: 0.75rem; opacity: 0.85; }
+.cover-note .countdown { font-variant-numeric: tabular-nums; font-weight: 800; background: none; border: 0; padding: 0; color: inherit; font-size: inherit; }
+.cover-media { position: relative; display: block; background: #fff; }
+.cover-media .card-media { position: absolute; inset: 0; aspect-ratio: auto; height: 100%; }
+.cover-media .card-media img { width: 100%; height: 100%; object-fit: cover; }
+.cover-media .card-media.fit-contain img { object-fit: contain; padding: 8%; }
+.cover-media .card-visual { background: color-mix(in srgb, var(--cat) 16%, #fff); color: var(--cat); }
+.cover-stamp {
+    position: absolute; right: 20px; top: 20px; z-index: 3;
+    width: 112px; height: 112px; border-radius: 50%;
+    display: grid; place-items: center; text-align: center;
+    background: var(--pink); color: #fff;
+    font-family: var(--display); font-weight: 800; font-size: 1.0625rem; line-height: 1.02;
+    transform: rotate(12deg);
+    box-shadow: 0 0 0 5px var(--bg);
+}
+
+/* ---------- Colour strip under the cover ---------- */
+.cover-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; }
+.strip-tile {
+    display: flex; flex-direction: column;
+    min-height: 268px; padding: 16px;
+    border-radius: 20px;
+    background: color-mix(in srgb, var(--cat, #7c3aed) 26%, #fff);
+    color: var(--ink);
+    transition: transform var(--t-normal) var(--ease), box-shadow var(--t-normal) var(--ease);
+}
+.strip-tile:hover { color: var(--ink); transform: translateY(-3px); box-shadow: 0 6px 0 var(--ink); }
+.strip-tile small { font-size: 0.6875rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--cat, #7c3aed) 80%, #000); }
+.strip-tile h3 { font-family: var(--display); font-weight: 800; font-size: 1.5rem; line-height: 1.02; letter-spacing: -0.03em; margin: 6px 0 12px; text-wrap: balance; }
+.strip-img { margin-top: auto; height: 128px; border-radius: 12px; overflow: hidden; background: #fff; display: grid; place-items: center; color: var(--cat); }
+.strip-img img { width: 100%; height: 100%; object-fit: cover; }
+.strip-img.fit-contain img { object-fit: contain; padding: 8px; }
+.strip-img .icon { width: 48px; height: 48px; }
+.strip-go { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 0.8125rem; font-weight: 800; }
+.strip-go .icon { width: 15px; height: 15px; }
+.strip-dark { background: var(--ink); color: #fff; }
+.strip-dark:hover { color: #fff; box-shadow: 0 6px 0 var(--accent); }
+.strip-dark small { color: var(--yellow); }
+.strip-dark p { font-size: 0.875rem; line-height: 1.45; opacity: 0.82; }
+.strip-dark .strip-go { margin-top: auto; color: var(--yellow); }
+
+/* ---------- Sections ---------- */
+.section-tag { background: var(--yellow); color: var(--ink); border: 0; }
+.section-header .view-all { color: var(--ink); border-bottom: 2px solid var(--ink); padding-bottom: 1px; }
+.section-header .view-all:hover { color: var(--accent); border-color: var(--accent); }
+.cat-section .section-header h2::before {
+    content: ''; display: inline-block; width: 0.62em; height: 0.62em; border-radius: 0.16em;
+    background: var(--cat); margin-right: 0.3em; vertical-align: 0.04em;
+}
+
+/* ---------- Product cards ---------- */
+.product-card {
+    --tint: color-mix(in srgb, var(--cat, #7c3aed) 12%, #fff);
+    --tint-2: color-mix(in srgb, var(--cat, #7c3aed) 28%, #fff);
+    border: 2px solid var(--ink);
+    border-radius: 20px;
+}
+.product-card:hover { transform: translateY(-4px); border-color: var(--ink); box-shadow: 0 6px 0 var(--ink); }
+.product-card .card-media { border-bottom: 2px solid var(--ink); }
+.card-visual { color: var(--cat); }
+.visual-icon { color: var(--cat); filter: none; }
+.badge { font-weight: 800; border: 0; }
+.badge-cat { background: var(--cat, var(--ink)); color: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+a.badge-cat:hover { color: var(--yellow); }
+.badge-new { background: var(--yellow); color: var(--ink); }
+.badge-hot { background: var(--ink); color: #fff; }
+.favorite-btn { border: 2px solid var(--ink); background: #fff; color: var(--ink); }
+.card-title { font-weight: 800; }
+.card-title a:hover { color: var(--cat, var(--accent)); }
+.spec-pills li { background: var(--surface-2); border: 0; color: var(--text-2); }
+.card-cta { background: var(--ink); border-radius: 12px; font-weight: 800; }
+.card-cta:hover { background: var(--cat, var(--accent)); }
+
+/* ---------- Category tiles ---------- */
+.cat-tile { background: var(--cat); color: #fff; border: 0; min-height: 168px; }
+.cat-tile:hover { background: var(--cat); border: 0; transform: translateY(-3px); box-shadow: 0 6px 0 var(--ink); }
+.cat-tile strong { font-size: 1.375rem; color: #fff; }
+.cat-tile small { color: rgba(255, 255, 255, 0.86); }
+.cat-tile-count { color: var(--yellow); }
+.cat-tile-icon { background: rgba(255, 255, 255, 0.16); color: #fff; }
+
+/* ---------- Guide cards ---------- */
+.guide-card { background: #fff; border: 2px solid var(--ink); border-radius: 20px; }
+.guide-card:hover { transform: translateY(-3px); border-color: var(--ink); box-shadow: 0 6px 0 var(--ink); }
+.guide-card .eyebrow { align-self: flex-start; background: var(--yellow); color: var(--ink); padding: 3px 9px; border-radius: 999px; font-size: 0.6875rem; }
+.guide-card h3 { font-size: 1.3125rem; }
+
+/* ---------- Category & guide heroes: colour block ---------- */
+.category-hero.mag-hero { padding: 6px 0 var(--s-lg); }
+.mag-hero .container {
+    background: var(--cat);
+    color: #fff;
+    border-radius: 26px;
+    padding: clamp(24px, 4vw, 44px);
+}
+.mag-hero h1 { color: #fff; font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 0.95; letter-spacing: -0.05em; max-width: 18ch; text-wrap: balance; }
+.mag-hero p { color: rgba(255, 255, 255, 0.92); max-width: 46em; font-size: 1.0625rem; }
+.mag-hero .eyebrow { color: var(--yellow); }
+.mag-hero .eyebrow a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.mag-hero .quick-answer { background: #fff; color: var(--ink); border: 0; border-left: 6px solid var(--yellow); }
+.mag-hero .quick-answer strong { color: var(--cat); }
+.guide-rank { font-family: var(--display); font-size: 2.5rem; line-height: 1; color: var(--accent); letter-spacing: -0.04em; }
+.page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1; }
+
+/* ---------- Buttons, chips, FAQ ---------- */
+.btn-primary { background: var(--ink); border-radius: 14px; font-weight: 800; }
+.btn-primary:hover { background: var(--accent); }
+.btn-outline { border: 2px solid var(--ink) !important; border-radius: 14px !important; color: var(--ink) !important; font-weight: 800 !important; }
+.chip { border: 2px solid var(--border); }
+.chip.active { background: var(--ink); border-color: var(--ink); }
+.faq-item { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: #fff; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+    .cover-hero { grid-template-columns: 1fr; min-height: 0; }
+    .cover-media { order: -1; }
+    .cover-media .card-media { position: relative; aspect-ratio: 16 / 10; }
+    .cover-strip { grid-template-columns: repeat(2, 1fr); }
+    .mast { flex-direction: column; align-items: stretch; }
+    .mast-search { flex-basis: auto; }
+}
+@media (max-width: 640px) {
+    .mag-top { padding-top: 14px; }
+    .cover-hero { border-radius: 20px; }
+    .cover-title { font-size: clamp(2.25rem, 11vw, 3rem); }
+    .cover-blurb { font-size: 1rem; }
+    .cover-actions .btn-amazon { flex: 1; justify-content: center; }
+    .cover-stamp { width: 86px; height: 86px; font-size: 0.875rem; right: 14px; top: 14px; }
+    .cover-strip { gap: 10px; }
+    .strip-tile { min-height: 236px; padding: 13px; border-radius: 16px; }
+    .strip-tile h3 { font-size: 1.1875rem; }
+    .strip-img { height: 100px; }
+    .mast-stats { gap: 4px 14px; font-size: 0.75rem; }
+    .mag-hero .container { border-radius: 20px; }
+}
+.cover-note .countdown { display: inline; }
+.cover-note .countdown::before { display: none; }
+/* product cards: the v7 card defined its own --ink (hue tint); v8 uses true ink everywhere */
+.product-card { --ink: #121019; }
+@media (max-width: 640px) {
+    .cover-hero .favorite-btn.inline span { display: none; }
+    .cover-hero .favorite-btn.inline { padding: 12px 14px; }
+    .cover-actions { flex-wrap: nowrap; }
+}

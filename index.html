@@ -71,46 +71,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css?v=7.1">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css?v=8.0">
 </head>
 
 <body id="index" data-page="home">
     <div id="menu-include"></div>
 
     <main>
-        <!-- Hero + pick of the day -->
-        <section class="hero hero-split">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">Curated for the UAE · new picks daily</div>
-                    <h1>The tech worth buying <span class="text-gradient">on Amazon.ae</span></h1>
-                    <p class="hero-subtitle">Hand-picked gadgets across gaming, phones, audio, computers and smart home. No fake discounts and no clutter, just the products we would buy ourselves, with UAE warranty and Prime delivery.</p>
-                    <form class="hero-search" action="/products.html" method="get" role="search">
-                        <input type="search" name="q" placeholder="Search iPhone 18, GTA 6, Zelda…" class="search-input" aria-label="Search products" autocomplete="off">
+        <!-- Masthead + magazine cover (pick of the day) -->
+        <section class="mag-top">
+            <div class="container">
+                <div class="mast">
+                    <h1>The tech worth buying on <span>Amazon.ae</span>, picked for the UAE</h1>
+                    <form class="mast-search" action="/products.html" method="get" role="search">
+                        <input type="search" name="q" placeholder="Search iPhone 18, GTA 6, Zelda…" aria-label="Search products" autocomplete="off">
                         <button type="submit" aria-label="Search">&#x1F50D;</button>
                     </form>
-                    <div class="hero-stats">
-                        <div class="hero-stat"><strong data-catalog-count>193</strong><span>curated picks</span></div>
-                        <div class="hero-stat"><strong data-brand-count>60</strong><span>brands</span></div>
-                        <div class="hero-stat"><strong>Daily</strong><span>rotation</span></div>
-                    </div>
                 </div>
                 <div id="deal-of-day" aria-live="polite"></div>
-            </div>
-        </section>
-
-        <!-- Seasonal: Black Friday / White Friday 2026 -->
-        <section class="section tight" id="black-friday">
-            <div class="container">
-                <a class="season-banner" href="/guides/black-friday-white-friday-uae-2026.html">
-                    <div>
-                        <span class="season-eyebrow">Black Friday · White Friday 2026</span>
-                        <h2>What to buy this White Friday on Amazon.ae</h2>
-                        <p>Black Friday is on 27 November. Our shortlist of what to check first: iPhone 18 Pro Max, GTA VI, Zelda: Ocarina of Time, Switch 2, AirPods and more.</p>
-                    </div>
-                    <span class="season-cta">See the shortlist &#8594;</span>
-                </a>
+                <div class="cover-strip" id="cover-strip">
+                    <a class="strip-tile strip-dark" href="/guides/black-friday-white-friday-uae-2026.html">
+                        <small>White Friday 2026</small>
+                        <h3>What to buy before 27&nbsp;Nov</h3>
+                        <p>Black Friday on Amazon.ae: our shortlist, from GTA VI to AirPods.</p>
+                        <span class="strip-go">Read the shortlist &#8594;</span>
+                    </a>
+                </div>
+                <div class="mast-stats">
+                    <span><strong data-catalog-count>193</strong> hand-picked products</span>
+                    <span><strong data-brand-count>60</strong> brands</span>
+                    <span><strong>Daily</strong> new pick at midnight UAE</span>
+                    <span>No fake discounts · UAE warranty · Prime delivery</span>
+                </div>
             </div>
         </section>
 
@@ -119,7 +112,7 @@
             <div class="container">
                 <div class="section-header">
                     <div>
-                        <div class="section-title-row"><h2>Trending this week</h2><span class="section-tag">Refreshes Mondays</span></div>
+                        <div class="section-title-row"><h2>This week&rsquo;s must-haves</h2><span class="section-tag">Refreshes Mondays</span></div>
                         <p class="section-sub">Eight products from across the catalog, reshuffled every week.</p>
                     </div>
                     <a href="/deals.html" class="view-all">Today's picks &#8594;</a>
@@ -154,7 +147,7 @@
         </section>
 
         <!-- Category spotlights -->
-        <section class="section" id="gaming">
+        <section class="section cat-section" id="gaming" style="--cat:#7c3aed">
             <div class="container">
                 <div class="section-header">
                     <div class="section-title-row"><h2>Gaming</h2><span class="section-tag">Rotates daily</span></div>
@@ -164,7 +157,7 @@
             </div>
         </section>
 
-        <section class="section" id="mobiles">
+        <section class="section cat-section" id="mobiles" style="--cat:#2563eb">
             <div class="container">
                 <div class="section-header">
                     <div class="section-title-row"><h2>Phones &amp; tablets</h2><span class="section-tag">Rotates daily</span></div>
@@ -174,7 +167,7 @@
             </div>
         </section>
 
-        <section class="section" id="audio">
+        <section class="section cat-section" id="audio" style="--cat:#be185d">
             <div class="container">
                 <div class="section-header">
                     <div class="section-title-row"><h2>Audio</h2><span class="section-tag">Rotates daily</span></div>
@@ -184,7 +177,7 @@
             </div>
         </section>
 
-        <section class="section" id="computers">
+        <section class="section cat-section" id="computers" style="--cat:#c2410c">
             <div class="container">
                 <div class="section-header">
                     <div class="section-title-row"><h2>Computers &amp; tech</h2><span class="section-tag">Rotates daily</span></div>
@@ -194,7 +187,7 @@
             </div>
         </section>
 
-        <section class="section" id="smart-home">
+        <section class="section cat-section" id="smart-home" style="--cat:#047857">
             <div class="container">
                 <div class="section-header">
                     <div class="section-title-row"><h2>Smart home</h2><span class="section-tag">Rotates daily</span></div>
@@ -316,16 +309,16 @@
 
     <div id="footer-include"></div>
 
-    <script src="/assets/js/products.js?v=7.1"></script>
-    <script src="/assets/data/catalog-items.js?v=7.1"></script>
-    <script src="/assets/data/catalog-images.js?v=7.1"></script>
-    <script src="/assets/js/catalog.js?v=7.1"></script>
-    <script src="/assets/js/rotation.js?v=7.1"></script>
-    <script src="/assets/js/product-renderer.js?v=7.1"></script>
-    <script src="/assets/js/script.js?v=7.1"></script>
-    <script src="/assets/js/page.js?v=7.1"></script>
-    <script src="/assets/js/jsonld-injector.js?v=7.1"></script>
-    <script src="/assets/js/stats.js?v=7.1"></script>
+    <script src="/assets/js/products.js?v=8.0"></script>
+    <script src="/assets/data/catalog-items.js?v=8.0"></script>
+    <script src="/assets/data/catalog-images.js?v=8.0"></script>
+    <script src="/assets/js/catalog.js?v=8.0"></script>
+    <script src="/assets/js/rotation.js?v=8.0"></script>
+    <script src="/assets/js/product-renderer.js?v=8.0"></script>
+    <script src="/assets/js/script.js?v=8.0"></script>
+    <script src="/assets/js/page.js?v=8.0"></script>
+    <script src="/assets/js/jsonld-injector.js?v=8.0"></script>
+    <script src="/assets/js/stats.js?v=8.0"></script>
 
     <script type="application/ld+json">
     {

@@ -87,7 +87,10 @@
     /** One hero product per day, drawn from the hottest third of the catalog. */
     function dealOfDay(items, date) {
         if (!items.length) return null;
-        const sorted = items.slice().sort((a, b) => (b.heat || 0) - (a.heat || 0));
+        // The pick of the day is the cover of the site: prefer products with a real photo.
+        const withPhoto = items.filter(p => p.hasImage);
+        const base = withPhoto.length >= 6 ? withPhoto : items;
+        const sorted = base.slice().sort((a, b) => (b.heat || 0) - (a.heat || 0));
         const pool = sorted.slice(0, Math.max(6, Math.ceil(sorted.length / 3)));
         return daily(pool, 1, 'deal', date)[0] || null;
     }
