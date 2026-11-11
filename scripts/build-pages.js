@@ -84,7 +84,7 @@ ${T.faq(content.faq)}`;
 
 function guideCard(g) {
     return `                    <a class="guide-card" href="/guides/${g.slug}.html">
-                        <span class="eyebrow">Buying guide</span>
+                        <span class="eyebrow">${g.category ? 'Buying guide' : 'Seasonal guide'}</span>
                         <h3>${T.esc(g.title)}</h3>
                         <p>${T.esc(g.quick)}</p>
                         <span class="link">Read the guide &#8594;</span>
@@ -92,8 +92,24 @@ function guideCard(g) {
 }
 
 /* ---------- Guide pages ---------- */
+const DEFAULT_UPDATED = 'September 2026';
+const ALL_CATEGORIES = { key: '', label: 'All categories', page: '/products.html' };
+
+/** Article JSON-LD: tells search engines and AI assistants who wrote the guide and when it was last updated. */
+function articleJsonLd(g) {
+    const data = {
+        '@context': 'https://schema.org', '@type': 'Article',
+        headline: g.title, description: g.description,
+        dateModified: T.isoMonth(g.updated || DEFAULT_UPDATED),
+        mainEntityOfPage: `${T.SITE}/guides/${g.slug}.html`,
+        author: { '@type': 'Organization', name: 'GadgetsUAE', url: T.SITE },
+        publisher: { '@type': 'Organization', name: 'GadgetsUAE', logo: { '@type': 'ImageObject', url: T.SITE + '/android-chrome-512x512.png' } }
+    };
+    return `    <script type="application/ld+json">${JSON.stringify(data)}</script>\n`;
+}
+
 function guidePage(g) {
-    const cat = Catalog.category(g.category);
+    const cat = g.category ? Catalog.category(g.category) : ALL_CATEGORIES;
     const missing = g.picks.filter(p => !byId[p.id]).map(p => p.id);
     if (missing.length) throw new Error(`Guide ${g.slug} references unknown products: ${missing.join(', ')}`);
     const others = GUIDES.filter(x => x.slug !== g.slug).slice(0, 3);
@@ -108,7 +124,7 @@ function guidePage(g) {
 
         <section class="category-hero guide-hero">
             <div class="container">
-                <div class="eyebrow">Buying guide · <a href="${cat.page}">${cat.label}</a> · Updated September 2026</div>
+                <div class="eyebrow">Buying guide · <a href="${cat.page}">${cat.label}</a> · Updated ${T.esc(g.updated || DEFAULT_UPDATED)}</div>
                 <h1>${T.esc(g.title)}</h1>
                 <p>${T.esc(g.intro)}</p>
                 <div class="quick-answer"><strong>Quick answer</strong><span>${T.esc(g.quick)}</span></div>
@@ -130,7 +146,7 @@ ${g.picks.map((p, i) => `                <div class="guide-pick">
 
         <section class="section tight">
             <div class="container">
-                <div class="section-header"><h2>More from ${cat.label}</h2><a href="${cat.page}" class="view-all">View all &#8594;</a></div>
+                <div class="section-header"><h2>${g.category ? 'More from ' + cat.label : 'Trending this week'}</h2><a href="${cat.page}" class="view-all">View all &#8594;</a></div>
                 <div class="products-grid" id="guide-related" data-category="${cat.key}" data-exclude="${g.picks.map(p => p.id).join(',')}"></div>
             </div>
         </section>
@@ -148,8 +164,8 @@ ${others.map(guideCard).join('\n')}
         title: g.seoTitle,
         description: g.description,
         path: `/guides/${g.slug}.html`,
-        extraHead: T.faqJsonLd(g.faq) + `    <script type="application/ld+json">${JSON.stringify(itemList)}</script>\n`,
-        bodyAttrs: `data-page="guide" data-category="${g.category}"`,
+        extraHead: T.faqJsonLd(g.faq) + articleJsonLd(g) + `    <script type="application/ld+json">${JSON.stringify(itemList)}</script>\n`,
+        bodyAttrs: `data-page="guide" data-category="${g.category || ''}"`,
         main
     });
 }
@@ -293,6 +309,47 @@ function notFoundPage() {
     });
 }
 
+/* ---------- llms.txt (plain-text summary for AI assistants) ---------- */
+function llmsTxt() {
+    const fresh = catalog.filter(p => p.added === catalog.map(x => x.added).sort().pop())
+        .sort((a, b) => b.heat - a.heat).slice(0, 12);
+    // The Black Friday block disappears by itself after the sale (the nightly build regenerates this file).
+    const seasonal = Date.now() < Date.UTC(2026, 11, 2) ? `## Seasonal: Black Friday / White Friday 2026
+- Black Friday 2026 is on Friday 27 November; Cyber Monday is 30 November.
+- Amazon.ae calls its sale "White Friday"; in 2025 it ran 20–30 November and 2026 is expected to be similar.
+- Guide: ${T.SITE}/guides/black-friday-white-friday-uae-2026.html
+
+` : '';
+    const faqs = GUIDES.flatMap(g => g.faq || []).concat(Object.values(CATEGORY_PAGES).flatMap(c => c.faq || []));
+    return `# GadgetsUAE
+
+> Hand-picked tech on Amazon.ae for shoppers in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah and every emirate). ${catalog.length} curated products, buying guides and a pick of the day that rotates daily.
+
+GadgetsUAE (https://gadgetsdxb.com) is an independent Amazon Associates site. We do not sell anything: every product links to its live Amazon.ae page, where price, stock and delivery are shown. We never publish prices because they change by the hour.
+
+${seasonal}## Newest additions
+${fresh.map(p => `- ${p.title} (${p.category}) — ${p.blurb}`).join('\n')}
+
+## Buying guides
+${GUIDES.map(g => `- [${g.title}](${T.SITE}/guides/${g.slug}.html): ${g.quick}`).join('\n')}
+
+## Categories
+${Catalog.CATEGORIES.map(c => `- [${c.label}](${T.SITE}${c.page}): ${c.tagline}`).join('\n')}
+
+## Other pages
+- [Today's picks](${T.SITE}/deals.html): pick of the day plus twelve products, reshuffled at midnight UAE time
+- [All products](${T.SITE}/products.html)
+- [Public JSON feed](${T.SITE}/assets/data/catalog.json): the full catalog in machine-readable form
+
+## Frequently asked questions
+${faqs.map(f => `### ${f.q}\n${f.a}`).join('\n\n')}
+
+## Affiliate disclosure
+As an Amazon Associate, GadgetsUAE earns from qualifying purchases made through links on this site.
+`;
+}
+
+write('llms.txt', llmsTxt());
 write('404.html', notFoundPage());
 write('products.html', productsPage());
 write('deals.html', dealsPage());

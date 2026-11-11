@@ -29,7 +29,9 @@ test('every category has page content and every guide references real products',
     const slugs = new Set();
     for (const g of GUIDES) {
         assert.ok(!slugs.has(g.slug), 'duplicate guide slug ' + g.slug); slugs.add(g.slug);
-        assert.ok(Catalog.category(g.category), g.slug + ': unknown category');
+        // category: null marks a cross-category (seasonal) guide
+        assert.ok(g.category === null || Catalog.category(g.category), g.slug + ': unknown category');
+        if (g.updated) assert.ok(T.isoMonth(g.updated), g.slug + ': updated must look like "November 2026"');
         assert.ok(g.picks.length >= 4);
         for (const p of g.picks) assert.ok(ids.has(p.id), `${g.slug}: unknown product ${p.id}`);
         assert.equal(new Set(g.picks.map(p => p.id)).size, g.picks.length, g.slug + ': duplicate picks');
@@ -59,4 +61,21 @@ test('templates escape user-visible text and build valid breadcrumbs', () => {
     assert.ok(html.includes('data-page="x"') && html.includes('/assets/js/page.js'));
     assert.equal(T.faq([]), '');
     assert.ok(T.faqJsonLd([{ q: 'Q?', a: 'A.' }]).includes('"FAQPage"'));
+});
+
+test('isoMonth turns a "Month YYYY" label into a schema.org date', () => {
+    assert.equal(T.isoMonth('November 2026'), '2026-11-01');
+    assert.equal(T.isoMonth(' january 2027 '), '2027-01-01');
+    assert.equal(T.isoMonth(''), null);
+    assert.equal(T.isoMonth('Nov 2026'), null);
+    assert.equal(T.isoMonth(undefined), null);
+});
+
+test('seasonal Black Friday guide exists, has FAQs and never mentions prices', () => {
+    const bf = GUIDES.find(g => g.slug === 'black-friday-white-friday-uae-2026');
+    assert.ok(bf, 'Black Friday guide missing');
+    assert.equal(bf.category, null);
+    assert.ok(bf.faq.length >= 4);
+    const text = JSON.stringify(bf);
+    assert.ok(!/AED|Dh\s?\d|\$\d|\d+\s?%/.test(text), 'no prices or percentages in the Black Friday guide');
 });

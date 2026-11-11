@@ -1848,3 +1848,25 @@ details.faq-item .faq-answer {
 .card-media.fit-contain img { object-fit: contain; padding: 10%; }
 .deal-hero .card-media.fit-contain img { padding: 8%; }
 .product-card:hover .card-media.fit-contain img { transform: scale(1.03); }
+
+/* ===== SEASONAL BANNER (Black Friday / White Friday) ===== */
+.season-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-lg);
+    padding: var(--s-lg) var(--s-xl);
+    border-radius: var(--r);
+    background: #0b0b0f;
+    color: #fff;
+    text-decoration: none;
+}
+.season-banner:hover { color: #fff; }
+.season-banner .season-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fbbf24; }
+.season-banner h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin: 4px 0 6px; color: #fff; }
+.season-banner p { color: rgba(255, 255, 255, 0.72); font-size: var(--fs-small); max-width: 60ch; }
+.season-banner .season-cta { flex-shrink: 0; padding: 12px 22px; border-radius: var(--r-sm); background: #fff; color: #0b0b0f; font-weight: 700; font-size: var(--fs-small); white-space: nowrap; }
+.season-banner:hover .season-cta { background: #fbbf24; }
+@media (max-width: 700px) {
+    .season-banner { flex-direction: column; align-items: flex-start; padding: var(--s-lg); }
+}

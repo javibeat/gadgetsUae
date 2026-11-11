@@ -219,7 +219,9 @@
         if (rel) {
             const key = rel.dataset.category || body.dataset.category;
             const ex = (rel.dataset.exclude || '').split(',').filter(Boolean).concat(picked);
-            r.render(rel, { items: R().spotlight(items, key, 4, new Date(), ex) });
+            // Cross-category guides (e.g. Black Friday) have no category → show this week's trending picks.
+            const list = key ? R().spotlight(items, key, 4, new Date(), ex) : R().trending(items, 4, new Date(), ex);
+            r.render(rel, { items: list });
         }
     }
 

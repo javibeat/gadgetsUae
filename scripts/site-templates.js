@@ -2,7 +2,7 @@
  * Shared HTML fragments for generated pages (categories, guides).
  * Pure functions, no I/O — unit tested in tests/templates.test.js.
  */
-const V = '7.0';
+const V = '7.1';
 const SITE = 'https://gadgetsdxb.com';
 
 function esc(s) {
@@ -45,7 +45,7 @@ function searchOverlay() {
         <div class="container">
             <div class="search-header">
                 <div class="search-input-wrap">
-                    <input type="text" id="searchOverlayInput" placeholder="Search 140+ products…" aria-label="Search">
+                    <input type="text" id="searchOverlayInput" placeholder="Search 190+ products…" aria-label="Search">
                 </div>
                 <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
             </div>
@@ -100,6 +100,15 @@ function faqJsonLd(items) {
     return `    <script type="application/ld+json">${JSON.stringify(data)}</script>\n`;
 }
 
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+/** 'November 2026' → '2026-11-01' (for schema.org dates). Returns null if it cannot be parsed. */
+function isoMonth(label) {
+    const m = String(label || '').trim().toLowerCase().match(/^([a-z]+)\s+(\d{4})$/);
+    const i = m ? MONTHS.indexOf(m[1]) : -1;
+    return i < 0 ? null : `${m[2]}-${String(i + 1).padStart(2, '0')}-01`;
+}
+
 function breadcrumb(trail) {
     return `<nav class="breadcrumb" aria-label="Breadcrumb">${trail.map((t, i) =>
         i === trail.length - 1 ? `<strong>${esc(t.label)}</strong>` : `<a href="${t.href}">${esc(t.label)}</a> <span class="separator">/</span>`
@@ -122,4 +131,4 @@ ${scripts()}</body>
 `;
 }
 
-module.exports = { V, SITE, esc, head, searchOverlay, scripts, faq, faqJsonLd, breadcrumb, page };
+module.exports = { V, SITE, esc, isoMonth, head, searchOverlay, scripts, faq, faqJsonLd, breadcrumb, page };

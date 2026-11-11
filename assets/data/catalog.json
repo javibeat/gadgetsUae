@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-11T00:27:54.687Z",
+  "generatedAt": "2026-11-11T09:38:14.036Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,21 +10,21 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 29
+      "count": 32
     },
     {
       "key": "Mobiles",
       "slug": "mobiles",
       "label": "Phones & Tablets",
       "page": "https://gadgetsdxb.com/mobiles.html",
-      "count": 25
+      "count": 28
     },
     {
       "key": "Audio",
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 28
+      "count": 29
     },
     {
       "key": "Tech",
@@ -45,7 +45,7 @@
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 19
+      "count": 20
     },
     {
       "key": "Accessories",
@@ -71,9 +71,9 @@
       "galaxy-watch8-classic",
       "galaxy-watch8",
       "rayneo-air-4-pro",
+      "iphone-duo",
       "apple-pencil-pro",
-      "airpods-pro-3",
-      "macbook-pro-m5-14"
+      "airpods-pro-3"
     ]
   },
   "products": [
@@ -4853,6 +4853,213 @@
       "image": null,
       "added": "2026-11",
       "heat": 66
+    },
+    {
+      "id": "iphone-18-pro-max",
+      "brand": "Apple",
+      "model": "iPhone 18 Pro Max",
+      "title": "Apple iPhone 18 Pro Max (UAE Version)",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "premium",
+      "tags": [
+        "ios",
+        "apple",
+        "camera",
+        "flagship"
+      ],
+      "blurb": "Apple's biggest flagship for 2026: A20 Pro, three 48 MP cameras and the longest battery of any iPhone.",
+      "specs": [
+        "A20 Pro",
+        "6.9\" 120 Hz",
+        "3x 48 MP"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20iPhone%2018%20Pro%20Max&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-18-pro-max/1.webp",
+      "added": "2026-11",
+      "heat": 97
+    },
+    {
+      "id": "iphone-18-pro",
+      "brand": "Apple",
+      "model": "iPhone 18 Pro",
+      "title": "Apple iPhone 18 Pro (UAE Version)",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "premium",
+      "tags": [
+        "ios",
+        "apple",
+        "camera",
+        "compact"
+      ],
+      "blurb": "The same A20 Pro and pro cameras as the Max in a size that fits one hand and any pocket.",
+      "specs": [
+        "A20 Pro",
+        "120 Hz OLED",
+        "48 MP trio"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20iPhone%2018%20Pro&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-18-pro/1.webp",
+      "added": "2026-11",
+      "heat": 90
+    },
+    {
+      "id": "iphone-duo",
+      "brand": "Apple",
+      "model": "iPhone Duo",
+      "title": "Apple iPhone Duo Foldable Smartphone",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "premium",
+      "tags": [
+        "ios",
+        "apple",
+        "foldable"
+      ],
+      "blurb": "Apple's first foldable opens into a 7.6-inch screen that works with Apple Pencil — a phone and mini iPad in one.",
+      "specs": [
+        "7.6\" inner",
+        "5.4\" outer",
+        "A20 Pro"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20iPhone%20Duo%20foldable&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/iphone-duo/1.webp",
+      "added": "2026-11",
+      "heat": 88
+    },
+    {
+      "id": "airpods-5",
+      "brand": "Apple",
+      "model": "AirPods 5",
+      "title": "Apple AirPods 5 with Active Noise Cancellation",
+      "category": "Audio",
+      "sub": "Earbuds",
+      "tier": "mid",
+      "tags": [
+        "ios",
+        "apple",
+        "anc",
+        "earbuds"
+      ],
+      "blurb": "Open-fit AirPods with stronger noise cancelling and live translation — the easy gift for any iPhone owner.",
+      "specs": [
+        "Open-fit ANC",
+        "Live Translation",
+        "USB-C case"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20AirPods%205&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/airpods-5/1.webp",
+      "added": "2026-11",
+      "heat": 86
+    },
+    {
+      "id": "apple-watch-ultra-4",
+      "brand": "Apple",
+      "model": "Watch Ultra 4",
+      "title": "Apple Watch Ultra 4 GPS + Cellular 49mm Titanium",
+      "category": "Wearables",
+      "sub": "Smartwatch",
+      "tier": "premium",
+      "tags": [
+        "apple",
+        "outdoor",
+        "titanium",
+        "gps"
+      ],
+      "blurb": "Two-day battery, a titanium case and a screen bright enough for desert hikes and summer runs.",
+      "specs": [
+        "49 mm titanium",
+        "50 h battery",
+        "S11 chip"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20Watch%20Ultra%204&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/apple-watch-ultra-4/1.webp",
+      "added": "2026-11",
+      "heat": 80
+    },
+    {
+      "id": "zelda-ocarina-of-time-switch-2",
+      "brand": "Nintendo",
+      "model": "Ocarina of Time",
+      "title": "The Legend of Zelda: Ocarina of Time (Nintendo Switch 2)",
+      "category": "Gaming",
+      "sub": "Video Game",
+      "tier": "mid",
+      "tags": [
+        "nintendo",
+        "zelda",
+        "switch-2",
+        "game"
+      ],
+      "blurb": "The full remake of the classic Zelda, rebuilt for Switch 2 — out since 5 November and the game of the month.",
+      "specs": [
+        "Switch 2",
+        "Full remake",
+        "Out 5 Nov 2026"
+      ],
+      "url": "https://www.amazon.ae/s?k=Zelda%20Ocarina%20of%20Time%20Nintendo%20Switch%202&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/zelda-ocarina-of-time-switch-2/1.jpg",
+      "added": "2026-11",
+      "heat": 98
+    },
+    {
+      "id": "gta-6-ps5",
+      "brand": "Rockstar Games",
+      "model": "GTA VI",
+      "title": "Grand Theft Auto VI (PlayStation 5)",
+      "category": "Gaming",
+      "sub": "Video Game",
+      "tier": "mid",
+      "tags": [
+        "playstation",
+        "gta",
+        "game",
+        "open-world"
+      ],
+      "blurb": "The most anticipated game in years lands on 19 November — Vice City, two leads and a huge open world.",
+      "specs": [
+        "PS5",
+        "Open world",
+        "Out 19 Nov 2026"
+      ],
+      "url": "https://www.amazon.ae/s?k=GTA%206%20Grand%20Theft%20Auto%20VI%20PS5&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/gta-6-ps5/1.webp",
+      "added": "2026-11",
+      "heat": 99
+    },
+    {
+      "id": "gta-6-xbox",
+      "brand": "Rockstar Games",
+      "model": "GTA VI (Xbox)",
+      "title": "Grand Theft Auto VI (Xbox Series X|S)",
+      "category": "Gaming",
+      "sub": "Video Game",
+      "tier": "mid",
+      "tags": [
+        "xbox",
+        "gta",
+        "game",
+        "open-world"
+      ],
+      "blurb": "GTA VI on Xbox Series X and S, launching 19 November alongside the PS5 version.",
+      "specs": [
+        "Xbox Series X|S",
+        "Open world",
+        "Out 19 Nov 2026"
+      ],
+      "url": "https://www.amazon.ae/s?k=GTA%206%20Grand%20Theft%20Auto%20VI%20Xbox%20Series%20X&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": "https://gadgetsdxb.com/assets/images/gta-6-xbox/1.webp",
+      "added": "2026-11",
+      "heat": 85
     }
   ]
 }

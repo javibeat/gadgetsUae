@@ -6,6 +6,9 @@ const CATALOG_IMAGES = {
   "airpods-4-anc": [
     "/assets/images/airpods-4-anc/1.png"
   ],
+  "airpods-5": [
+    "/assets/images/airpods-5/1.webp"
+  ],
   "airpods-max-usb-c": [
     "/assets/images/airpods-max-usb-c/1.webp"
   ],
@@ -53,6 +56,9 @@ const CATALOG_IMAGES = {
   ],
   "apple-watch-ultra-3": [
     "/assets/images/apple-watch-ultra-3/1.jpg"
+  ],
+  "apple-watch-ultra-4": [
+    "/assets/images/apple-watch-ultra-4/1.webp"
   ],
   "asus-tuf-gaming-a15": [
     "/assets/images/asus-tuf-gaming-a15/1.webp"
@@ -162,6 +168,12 @@ const CATALOG_IMAGES = {
   "govee-tv-backlight-t2": [
     "/assets/images/govee-tv-backlight-t2/1.webp"
   ],
+  "gta-6-ps5": [
+    "/assets/images/gta-6-ps5/1.webp"
+  ],
+  "gta-6-xbox": [
+    "/assets/images/gta-6-xbox/1.webp"
+  ],
   "huawei-watch-gt-6": [
     "/assets/images/huawei-watch-gt-6/1.webp"
   ],
@@ -186,8 +198,17 @@ const CATALOG_IMAGES = {
   "iphone-17-pro-max": [
     "/assets/images/iphone-17-pro-max/1.jpg"
   ],
+  "iphone-18-pro": [
+    "/assets/images/iphone-18-pro/1.webp"
+  ],
+  "iphone-18-pro-max": [
+    "/assets/images/iphone-18-pro-max/1.webp"
+  ],
   "iphone-air": [
     "/assets/images/iphone-air/1.png"
+  ],
+  "iphone-duo": [
+    "/assets/images/iphone-duo/1.webp"
   ],
   "jbl-charge-6": [
     "/assets/images/jbl-charge-6/1.jpg"
@@ -418,6 +439,9 @@ const CATALOG_IMAGES = {
     "/assets/images/xiaomivacuumx20/11.jpg",
     "/assets/images/xiaomivacuumx20/12.jpg",
     "/assets/images/xiaomivacuumx20/13.jpg"
+  ],
+  "zelda-ocarina-of-time-switch-2": [
+    "/assets/images/zelda-ocarina-of-time-switch-2/1.jpg"
   ]
 };
 if (typeof module !== 'undefined') module.exports = { CATALOG_IMAGES };

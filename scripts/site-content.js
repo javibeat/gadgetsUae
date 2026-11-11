@@ -5,26 +5,29 @@
 const CATEGORY_PAGES = {
     'Gaming': {
         title: 'Best Gaming Gear in UAE 2026 — Consoles, Handhelds & Controllers | GadgetsUAE',
-        description: 'Hand-picked gaming consoles, handhelds, controllers and headsets on Amazon.ae — PS5, Xbox, Switch 2, Steam Deck and more with Prime delivery across the UAE.',
+        description: 'Gaming in the UAE on Amazon.ae: PS5, Xbox, Switch 2, Steam Deck, controllers and the big November 2026 games — GTA VI and Zelda: Ocarina of Time for Switch 2.',
         h1: 'Gaming',
-        intro: 'Consoles, handhelds, controllers and headsets we would actually buy on Amazon.ae — the selection reshuffles every day.',
+        intro: 'Consoles, handhelds, controllers, headsets and the games everyone is talking about — Zelda: Ocarina of Time on Switch 2 and GTA VI — picked for Amazon.ae and reshuffled every day.',
         amazonQuery: 'gaming console',
         faq: [
             { q: 'Which gaming console is best to buy in UAE?', a: 'It depends on how you play. The Nintendo Switch 2 is the family and portable pick, the PlayStation 5 has the strongest exclusives, and the Xbox Series X is the best value with Game Pass. All are sold on Amazon.ae with Prime delivery.' },
             { q: 'Can I use international gaming consoles in UAE?', a: 'Yes, modern consoles are region-free for games. For warranty and the correct power plug we still recommend the UAE version sold by Amazon.ae.' },
+            { q: 'When does GTA 6 come out in the UAE?', a: 'Grand Theft Auto VI launches on 19 November 2026 for PlayStation 5 and Xbox Series X|S, the same day worldwide. There is no PC version at launch. Physical copies are expected on Amazon.ae and at major UAE retailers.' },
+            { q: 'Is the new Zelda: Ocarina of Time out on Switch 2?', a: 'Yes. The Switch 2 remake of The Legend of Zelda: Ocarina of Time came out on 5 November 2026. It is a Switch 2 exclusive, so it does not run on the original Switch.' },
             { q: 'Is a handheld like Steam Deck or ROG Ally worth it in the UAE?', a: 'If you travel or commute a lot, yes. Both run PC games natively and pair with a monitor at home. The Steam Deck OLED is simpler; the ROG Ally X is more powerful and runs Windows.' }
         ]
     },
     'Mobiles': {
-        title: 'Best Phones & Tablets in UAE 2026 — iPhone, Samsung, Pixel, iPad | GadgetsUAE',
-        description: 'The smartphones and tablets worth buying on Amazon.ae in 2026 — iPhone 17, Galaxy S26, Pixel 10, iPad Air and value picks with UAE warranty and Prime delivery.',
+        title: 'Best Phones & Tablets in UAE 2026 — iPhone 18 Pro Max, Galaxy S26, Pixel 11 | GadgetsUAE',
+        description: 'The phones and tablets worth buying on Amazon.ae in 2026 — iPhone 18 Pro Max, iPhone Duo, Galaxy S26 Ultra, Pixel 11 Pro, iPad and value picks with UAE warranty.',
         h1: 'Phones & Tablets',
         intro: 'Flagships, value phones and tablets with UAE warranty. Every model here is one we would recommend to a friend in Dubai.',
         amazonQuery: 'smartphone',
         faq: [
             { q: 'Are smartphones on Amazon.ae UAE versions?', a: 'Most phones sold by Amazon.ae are official UAE or Middle East versions with local warranty. Check the listing for "UAE Version" or "Middle East Version" to be sure of network bands and warranty.' },
             { q: 'Can I trade in my old phone on Amazon.ae?', a: 'Yes, Amazon.ae runs a trade-in programme for selected devices that gives you credit towards a new phone. Eligibility is shown on the product page.' },
-            { q: 'Which iPhone is the best value in 2026?', a: 'The iPhone 16 Pro and iPhone 16e give you most of the current experience for less. If you want the newest camera and battery, the iPhone 17 Pro Max is the one to get.' }
+            { q: 'Which iPhone is the best value in 2026?', a: 'The iPhone 17 Pro and iPhone 16e give you most of the current experience for less. If you want the newest camera and the biggest battery, the iPhone 18 Pro Max (released September 2026) is the one to get. See our guide to which iPhone to buy in the UAE.' },
+            { q: 'Is the iPhone 18 Pro Max available in the UAE?', a: 'Yes. The iPhone 18 Pro and iPhone 18 Pro Max went on sale in the UAE on 18 September 2026, and the foldable iPhone Duo followed on 23 October 2026. The standard iPhone 18 is expected in spring 2027.' }
         ]
     },
     'Audio': {
@@ -71,7 +74,7 @@ const CATEGORY_PAGES = {
         amazonQuery: 'smartwatch',
         faq: [
             { q: 'Apple Watch or Galaxy Watch in the UAE?', a: 'Match the watch to your phone. Apple Watch only works with iPhone; Galaxy Watch works best with Samsung and other Android phones. Both support UAE payments and local carriers for cellular models.' },
-            { q: 'Which watch is best for running in UAE heat?', a: 'Garmin Forerunner 570 and fenix 8 have the longest battery and the most accurate GPS for outdoor training. Apple Watch Ultra 3 is the pick if you want an iPhone companion that also does serious sport.' },
+            { q: 'Which watch is best for running in UAE heat?', a: 'Garmin Forerunner 570 and fenix 8 have the longest battery and the most accurate GPS for outdoor training. Apple Watch Ultra 4 is the pick if you want an iPhone companion that also does serious sport.' },
             { q: 'Do smartwatches handle sweat and pool swimming?', a: 'All the watches listed here are rated to at least 5 ATM, so pool swimming and sweat are fine. Rinse them after sea water.' }
         ]
     },
@@ -103,7 +106,65 @@ const CATEGORY_PAGES = {
 
 const GUIDES = [
     {
+        slug: 'black-friday-white-friday-uae-2026',
+        category: null,
+        updated: 'November 2026',
+        title: 'Black Friday & White Friday UAE 2026: What to Buy on Amazon.ae',
+        seoTitle: 'Black Friday & White Friday UAE 2026 — Dates & Best Tech to Buy on Amazon.ae | GadgetsUAE',
+        description: 'Black Friday 2026 in the UAE is on 27 November; Amazon.ae calls its sale White Friday. The tech worth buying: iPhone 18 Pro Max, GTA VI, Zelda Ocarina of Time, Switch 2, AirPods and more.',
+        intro: 'Black Friday falls on Friday 27 November 2026, and Amazon.ae runs it as White Friday, usually across the whole last week of November. Prices change by the hour during the sale, so instead of listing them we pick the products worth checking first: the new releases everyone is searching for and the proven best-sellers that tend to drop. Every link opens the live Amazon.ae page.',
+        quick: 'Biggest launches: iPhone 18 Pro Max, GTA VI (19 Nov) and Zelda: Ocarina of Time for Switch 2. Best gifts: AirPods Pro 3, Switch 2, Kindle Paperwhite. Big-ticket upgrades: MacBook Air M4, Sony WH-1000XM6, a robot vacuum.',
+        picks: [
+            { id: 'iphone-18-pro-max', why: 'The most searched phone in the UAE this season. Launch iPhones rarely get deep cuts, but White Friday is when bank instalment plans, trade-in credit and bundles appear, so check the listing before you pay full price elsewhere.' },
+            { id: 'gta-6-ps5', why: 'Out on 19 November, right in the middle of the sale. New releases are rarely discounted in their first weeks, so the win here is availability and fast Prime delivery on launch week.' },
+            { id: 'zelda-ocarina-of-time-switch-2', why: 'The full Switch 2 remake of the classic, released on 5 November. If there is a Switch 2 under the tree this year, this is the game to put next to it.' },
+            { id: 'switch2', why: 'The most-gifted console in the UAE. Look for bundles with a game such as Mario Kart World, which usually beat buying the console and game separately.' },
+            { id: 'ps5-pro', why: 'GTA VI is the reason many people upgrade this year. The PS5 Pro runs it best on a 4K TV; console bundles are a Black Friday classic.' },
+            { id: 'airpods-pro-3', why: 'The safest gift for any iPhone owner, and AirPods are among the products most often reduced during Amazon sales.' },
+            { id: 'sony-wh-1000xm6', why: 'If you fly over the holidays, this is the upgrade you will feel every trip. Previous-generation XM5 stock also tends to drop hard.' },
+            { id: 'macbook-air-m4-13', why: 'The laptop most people should buy, and MacBooks are reliably part of the White Friday line-up on Amazon.ae.' },
+            { id: 'galaxy-s26-ultra', why: 'Android flagships drop faster than iPhones. The S26 Ultra is the one to watch if you want the best Android camera for less.' },
+            { id: 'kindle-paperwhite', why: 'Amazon\'s own devices see some of the deepest cuts of the year during its sales. An easy, useful gift.' },
+            { id: 'roborock-qrevo-curv', why: 'Robot vacuums are one of the big winners of every White Friday. Ideal for marble and tile floors and the daily UAE dust.' },
+            { id: 'anker-prime-26k-300w', why: 'Accessories like chargers and power banks are where the sale is most generous. This one charges a laptop and still flies as carry-on.' }
+        ],
+        faq: [
+            { q: 'When is Black Friday 2026 in the UAE?', a: 'Black Friday is on Friday 27 November 2026 and Cyber Monday on 30 November 2026. Amazon.ae calls its event White Friday; last year it ran from 20 to 30 November, and the 2026 sale is expected to follow a similar window. Check Amazon.ae for the official dates.' },
+            { q: 'Is White Friday the same as Black Friday?', a: 'Yes. White Friday is the name Amazon.ae and some Gulf retailers use for the Black Friday sale. Noon calls it Yellow Friday. The deals and timing are the same idea: the last week or so of November.' },
+            { q: 'Will the iPhone 18 Pro Max be cheaper on Black Friday?', a: 'Brand-new iPhones are rarely discounted much. The value usually comes from bank offers, instalments, trade-in credit and bundles. Older models such as the iPhone 17 and iPhone 16 series see bigger price cuts.' },
+            { q: 'Is GTA 6 on sale for Black Friday?', a: 'GTA VI launches on 19 November 2026 for PS5 and Xbox Series X|S. Brand-new games are rarely discounted at launch, but consoles and controllers often are, so it is a good moment to buy the hardware.' },
+            { q: 'Do I need Amazon Prime for White Friday deals?', a: 'Not to buy, but Prime members usually get early access to deals and free fast delivery across the UAE. Amazon.ae offers a free Prime trial, so you can sign up just before the sale.' },
+            { q: 'How do I know if a White Friday deal is real?', a: 'Check that the seller is Amazon.ae or the official brand store, that the listing says UAE or Middle East version for warranty, and compare the price with the past few weeks rather than with the crossed-out list price.' }
+        ]
+    },
+    {
+        slug: 'best-iphone-to-buy-uae',
+        category: 'Mobiles',
+        updated: 'November 2026',
+        title: 'Which iPhone to Buy in UAE (2026)',
+        seoTitle: 'Which iPhone to Buy in UAE 2026 — iPhone 18 Pro Max vs iPhone Duo vs 17 | GadgetsUAE',
+        description: 'iPhone 18 Pro Max, iPhone 18 Pro, the foldable iPhone Duo, iPhone 17 Pro Max, iPhone Air and iPhone 16e compared for UAE buyers on Amazon.ae.',
+        intro: 'Apple sells more iPhones than ever in the UAE, and since September 2026 the line-up includes the iPhone 18 Pro, the 18 Pro Max and Apple\'s first foldable, the iPhone Duo. The standard iPhone 18 is not out until spring 2027, so last year\'s models are still very much in the picture. Here is which one to buy.',
+        quick: 'Best overall: iPhone 18 Pro Max. Smaller pro: iPhone 18 Pro. Want a foldable: iPhone Duo. Best value: iPhone 17. Cheapest: iPhone 16e.',
+        picks: [
+            { id: 'iphone-18-pro-max', why: 'The best iPhone you can buy: A20 Pro, three 48 MP cameras and the biggest battery. If you keep phones for three or four years, this is the one.' },
+            { id: 'iphone-18-pro', why: 'All the Pro Max cameras and performance in a smaller body that fits one hand. The pick if big phones annoy you.' },
+            { id: 'iphone-duo', why: 'Apple\'s first foldable opens into a 7.6-inch screen with Apple Pencil support. Spectacular, but the most expensive iPhone ever, so buy it for the screen, not the camera.' },
+            { id: 'iphone-17-pro-max', why: 'Last year\'s Pro Max is still superb, and it is the model most likely to see real price cuts during White Friday.' },
+            { id: 'iphone-17', why: 'The best value iPhone right now: 120 Hz screen, great battery and the newest standard model until the iPhone 18 arrives in 2027.' },
+            { id: 'iphone-air', why: 'The thinnest iPhone. A style choice with one camera and a smaller battery, best for light users.' },
+            { id: 'iphone-16e', why: 'The cheapest way into a current iPhone with Apple Intelligence. Ideal for teenagers, parents or a second phone.' }
+        ],
+        faq: [
+            { q: 'Is the iPhone 18 Pro Max worth it over the iPhone 17 Pro Max?', a: 'If you are coming from an iPhone 15 or older, yes: the A20 Pro and the camera upgrades are noticeable. From a 17 Pro Max the jump is small, so keep your phone or wait for a deal.' },
+            { q: 'When does the standard iPhone 18 come out?', a: 'Apple only launched the Pro models and the foldable iPhone Duo in September 2026. The standard iPhone 18 is expected in spring 2027, alongside a new iPhone 18e.' },
+            { q: 'Are iPhones on Amazon.ae the UAE version?', a: 'iPhones sold by Amazon.ae are Middle East versions with Apple warranty, which Apple honours at its UAE stores.' },
+            { q: 'Is the iPhone Duo available in the UAE?', a: 'Yes. The iPhone Duo went on sale in the UAE on 23 October 2026 in star white and night sky.' }
+        ]
+    },
+    {
         slug: 'best-wireless-earbuds-uae',
+        updated: 'November 2026',
         category: 'Audio',
         title: 'Best Wireless Earbuds in UAE (2026)',
         seoTitle: 'Best Wireless Earbuds in UAE 2026 — Tested Picks on Amazon.ae | GadgetsUAE',
@@ -115,7 +176,7 @@ const GUIDES = [
             { id: 'sony-wf-1000xm5', why: 'The best-sounding earbuds on this list and superb noise cancelling, with an app that works equally well on iPhone and Android.' },
             { id: 'galaxy-buds3-pro', why: 'If you carry a Galaxy phone these pair instantly, switch between your Samsung devices and support 24-bit audio.' },
             { id: 'bose-qc-ultra-earbuds-2', why: 'Bose still leads for pure quiet. Pick these if silence on the plane matters more than anything else.' },
-            { id: 'airpods-4-anc', why: 'Open-fit AirPods with noise cancelling: perfect if in-ear tips bother you and you still want the Apple integration.' },
+            { id: 'airpods-5', why: 'The new open-fit AirPods (September 2026) with stronger noise cancelling and Live Translation: perfect if in-ear tips bother you.' },
             { id: 'nothing-ear-3', why: 'Design-led and surprisingly capable, with strong ANC and one of the best apps at this price.' },
             { id: 'soundcore-liberty-5', why: 'The value pick. Good ANC, long battery and a wing-tip fit that stays put in the gym.' }
         ],
@@ -215,16 +276,17 @@ const GUIDES = [
     },
     {
         slug: 'best-smartwatch-uae',
+        updated: 'November 2026',
         category: 'Wearables',
         title: 'Best Smartwatches in UAE (2026)',
         seoTitle: 'Best Smartwatch in UAE 2026 — Apple Watch, Galaxy Watch, Garmin, Xiaomi | GadgetsUAE',
-        description: 'The smartwatches and fitness trackers worth buying on Amazon.ae in 2026, matched to iPhone or Android and to UAE heat: Apple Watch Series 11, Galaxy Watch8, Garmin and Xiaomi Band.',
+        description: 'The smartwatches and fitness trackers worth buying on Amazon.ae in 2026, matched to iPhone or Android and to UAE heat: Apple Watch Series 12, Ultra 4, Galaxy Watch8, Garmin and Xiaomi Band.',
         intro: 'A watch is the gadget most tied to your phone, so the first question is iPhone or Android. The second is whether you train outdoors in the heat, where battery life and GPS accuracy separate the toys from the tools.',
-        quick: 'iPhone: Apple Watch Series 11 (or SE 3 on a budget). Samsung: Galaxy Watch8. Serious sport: Garmin Forerunner 570. Under AED 200: Xiaomi Smart Band 10.',
+        quick: 'iPhone: Apple Watch Series 12 (or SE 3 on a budget). Samsung: Galaxy Watch8. Serious sport: Garmin Forerunner 570. Under AED 200: Xiaomi Smart Band 10.',
         picks: [
-            { id: 'apple-watch-series-11', why: 'The best all-round watch for iPhone owners, with the most polished health features and UAE payments.' },
-            { id: 'apple-watch-se-3', why: 'Most of the Series 11 experience for far less. The pick for a first Apple Watch or for kids.' },
-            { id: 'apple-watch-ultra-3', why: 'Multi-day battery, a brighter screen for desert sun and dive-grade toughness.' },
+            { id: 'apple-watch-series-12', why: 'The newest all-round watch for iPhone owners (September 2026), with the most polished health features and UAE payments.' },
+            { id: 'apple-watch-se-3', why: 'Most of the Series 12 experience for far less. The pick for a first Apple Watch or for kids.' },
+            { id: 'apple-watch-ultra-4', why: 'Up to 50 hours of battery, a brighter screen for desert sun and dive-grade toughness.' },
             { id: 'galaxy-watch8', why: 'The natural partner for a Galaxy phone: sleep coaching, ECG and a slimmer body this year.' },
             { id: 'garmin-forerunner-570', why: 'The runner’s pick: two weeks of battery, dual-band GPS and training load that actually helps.' },
             { id: 'garmin-fenix-8', why: 'For triathletes and hikers who want a watch that lasts a month and survives anything.' },

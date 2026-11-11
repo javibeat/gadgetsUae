@@ -39,6 +39,7 @@ and publishes them. Follow it literally. Read `CLAUDE.md` first for the architec
      title: 'Sony WH-1000XM6 Wireless Noise Cancelling Headphones', // ≤ 70 chars
      category: 'Audio',                 // one of: Gaming, Mobiles, Audio, Tech, Smart Home, Wearables, Accessories, 3D Printing
      sub: 'Headphones',                 // reuse an existing sub label when one fits (grep "sub:" for the list)
+                                        // big new games use sub: 'Video Game' (category Gaming)
      tier: 'premium',                   // budget | mid | premium
      tags: ['anc', 'wireless'],         // 2–5 lowercase tags
      blurb: 'One useful sentence for a UAE reader, ≤ 120 chars, no prices, no hype words.',
