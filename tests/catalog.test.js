@@ -7,7 +7,7 @@ const curated = [
     { id: 'b', brand: 'Anker', model: 'Y', title: 'Anker Y', category: 'Accessories', sub: 'Charger', tier: 'budget', tags: [], blurb: 'b', specs: [], query: 'Anker Y', asin: 'B0TEST1234', added: '2026-09', heat: 40 }
 ];
 const legacy = [
-    { id: 'kindle-paperwhite', title: 'Kindle Paperwhite', category: 'Kindle & E-Readers', image: 'assets/images/k/1.jpg', price: 'AED 1', url: 'https://amzn.to/abc', asin: 'B09TMR67G8', gallery: ['assets/images/k/1.jpg', 'assets/images/k/2.jpg'] },
+    { id: 'streamdeck-neo', title: 'Stream Deck Neo', category: 'Kindle & E-Readers', image: 'assets/images/k/1.jpg', price: 'AED 1', url: 'https://amzn.to/abc', asin: 'B09TMR67G8', gallery: ['assets/images/k/1.jpg', 'assets/images/k/2.jpg'] },
     { id: 'a', title: 'Duplicate of a', category: 'Audio' }
 ];
 
@@ -25,8 +25,8 @@ test('legacy products keep their shortlink, photos and get remapped category + m
     const [k] = C.build([], [legacy[0]]);
     assert.equal(k.url, 'https://amzn.to/abc');
     assert.equal(k.category, 'Tech');
-    assert.equal(k.brand, 'Amazon');
-    assert.equal(k.sub, 'E-Reader');
+    assert.equal(k.brand, 'Elgato');
+    assert.equal(k.sub, 'Stream Controller');
     assert.equal(k.gallery.length, 2);
     assert.equal(k.image, '/assets/images/k/1.jpg', 'local paths become root-absolute');
     assert.equal(k.gallery[1], '/assets/images/k/2.jpg');
@@ -64,7 +64,7 @@ test('brands are counted and sorted by frequency', () => {
     const b = C.brands(all);
     assert.equal(b.length, 3);
     assert.ok(b.every(x => x.count === 1));
-    assert.deepEqual(b.map(x => x.name), ['Amazon', 'Anker', 'Sony']);
+    assert.deepEqual(b.map(x => x.name), ['Anker', 'Elgato', 'Sony']);
 });
 
 test('every category has a magazine colour (hex) for its cover, tiles and pills', () => {

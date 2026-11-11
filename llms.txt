@@ -1,6 +1,6 @@
 # GadgetsUAE
 
-> Hand-picked tech on Amazon.ae for shoppers in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah and every emirate). 193 curated products, buying guides and a pick of the day that rotates daily.
+> Hand-picked tech on Amazon.ae for shoppers in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah and every emirate). 177 curated products, buying guides and a pick of the day that rotates daily.
 
 GadgetsUAE (https://gadgetsdxb.com) is an independent Amazon Associates site. We do not sell anything: every product links to its live Amazon.ae page, where price, stock and delivery are shown. We never publish prices because they change by the hour.
 
@@ -24,16 +24,16 @@ GadgetsUAE (https://gadgetsdxb.com) is an independent Amazon Associates site. We
 - Garmin Fenix 9 Pro Titanium Multisport GPS Watch (Wearables) — The first titanium fenix case, with a brighter AMOLED display and up to 31 days of battery life.
 
 ## Buying guides
-- [Black Friday & White Friday UAE 2026: What to Buy on Amazon.ae](https://gadgetsdxb.com/guides/black-friday-white-friday-uae-2026.html): Biggest launches: iPhone 18 Pro Max, GTA VI (19 Nov) and Zelda: Ocarina of Time for Switch 2. Best gifts: AirPods Pro 3, Switch 2, Kindle Paperwhite. Big-ticket upgrades: MacBook Air M4, Sony WH-1000XM6, a robot vacuum.
-- [Which iPhone to Buy in UAE (2026)](https://gadgetsdxb.com/guides/best-iphone-to-buy-uae.html): Best overall: iPhone 18 Pro Max. Smaller pro: iPhone 18 Pro. Want a foldable: iPhone Duo. Best value: iPhone 17. Cheapest: iPhone 16e.
-- [Best Wireless Earbuds in UAE (2026)](https://gadgetsdxb.com/guides/best-wireless-earbuds-uae.html): iPhone owners: AirPods Pro 3. Android or Samsung: Galaxy Buds3 Pro or Sony WF-1000XM5. Tight budget: Soundcore Liberty 5.
-- [Best Noise-Cancelling Headphones in UAE (2026)](https://gadgetsdxb.com/guides/best-noise-cancelling-headphones-uae.html): Best overall: Sony WH-1000XM6. Quietest: Bose QuietComfort Ultra (2nd gen). Best value: Sony WH-CH720N.
+- [Black Friday & White Friday UAE 2026: What to Buy on Amazon.ae](https://gadgetsdxb.com/guides/black-friday-white-friday-uae-2026.html): Biggest launches: iPhone 18 Pro Max, GTA VI (19 Nov) and Zelda: Ocarina of Time for Switch 2. Best gifts: AirPods Pro 3, Switch 2, Kindle Paperwhite. Big-ticket upgrades: MacBook Air M5, Sony WH-1000XM6, a robot vacuum.
+- [Which iPhone to Buy in UAE (2026)](https://gadgetsdxb.com/guides/best-iphone-to-buy-uae.html): Best overall: iPhone 18 Pro Max. Smaller pro: iPhone 18 Pro. Want a foldable: iPhone Duo. Best value: iPhone 17. Cheapest: iPhone 17e.
+- [Best Wireless Earbuds in UAE (2026)](https://gadgetsdxb.com/guides/best-wireless-earbuds-uae.html): iPhone owners: AirPods Pro 3. Android or Samsung: Galaxy Buds4 Pro or Sony WF-1000XM6. Tight budget: Soundcore Liberty 5.
+- [Best Noise-Cancelling Headphones in UAE (2026)](https://gadgetsdxb.com/guides/best-noise-cancelling-headphones-uae.html): Best overall: Sony WH-1000XM6. Quietest: Bose QuietComfort Ultra (2nd gen). Best value: Sony WH-CH730N.
 - [Which Gaming Console to Buy in UAE (2026)](https://gadgetsdxb.com/guides/best-gaming-console-uae.html): Families: Nintendo Switch 2. Exclusives and 4K TV: PS5 Pro. Best value: Xbox Series S with Game Pass. Travel: Steam Deck OLED.
-- [Best Laptops in UAE for Work and Study (2026)](https://gadgetsdxb.com/guides/best-laptop-uae.html): Most people: MacBook Air M4. Windows: ASUS Zenbook A14. Budget: Lenovo IdeaPad Slim 3. Creators: MacBook Pro M5. Gaming: ASUS TUF A15.
-- [Best Robot Vacuums for UAE Homes (2026)](https://gadgetsdxb.com/guides/best-robot-vacuum-uae.html): Best value: Xiaomi Robot Vacuum X20 Pro. Best self-cleaning: Eufy X10 Pro Omni. Premium: Roborock Qrevo Curv. Manual alternative: Dyson V15 Detect.
-- [Best Smartwatches in UAE (2026)](https://gadgetsdxb.com/guides/best-smartwatch-uae.html): iPhone: Apple Watch Series 12 (or SE 3 on a budget). Samsung: Galaxy Watch8. Serious sport: Garmin Forerunner 570. Under AED 200: Xiaomi Smart Band 10.
+- [Best Laptops in UAE for Work and Study (2026)](https://gadgetsdxb.com/guides/best-laptop-uae.html): Most people: MacBook Air M5. Windows: ASUS Zenbook A14. Budget: Lenovo IdeaPad Slim 3. Creators: MacBook Pro M6. Gaming: ASUS TUF A16.
+- [Best Robot Vacuums for UAE Homes (2026)](https://gadgetsdxb.com/guides/best-robot-vacuum-uae.html): Best value: Xiaomi Robot Vacuum 6. Best self-cleaning: Eufy Omni S2. Premium: Roborock Qrevo Curv 2 Pro. Manual alternative: Dyson V16 Piston Animal.
+- [Best Smartwatches in UAE (2026)](https://gadgetsdxb.com/guides/best-smartwatch-uae.html): iPhone: Apple Watch Series 12 (or SE 3 on a budget). Samsung: Galaxy Watch9. Serious sport: Garmin Forerunner 570. Under AED 200: Xiaomi Smart Band 11.
 - [Best Power Banks and Chargers in UAE (2026)](https://gadgetsdxb.com/guides/best-power-bank-charger-uae.html): Pocket power bank: Anker Nano 10K. Laptop power bank: Anker Prime 26K. One charger for everything: Anker Prime 100 W. Budget wall charger: Anker Nano 65 W.
-- [Best 3D Printers for Beginners in UAE (2026)](https://gadgetsdxb.com/guides/best-3d-printer-beginners-uae.html): First printer: Bambu Lab A1 mini. Want multi-colour: Bambu Lab A1 Combo. Budget tinkerer: Creality Ender 3 V3 SE. Enclosed for ABS: Bambu Lab P1S.
+- [Best 3D Printers for Beginners in UAE (2026)](https://gadgetsdxb.com/guides/best-3d-printer-beginners-uae.html): First printer: Bambu Lab A1 mini. Want multi-colour: Bambu Lab A1 Combo. Budget multi-colour: Creality Ender-3 V4 Combo. Enclosed for ABS: Bambu Lab P2S.
 
 ## Latest articles
 - [GTA 6 in the UAE: release time, download size and what to play it on](https://gadgetsdxb.com/posts/gta-6-uae-release-time-storage-guide.html)
@@ -68,7 +68,7 @@ Black Friday is on Friday 27 November 2026 and Cyber Monday on 30 November 2026.
 Yes. White Friday is the name Amazon.ae and some Gulf retailers use for the Black Friday sale. Noon calls it Yellow Friday. The deals and timing are the same idea: the last week or so of November.
 
 ### Will the iPhone 18 Pro Max be cheaper on Black Friday?
-Brand-new iPhones are rarely discounted much. The value usually comes from bank offers, instalments, trade-in credit and bundles. Older models such as the iPhone 17 and iPhone 16 series see bigger price cuts.
+Brand-new iPhones are rarely discounted much. The value usually comes from bank offers, instalments, trade-in credit and bundles. Older models such as the iPhone 17 and iPhone Air see bigger price cuts.
 
 ### Is GTA 6 on sale for Black Friday?
 GTA VI launches on 19 November 2026 for PS5 and Xbox Series X|S. Brand-new games are rarely discounted at launch, but consoles and controllers often are, so it is a good moment to buy the hardware.
@@ -140,7 +140,7 @@ All three robots here store several maps, so you can carry the robot between flo
 Yes, both work with most UAE banks, so you can tap the watch on the metro gates and in shops.
 
 ### Which watch has the longest battery?
-Garmin fenix 8 and Huawei Watch GT 6 last two weeks or more. Apple and Samsung watches need charging every one to two days.
+Garmin fenix 9 Pro and Huawei Watch GT 7 last two weeks or more. Apple and Samsung watches need charging every one to two days.
 
 ### Can I get cellular models in the UAE?
 Yes, Etisalat by e& and du both support eSIM on Apple Watch and Galaxy Watch cellular models.
@@ -176,7 +176,7 @@ Grand Theft Auto VI launches on 19 November 2026 for PlayStation 5 and Xbox Seri
 Yes. The Switch 2 remake of The Legend of Zelda: Ocarina of Time came out on 5 November 2026. It is a Switch 2 exclusive, so it does not run on the original Switch.
 
 ### Is a handheld like Steam Deck or ROG Ally worth it in the UAE?
-If you travel or commute a lot, yes. Both run PC games natively and pair with a monitor at home. The Steam Deck OLED is simpler; the ROG Ally X is more powerful and runs Windows.
+If you travel or commute a lot, yes. Both run PC games natively and pair with a monitor at home. The Steam Deck OLED is simpler; the ROG Xbox Ally X20 is more powerful and runs Windows.
 
 ### Are smartphones on Amazon.ae UAE versions?
 Most phones sold by Amazon.ae are official UAE or Middle East versions with local warranty. Check the listing for "UAE Version" or "Middle East Version" to be sure of network bands and warranty.
@@ -185,22 +185,22 @@ Most phones sold by Amazon.ae are official UAE or Middle East versions with loca
 Yes, Amazon.ae runs a trade-in programme for selected devices that gives you credit towards a new phone. Eligibility is shown on the product page.
 
 ### Which iPhone is the best value in 2026?
-The iPhone 17 Pro and iPhone 16e give you most of the current experience for less. If you want the newest camera and the biggest battery, the iPhone 18 Pro Max (released September 2026) is the one to get. See our guide to which iPhone to buy in the UAE.
+The iPhone 17 and iPhone 17e give you most of the current experience for less. If you want the newest camera and the biggest battery, the iPhone 18 Pro Max (released September 2026) is the one to get. See our guide to which iPhone to buy in the UAE.
 
 ### Is the iPhone 18 Pro Max available in the UAE?
 Yes. The iPhone 18 Pro and iPhone 18 Pro Max went on sale in the UAE on 18 September 2026, and the foldable iPhone Duo followed on 23 October 2026. The standard iPhone 18 is expected in spring 2027.
 
 ### What are the best noise-cancelling headphones available in UAE?
-The Sony WH-1000XM6 and Bose QuietComfort Ultra lead for noise cancelling. In earbuds, the AirPods Pro 3 and Sony WF-1000XM5 are the ones to beat. All are on Amazon.ae with Prime delivery.
+The Sony WH-1000XM6 and Bose QuietComfort Ultra lead for noise cancelling. In earbuds, the AirPods Pro 3 and Sony WF-1000XM6 are the ones to beat. All are on Amazon.ae with Prime delivery.
 
 ### Do wireless earbuds cope with the UAE heat?
 Yes. Look for an IPX4 or higher rating for sweat and humidity, and avoid leaving them in a parked car in summer, which can degrade the battery.
 
 ### Are AirPods worth it if I use an Android phone?
-Not really. On Android you lose seamless pairing and the spatial audio features. The Galaxy Buds3 Pro, Sony WF-1000XM5 or Nothing Ear (3) are better matches.
+Not really. On Android you lose seamless pairing and the spatial audio features. The Galaxy Buds4 Pro, Sony WF-1000XM6 or Nothing Ear (3) are better matches.
 
 ### Which laptop is best for work and study in UAE?
-The MacBook Air M4 is the safest choice for most people: silent, fast and around 18 hours of battery. On Windows, the ASUS Zenbook A14 and Lenovo Yoga Slim 7i are the ones we recommend.
+The MacBook Air M5 is the safest choice for most people: silent, fast and with all-day battery. On Windows, the ASUS Zenbook A14 and Lenovo Yoga Slim 7i are the ones we recommend.
 
 ### Are laptop warranties valid in UAE?
 Laptops sold by Amazon.ae normally include a manufacturer warranty valid in the UAE. The warranty length and whether it is international is listed on each product page.
@@ -212,16 +212,16 @@ Kindle if you buy from the Amazon store; the Paperwhite is the best all-rounder.
 Yes. Devices sold on Amazon.ae are rated for 220–240 V and come with the UK-style three-pin plug used in the UAE. Check the voltage only when importing from elsewhere.
 
 ### Which robot vacuum is best for Dubai apartments?
-The Xiaomi X20 Pro and Eufy X10 Pro Omni are excellent on tile and marble and both mop. The Roborock Qrevo Curv is the premium pick if you have thick rugs or thresholds.
+The Xiaomi Robot Vacuum 6 and Eufy Omni S2 are excellent on tile and marble and both mop. The Roborock Qrevo Curv 2 Pro is the premium pick if you have thick rugs or thresholds.
 
 ### Do I need an air purifier in the UAE?
-On dusty and humid days a HEPA purifier makes a noticeable difference indoors, especially in bedrooms. The Xiaomi Smart Air Purifier 4 is the value choice; Dyson combines purifying with a fan.
+On dusty and humid days a HEPA purifier makes a noticeable difference indoors, especially in bedrooms. The Xiaomi Air Purifier 6 is the value choice; the Dyson HushJet Compact is the quiet bedroom pick.
 
 ### Apple Watch or Galaxy Watch in the UAE?
 Match the watch to your phone. Apple Watch only works with iPhone; Galaxy Watch works best with Samsung and other Android phones. Both support UAE payments and local carriers for cellular models.
 
 ### Which watch is best for running in UAE heat?
-Garmin Forerunner 570 and fenix 8 have the longest battery and the most accurate GPS for outdoor training. Apple Watch Ultra 4 is the pick if you want an iPhone companion that also does serious sport.
+Garmin Forerunner 570 and fenix 9 Pro have the longest battery and the most accurate GPS for outdoor training. Apple Watch Ultra 4 is the pick if you want an iPhone companion that also does serious sport.
 
 ### Do smartwatches handle sweat and pool swimming?
 All the watches listed here are rated to at least 5 ATM, so pool swimming and sweat are fine. Rinse them after sea water.
@@ -236,7 +236,7 @@ A 65 W GaN charger covers a MacBook Air and a phone at the same time. For a MacB
 Yes, the UAE uses the same three-pin Type G socket as the UK, so chargers sold on Amazon.ae plug straight in.
 
 ### Which 3D printer should a beginner buy in UAE?
-The Bambu Lab A1 mini is the easiest start: auto-levelling, quiet and reliable out of the box. The Creality Ender 3 V3 SE is the budget alternative if you want to tinker.
+The Bambu Lab A1 mini is the easiest start: auto-levelling, quiet and reliable out of the box. The Creality Ender-3 V4 Combo is the budget alternative if you want to tinker.
 
 ### Does the UAE heat affect 3D printing?
 Heat is fine for printing, but humidity ruins filament. Keep spools in a sealed box with silica gel and dry them before long prints.

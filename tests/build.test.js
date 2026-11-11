@@ -6,7 +6,8 @@ const { toFeed, loadLegacy } = require('../scripts/build-data.js');
 const { CATEGORY_PAGES, GUIDES } = require('../scripts/site-content.js');
 const T = require('../scripts/site-templates.js');
 
-const catalog = Catalog.build(CATALOG_ITEMS, loadLegacy());
+const { CATALOG_IMAGES } = require('../assets/data/catalog-images.js');
+const catalog = Catalog.build(CATALOG_ITEMS, loadLegacy(), CATALOG_IMAGES);
 const ids = new Set(catalog.map(p => p.id));
 
 test('real catalog is consistent: unique ids, known categories, complete cards', () => {

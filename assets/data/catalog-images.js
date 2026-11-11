@@ -6,23 +6,17 @@ const CATALOG_IMAGES = {
   "acer-predator-atlas-8": [
     "/assets/images/acer-predator-atlas-8/1.webp"
   ],
-  "airpods-4-anc": [
-    "/assets/images/airpods-4-anc/1.png"
-  ],
   "airpods-5": [
     "/assets/images/airpods-5/1.webp"
   ],
-  "airpods-max-usb-c": [
-    "/assets/images/airpods-max-usb-c/1.webp"
+  "airpods-max-2": [
+    "/assets/images/airpods-max-2/1.webp"
   ],
   "airpods-pro-3": [
     "/assets/images/airpods-pro-3/1.webp"
   ],
-  "airtag-4-pack": [
-    "/assets/images/airtag-4-pack/1.png"
-  ],
-  "amazfit-active-2": [
-    "/assets/images/amazfit-active-2/1.jpg"
+  "airtag-2-4-pack": [
+    "/assets/images/airtag-2-4-pack/1.webp"
   ],
   "anker-555-hub": [
     "/assets/images/anker-555-hub/1.webp"
@@ -48,9 +42,6 @@ const CATALOG_IMAGES = {
   "anker-soundcore-boom-go-3i": [
     "/assets/images/anker-soundcore-boom-go-3i/1.webp"
   ],
-  "anycubic-kobra-3-combo": [
-    "/assets/images/anycubic-kobra-3-combo/1.jpg"
-  ],
   "apple-homepod-mini-2": [
     "/assets/images/apple-homepod-mini-2/1.jpg"
   ],
@@ -63,20 +54,11 @@ const CATALOG_IMAGES = {
   "apple-watch-se-3": [
     "/assets/images/apple-watch-se-3/1.jpg"
   ],
-  "apple-watch-series-11": [
-    "/assets/images/apple-watch-series-11/1.jpg"
-  ],
   "apple-watch-series-12": [
     "/assets/images/apple-watch-series-12/1.jpg"
   ],
-  "apple-watch-ultra-3": [
-    "/assets/images/apple-watch-ultra-3/1.jpg"
-  ],
   "apple-watch-ultra-4": [
     "/assets/images/apple-watch-ultra-4/1.webp"
-  ],
-  "asus-tuf-gaming-a15": [
-    "/assets/images/asus-tuf-gaming-a15/1.webp"
   ],
   "asus-zenbook-a14": [
     "/assets/images/asus-zenbook-a14/1.jpg"
@@ -93,8 +75,8 @@ const CATALOG_IMAGES = {
   "bambu-lab-h2d": [
     "/assets/images/bambu-lab-h2d/1.jpg"
   ],
-  "bambu-lab-p1s": [
-    "/assets/images/bambu-lab-p1s/1.jpg"
+  "bambu-lab-p2s": [
+    "/assets/images/bambu-lab-p2s/1.webp"
   ],
   "bambu-lab-x2d": [
     "/assets/images/bambu-lab-x2d/1.webp"
@@ -102,11 +84,11 @@ const CATALOG_IMAGES = {
   "bambu-pla-basic": [
     "/assets/images/bambu-pla-basic/1.jpg"
   ],
-  "belkin-boostcharge-pro-3-in-1": [
-    "/assets/images/belkin-boostcharge-pro-3-in-1/1.jpg"
-  ],
   "belkin-car-vent-mount-pro": [
     "/assets/images/belkin-car-vent-mount-pro/1.jpg"
+  ],
+  "belkin-ultracharge-pro-3-in-1": [
+    "/assets/images/belkin-ultracharge-pro-3-in-1/1.webp"
   ],
   "beyerdynamic-aventho-y": [
     "/assets/images/beyerdynamic-aventho-y/1.webp"
@@ -117,11 +99,11 @@ const CATALOG_IMAGES = {
   "bose-qc-ultra-headphones-2": [
     "/assets/images/bose-qc-ultra-headphones-2/1.jpg"
   ],
-  "creality-ender-3-v3-se": [
-    "/assets/images/creality-ender-3-v3-se/1.webp"
+  "creality-ender-3-v4-combo": [
+    "/assets/images/creality-ender-3-v4-combo/1.webp"
   ],
-  "creality-k1c": [
-    "/assets/images/creality-k1c/1.webp"
+  "creality-k2-combo": [
+    "/assets/images/creality-k2-combo/1.webp"
   ],
   "dell-u2725qe": [
     "/assets/images/dell-u2725qe/1.webp"
@@ -135,23 +117,14 @@ const CATALOG_IMAGES = {
   "dualsense-edge": [
     "/assets/images/dualsense-edge/1.jpg"
   ],
-  "dyson-purifier-cool-gen1": [
-    "/assets/images/dyson-purifier-cool-gen1/1.jpg"
+  "echo-dot-2026": [
+    "/assets/images/echo-dot-2026/1.webp"
   ],
-  "dyson-v15-detect": [
-    "/assets/images/dyson-v15-detect/1.jpg"
-  ],
-  "echo-dot-5th-gen": [
-    "/assets/images/echo-dot-5th-gen/1.jpg"
-  ],
-  "echo-show-8": [
-    "/assets/images/echo-show-8/1.jpg"
+  "echo-show-8-2025": [
+    "/assets/images/echo-show-8-2025/1.webp"
   ],
   "ecovacs-deebot-x12s-omnicyclone": [
     "/assets/images/ecovacs-deebot-x12s-omnicyclone/1.webp"
-  ],
-  "elegoo-centauri-carbon": [
-    "/assets/images/elegoo-centauri-carbon/1.jpg"
   ],
   "elgato-stream-deck-mk2": [
     "/assets/images/elgato-stream-deck-mk2/1.webp"
@@ -165,14 +138,11 @@ const CATALOG_IMAGES = {
   "eufy-video-doorbell-s4": [
     "/assets/images/eufy-video-doorbell-s4/1.webp"
   ],
-  "eufy-x10-pro-omni": [
-    "/assets/images/eufy-x10-pro-omni/1.webp"
+  "galaxy-a57": [
+    "/assets/images/galaxy-a57/1.webp"
   ],
-  "galaxy-a56": [
-    "/assets/images/galaxy-a56/1.jpg"
-  ],
-  "galaxy-buds3-pro": [
-    "/assets/images/galaxy-buds3-pro/1.jpg"
+  "galaxy-buds4-pro": [
+    "/assets/images/galaxy-buds4-pro/1.webp"
   ],
   "galaxy-ring": [
     "/assets/images/galaxy-ring/1.webp"
@@ -183,23 +153,20 @@ const CATALOG_IMAGES = {
   "galaxy-tab-s10-fe": [
     "/assets/images/galaxy-tab-s10-fe/1.jpg"
   ],
-  "galaxy-tab-s11-ultra": [
-    "/assets/images/galaxy-tab-s11-ultra/1.webp"
-  ],
-  "galaxy-watch8": [
-    "/assets/images/galaxy-watch8/1.png"
+  "galaxy-tab-s12-ultra": [
+    "/assets/images/galaxy-tab-s12-ultra/1.webp"
   ],
   "galaxy-watch8-classic": [
     "/assets/images/galaxy-watch8-classic/1.webp"
   ],
-  "galaxy-z-fold7": [
-    "/assets/images/galaxy-z-fold7/1.webp"
+  "galaxy-watch9": [
+    "/assets/images/galaxy-watch9/1.webp"
+  ],
+  "galaxy-z-fold8-ultra": [
+    "/assets/images/galaxy-z-fold8-ultra/1.webp"
   ],
   "garmin-cirqa": [
     "/assets/images/garmin-cirqa/1.webp"
-  ],
-  "garmin-fenix-8": [
-    "/assets/images/garmin-fenix-8/1.jpg"
   ],
   "garmin-fenix-9-pro": [
     "/assets/images/garmin-fenix-9-pro/1.webp"
@@ -207,8 +174,8 @@ const CATALOG_IMAGES = {
   "garmin-forerunner-570": [
     "/assets/images/garmin-forerunner-570/1.jpg"
   ],
-  "govee-tv-backlight-t2": [
-    "/assets/images/govee-tv-backlight-t2/1.webp"
+  "govee-tv-backlight-3": [
+    "/assets/images/govee-tv-backlight-3/1.webp"
   ],
   "gta-6-ps5": [
     "/assets/images/gta-6-ps5/1.webp"
@@ -216,32 +183,29 @@ const CATALOG_IMAGES = {
   "gta-6-xbox": [
     "/assets/images/gta-6-xbox/1.webp"
   ],
-  "huawei-watch-gt-6": [
-    "/assets/images/huawei-watch-gt-6/1.webp"
+  "huawei-watch-gt-7": [
+    "/assets/images/huawei-watch-gt-7/1.webp"
   ],
   "insta360-x6": [
     "/assets/images/insta360-x6/1.webp"
   ],
-  "ipad-10th-gen": [
-    "/assets/images/ipad-10th-gen/1.jpg"
+  "ipad-a16": [
+    "/assets/images/ipad-a16/1.webp"
   ],
-  "ipad-air-m3": [
-    "/assets/images/ipad-air-m3/1.webp"
+  "ipad-air-m4": [
+    "/assets/images/ipad-air-m4/1.webp"
   ],
-  "ipad-mini-a17-pro": [
-    "/assets/images/ipad-mini-a17-pro/1.jpg"
+  "ipad-mini-a20-pro": [
+    "/assets/images/ipad-mini-a20-pro/1.webp"
   ],
   "ipad-pro-m5": [
     "/assets/images/ipad-pro-m5/1.jpg"
   ],
-  "iphone-16e": [
-    "/assets/images/iphone-16e/1.jpg"
-  ],
   "iphone-17": [
     "/assets/images/iphone-17/1.webp"
   ],
-  "iphone-17-pro-max": [
-    "/assets/images/iphone-17-pro-max/1.jpg"
+  "iphone-17e": [
+    "/assets/images/iphone-17e/1.webp"
   ],
   "iphone-18-pro": [
     "/assets/images/iphone-18-pro/1.webp"
@@ -261,32 +225,26 @@ const CATALOG_IMAGES = {
   "jbl-flip-7": [
     "/assets/images/jbl-flip-7/1.jpg"
   ],
-  "jbl-go-4": [
-    "/assets/images/jbl-go-4/1.webp"
+  "jbl-go-5": [
+    "/assets/images/jbl-go-5/1.webp"
   ],
-  "jbl-tune-770nc": [
-    "/assets/images/jbl-tune-770nc/1.webp"
+  "jbl-tune-780nc": [
+    "/assets/images/jbl-tune-780nc/1.webp"
   ],
   "keychron-k2-he": [
     "/assets/images/keychron-k2-he/1.jpg"
   ],
-  "kindle-2024": [
-    "/assets/images/kindle-2024/1.jpg"
+  "kindle-2026": [
+    "/assets/images/kindle-2026/1.webp"
   ],
   "kindle-colorsoft-signature-2026": [
     "/assets/images/kindle-colorsoft-signature-2026/2.webp"
   ],
-  "kindle-scribe-2024": [
-    "/assets/images/kindle-scribe-2024/1.jpg"
+  "kindle-paperwhite-2026": [
+    "/assets/images/kindle-paperwhite-2026/1.webp"
   ],
-  "kindlecolor": [
-    "/assets/images/kindlecolor/1.jpg",
-    "/assets/images/kindlecolor/2.jpg",
-    "/assets/images/kindlecolor/3.jpg",
-    "/assets/images/kindlecolor/4.jpg",
-    "/assets/images/kindlecolor/5.jpg",
-    "/assets/images/kindlecolor/6.jpg",
-    "/assets/images/kindlecolor/7.jpg"
+  "kindle-scribe-2025": [
+    "/assets/images/kindle-scribe-2025/1.webp"
   ],
   "kobo-clara-colour": [
     "/assets/images/kobo-clara-colour/1.webp"
@@ -296,9 +254,6 @@ const CATALOG_IMAGES = {
   ],
   "lenovo-ideapad-slim-3": [
     "/assets/images/lenovo-ideapad-slim-3/1.webp"
-  ],
-  "lenovo-yoga-slim-7i-aura": [
-    "/assets/images/lenovo-yoga-slim-7i-aura/1.webp"
   ],
   "logitech-g-pro-x-superlight-2": [
     "/assets/images/logitech-g-pro-x-superlight-2/1.jpg"
@@ -318,14 +273,14 @@ const CATALOG_IMAGES = {
   "logitech-pro-x3-superstrike": [
     "/assets/images/logitech-pro-x3-superstrike/1.webp"
   ],
-  "mac-mini-m4": [
-    "/assets/images/mac-mini-m4/1.jpg"
+  "mac-mini-m6": [
+    "/assets/images/mac-mini-m6/1.webp"
   ],
-  "macbook-air-m4-13": [
-    "/assets/images/macbook-air-m4-13/1.webp"
+  "macbook-air-m5": [
+    "/assets/images/macbook-air-m5/1.webp"
   ],
-  "macbook-pro-m5-14": [
-    "/assets/images/macbook-pro-m5-14/1.png"
+  "macbook-pro-14-m6": [
+    "/assets/images/macbook-pro-14-m6/1.webp"
   ],
   "marshall-emberton-iii": [
     "/assets/images/marshall-emberton-iii/1.webp"
@@ -339,16 +294,8 @@ const CATALOG_IMAGES = {
   "meta-quest-3s": [
     "/assets/images/meta-quest-3s/1.webp"
   ],
-  "nespresso": [
-    "/assets/images/nespresso/1.jpg",
-    "/assets/images/nespresso/2.jpg",
-    "/assets/images/nespresso/3.jpg",
-    "/assets/images/nespresso/4.jpg",
-    "/assets/images/nespresso/5.jpg",
-    "/assets/images/nespresso/6.jpg",
-    "/assets/images/nespresso/7.jpg",
-    "/assets/images/nespresso/8.jpg",
-    "/assets/images/nespresso/9.jpg"
+  "mijia-smart-air-purifier-6": [
+    "/assets/images/mijia-smart-air-purifier-6/1.webp"
   ],
   "nothing-ear-3": [
     "/assets/images/nothing-ear-3/1.webp"
@@ -356,8 +303,8 @@ const CATALOG_IMAGES = {
   "nothing-ear-3a": [
     "/assets/images/nothing-ear-3a/1.webp"
   ],
-  "nothing-phone-3a": [
-    "/assets/images/nothing-phone-3a/1.webp"
+  "nothing-phone-4a": [
+    "/assets/images/nothing-phone-4a/1.webp"
   ],
   "nothing-phone-4b": [
     "/assets/images/nothing-phone-4b/1.webp"
@@ -371,17 +318,14 @@ const CATALOG_IMAGES = {
   "philips-hue-play-light-bar": [
     "/assets/images/philips-hue-play-light-bar/1.jpg"
   ],
-  "pixel-10-pro": [
-    "/assets/images/pixel-10-pro/1.png"
-  ],
   "pixel-10a": [
     "/assets/images/pixel-10a/1.jpg"
   ],
   "pixel-11-pro": [
     "/assets/images/pixel-11-pro/1.webp"
   ],
-  "pixel-watch-4": [
-    "/assets/images/pixel-watch-4/1.jpg"
+  "pixel-watch-5": [
+    "/assets/images/pixel-watch-5/1.webp"
   ],
   "playstation-portal": [
     "/assets/images/playstation-portal/1.jpg"
@@ -395,44 +339,38 @@ const CATALOG_IMAGES = {
   "ps5-slim": [
     "/assets/images/ps5-slim/1.jpg"
   ],
-  "ray-ban-meta-gen-2": [
-    "/assets/images/ray-ban-meta-gen-2/1.jpg"
+  "ray-ban-meta-gen-3": [
+    "/assets/images/ray-ban-meta-gen-3/1.webp"
   ],
   "rayneo-air-4-pro": [
     "/assets/images/rayneo-air-4-pro/1.webp"
   ],
-  "razer-barracuda-x": [
-    "/assets/images/razer-barracuda-x/1.jpg"
+  "razer-barracuda-x-chroma": [
+    "/assets/images/razer-barracuda-x-chroma/1.webp"
   ],
-  "razer-basilisk-v3-pro": [
-    "/assets/images/razer-basilisk-v3-pro/1.webp"
+  "razer-basilisk-v4-pro": [
+    "/assets/images/razer-basilisk-v4-pro/1.webp"
   ],
-  "redmi-note-14-pro-plus": [
-    "/assets/images/redmi-note-14-pro-plus/1.webp"
+  "redmi-note-15-pro-plus": [
+    "/assets/images/redmi-note-15-pro-plus/1.webp"
   ],
-  "ring-battery-doorbell-pro": [
-    "/assets/images/ring-battery-doorbell-pro/1.jpg"
+  "ring-battery-doorbell-pro-2nd-gen": [
+    "/assets/images/ring-battery-doorbell-pro-2nd-gen/1.webp"
   ],
-  "ring-indoor-cam-2nd-gen": [
-    "/assets/images/ring-indoor-cam-2nd-gen/1.jpg"
-  ],
-  "roborock-qrevo-curv": [
-    "/assets/images/roborock-qrevo-curv/1.jpg"
-  ],
-  "rog-ally-x": [
-    "/assets/images/rog-ally-x/1.webp"
+  "roborock-qrevo-curv-2-pro": [
+    "/assets/images/roborock-qrevo-curv-2-pro/1.webp"
   ],
   "rog-xbox-ally-x20": [
     "/assets/images/rog-xbox-ally-x20/1.webp"
   ],
-  "samsung-45w-travel-adapter": [
-    "/assets/images/samsung-45w-travel-adapter/1.webp"
+  "rog-zephyrus-g14-2026": [
+    "/assets/images/rog-zephyrus-g14-2026/1.webp"
   ],
-  "samsung-990-pro-2tb": [
-    "/assets/images/samsung-990-pro-2tb/1.webp"
+  "samsung-60w-power-adapter": [
+    "/assets/images/samsung-60w-power-adapter/1.webp"
   ],
-  "samsung-buds-pro": [
-    "/assets/images/samsung-buds-pro/1.jpg"
+  "samsung-9100-pro-2tb": [
+    "/assets/images/samsung-9100-pro-2tb/1.webp"
   ],
   "samsung-galaxy-s26-fe": [
     "/assets/images/samsung-galaxy-s26-fe/1.webp"
@@ -440,23 +378,20 @@ const CATALOG_IMAGES = {
   "samsung-odyssey-g5-27": [
     "/assets/images/samsung-odyssey-g5-27/1.webp"
   ],
-  "samsung-odyssey-oled-g6": [
-    "/assets/images/samsung-odyssey-oled-g6/1.webp"
+  "samsung-odyssey-oled-g6-g60sf": [
+    "/assets/images/samsung-odyssey-oled-g6-g60sf/1.webp"
   ],
-  "samsung-t9-2tb": [
-    "/assets/images/samsung-t9-2tb/1.webp"
+  "samsung-p9-2tb": [
+    "/assets/images/samsung-p9-2tb/1.webp"
   ],
   "satechi-chargeview-140w": [
     "/assets/images/satechi-chargeview-140w/1.webp"
   ],
-  "sony-wf-1000xm5": [
-    "/assets/images/sony-wf-1000xm5/1.jpg"
-  ],
   "sony-wh-1000xm6": [
     "/assets/images/sony-wh-1000xm6/1.jpg"
   ],
-  "sony-wh-ch720n": [
-    "/assets/images/sony-wh-ch720n/1.jpg"
+  "sony-wh-ch730n": [
+    "/assets/images/sony-wh-ch730n/1.webp"
   ],
   "soundcore-liberty-5": [
     "/assets/images/soundcore-liberty-5/1.webp"
@@ -464,8 +399,8 @@ const CATALOG_IMAGES = {
   "steam-deck-oled": [
     "/assets/images/steam-deck-oled/1.jpg"
   ],
-  "steelseries-arctis-nova-7": [
-    "/assets/images/steelseries-arctis-nova-7/1.webp"
+  "steelseries-arctis-nova-7-gen-2": [
+    "/assets/images/steelseries-arctis-nova-7-gen-2/1.webp"
   ],
   "tapo-c210": [
     "/assets/images/tapo-c210/1.jpg"
@@ -497,29 +432,14 @@ const CATALOG_IMAGES = {
   "xbox-wireless-controller": [
     "/assets/images/xbox-wireless-controller/1.jpg"
   ],
-  "xiaomi-15t-pro": [
-    "/assets/images/xiaomi-15t-pro/1.webp"
+  "xiaomi-17t-pro": [
+    "/assets/images/xiaomi-17t-pro/1.webp"
   ],
-  "xiaomi-smart-air-purifier-4": [
-    "/assets/images/xiaomi-smart-air-purifier-4/1.webp"
+  "xiaomi-robot-vacuum-6": [
+    "/assets/images/xiaomi-robot-vacuum-6/1.webp"
   ],
-  "xiaomi-smart-band-10": [
-    "/assets/images/xiaomi-smart-band-10/1.webp"
-  ],
-  "xiaomivacuumx20": [
-    "/assets/images/xiaomivacuumx20/1.jpg",
-    "/assets/images/xiaomivacuumx20/2.jpg",
-    "/assets/images/xiaomivacuumx20/3.jpg",
-    "/assets/images/xiaomivacuumx20/4.jpg",
-    "/assets/images/xiaomivacuumx20/5.jpg",
-    "/assets/images/xiaomivacuumx20/6.jpg",
-    "/assets/images/xiaomivacuumx20/7.jpg",
-    "/assets/images/xiaomivacuumx20/8.jpg",
-    "/assets/images/xiaomivacuumx20/9.jpg",
-    "/assets/images/xiaomivacuumx20/10.jpg",
-    "/assets/images/xiaomivacuumx20/11.jpg",
-    "/assets/images/xiaomivacuumx20/12.jpg",
-    "/assets/images/xiaomivacuumx20/13.jpg"
+  "xiaomi-smart-band-11": [
+    "/assets/images/xiaomi-smart-band-11/1.webp"
   ],
   "zelda-ocarina-of-time-switch-2": [
     "/assets/images/zelda-ocarina-of-time-switch-2/1.jpg"
