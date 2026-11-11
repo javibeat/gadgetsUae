@@ -3,6 +3,9 @@ const CATALOG_IMAGES = {
   "8bitdo-ultimate-2c": [
     "/assets/images/8bitdo-ultimate-2c/1.jpg"
   ],
+  "acer-predator-atlas-8": [
+    "/assets/images/acer-predator-atlas-8/1.webp"
+  ],
   "airpods-4-anc": [
     "/assets/images/airpods-4-anc/1.png"
   ],
@@ -27,6 +30,9 @@ const CATALOG_IMAGES = {
   "anker-maggo-3-in-1": [
     "/assets/images/anker-maggo-3-in-1/1.webp"
   ],
+  "anker-maggo-power-bank-2-pro": [
+    "/assets/images/anker-maggo-power-bank-2-pro/1.webp"
+  ],
   "anker-nano-65w": [
     "/assets/images/anker-nano-65w/1.webp"
   ],
@@ -39,8 +45,14 @@ const CATALOG_IMAGES = {
   "anker-prime-26k-300w": [
     "/assets/images/anker-prime-26k-300w/1.webp"
   ],
+  "anker-soundcore-boom-go-3i": [
+    "/assets/images/anker-soundcore-boom-go-3i/1.webp"
+  ],
   "anycubic-kobra-3-combo": [
     "/assets/images/anycubic-kobra-3-combo/1.jpg"
+  ],
+  "apple-homepod-mini-2": [
+    "/assets/images/apple-homepod-mini-2/1.jpg"
   ],
   "apple-magsafe-charger-25w": [
     "/assets/images/apple-magsafe-charger-25w/1.jpg"
@@ -53,6 +65,9 @@ const CATALOG_IMAGES = {
   ],
   "apple-watch-series-11": [
     "/assets/images/apple-watch-series-11/1.jpg"
+  ],
+  "apple-watch-series-12": [
+    "/assets/images/apple-watch-series-12/1.jpg"
   ],
   "apple-watch-ultra-3": [
     "/assets/images/apple-watch-ultra-3/1.jpg"
@@ -72,11 +87,17 @@ const CATALOG_IMAGES = {
   "bambu-lab-a1-mini": [
     "/assets/images/bambu-lab-a1-mini/1.jpg"
   ],
+  "bambu-lab-a2l-combo": [
+    "/assets/images/bambu-lab-a2l-combo/1.webp"
+  ],
   "bambu-lab-h2d": [
     "/assets/images/bambu-lab-h2d/1.jpg"
   ],
   "bambu-lab-p1s": [
     "/assets/images/bambu-lab-p1s/1.jpg"
+  ],
+  "bambu-lab-x2d": [
+    "/assets/images/bambu-lab-x2d/1.webp"
   ],
   "bambu-pla-basic": [
     "/assets/images/bambu-pla-basic/1.jpg"
@@ -86,6 +107,9 @@ const CATALOG_IMAGES = {
   ],
   "belkin-car-vent-mount-pro": [
     "/assets/images/belkin-car-vent-mount-pro/1.jpg"
+  ],
+  "beyerdynamic-aventho-y": [
+    "/assets/images/beyerdynamic-aventho-y/1.webp"
   ],
   "bose-qc-ultra-earbuds-2": [
     "/assets/images/bose-qc-ultra-earbuds-2/1.jpg"
@@ -101,6 +125,9 @@ const CATALOG_IMAGES = {
   ],
   "dell-u2725qe": [
     "/assets/images/dell-u2725qe/1.webp"
+  ],
+  "dji-osmo-pocket-4": [
+    "/assets/images/dji-osmo-pocket-4/2.webp"
   ],
   "dualsense-controller": [
     "/assets/images/dualsense-controller/1.jpg"
@@ -120,14 +147,23 @@ const CATALOG_IMAGES = {
   "echo-show-8": [
     "/assets/images/echo-show-8/1.jpg"
   ],
+  "ecovacs-deebot-x12s-omnicyclone": [
+    "/assets/images/ecovacs-deebot-x12s-omnicyclone/1.webp"
+  ],
   "elegoo-centauri-carbon": [
     "/assets/images/elegoo-centauri-carbon/1.jpg"
   ],
   "elgato-stream-deck-mk2": [
     "/assets/images/elgato-stream-deck-mk2/1.webp"
   ],
+  "eufy-omni-e35": [
+    "/assets/images/eufy-omni-e35/1.webp"
+  ],
   "eufy-video-doorbell-e340": [
     "/assets/images/eufy-video-doorbell-e340/1.webp"
+  ],
+  "eufy-video-doorbell-s4": [
+    "/assets/images/eufy-video-doorbell-s4/1.webp"
   ],
   "eufy-x10-pro-omni": [
     "/assets/images/eufy-x10-pro-omni/1.webp"
@@ -159,8 +195,14 @@ const CATALOG_IMAGES = {
   "galaxy-z-fold7": [
     "/assets/images/galaxy-z-fold7/1.webp"
   ],
+  "garmin-cirqa": [
+    "/assets/images/garmin-cirqa/1.webp"
+  ],
   "garmin-fenix-8": [
     "/assets/images/garmin-fenix-8/1.jpg"
+  ],
+  "garmin-fenix-9-pro": [
+    "/assets/images/garmin-fenix-9-pro/1.webp"
   ],
   "garmin-forerunner-570": [
     "/assets/images/garmin-forerunner-570/1.jpg"
@@ -176,6 +218,9 @@ const CATALOG_IMAGES = {
   ],
   "huawei-watch-gt-6": [
     "/assets/images/huawei-watch-gt-6/1.webp"
+  ],
+  "insta360-x6": [
+    "/assets/images/insta360-x6/1.webp"
   ],
   "ipad-10th-gen": [
     "/assets/images/ipad-10th-gen/1.jpg"
@@ -228,6 +273,9 @@ const CATALOG_IMAGES = {
   "kindle-2024": [
     "/assets/images/kindle-2024/1.jpg"
   ],
+  "kindle-colorsoft-signature-2026": [
+    "/assets/images/kindle-colorsoft-signature-2026/2.webp"
+  ],
   "kindle-scribe-2024": [
     "/assets/images/kindle-scribe-2024/1.jpg"
   ],
@@ -243,6 +291,9 @@ const CATALOG_IMAGES = {
   "kobo-clara-colour": [
     "/assets/images/kobo-clara-colour/1.webp"
   ],
+  "lenovo-googlebook-15": [
+    "/assets/images/lenovo-googlebook-15/1.webp"
+  ],
   "lenovo-ideapad-slim-3": [
     "/assets/images/lenovo-ideapad-slim-3/1.webp"
   ],
@@ -252,6 +303,9 @@ const CATALOG_IMAGES = {
   "logitech-g-pro-x-superlight-2": [
     "/assets/images/logitech-g-pro-x-superlight-2/1.jpg"
   ],
+  "logitech-g325-lightspeed": [
+    "/assets/images/logitech-g325-lightspeed/1.webp"
+  ],
   "logitech-g502-x-lightspeed": [
     "/assets/images/logitech-g502-x-lightspeed/1.jpg"
   ],
@@ -260,6 +314,9 @@ const CATALOG_IMAGES = {
   ],
   "logitech-mx-master-4": [
     "/assets/images/logitech-mx-master-4/1.png"
+  ],
+  "logitech-pro-x3-superstrike": [
+    "/assets/images/logitech-pro-x3-superstrike/1.webp"
   ],
   "mac-mini-m4": [
     "/assets/images/mac-mini-m4/1.jpg"
@@ -296,8 +353,14 @@ const CATALOG_IMAGES = {
   "nothing-ear-3": [
     "/assets/images/nothing-ear-3/1.webp"
   ],
+  "nothing-ear-3a": [
+    "/assets/images/nothing-ear-3a/1.webp"
+  ],
   "nothing-phone-3a": [
     "/assets/images/nothing-phone-3a/1.webp"
+  ],
+  "nothing-phone-4b": [
+    "/assets/images/nothing-phone-4b/1.webp"
   ],
   "oneplus-15": [
     "/assets/images/oneplus-15/1.webp"
@@ -313,6 +376,9 @@ const CATALOG_IMAGES = {
   ],
   "pixel-10a": [
     "/assets/images/pixel-10a/1.jpg"
+  ],
+  "pixel-11-pro": [
+    "/assets/images/pixel-11-pro/1.webp"
   ],
   "pixel-watch-4": [
     "/assets/images/pixel-watch-4/1.jpg"
@@ -331,6 +397,9 @@ const CATALOG_IMAGES = {
   ],
   "ray-ban-meta-gen-2": [
     "/assets/images/ray-ban-meta-gen-2/1.jpg"
+  ],
+  "rayneo-air-4-pro": [
+    "/assets/images/rayneo-air-4-pro/1.webp"
   ],
   "razer-barracuda-x": [
     "/assets/images/razer-barracuda-x/1.jpg"
@@ -353,6 +422,9 @@ const CATALOG_IMAGES = {
   "rog-ally-x": [
     "/assets/images/rog-ally-x/1.webp"
   ],
+  "rog-xbox-ally-x20": [
+    "/assets/images/rog-xbox-ally-x20/1.webp"
+  ],
   "samsung-45w-travel-adapter": [
     "/assets/images/samsung-45w-travel-adapter/1.webp"
   ],
@@ -362,6 +434,9 @@ const CATALOG_IMAGES = {
   "samsung-buds-pro": [
     "/assets/images/samsung-buds-pro/1.jpg"
   ],
+  "samsung-galaxy-s26-fe": [
+    "/assets/images/samsung-galaxy-s26-fe/1.webp"
+  ],
   "samsung-odyssey-g5-27": [
     "/assets/images/samsung-odyssey-g5-27/1.webp"
   ],
@@ -370,6 +445,9 @@ const CATALOG_IMAGES = {
   ],
   "samsung-t9-2tb": [
     "/assets/images/samsung-t9-2tb/1.webp"
+  ],
+  "satechi-chargeview-140w": [
+    "/assets/images/satechi-chargeview-140w/1.webp"
   ],
   "sony-wf-1000xm5": [
     "/assets/images/sony-wf-1000xm5/1.jpg"
@@ -394,6 +472,9 @@ const CATALOG_IMAGES = {
   ],
   "tapo-p100": [
     "/assets/images/tapo-p100/1.jpg"
+  ],
+  "tapo-td23": [
+    "/assets/images/tapo-td23/1.webp"
   ],
   "tp-link-archer-be550": [
     "/assets/images/tp-link-archer-be550/1.jpg"
