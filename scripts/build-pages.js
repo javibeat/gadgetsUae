@@ -310,6 +310,19 @@ function notFoundPage() {
 }
 
 /* ---------- llms.txt (plain-text summary for AI assistants) ---------- */
+/** Blog posts, newest file first, as markdown links (title taken from each post's <h1>). */
+function latestPosts(limit = 8) {
+    const dir = path.join(ROOT, 'posts');
+    return fs.readdirSync(dir).filter(f => f.endsWith('.html'))
+        .map(f => {
+            const html = fs.readFileSync(path.join(dir, f), 'utf8');
+            // Sort by the post's own dateModified (file mtimes are meaningless after a git checkout in CI).
+            const t = (html.match(/"dateModified":\s*"([0-9-]+)"/) || [])[1] || '';
+            return { f, t, h: (html.match(/<h1>([^<]+)<\/h1>/) || [])[1] };
+        })
+        .filter(x => x.h).sort((a, b) => b.t.localeCompare(a.t) || a.f.localeCompare(b.f)).slice(0, limit)
+        .map(x => `- [${x.h.trim()}](${T.SITE}/posts/${x.f})`).join('\n');
+}
 function llmsTxt() {
     const fresh = catalog.filter(p => p.added === catalog.map(x => x.added).sort().pop())
         .sort((a, b) => b.heat - a.heat).slice(0, 12);
@@ -332,6 +345,9 @@ ${fresh.map(p => `- ${p.title} (${p.category}) — ${p.blurb}`).join('\n')}
 
 ## Buying guides
 ${GUIDES.map(g => `- [${g.title}](${T.SITE}/guides/${g.slug}.html): ${g.quick}`).join('\n')}
+
+## Latest articles
+${latestPosts()}
 
 ## Categories
 ${Catalog.CATEGORIES.map(c => `- [${c.label}](${T.SITE}${c.page}): ${c.tagline}`).join('\n')}
