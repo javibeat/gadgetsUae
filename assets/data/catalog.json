@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-11T17:01:29.122Z",
+  "generatedAt": "2026-11-12T01:49:30.458Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20768,
-    "dealOfDay": "airpods-max-2",
+    "dayIndex": 20769,
+    "dealOfDay": "meta-quest-3s",
     "trending": [
-      "logitech-g502-x-lightspeed",
+      "steelseries-arctis-nova-7-gen-2",
       "bambu-lab-a1-mini",
       "bambu-lab-p2s",
       "aqara-camera-hub-g350",
       "acer-predator-atlas-8",
-      "galaxy-tab-s12-ultra",
+      "galaxy-tab-s10-fe",
       "dyson-v16-piston-animal",
-      "airpods-pro-3"
+      "asus-zenbook-a14"
     ]
   },
   "products": [
