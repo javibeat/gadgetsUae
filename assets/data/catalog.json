@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T00:56:10.319Z",
+  "generatedAt": "2026-11-13T05:11:41.701Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -24,7 +24,7 @@
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 24
+      "count": 23
     },
     {
       "key": "Tech",
@@ -68,9 +68,9 @@
     "trending": [
       "steelseries-arctis-nova-7-gen-2",
       "bambu-lab-a1-mini",
+      "rog-xbox-ally-x20",
       "bambu-lab-p2s",
-      "aqara-camera-hub-g350",
-      "acer-predator-atlas-8",
+      "bambu-lab-a2l-combo",
       "streamdeck-neo",
       "ps5-pro",
       "galaxy-tab-s10-fe"
@@ -1024,10 +1024,10 @@
       "heat": 72
     },
     {
-      "id": "redmi-note-15-pro-plus",
+      "id": "redmi-note-17-pro-max",
       "brand": "Xiaomi",
-      "model": "Redmi Note 15 Pro+",
-      "title": "Xiaomi Redmi Note 15 Pro+ 5G 512GB",
+      "model": "Note 17 Pro Max",
+      "title": "Xiaomi Redmi Note 17 Pro Max 5G",
       "category": "Mobiles",
       "sub": "Smartphone",
       "tier": "budget",
@@ -1037,16 +1037,16 @@
         "value",
         "5g"
       ],
-      "blurb": "Rugged value pick: IP68/IP69K, a 200MP camera and 100W charging, sold officially in the UAE.",
+      "blurb": "Rugged value pick with a 10,000mAh battery that lasts days, IP68/IP69K and 100W charging.",
       "specs": [
-        "200MP OIS",
-        "6500mAh 100W",
+        "6.83\" 120Hz",
+        "10000mAh 100W",
         "IP68/IP69K"
       ],
-      "url": "https://www.amazon.ae/s?k=Redmi%20Note%2015%20Pro%2B%205G%20512GB&tag=gadgetsdxb-21",
+      "url": "https://www.amazon.ae/s?k=Redmi%20Note%2017%20Pro%20Max%205G&tag=gadgetsdxb-21",
       "asin": null,
-      "image": "https://gadgetsdxb.com/assets/images/redmi-note-15-pro-plus/1.webp",
-      "added": "2026-01",
+      "image": "https://gadgetsdxb.com/assets/images/redmi-note-17-pro-max/1.webp",
+      "added": "2026-11",
       "heat": 70
     },
     {
@@ -1680,7 +1680,7 @@
       "id": "asus-zenbook-a14",
       "brand": "ASUS",
       "model": "Zenbook A14",
-      "title": "ASUS Zenbook A14 Copilot+ PC 14-inch OLED Laptop",
+      "title": "ASUS Zenbook A14 (2026) Snapdragon X2 Elite 14\" OLED Laptop",
       "category": "Tech",
       "sub": "Laptop",
       "tier": "mid",
@@ -1690,13 +1690,13 @@
         "ultralight",
         "oled"
       ],
-      "blurb": "Under 1kg with a 14-inch OLED and 30-plus hours of battery — the lightest Windows laptop for travel.",
+      "blurb": "Under 1kg with a 14-inch OLED and the new Snapdragon X2 Elite chip: the lightest Windows laptop for travel.",
       "specs": [
-        "980g",
-        "14\" OLED",
-        "32h battery"
+        "990g",
+        "Snapdragon X2",
+        "70Wh battery"
       ],
-      "url": "https://www.amazon.ae/s?k=ASUS%20Zenbook%20A14%20Copilot%2B%20laptop&tag=gadgetsdxb-21",
+      "url": "https://www.amazon.ae/s?k=ASUS%20Zenbook%20A14%20UX3407%20Snapdragon%20X2%20Elite&tag=gadgetsdxb-21",
       "asin": null,
       "image": "https://gadgetsdxb.com/assets/images/asus-zenbook-a14/1.jpg",
       "added": "2026-09",
@@ -1724,7 +1724,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Lenovo%20Yoga%20Slim%207i%20Aura%20Edition%20Gen%2011%2014%20inch&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/lenovo-yoga-slim-7i-aura-gen11/1.webp",
       "added": "2026-03",
       "heat": 66
     },
@@ -1776,7 +1776,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=ASUS%20TUF%20Gaming%20A16%202026%20RTX%205070&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/asus-tuf-gaming-a16-2026/1.webp",
       "added": "2026-03",
       "heat": 66
     },
@@ -2165,7 +2165,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Dyson%20V16%20Piston%20Animal&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dyson-v16-piston-animal/1.webp",
       "added": "2025-09",
       "heat": 72
     },
@@ -2191,7 +2191,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Dyson%20HushJet%20Purifier%20Compact&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/dyson-hushjet-purifier-compact/1.webp",
       "added": "2025-09",
       "heat": 62
     },
@@ -2295,7 +2295,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Ring%20Indoor%20Cam%20Plus%202K&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ring-indoor-cam-plus/1.webp",
       "added": "2025-10",
       "heat": 62
     },
@@ -2321,7 +2321,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=eufy%20Omni%20S2%20robot%20vacuum&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/eufy-omni-s2/1.webp",
       "added": "2026-01",
       "heat": 66
     },
@@ -2762,7 +2762,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazfit%20Active%203%20Premium&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/amazfit-active-3-premium/1.webp",
       "added": "2026-02",
       "heat": 56
     },
@@ -2822,7 +2822,7 @@
       "id": "anker-nano-power-bank-10k",
       "brand": "Anker",
       "model": "Nano Power Bank",
-      "title": "Anker Nano Power Bank 10,000mAh 30W with Built-In USB-C Cable",
+      "title": "Anker Nano Power Bank 10K 45W with Retractable USB-C Cable",
       "category": "Accessories",
       "sub": "Power Bank",
       "tier": "budget",
@@ -2832,13 +2832,13 @@
         "compact",
         "travel"
       ],
-      "blurb": "Pocket-sized with a built-in USB-C cable, so you never forget the lead — carry-on approved.",
+      "blurb": "Pocket-sized with a retractable USB-C cable and a little screen, so you never forget the lead. Carry-on approved.",
       "specs": [
         "10,000mAh",
-        "30W",
-        "Built-in cable"
+        "45W",
+        "Retractable cable"
       ],
-      "url": "https://www.amazon.ae/s?k=Anker%20Nano%20Power%20Bank%2010000mAh%2030W%20built-in%20USB-C%20cable&tag=gadgetsdxb-21",
+      "url": "https://www.amazon.ae/s?k=Anker%20Nano%20Power%20Bank%2010K%2045W%20retractable%20cable%20A1638&tag=gadgetsdxb-21",
       "asin": null,
       "image": "https://gadgetsdxb.com/assets/images/anker-nano-power-bank-10k/1.webp",
       "added": "2026-09",
@@ -3282,7 +3282,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Elegoo%20Centauri%20Carbon%202%20Combo&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/elegoo-centauri-carbon-2-combo/1.webp",
       "added": "2026-01",
       "heat": 64
     },
@@ -3333,7 +3333,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anycubic%20Kobra%204%20Combo&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anycubic-kobra-4-combo/1.webp",
       "added": "2026-05",
       "heat": 60
     },
@@ -3390,32 +3390,6 @@
       "heat": 75
     },
     {
-      "id": "sony-wh-1000xm4c",
-      "brand": "Sony",
-      "model": "WH-1000XM4C",
-      "title": "Sony WH-1000XM4C Wireless Noise Cancelling Headphones",
-      "category": "Audio",
-      "sub": "Headphones",
-      "tier": "mid",
-      "tags": [
-        "anc",
-        "wireless",
-        "headphones",
-        "foldable"
-      ],
-      "blurb": "The return of Sony's favourite ANC headphones, now at a friendlier price point.",
-      "specs": [
-        "1000X ANC",
-        "27h battery",
-        "Foldable"
-      ],
-      "url": "https://www.amazon.ae/s?k=Sony%20WH-1000XM4C%20headphones&tag=gadgetsdxb-21",
-      "asin": null,
-      "image": null,
-      "added": "2026-09",
-      "heat": 72
-    },
-    {
       "id": "eufy-omni-e35",
       "brand": "Eufy",
       "model": "Omni E35",
@@ -3463,7 +3437,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Amazfit%20Balance%203%20smartwatch&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/amazfit-balance-3/1.webp",
       "added": "2026-09",
       "heat": 68
     },
@@ -3747,7 +3721,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Roborock%20Saros%2020%20Sonic%20robot%20vacuum&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/roborock-saros-20-sonic/1.webp",
       "added": "2026-10",
       "heat": 76
     },
@@ -3799,7 +3773,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=JBL%20Quantum%20520X%20gaming%20headset&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/jbl-quantum-520x/1.webp",
       "added": "2026-10",
       "heat": 72
     },
@@ -3929,7 +3903,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Sony%20WF-1000XM6%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/sony-wf-1000xm6/1.webp",
       "added": "2026-10",
       "heat": 80
     },
@@ -3955,7 +3929,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Oura%20Ring%205%20smart%20ring&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/oura-ring-5/1.webp",
       "added": "2026-10",
       "heat": 75
     },
@@ -4059,7 +4033,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Anker%20Soundcore%20Liberty%205%20Pro%20Max%20earbuds&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/anker-soundcore-liberty-5-pro-max/1.webp",
       "added": "2026-11",
       "heat": 76
     },
@@ -4163,7 +4137,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Aqara%20Camera%20Hub%20G350&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/aqara-camera-hub-g350/1.webp",
       "added": "2026-11",
       "heat": 71
     },
@@ -4241,7 +4215,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Vivo%20X300%20Pro%205G%20smartphone&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/vivo-x300-pro/1.webp",
       "added": "2026-11",
       "heat": 74
     },
@@ -4604,7 +4578,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Ring%20Battery%20Video%20Doorbell%202nd%20Gen%202K&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/ring-battery-doorbell-2nd-gen/1.webp",
       "added": "2026-03",
       "heat": 66
     },
@@ -4630,7 +4604,7 @@
       ],
       "url": "https://www.amazon.ae/s?k=Nespresso%20Vertuo%20Up&tag=gadgetsdxb-21",
       "asin": null,
-      "image": null,
+      "image": "https://gadgetsdxb.com/assets/images/nespresso-vertuo-up/1.webp",
       "added": "2026-08",
       "heat": 62
     },

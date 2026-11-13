@@ -306,7 +306,7 @@ const GUIDES = [
         intro: 'Between long commutes, weekend trips and summer power draws, a good charger and power bank remove a daily annoyance. Everything here is under the 100 Wh airline limit and uses the UAE three-pin plug.',
         quick: 'Pocket power bank: Anker Nano 10K. Laptop power bank: Anker Prime 26K. One charger for everything: Anker Prime 100 W. Budget wall charger: Anker Nano 65 W.',
         picks: [
-            { id: 'anker-nano-power-bank-10k', why: 'Built-in USB-C cable, fits in a pocket and charges an iPhone almost twice. The one to keep in your bag.' },
+            { id: 'anker-nano-power-bank-10k', why: 'Retractable USB-C cable, fits in a pocket and charges an iPhone almost twice. The one to keep in your bag.' },
             { id: 'anker-prime-26k-300w', why: 'Charges a MacBook Pro at full speed and two phones at once, yet still flies as carry-on.' },
             { id: 'anker-prime-100w-charger', why: 'Replace three chargers with one: laptop, phone and earbuds from a single compact GaN brick.' },
             { id: 'anker-nano-65w', why: 'Enough for a MacBook Air or any phone at max speed, small enough for a jacket pocket.' },

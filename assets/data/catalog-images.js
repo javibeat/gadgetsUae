@@ -18,6 +18,12 @@ const CATALOG_IMAGES = {
   "airtag-2-4-pack": [
     "/assets/images/airtag-2-4-pack/1.webp"
   ],
+  "amazfit-active-3-premium": [
+    "/assets/images/amazfit-active-3-premium/1.webp"
+  ],
+  "amazfit-balance-3": [
+    "/assets/images/amazfit-balance-3/1.webp"
+  ],
   "anker-555-hub": [
     "/assets/images/anker-555-hub/1.webp"
   ],
@@ -42,6 +48,12 @@ const CATALOG_IMAGES = {
   "anker-soundcore-boom-go-3i": [
     "/assets/images/anker-soundcore-boom-go-3i/1.webp"
   ],
+  "anker-soundcore-liberty-5-pro-max": [
+    "/assets/images/anker-soundcore-liberty-5-pro-max/1.webp"
+  ],
+  "anycubic-kobra-4-combo": [
+    "/assets/images/anycubic-kobra-4-combo/1.webp"
+  ],
   "apple-homepod-mini-2": [
     "/assets/images/apple-homepod-mini-2/1.jpg"
   ],
@@ -59,6 +71,12 @@ const CATALOG_IMAGES = {
   ],
   "apple-watch-ultra-4": [
     "/assets/images/apple-watch-ultra-4/1.webp"
+  ],
+  "aqara-camera-hub-g350": [
+    "/assets/images/aqara-camera-hub-g350/1.webp"
+  ],
+  "asus-tuf-gaming-a16-2026": [
+    "/assets/images/asus-tuf-gaming-a16-2026/1.webp"
   ],
   "asus-zenbook-a14": [
     "/assets/images/asus-zenbook-a14/1.jpg"
@@ -117,6 +135,12 @@ const CATALOG_IMAGES = {
   "dualsense-edge": [
     "/assets/images/dualsense-edge/1.jpg"
   ],
+  "dyson-hushjet-purifier-compact": [
+    "/assets/images/dyson-hushjet-purifier-compact/1.webp"
+  ],
+  "dyson-v16-piston-animal": [
+    "/assets/images/dyson-v16-piston-animal/1.webp"
+  ],
   "echo-dot-2026": [
     "/assets/images/echo-dot-2026/1.webp"
   ],
@@ -126,11 +150,17 @@ const CATALOG_IMAGES = {
   "ecovacs-deebot-x12s-omnicyclone": [
     "/assets/images/ecovacs-deebot-x12s-omnicyclone/1.webp"
   ],
+  "elegoo-centauri-carbon-2-combo": [
+    "/assets/images/elegoo-centauri-carbon-2-combo/1.webp"
+  ],
   "elgato-stream-deck-mk2": [
     "/assets/images/elgato-stream-deck-mk2/1.webp"
   ],
   "eufy-omni-e35": [
     "/assets/images/eufy-omni-e35/1.webp"
+  ],
+  "eufy-omni-s2": [
+    "/assets/images/eufy-omni-s2/1.webp"
   ],
   "eufy-video-doorbell-e340": [
     "/assets/images/eufy-video-doorbell-e340/1.webp"
@@ -228,6 +258,9 @@ const CATALOG_IMAGES = {
   "jbl-go-5": [
     "/assets/images/jbl-go-5/1.webp"
   ],
+  "jbl-quantum-520x": [
+    "/assets/images/jbl-quantum-520x/1.webp"
+  ],
   "jbl-tune-780nc": [
     "/assets/images/jbl-tune-780nc/1.webp"
   ],
@@ -254,6 +287,9 @@ const CATALOG_IMAGES = {
   ],
   "lenovo-ideapad-slim-3": [
     "/assets/images/lenovo-ideapad-slim-3/1.webp"
+  ],
+  "lenovo-yoga-slim-7i-aura-gen11": [
+    "/assets/images/lenovo-yoga-slim-7i-aura-gen11/1.webp"
   ],
   "logitech-g-pro-x-superlight-2": [
     "/assets/images/logitech-g-pro-x-superlight-2/1.jpg"
@@ -297,6 +333,9 @@ const CATALOG_IMAGES = {
   "mijia-smart-air-purifier-6": [
     "/assets/images/mijia-smart-air-purifier-6/1.webp"
   ],
+  "nespresso-vertuo-up": [
+    "/assets/images/nespresso-vertuo-up/1.webp"
+  ],
   "nothing-ear-3": [
     "/assets/images/nothing-ear-3/1.webp"
   ],
@@ -311,6 +350,9 @@ const CATALOG_IMAGES = {
   ],
   "oneplus-15": [
     "/assets/images/oneplus-15/1.webp"
+  ],
+  "oura-ring-5": [
+    "/assets/images/oura-ring-5/1.webp"
   ],
   "philips-hue-lightstrip-plus": [
     "/assets/images/philips-hue-lightstrip-plus/1.jpg"
@@ -351,14 +393,23 @@ const CATALOG_IMAGES = {
   "razer-basilisk-v4-pro": [
     "/assets/images/razer-basilisk-v4-pro/1.webp"
   ],
-  "redmi-note-15-pro-plus": [
-    "/assets/images/redmi-note-15-pro-plus/1.webp"
+  "redmi-note-17-pro-max": [
+    "/assets/images/redmi-note-17-pro-max/1.webp"
+  ],
+  "ring-battery-doorbell-2nd-gen": [
+    "/assets/images/ring-battery-doorbell-2nd-gen/1.webp"
   ],
   "ring-battery-doorbell-pro-2nd-gen": [
     "/assets/images/ring-battery-doorbell-pro-2nd-gen/1.webp"
   ],
+  "ring-indoor-cam-plus": [
+    "/assets/images/ring-indoor-cam-plus/1.webp"
+  ],
   "roborock-qrevo-curv-2-pro": [
     "/assets/images/roborock-qrevo-curv-2-pro/1.webp"
+  ],
+  "roborock-saros-20-sonic": [
+    "/assets/images/roborock-saros-20-sonic/1.webp"
   ],
   "rog-xbox-ally-x20": [
     "/assets/images/rog-xbox-ally-x20/1.webp"
@@ -386,6 +437,9 @@ const CATALOG_IMAGES = {
   ],
   "satechi-chargeview-140w": [
     "/assets/images/satechi-chargeview-140w/1.webp"
+  ],
+  "sony-wf-1000xm6": [
+    "/assets/images/sony-wf-1000xm6/1.webp"
   ],
   "sony-wh-1000xm6": [
     "/assets/images/sony-wh-1000xm6/1.jpg"
@@ -419,6 +473,9 @@ const CATALOG_IMAGES = {
   ],
   "ugreen-nexode-100w": [
     "/assets/images/ugreen-nexode-100w/1.webp"
+  ],
+  "vivo-x300-pro": [
+    "/assets/images/vivo-x300-pro/1.webp"
   ],
   "xbox-elite-series-2": [
     "/assets/images/xbox-elite-series-2/1.jpg"

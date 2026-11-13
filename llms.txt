@@ -1,6 +1,6 @@
 # GadgetsUAE
 
-> Hand-picked tech on Amazon.ae for shoppers in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah and every emirate). 177 curated products, buying guides and a pick of the day that rotates daily.
+> Hand-picked tech on Amazon.ae for shoppers in the United Arab Emirates (Dubai, Abu Dhabi, Sharjah and every emirate). 176 curated products, buying guides and a pick of the day that rotates daily.
 
 GadgetsUAE (https://gadgetsdxb.com) is an independent Amazon Associates site. We do not sell anything: every product links to its live Amazon.ae page, where price, stock and delivery are shown. We never publish prices because they change by the hour.
 
