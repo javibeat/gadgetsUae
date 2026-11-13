@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T01:49:30.458Z",
+  "generatedAt": "2026-11-13T00:56:10.319Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20769,
-    "dealOfDay": "meta-quest-3s",
+    "dayIndex": 20770,
+    "dealOfDay": "switch2",
     "trending": [
       "steelseries-arctis-nova-7-gen-2",
       "bambu-lab-a1-mini",
       "bambu-lab-p2s",
       "aqara-camera-hub-g350",
       "acer-predator-atlas-8",
-      "galaxy-tab-s10-fe",
-      "dyson-v16-piston-animal",
-      "asus-zenbook-a14"
+      "streamdeck-neo",
+      "ps5-pro",
+      "galaxy-tab-s10-fe"
     ]
   },
   "products": [
