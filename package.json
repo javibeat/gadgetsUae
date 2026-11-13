@@ -11,7 +11,7 @@
         "test": "node --test tests/*.test.js",
         "build:data": "node scripts/build-data.js",
         "build:pages": "node scripts/build-pages.js",
-        "build": "npm run build:images && npm run build:data && npm run build:pages && node scripts/generate-sitemap.js",
+        "build": "npm run build:images && npm run build:data && npm run build:pages && node scripts/inline-includes.js && node scripts/generate-sitemap.js",
         "build:images": "node scripts/build-images.js"
     },
     "dependencies": {

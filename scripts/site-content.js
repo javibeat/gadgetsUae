@@ -4,9 +4,9 @@
  */
 const CATEGORY_PAGES = {
     'Gaming': {
-        title: 'Best Gaming Gear in UAE 2026 — Consoles, Handhelds & Controllers | GadgetsUAE',
+        title: 'Best Gaming Consoles & Gear in UAE 2026 | GadgetsUAE',
         description: 'Gaming in the UAE on Amazon.ae: PS5, Xbox, Switch 2, Steam Deck, controllers and the big November 2026 games — GTA VI and Zelda: Ocarina of Time for Switch 2.',
-        h1: 'Gaming',
+        h1: 'Best Gaming Gear in UAE',
         intro: 'Consoles, handhelds, controllers, headsets and the games everyone is talking about — Zelda: Ocarina of Time on Switch 2 and GTA VI — picked for Amazon.ae and reshuffled every day.',
         amazonQuery: 'gaming console',
         faq: [
@@ -18,9 +18,9 @@ const CATEGORY_PAGES = {
         ]
     },
     'Mobiles': {
-        title: 'Best Phones & Tablets in UAE 2026 — iPhone 18 Pro Max, Galaxy S26, Pixel 11 | GadgetsUAE',
+        title: 'Best Phones & Tablets in UAE 2026: iPhone, Galaxy, Pixel',
         description: 'The phones and tablets worth buying on Amazon.ae in 2026 — iPhone 18 Pro Max, iPhone Duo, Galaxy S26 Ultra, Pixel 11 Pro, iPad and value picks with UAE warranty.',
-        h1: 'Phones & Tablets',
+        h1: 'Best Phones & Tablets in UAE',
         intro: 'Flagships, value phones and tablets with UAE warranty. Every model here is one we would recommend to a friend in Dubai.',
         amazonQuery: 'smartphone',
         faq: [
@@ -33,7 +33,7 @@ const CATEGORY_PAGES = {
     'Audio': {
         title: 'Best Headphones, Earbuds & Speakers in UAE 2026 | GadgetsUAE',
         description: 'Noise-cancelling headphones, wireless earbuds and Bluetooth speakers worth buying on Amazon.ae — Sony, Apple, Bose, JBL and Marshall with Prime delivery in the UAE.',
-        h1: 'Audio',
+        h1: 'Best Headphones & Speakers in UAE',
         intro: 'Headphones for long-haul flights, earbuds for the metro and speakers for the beach — picked for sound, comfort and battery life.',
         amazonQuery: 'wireless headphones',
         faq: [
@@ -43,9 +43,9 @@ const CATEGORY_PAGES = {
         ]
     },
     'Tech': {
-        title: 'Best Laptops, Monitors & Computer Gear in UAE 2026 | GadgetsUAE',
+        title: 'Best Laptops & Monitors in UAE 2026 | GadgetsUAE',
         description: 'Laptops, monitors, e-readers, storage and peripherals worth buying on Amazon.ae — MacBook Air M5, Kindle, Logitech MX and more with UAE warranty.',
-        h1: 'Computers & Tech',
+        h1: 'Best Laptops & Tech in UAE',
         intro: 'Laptops for work and study, monitors, e-readers, storage and the peripherals that make a desk feel finished.',
         amazonQuery: 'laptop',
         faq: [
@@ -55,9 +55,9 @@ const CATEGORY_PAGES = {
         ]
     },
     'Smart Home': {
-        title: 'Best Smart Home Devices in UAE 2026 — Robot Vacuums, Security, Lighting | GadgetsUAE',
+        title: 'Best Smart Home Devices in UAE 2026 | GadgetsUAE',
         description: 'Robot vacuums, air purifiers, smart lighting, video doorbells and speakers worth buying on Amazon.ae for UAE homes, with Prime delivery.',
-        h1: 'Smart Home',
+        h1: 'Best Smart Home Tech in UAE',
         intro: 'Robot vacuums that handle dust and marble, purifiers for sandy days, lights and cameras that work with every assistant.',
         amazonQuery: 'smart home',
         faq: [
@@ -69,7 +69,7 @@ const CATEGORY_PAGES = {
     'Wearables': {
         title: 'Best Smartwatches & Fitness Trackers in UAE 2026 | GadgetsUAE',
         description: 'Apple Watch, Galaxy Watch, Garmin, Xiaomi bands and smart glasses worth buying on Amazon.ae — picked for battery, health tracking and UAE heat, with Prime delivery.',
-        h1: 'Wearables',
+        h1: 'Best Smartwatches in UAE',
         intro: 'Smartwatches, sports watches and trackers that survive summer runs on the Corniche and still look good at the office.',
         amazonQuery: 'smartwatch',
         faq: [
@@ -79,9 +79,9 @@ const CATEGORY_PAGES = {
         ]
     },
     'Accessories': {
-        title: 'Best Chargers, Power Banks & Accessories in UAE 2026 | GadgetsUAE',
+        title: 'Best Chargers & Power Banks in UAE 2026 | GadgetsUAE',
         description: 'Chargers, power banks, hubs, MagSafe stands and trackers worth buying on Amazon.ae — Anker, Belkin, UGREEN and Apple with Prime delivery in the UAE.',
-        h1: 'Accessories',
+        h1: 'Best Tech Accessories in UAE',
         intro: 'The unglamorous things that make every other gadget better: fast chargers, power banks that fly, hubs and trackers.',
         amazonQuery: 'usb c charger',
         faq: [
@@ -91,9 +91,9 @@ const CATEGORY_PAGES = {
         ]
     },
     '3D Printing': {
-        title: 'Best 3D Printers in UAE 2026 — Bambu Lab, Creality, Anycubic | GadgetsUAE',
+        title: 'Best 3D Printers in UAE 2026: Bambu Lab, Creality & More',
         description: '3D printers and filament worth buying on Amazon.ae — Bambu Lab A1, P2S and H2D, Creality K2 and Ender-3 V4, with Prime delivery across the UAE.',
-        h1: '3D Printing',
+        h1: 'Best 3D Printers in UAE',
         intro: 'Printers from first-timer to multi-material workhorse, plus the filament that survives a Dubai garage in summer.',
         amazonQuery: '3d printer',
         faq: [
@@ -110,7 +110,7 @@ const GUIDES = [
         category: null,
         updated: 'November 2026',
         title: 'Black Friday & White Friday UAE 2026: What to Buy on Amazon.ae',
-        seoTitle: 'Black Friday & White Friday UAE 2026 — Dates & Best Tech to Buy on Amazon.ae | GadgetsUAE',
+        seoTitle: 'White Friday & Black Friday UAE 2026: Dates & What to Buy',
         description: 'Black Friday 2026 in the UAE is on 27 November; Amazon.ae calls its sale White Friday. The tech worth buying: iPhone 18 Pro Max, GTA VI, Zelda Ocarina of Time, Switch 2, AirPods and more.',
         intro: 'Black Friday falls on Friday 27 November 2026, and Amazon.ae runs it as White Friday, usually across the whole last week of November. Prices change by the hour during the sale, so instead of listing them we pick the products worth checking first: the new releases everyone is searching for and the proven best-sellers that tend to drop. Every link opens the live Amazon.ae page.',
         quick: 'Biggest launches: iPhone 18 Pro Max, GTA VI (19 Nov) and Zelda: Ocarina of Time for Switch 2. Best gifts: AirPods Pro 3, Switch 2, Kindle Paperwhite. Big-ticket upgrades: MacBook Air M5, Sony WH-1000XM6, a robot vacuum.',
@@ -142,7 +142,7 @@ const GUIDES = [
         category: 'Mobiles',
         updated: 'November 2026',
         title: 'Which iPhone to Buy in UAE (2026)',
-        seoTitle: 'Which iPhone to Buy in UAE 2026 — iPhone 18 Pro Max vs iPhone Duo vs 17 | GadgetsUAE',
+        seoTitle: 'Which iPhone to Buy in UAE 2026: 18 Pro Max vs Duo vs 17',
         description: 'iPhone 18 Pro Max, iPhone 18 Pro, the foldable iPhone Duo, iPhone 17, iPhone Air and iPhone 17e compared for UAE buyers on Amazon.ae.',
         intro: 'Apple sells more iPhones than ever in the UAE, and since September 2026 the line-up includes the iPhone 18 Pro, the 18 Pro Max and Apple\'s first foldable, the iPhone Duo. The standard iPhone 18 is not out until spring 2027, so last year\'s models are still very much in the picture. Here is which one to buy.',
         quick: 'Best overall: iPhone 18 Pro Max. Smaller pro: iPhone 18 Pro. Want a foldable: iPhone Duo. Best value: iPhone 17. Cheapest: iPhone 17e.',
@@ -166,7 +166,7 @@ const GUIDES = [
         updated: 'November 2026',
         category: 'Audio',
         title: 'Best Wireless Earbuds in UAE (2026)',
-        seoTitle: 'Best Wireless Earbuds in UAE 2026 — Tested Picks on Amazon.ae | GadgetsUAE',
+        seoTitle: 'Best Wireless Earbuds in UAE 2026 | GadgetsUAE',
         description: 'The best wireless earbuds you can buy on Amazon.ae in 2026: AirPods Pro 3, Sony WF-1000XM6, Galaxy Buds4 Pro, Bose and value picks under AED 400.',
         intro: 'Earbuds are the gadget most people in the UAE use every single day: metro commutes, gym sessions, video calls and long flights. We picked seven pairs that cover every phone and budget, judged on noise cancelling, comfort in the heat, call quality and battery life.',
         quick: 'iPhone owners: AirPods Pro 3. Android or Samsung: Galaxy Buds4 Pro or Sony WF-1000XM6. Tight budget: Soundcore Liberty 5.',
@@ -189,7 +189,7 @@ const GUIDES = [
         slug: 'best-noise-cancelling-headphones-uae',
         category: 'Audio',
         title: 'Best Noise-Cancelling Headphones in UAE (2026)',
-        seoTitle: 'Best Noise-Cancelling Headphones in UAE 2026 — Sony, Bose, Apple | GadgetsUAE',
+        seoTitle: 'Best Noise-Cancelling Headphones in UAE 2026',
         description: 'Over-ear noise-cancelling headphones worth buying on Amazon.ae in 2026: Sony WH-1000XM6, Bose QC Ultra, AirPods Max 2 and budget picks for flights and offices.',
         intro: 'If you fly out of Dubai or Abu Dhabi more than a couple of times a year, over-ear noise cancelling is the best money you can spend on tech. These five range from the class leaders to sub-AED 400 options that still cut cabin drone.',
         quick: 'Best overall: Sony WH-1000XM6. Quietest: Bose QuietComfort Ultra (2nd gen). Best value: Sony WH-CH730N.',
@@ -210,7 +210,7 @@ const GUIDES = [
         slug: 'best-gaming-console-uae',
         category: 'Gaming',
         title: 'Which Gaming Console to Buy in UAE (2026)',
-        seoTitle: 'Best Gaming Console in UAE 2026 — PS5 Pro vs Xbox vs Switch 2 vs Steam Deck | GadgetsUAE',
+        seoTitle: 'Best Gaming Console in UAE 2026: PS5 Pro vs Switch 2 vs Xbox',
         description: 'PS5 Pro, PS5 Slim, Xbox Series X and S, Nintendo Switch 2, Steam Deck OLED and ROG Xbox Ally X20 compared for UAE buyers on Amazon.ae.',
         intro: 'Seven consoles and handhelds are worth considering on Amazon.ae right now. The right one depends less on raw power and more on who you play with, whether you travel, and which subscriptions you already pay for.',
         quick: 'Families: Nintendo Switch 2. Exclusives and 4K TV: PS5 Pro. Best value: Xbox Series S with Game Pass. Travel: Steam Deck OLED.',
@@ -233,7 +233,7 @@ const GUIDES = [
         slug: 'best-laptop-uae',
         category: 'Tech',
         title: 'Best Laptops in UAE for Work and Study (2026)',
-        seoTitle: 'Best Laptops in UAE 2026 — MacBook Air M5, Zenbook, Yoga & Budget Picks | GadgetsUAE',
+        seoTitle: 'Best Laptops in UAE 2026 for Work & Study | GadgetsUAE',
         description: 'The laptops worth buying on Amazon.ae in 2026 for work, university and gaming: MacBook Air M5, MacBook Pro M6, ASUS Zenbook A14, Lenovo Yoga and budget options.',
         intro: 'Whether you are starting at a university in Sharjah or running a business from a Dubai café, these are the laptops we would put our own money on. All ship from Amazon.ae with a UAE warranty.',
         quick: 'Most people: MacBook Air M5. Windows: ASUS Zenbook A14. Budget: Lenovo IdeaPad Slim 3. Creators: MacBook Pro M6. Gaming: ASUS TUF A16.',
@@ -256,7 +256,7 @@ const GUIDES = [
         slug: 'best-robot-vacuum-uae',
         category: 'Smart Home',
         title: 'Best Robot Vacuums for UAE Homes (2026)',
-        seoTitle: 'Best Robot Vacuum in UAE 2026 — Xiaomi, Eufy, Roborock for Tile & Marble | GadgetsUAE',
+        seoTitle: 'Best Robot Vacuum in UAE 2026 for Tile & Marble Floors',
         description: 'Robot vacuums and mops that handle dust, tile and marble in UAE apartments and villas: Xiaomi Robot Vacuum 6, Eufy Omni S2, Roborock Qrevo Curv 2 Pro and a Dyson alternative.',
         intro: 'UAE homes are a robot vacuum’s ideal territory: hard floors, fine dust that arrives daily and large open living rooms. These are the models that actually keep up, plus a cordless Dyson for those who prefer to do it themselves.',
         quick: 'Best value: Xiaomi Robot Vacuum 6. Best self-cleaning: Eufy Omni S2. Premium: Roborock Qrevo Curv 2 Pro. Manual alternative: Dyson V16 Piston Animal.',
@@ -277,7 +277,7 @@ const GUIDES = [
         updated: 'November 2026',
         category: 'Wearables',
         title: 'Best Smartwatches in UAE (2026)',
-        seoTitle: 'Best Smartwatch in UAE 2026 — Apple Watch, Galaxy Watch, Garmin, Xiaomi | GadgetsUAE',
+        seoTitle: 'Best Smartwatch in UAE 2026: Apple, Galaxy, Garmin',
         description: 'The smartwatches and fitness trackers worth buying on Amazon.ae in 2026, matched to iPhone or Android and to UAE heat: Apple Watch Series 12, Ultra 4, Galaxy Watch9, Garmin and Xiaomi Band.',
         intro: 'A watch is the gadget most tied to your phone, so the first question is iPhone or Android. The second is whether you train outdoors in the heat, where battery life and GPS accuracy separate the toys from the tools.',
         quick: 'iPhone: Apple Watch Series 12 (or SE 3 on a budget). Samsung: Galaxy Watch9. Serious sport: Garmin Forerunner 570. Under AED 200: Xiaomi Smart Band 11.',
@@ -301,7 +301,7 @@ const GUIDES = [
         slug: 'best-power-bank-charger-uae',
         category: 'Accessories',
         title: 'Best Power Banks and Chargers in UAE (2026)',
-        seoTitle: 'Best Power Bank & USB-C Charger in UAE 2026 — Anker, UGREEN, Samsung | GadgetsUAE',
+        seoTitle: 'Best Power Bank & USB-C Charger in UAE 2026',
         description: 'Flight-safe power banks and GaN USB-C chargers worth buying on Amazon.ae in 2026: Anker Prime, Anker Nano, UGREEN Nexode and Samsung 60 W.',
         intro: 'Between long commutes, weekend trips and summer power draws, a good charger and power bank remove a daily annoyance. Everything here is under the 100 Wh airline limit and uses the UAE three-pin plug.',
         quick: 'Pocket power bank: Anker Nano 10K. Laptop power bank: Anker Prime 26K. One charger for everything: Anker Prime 100 W. Budget wall charger: Anker Nano 65 W.',
@@ -323,7 +323,7 @@ const GUIDES = [
         slug: 'best-3d-printer-beginners-uae',
         category: '3D Printing',
         title: 'Best 3D Printers for Beginners in UAE (2026)',
-        seoTitle: 'Best 3D Printer for Beginners in UAE 2026 — Bambu Lab A1 mini, Ender-3 V4, K2 | GadgetsUAE',
+        seoTitle: 'Best 3D Printer for Beginners in UAE 2026 | GadgetsUAE',
         description: 'Beginner-friendly 3D printers worth buying on Amazon.ae in 2026: Bambu Lab A1 mini and A1 Combo, Creality Ender-3 V4 and K2, Anycubic Kobra 4 and the P2S upgrade path.',
         intro: 'Modern 3D printers level themselves, calibrate themselves and print reliably out of the box. These six take you from a first print on day one to multi-colour models, with filament and spares available on Amazon.ae.',
         quick: 'First printer: Bambu Lab A1 mini. Want multi-colour: Bambu Lab A1 Combo. Budget multi-colour: Creality Ender-3 V4 Combo. Enclosed for ABS: Bambu Lab P2S.',

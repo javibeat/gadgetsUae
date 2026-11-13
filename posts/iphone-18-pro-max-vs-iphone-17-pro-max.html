@@ -26,7 +26,52 @@
 </head>
 
 <body class="post">
-  <div id="menu-include"></div>
+  <div id="menu-include"><!--include:menu-->
+<div class="affiliate-disclosure">
+    <p>As an Amazon Associate, we earn from qualifying purchases. <a href="/about.html">Learn more</a></p>
+</div>
+
+<nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+        <a href="/" class="nav-logo">Gadgets<span>UAE</span></a>
+
+        <div class="nav-links" id="navLinks" role="menubar">
+            <a href="/gaming.html" role="menuitem" class="nav-cat" style="--cat:#7c3aed">Gaming</a>
+            <a href="/mobiles.html" role="menuitem" class="nav-cat" style="--cat:#2563eb">Phones</a>
+            <a href="/audio.html" role="menuitem" class="nav-cat" style="--cat:#be185d">Audio</a>
+            <a href="/tech.html" role="menuitem" class="nav-cat" style="--cat:#c2410c">Tech</a>
+            <a href="/smarthome.html" role="menuitem" class="nav-cat" style="--cat:#047857">Home</a>
+
+            <div class="nav-dropdown" role="menuitem" aria-haspopup="true">
+                <span>More <small>&#9662;</small></span>
+                <div class="nav-dropdown-menu" role="menu">
+                    <a href="/wearables.html" role="menuitem">Wearables</a>
+                    <a href="/accessories.html" role="menuitem">Accessories</a>
+                    <a href="/3d-printing.html" role="menuitem">3D Printing</a>
+                    <a href="/deals.html" role="menuitem">Today's picks</a>
+                    <a href="/products.html" role="menuitem">All products</a>
+                    <a href="/blog.html" role="menuitem">Blog</a>
+                    <a href="/about.html" role="menuitem">About</a>
+                </div>
+            </div>
+
+            <a href="/guides.html" role="menuitem" class="nav-guides">Guides</a>
+        </div>
+
+        <div class="nav-actions">
+            <button id="searchToggle" aria-label="Search products" title="Search">&#x1F50D;</button>
+            <a href="/favoritos.html" aria-label="Favorites" title="Favorites">&#9825;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<!--/include:menu--></div>
   <main class="container" style="max-width:900px;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span class="separator">/</span> <a href="/blog.html">Blog</a> <span class="separator">/</span> <strong>iPhone 18 Pro Max vs 17 Pro Max</strong></nav>
     <figure class="post-hero">
@@ -100,7 +145,55 @@
       </footer>
     </article>
   </main>
-  <div id="footer-include"></div>
+  <div id="footer-include"><!--include:footer-->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo">GADGETS UAE</a>
+                <p>Hand-picked tech from Amazon.ae for Dubai, Abu Dhabi and every emirate. New picks every day, prices always live on Amazon.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Categories</h3>
+                <ul>
+                    <li><a href="/gaming.html">Gaming</a></li>
+                    <li><a href="/mobiles.html">Smartphones</a></li>
+                    <li><a href="/audio.html">Audio</a></li>
+                    <li><a href="/tech.html">Laptops & Tech</a></li>
+                    <li><a href="/smarthome.html">Smart Home</a></li>
+                    <li><a href="/wearables.html">Wearables</a></li>
+                    <li><a href="/accessories.html">Accessories</a></li>
+                    <li><a href="/3d-printing.html">3D Printing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Links</h3>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/deals.html">Today's picks</a></li>
+                    <li><a href="/guides.html">Buying guides</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/favoritos.html">Favorites</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                    <li><a href="/terms.html">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p style="color:var(--text-3);font-size:var(--fs-small);margin-bottom:var(--s-md)">New picks and buying guides in your inbox.</p>
+                <form class="footer-newsletter" aria-label="Newsletter signup">
+                    <input type="email" placeholder="Email" required aria-label="Email address">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GadgetsUAE &mdash; Dubai</p>
+            <p>Amazon Associate. Prices and availability are shown live on Amazon.ae. Product images &copy; their respective manufacturers.</p>
+        </div>
+    </div>
+</footer>
+<!--/include:footer--></div>
   <script src="/assets/js/blog.js?v=8.0" defer></script>
   <script src="/assets/js/script.js?v=8.0" defer></script>
   <script src="/assets/js/stats.js?v=8.0"></script>

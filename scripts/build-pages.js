@@ -16,6 +16,13 @@ const legacySrc = fs.readFileSync(path.join(ROOT, 'assets/js/products.js'), 'utf
 const legacy = new Function(legacySrc.replace('window.products = products;', 'return products;'))();
 const catalog = Catalog.build(CATALOG_ITEMS, legacy, discover(CATALOG_ITEMS.map(p => p.id).concat(legacy.map(p => p.id))));
 const byId = Object.fromEntries(catalog.map(p => [p.id, p]));
+// Same card markup the browser renders, written into the HTML so search engines and AI crawlers
+// that don't run JavaScript still see every product. page.js re-renders on top (daily order, filters).
+globalThis.Catalog = Catalog;
+const ProductRenderer = require('../assets/js/product-renderer.js');
+const cards = new ProductRenderer(catalog);
+const byHeat = list => list.slice().sort((a, b) => b.heat - a.heat || a.id.localeCompare(b.id));
+const staticCards = list => list.map((p, i) => cards.createCard(p, { index: i })).join('');
 
 function write(rel, html) {
     fs.writeFileSync(path.join(ROOT, rel), html);
@@ -28,7 +35,7 @@ function categoryPage(cat, content) {
     const guides = GUIDES.filter(g => g.category === cat.key);
     const main = `
         <div class="container">
-            ${T.breadcrumb([{ label: 'Home', href: '/' }, { label: content.h1 }])}
+            ${T.breadcrumb([{ label: 'Home', href: '/' }, { label: cat.label }])}
         </div>
 
         <section class="category-hero mag-hero" style="--cat:${cat.color}">
@@ -51,11 +58,11 @@ function categoryPage(cat, content) {
         <section class="section tight">
             <div class="container">
                 <div class="section-header">
-                    <h2>All ${T.esc(content.h1.toLowerCase())} picks</h2>
+                    <h2>All ${T.esc(cat.label.toLowerCase())} picks</h2>
                     <span class="result-count"><span data-result-count>${count}</span> shown</span>
                 </div>
                 <div class="filter-bar" id="filter-bar"></div>
-                <div class="products-grid stagger" id="category-products-grid"></div>
+                <div class="products-grid stagger" id="category-products-grid">${staticCards(byHeat(catalog.filter(p => p.category === cat.key)))}</div>
                 <div class="view-more-wrap">
                     <a href="https://www.amazon.ae/s?k=${encodeURIComponent(content.amazonQuery)}&tag=${Catalog.TAG}" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse more on Amazon.ae &#8594;</a>
                 </div>
@@ -139,7 +146,7 @@ ${g.picks.map((p, i) => `                <div class="guide-pick">
                         <h2>${T.esc(byId[p.id].title)}</h2>
                         <p>${T.esc(p.why)}</p>
                     </div>
-                    <div class="guide-pick-card" data-pick="${p.id}"></div>
+                    <div class="guide-pick-card" data-pick="${p.id}">${cards.createCard(byId[p.id])}</div>
                 </div>`).join('\n')}
             </div>
         </section>
@@ -217,7 +224,7 @@ function productsPage() {
                     <span class="result-count"><span data-result-count>${catalog.length}</span> products</span>
                 </div>
                 <div class="filter-bar" id="filter-bar"></div>
-                <div class="products-grid stagger" id="all-products-grid"></div>
+                <div class="products-grid stagger" id="all-products-grid">${staticCards(byHeat(catalog).slice(0, 24))}</div>
                 <div class="view-more-wrap">
                     <a href="https://www.amazon.ae/s?k=electronics&tag=${Catalog.TAG}" class="btn-outline" target="_blank" rel="sponsored noopener noreferrer">Browse Amazon.ae electronics &#8594;</a>
                 </div>

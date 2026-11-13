@@ -280,4 +280,6 @@
         root.renderer = new ProductRenderer(products);
         return root.renderer;
     };
-})(window);
+    // Node (build scripts): same card markup is pre-rendered into the static HTML.
+    if (typeof module !== 'undefined' && module.exports) module.exports = ProductRenderer;
+})(typeof window !== 'undefined' ? window : globalThis);

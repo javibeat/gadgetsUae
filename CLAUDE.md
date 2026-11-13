@@ -56,7 +56,8 @@ The site is served as static files; there is no bundler or lint step.
 - **Amazon sync scripts** (`scripts/amazon-*.js`) are kept for when Creators API credentials arrive; `.github/workflows/amazon-sync.yml` is manual-only until then.
 
 ### Frontend
-- Each HTML page includes shared components via fetch: `menu.html` (nav) and `footer.html`.
+- `menu.html` (nav) and `footer.html` are written into every page's `#menu-include` / `#footer-include` by `scripts/inline-includes.js` (part of `npm run build`), so crawlers see them without JS. Edit `menu.html`/`footer.html`, then rebuild. `script.js` only fetches them on pages that weren't pre-filled.
+- **Pre-rendered cards (SEO):** `scripts/build-pages.js` writes product cards (same markup as `ProductRenderer.createCard`, which is also loadable in Node) into category grids, guide picks and the first 24 of `products.html`; `page.js` re-renders on top with the daily order and filters.
 - `assets/js/script.js` — Loads menu, handles mobile nav, highlights active link.
 - `assets/js/product-renderer.js` — `ProductRenderer`: photo cards, typographic "visual" cards for products without photos, the pick-of-the-day hero and compact rows.
 - **Design v8 "colour magazine"** (Nov 2026): cream background, one colour per category (`Catalog.CATEGORIES[].color`, passed to the HTML as `--cat`), Bricolage Grotesque headlines, 2px ink outlines, yellow `.btn-amazon`. The pick of the day renders as a magazine cover (`createHero`) and the home strip uses `createTile`. Styles live in the `v8 — COLOUR MAGAZINE` block at the end of `assets/css/style.css`. Product context for design work: `PRODUCT.md`.

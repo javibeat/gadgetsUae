@@ -5,22 +5,28 @@
 
 // ===== MENU LOADER =====
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/menu.html')
-        .then(r => r.ok ? r.text() : Promise.reject('Menu load failed'))
-        .then(html => {
-            const el = document.getElementById('menu-include');
-            if (!el) return;
-            el.innerHTML = html;
-            setupMobileMenu();
-            setupDropdowns();
-            setupSearchToggle();
-            highlightActiveLink();
-        })
-        .catch(e => console.error('Menu error:', e));
+    // The build (scripts/inline-includes.js) writes menu and footer into each page;
+    // fetch them only on a page that wasn't pre-filled.
+    const setupMenu = () => {
+        setupMobileMenu();
+        setupDropdowns();
+        setupSearchToggle();
+        highlightActiveLink();
+    };
+    const menu = document.getElementById('menu-include');
+    if (menu && menu.querySelector('nav')) {
+        setupMenu();
+    } else if (menu) {
+        fetch('/menu.html')
+            .then(r => r.ok ? r.text() : Promise.reject('Menu load failed'))
+            .then(html => { menu.innerHTML = html; setupMenu(); })
+            .catch(e => console.error('Menu error:', e));
+    }
 
-    // Footer
     const footer = document.getElementById('footer-include');
-    if (footer) {
+    if (footer && footer.querySelector('footer, a')) {
+        setupNewsletter();
+    } else if (footer) {
         fetch('/footer.html').then(r => r.text()).then(html => {
             footer.innerHTML = html;
             setupNewsletter();

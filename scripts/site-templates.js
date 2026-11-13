@@ -29,6 +29,7 @@ function head({ title, description, path, image, extraHead, robots }) {
     <meta property="og:url" content="${url}">
     <meta property="og:image" content="${SITE}${image || '/assets/images/banners/products.jpg?v=7'}">
     <meta property="og:site_name" content="GadgetsUAE">
+    <meta property="og:locale" content="en_AE">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,7 @@ function searchOverlay() {
         <div class="container">
             <div class="search-header">
                 <div class="search-input-wrap">
-                    <input type="text" id="searchOverlayInput" placeholder="Search 190+ products…" aria-label="Search">
+                    <input type="text" id="searchOverlayInput" placeholder="Search 170+ products…" aria-label="Search">
                 </div>
                 <button class="search-close" id="closeSearch" aria-label="Close search">&times;</button>
             </div>
