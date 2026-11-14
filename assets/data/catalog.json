@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T11:12:31.720Z",
+  "generatedAt": "2026-11-14T00:45:37.663Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20770,
-    "dealOfDay": "switch2",
+    "dayIndex": 20771,
+    "dealOfDay": "pixel-11-pro",
     "trending": [
-      "steelseries-arctis-nova-7-gen-2",
-      "bambu-lab-a1-mini",
-      "rog-xbox-ally-x20",
+      "logitech-g502-x-lightspeed",
       "bambu-lab-p2s",
-      "bambu-lab-a2l-combo",
-      "streamdeck-neo",
-      "ps5-pro",
-      "galaxy-tab-s10-fe"
+      "rog-xbox-ally-x20",
+      "airtag-2-4-pack",
+      "acer-predator-atlas-8",
+      "galaxy-tab-s12-ultra",
+      "mac-mini-m6",
+      "airpods-pro-3"
     ]
   },
   "products": [
