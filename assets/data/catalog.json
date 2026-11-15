@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T23:42:58.795Z",
+  "generatedAt": "2026-11-15T23:50:27.033Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20772,
-    "dealOfDay": "samsung-galaxy-s26-fe",
+    "dayIndex": 20773,
+    "dealOfDay": "apple-watch-series-12",
     "trending": [
-      "logitech-g502-x-lightspeed",
-      "bambu-lab-p2s",
-      "rog-xbox-ally-x20",
-      "airtag-2-4-pack",
-      "bambu-lab-a2l-combo",
-      "galaxy-tab-s12-ultra",
-      "mac-mini-m6",
-      "airpods-pro-3"
+      "iphone-18-pro-max",
+      "backbone-one-usb-c",
+      "dell-u2725qe",
+      "oneplus-15",
+      "eufy-video-doorbell-e340",
+      "dji-osmo-pocket-4",
+      "redmi-note-17-pro-max",
+      "bose-qc-ultra-earbuds-2"
     ]
   },
   "products": [
