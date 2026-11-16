@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T23:50:27.033Z",
+  "generatedAt": "2026-11-16T05:08:55.847Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -10,21 +10,21 @@
       "slug": "gaming",
       "label": "Gaming",
       "page": "https://gadgetsdxb.com/gaming.html",
-      "count": 31
+      "count": 32
     },
     {
       "key": "Mobiles",
       "slug": "mobiles",
       "label": "Phones & Tablets",
       "page": "https://gadgetsdxb.com/mobiles.html",
-      "count": 24
+      "count": 25
     },
     {
       "key": "Audio",
       "slug": "audio",
       "label": "Audio",
       "page": "https://gadgetsdxb.com/audio.html",
-      "count": 23
+      "count": 24
     },
     {
       "key": "Tech",
@@ -38,14 +38,14 @@
       "slug": "smarthome",
       "label": "Smart Home",
       "page": "https://gadgetsdxb.com/smarthome.html",
-      "count": 26
+      "count": 27
     },
     {
       "key": "Wearables",
       "slug": "wearables",
       "label": "Wearables",
       "page": "https://gadgetsdxb.com/wearables.html",
-      "count": 17
+      "count": 18
     },
     {
       "key": "Accessories",
@@ -4633,6 +4633,136 @@
       "image": "https://gadgetsdxb.com/assets/images/xiaomi-robot-vacuum-6/1.webp",
       "added": "2026-08",
       "heat": 70
+    },
+    {
+      "id": "apple-homeview",
+      "brand": "Apple",
+      "model": "HomeView",
+      "title": "Apple HomeView Smart Home Hub",
+      "category": "Smart Home",
+      "sub": "Smart Hub",
+      "tier": "premium",
+      "tags": [
+        "smart-home",
+        "hub",
+        "matter",
+        "apple"
+      ],
+      "blurb": "A 7-inch touchscreen hub for Matter and Thread homes, with Siri for scenes, calls and cameras.",
+      "specs": [
+        "7\" touchscreen",
+        "Matter & Thread",
+        "A18 chip"
+      ],
+      "url": "https://www.amazon.ae/s?k=Apple%20HomeView%20smart%20home%20hub&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 80
+    },
+    {
+      "id": "technics-eah-a1000",
+      "brand": "Technics",
+      "model": "EAH-A1000",
+      "title": "Technics EAH-A1000 Wireless Noise Cancelling Headphones",
+      "category": "Audio",
+      "sub": "Headphones",
+      "tier": "premium",
+      "tags": [
+        "anc",
+        "wireless",
+        "ldac",
+        "dolby-atmos"
+      ],
+      "blurb": "Flagship ANC headphones with a magnetic fluid driver, LDAC hi-res audio and Dolby Atmos tracking.",
+      "specs": [
+        "45h battery",
+        "LDAC Hi-Res",
+        "Dolby Atmos"
+      ],
+      "url": "https://www.amazon.ae/s?k=Technics%20EAH-A1000%20headphones&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 76
+    },
+    {
+      "id": "motorola-signature-27",
+      "brand": "Motorola",
+      "model": "Signature 27",
+      "title": "Motorola Signature 27 5G Smartphone",
+      "category": "Mobiles",
+      "sub": "Smartphone",
+      "tier": "premium",
+      "tags": [
+        "motorola",
+        "flagship",
+        "camera",
+        "android"
+      ],
+      "blurb": "A 200MP periscope camera, 7000mAh battery and a top Snapdragon chip in one flagship slab phone.",
+      "specs": [
+        "200MP periscope",
+        "7000mAh battery",
+        "Snapdragon Elite"
+      ],
+      "url": "https://www.amazon.ae/s?k=Motorola%20Signature%2027%205G%20smartphone&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 72
+    },
+    {
+      "id": "turtle-beach-stealth-ultra-ii",
+      "brand": "Turtle Beach",
+      "model": "Stealth Ultra II",
+      "title": "Turtle Beach Stealth Ultra II Wireless Controller",
+      "category": "Gaming",
+      "sub": "Controller",
+      "tier": "mid",
+      "tags": [
+        "controller",
+        "wireless",
+        "pc",
+        "xbox"
+      ],
+      "blurb": "A premium wireless controller with hall-effect sticks and swappable grips for PC and console play.",
+      "specs": [
+        "HE thumbsticks",
+        "Swappable grips",
+        "40h battery"
+      ],
+      "url": "https://www.amazon.ae/s?k=Turtle%20Beach%20Stealth%20Ultra%20II%20controller&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 68
+    },
+    {
+      "id": "fitbit-air",
+      "brand": "Google",
+      "model": "Fitbit Air",
+      "title": "Google Fitbit Air Screenless Fitness Tracker",
+      "category": "Wearables",
+      "sub": "Fitness Tracker",
+      "tier": "budget",
+      "tags": [
+        "fitness-tracker",
+        "screenless",
+        "sleep",
+        "ai"
+      ],
+      "blurb": "A screenless band that tracks sleep, heart rate and recovery with a Gemini-powered health coach.",
+      "specs": [
+        "Screenless band",
+        "Sleep tracking",
+        "Gemini coach"
+      ],
+      "url": "https://www.amazon.ae/s?k=Google%20Fitbit%20Air%20fitness%20tracker&tag=gadgetsdxb-21",
+      "asin": null,
+      "image": null,
+      "added": "2026-11",
+      "heat": 74
     }
   ]
 }
