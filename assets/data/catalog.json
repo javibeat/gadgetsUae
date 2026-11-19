@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-18T02:12:06.527Z",
+  "generatedAt": "2026-11-19T01:46:21.230Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,14 +63,14 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20775,
-    "dealOfDay": "kindle-2026",
+    "dayIndex": 20776,
+    "dealOfDay": "galaxy-watch9",
     "trending": [
       "iphone-18-pro-max",
       "backbone-one-usb-c",
       "dell-u2725qe",
-      "roborock-qrevo-curv-2-pro",
       "oneplus-15",
+      "eufy-video-doorbell-e340",
       "dji-osmo-pocket-4",
       "redmi-note-17-pro-max",
       "bose-qc-ultra-earbuds-2"
