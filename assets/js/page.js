@@ -43,6 +43,27 @@
     }
 
     /* ---------- HOME ---------- */
+    // Promo de temporada de la tira de portada (fechas UAE). El HTML estático lleva la primera;
+    // a partir de su fecha, la siguiente sustituye a la anterior sola.
+    const HOME_PROMOS = [
+        { from: '2026-11-01', to: '2026-11-30', href: '/guides/black-friday-white-friday-uae-2026.html',
+          small: 'White Friday 2026', title: 'What to buy before 27 Nov',
+          text: 'Black Friday on Amazon.ae: our shortlist, from GTA VI to AirPods.', cta: 'Read the shortlist' },
+        { from: '2026-12-01', to: '2027-01-17', href: '/guides/dubai-shopping-festival-2026-tech-guide.html',
+          small: 'DSF 2026–27', title: 'Tech worth buying this DSF',
+          text: '4 Dec – 17 Jan: gifts and upgrades to compare before you pay at the mall.', cta: 'Read the guide' }
+    ];
+
+    function applyPromo(tile, promo) {
+        if (!tile || !promo) return;
+        tile.setAttribute('href', promo.href);
+        const set = (sel, txt) => { const el = tile.querySelector(sel); if (el) el.textContent = txt; };
+        set('small', promo.small);
+        set('h3', promo.title);
+        set('p', promo.text);
+        set('.strip-go', promo.cta + ' \u2192');
+    }
+
     function home() {
         const items = all();
         const r = renderer();
@@ -55,6 +76,7 @@
         const strip = $('#cover-strip');
         const stripIds = [];
         if (strip) {
+            applyPromo(strip.querySelector('.strip-dark'), R().activePromo(HOME_PROMOS, now));
             const seenCats = new Set(deal ? [deal.category] : []);
             const pool = R().fresh(items, 60).filter(p => p.hasImage && (!deal || p.id !== deal.id)).sort((a, b) => b.heat - a.heat);
             for (const p of pool) {

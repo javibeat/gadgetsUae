@@ -108,3 +108,16 @@ test('pick of the day prefers products with a photo when enough exist', () => {
     const few = [{ id: 'a', heat: 10, hasImage: true }].concat(hot);
     assert.ok(R.dealOfDay(few, new Date(Date.UTC(2026, 10, 1, 12))));
 });
+
+test('activePromo picks the promo for the UAE day, switching at UAE midnight', () => {
+    const promos = [
+        { id: 'bf', from: '2026-11-01', to: '2026-11-30' },
+        { id: 'dsf', from: '2026-12-01', to: '2027-01-17' }
+    ];
+    assert.equal(R.activePromo(promos, new Date('2026-11-30T19:59:00Z')).id, 'bf');   // 23:59 UAE
+    assert.equal(R.activePromo(promos, new Date('2026-11-30T20:00:00Z')).id, 'dsf');  // 00:00 UAE, 1 Dec
+    assert.equal(R.activePromo(promos, new Date('2027-01-17T12:00:00Z')).id, 'dsf');
+    assert.equal(R.activePromo(promos, new Date('2027-01-18T12:00:00Z')), null);
+    assert.equal(R.activePromo([], new Date()), null);
+    assert.equal(R.activePromo(undefined, new Date()), null);
+});

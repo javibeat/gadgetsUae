@@ -138,6 +138,37 @@ const GUIDES = [
         ]
     },
     {
+        slug: 'dubai-shopping-festival-2026-tech-guide',
+        category: null,
+        updated: 'November 2026',
+        title: 'Dubai Shopping Festival 2026–27: The Tech Worth Buying',
+        seoTitle: 'Dubai Shopping Festival 2026-27: Tech Worth Buying',
+        description: 'DSF 2026–27 runs from 4 December 2026 to 17 January 2027. The phones, consoles, headphones and gifts worth checking, and how to compare mall deals with Amazon.ae.',
+        intro: 'The 32nd Dubai Shopping Festival runs from 4 December 2026 to 17 January 2027, the longest edition so far at 45 days. It overlaps with Christmas, New Year and the school winter break, so it is the busiest gift-buying season of the year in the UAE. Most DSF discounts happen in malls and electronics stores, so the smart move is simple: before you pay at the counter, open the same product on Amazon.ae and compare. Below are the tech products worth checking first. Every link opens the live Amazon.ae page.',
+        quick: 'Big gifts: Switch 2, PS5 Pro, iPhone 18 Pro Max. Easy gifts: AirPods Pro 3, Kindle Paperwhite, AirTag 2 4-pack. For your own home: MacBook Air M5, Apple HomeView, a robot vacuum. For travel over the holidays: Sony WH-1000XM6 and a power bank.',
+        picks: [
+            { id: 'switch2', why: 'The family gift of the season, and with Zelda: Ocarina of Time out in November there is a big new game to go with it. Bundles with a game usually beat buying both separately.' },
+            { id: 'ps5-pro', why: 'GTA VI launched on 19 November, so this is the console many people want under the tree. Compare the mall bundle with Amazon.ae before you buy.' },
+            { id: 'iphone-18-pro-max', why: 'The most wanted phone in the UAE. New iPhones rarely get big price cuts; during DSF the value tends to come from bank offers, instalments and trade-in credit, so compare the full deal, not just the price tag.' },
+            { id: 'galaxy-s26-ultra', why: 'Android flagships drop faster than iPhones, which makes the S26 Ultra one of the better big-ticket buys this season.' },
+            { id: 'airpods-pro-3', why: 'The safest gift for any iPhone owner. Small enough to pick up at any store, so it is easy to check the Amazon.ae price on your phone first.' },
+            { id: 'sony-wh-1000xm6', why: 'If you fly home over the winter break, these make every flight quieter. One of the best noise-cancelling headphones you can buy.' },
+            { id: 'macbook-air-m5', why: 'The laptop most people should buy, and a good moment if a student in the family needs one before the new term in January.' },
+            { id: 'apple-homeview', why: 'Apple\'s new smart home display, on sale since November. A gift for the person in the family who already runs the house from an iPhone.' },
+            { id: 'kindle-paperwhite-2026', why: 'Thin, light and useful for years. An easy gift that works for any age.' },
+            { id: 'airtag-2-4-pack', why: 'Clip one to every suitcase before the holiday trip. A small, practical gift that nobody returns.' },
+            { id: 'roborock-saros-20-sonic', why: 'Robot vacuums are made for UAE homes: marble and tile floors and daily dust. A big upgrade you notice every day.' },
+            { id: 'anker-nano-power-bank-10k', why: 'Long days at the Global Village, the beach or the airport drain phones fast. Small enough for any pocket and a good stocking filler.' }
+        ],
+        faq: [
+            { q: 'When is the Dubai Shopping Festival 2026–27?', a: 'DSF 2026–27 runs from 4 December 2026 to 17 January 2027. It is the 32nd edition and, at 45 days, the longest so far. Check visitdubai.com for the official programme.' },
+            { q: 'Are there online deals during DSF?', a: 'Most DSF offers happen in Dubai malls and stores, and some retailers run matching online offers. Prices on Amazon.ae change all the time, so the easiest check is to open the product on Amazon.ae before paying in a store.' },
+            { q: 'Is DSF a good time to buy a new iPhone?', a: 'New iPhones rarely get big discounts. During DSF the savings usually come from bank instalment plans, cashback offers and trade-in credit, so compare the total cost of each offer, not only the price.' },
+            { q: 'Do products bought in Dubai have a UAE warranty?', a: 'Buy from the official brand store or an authorised seller and check that the box or listing says UAE or Middle East version. That version is covered by the local warranty.' },
+            { q: 'What tech makes a good gift during DSF?', a: 'Safe gifts are AirPods, a Kindle, an AirTag pack or a power bank. For a bigger gift, a Nintendo Switch 2 or a PS5 Pro, especially now that GTA VI is out.' }
+        ]
+    },
+    {
         slug: 'best-iphone-to-buy-uae',
         category: 'Mobiles',
         updated: 'November 2026',

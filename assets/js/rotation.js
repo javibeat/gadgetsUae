@@ -142,5 +142,14 @@
         return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
     }
 
-    return { dayIndex, weekIndex, hash, rng, seedFor, shuffle, weightedSample, daily, weekly, dealOfDay, trending, spotlight, fresh, related, dailyOrder, dayLabel };
+    /**
+     * Promo de temporada para la portada: la primera cuyo rango [from, to] (fechas UAE, AAAA-MM-DD)
+     * contiene el día actual. null si ninguna está activa.
+     */
+    function activePromo(promos, date) {
+        const today = new Date(dayIndex(date) * DAY_MS).toISOString().slice(0, 10);
+        return (promos || []).find(p => p.from <= today && today <= p.to) || null;
+    }
+
+    return { activePromo, dayIndex, weekIndex, hash, rng, seedFor, shuffle, weightedSample, daily, weekly, dealOfDay, trending, spotlight, fresh, related, dailyOrder, dayLabel };
 });
