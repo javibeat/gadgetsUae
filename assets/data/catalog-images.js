@@ -3,6 +3,9 @@ const CATALOG_IMAGES = {
   "8bitdo-ultimate-2c": [
     "/assets/images/8bitdo-ultimate-2c/1.jpg"
   ],
+  "8bitdo-ultimate-3e": [
+    "/assets/images/8bitdo-ultimate-3e/1.webp"
+  ],
   "acer-predator-atlas-8": [
     "/assets/images/acer-predator-atlas-8/1.webp"
   ],
@@ -56,6 +59,9 @@ const CATALOG_IMAGES = {
   ],
   "apple-homepod-mini-2": [
     "/assets/images/apple-homepod-mini-2/1.jpg"
+  ],
+  "apple-homeview": [
+    "/assets/images/apple-homeview/1.webp"
   ],
   "apple-magsafe-charger-25w": [
     "/assets/images/apple-magsafe-charger-25w/1.jpg"
@@ -167,6 +173,9 @@ const CATALOG_IMAGES = {
   ],
   "eufy-video-doorbell-s4": [
     "/assets/images/eufy-video-doorbell-s4/1.webp"
+  ],
+  "fitbit-air": [
+    "/assets/images/fitbit-air/1.jpg"
   ],
   "galaxy-a57": [
     "/assets/images/galaxy-a57/1.webp"
@@ -333,6 +342,9 @@ const CATALOG_IMAGES = {
   "mijia-smart-air-purifier-6": [
     "/assets/images/mijia-smart-air-purifier-6/1.webp"
   ],
+  "motorola-signature-27": [
+    "/assets/images/motorola-signature-27/1.webp"
+  ],
   "nespresso-vertuo-up": [
     "/assets/images/nespresso-vertuo-up/1.webp"
   ],
@@ -465,11 +477,17 @@ const CATALOG_IMAGES = {
   "tapo-td23": [
     "/assets/images/tapo-td23/1.webp"
   ],
+  "technics-eah-a1000": [
+    "/assets/images/technics-eah-a1000/1.webp"
+  ],
   "tp-link-archer-be550": [
     "/assets/images/tp-link-archer-be550/1.jpg"
   ],
   "tp-link-deco-be63": [
     "/assets/images/tp-link-deco-be63/1.jpg"
+  ],
+  "turtle-beach-stealth-ultra-ii": [
+    "/assets/images/turtle-beach-stealth-ultra-ii/1.webp"
   ],
   "ugreen-nexode-100w": [
     "/assets/images/ugreen-nexode-100w/1.webp"

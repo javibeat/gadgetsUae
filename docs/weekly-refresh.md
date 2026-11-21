@@ -60,7 +60,11 @@ and publishes them. Follow it literally. Read `CLAUDE.md` first for the architec
    ```
    Open the saved file with the Read tool and confirm it shows the right product on a clean background
    (no logos, banners with big text, or wrong model). If wrong, delete the file and its `SOURCE.txt` line and retry
-   with another official source. Max 3 attempts; a product without a photo still ships (the card shows a silhouette).
+   with another official source. Max 3 attempts. **A product without a good official photo does NOT ship**: remove its catalog entry and
+   its `assets/images/<id>/` folder, pick another trending product instead, and list the dropped one in the report.
+   Tip: when `fetch-image.js` finds no og:image (Shopify stores, JS-heavy sites), try `<product-url>.json` on Shopify
+   stores or the brand's other regional sites, then pass the direct image URL with `--image`.
+   The photo must show only the product itself (no bundled accessories, no dark lifestyle scenes).
 
 5. **Keep the catalog fresh, not bloated**
    - If the catalog has more than 220 curated items, remove the lowest-`heat` items whose `added` is 12+ months old
