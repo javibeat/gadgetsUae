@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T08:33:54.509Z",
+  "generatedAt": "2026-11-22T00:08:28.996Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,16 +63,16 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20778,
-    "dealOfDay": "galaxy-a57",
+    "dayIndex": 20779,
+    "dealOfDay": "ipad-pro-m5",
     "trending": [
       "iphone-18-pro-max",
       "backbone-one-usb-c",
       "samsung-odyssey-g5-27",
       "roborock-qrevo-curv-2-pro",
-      "xiaomi-17t-pro",
+      "oneplus-15",
       "dji-osmo-pocket-4",
-      "ipad-pro-m5",
+      "redmi-note-17-pro-max",
       "galaxy-buds4-pro"
     ]
   },
