@@ -13,10 +13,11 @@
         document.head.appendChild(s);
     }
 
-    function product(p) {
-        const out = { '@type': 'Product', name: p.title, brand: { '@type': 'Brand', name: p.brand }, category: p.category, url: p.url };
+    // Sin Offer/precio no podemos marcar "Product" (Google exige offers, review o
+    // aggregateRating), así que la lista solo enlaza cada ficha: url + nombre.
+    function listItem(p, i) {
+        const out = { '@type': 'ListItem', position: i + 1, name: p.title, url: p.url };
         if (p.image) out.image = /^https?:\/\//.test(p.image) ? p.image : SITE + '/' + p.image.replace(/^\//, '');
-        if (p.blurb) out.description = p.blurb;
         return out;
     }
 
@@ -40,7 +41,7 @@
         if (items.length) {
             inject({
                 '@context': 'https://schema.org', '@type': 'ItemList', name,
-                itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, item: product(p) }))
+                itemListElement: items.map(listItem)
             });
         }
 
