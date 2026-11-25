@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T04:39:10.186Z",
+  "generatedAt": "2026-11-25T03:25:04.257Z",
   "site": "https://gadgetsdxb.com",
   "disclosure": "As an Amazon Associate, GadgetsUAE earns from qualifying purchases.",
   "note": "No prices: use the url field, prices are shown live on Amazon.ae.",
@@ -63,17 +63,17 @@
     }
   ],
   "rotation": {
-    "dayIndex": 20781,
-    "dealOfDay": "macbook-air-m5",
+    "dayIndex": 20782,
+    "dealOfDay": "airpods-5",
     "trending": [
-      "nothing-phone-4b",
-      "bambu-lab-h2d",
+      "garmin-cirqa",
+      "bambu-lab-a1-mini",
+      "logitech-mx-master-4",
       "sandisk-switch2-sd",
-      "logitech-mx-keys-s",
       "bose-qc-ultra-earbuds-2",
-      "logitech-g325-lightspeed",
-      "anker-555-hub",
-      "anker-maggo-power-bank-2-pro"
+      "amazfit-balance-3",
+      "anker-maggo-3-in-1",
+      "apple-homepod-mini-2"
     ]
   },
   "products": [
