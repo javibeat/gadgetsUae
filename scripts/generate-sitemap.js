@@ -29,9 +29,7 @@ function main() {
         entry(SITE + '/blog.html', 'weekly', '0.7'),
         ...listHtmlFiles(path.join(ROOT, 'posts')).map(p => entry(SITE + '/posts/' + p, 'monthly', '0.6')),
         entry(SITE + '/about.html', 'monthly', '0.5'),
-        entry(SITE + '/contact.html', 'monthly', '0.4'),
-        entry(SITE + '/privacy.html', 'yearly', '0.2'),
-        entry(SITE + '/terms.html', 'yearly', '0.2')
+        entry(SITE + '/contact.html', 'monthly', '0.4')
     ];
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join('\n')}\n</urlset>\n`;
     fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml, 'utf8');
